@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace fazenda_verdeviva.UserControls.Dashboard
 {
-    public partial class ClientsControl : UserControl
+    public partial class ManufacturerControl : UserControl
     {
-        public ClientsControl()
+        public ManufacturerControl()
         {
             InitializeComponent();
         }

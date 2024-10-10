@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace fazenda_verdeviva.UserControls.Dashboard.Stock
+namespace fazenda_verdeviva.UserControls.Dashboard.Manufacturer
 {
-    public partial class ProductsControl : UserControl
+    public partial class ManufacturerCardControl : UserControl
     {
-        public ProductsControl()
+        public ManufacturerCardControl()
         {
             InitializeComponent();
         }

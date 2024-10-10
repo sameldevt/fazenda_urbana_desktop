@@ -1,5 +1,6 @@
 ﻿using fazenda_verdeviva.Forms;
 using fazenda_verdeviva.UserControls.Dashboard;
+using fazenda_verdeviva.UserControls.Dashboard.Products;
 using fazenda_verdeviva.UserControls.Dashboard.Reports;
 using System;
 using System.Collections.Generic;
@@ -21,14 +22,9 @@ namespace fazenda_verdeviva.UserControls
         {
             InitializeComponent();
 
-            //ContentPanel = new Panel
-            //{
-            //    Dock = DockStyle.Fill
-            //};
-
             Controls.Add(ContentPanel);
 
-            SetContentPanelControl(new StockControl());
+            SetContentPanelControl(new ProductsControl());
         }
 
         public static DashboardControl GetInstance()
@@ -44,33 +40,33 @@ namespace fazenda_verdeviva.UserControls
         public void SetContentPanelControl(UserControl control)
         {
             ContentPanel.Controls.Clear();
-            //control.Dock = DockStyle.Fill;
             ContentPanel.Controls.Add(control);
         }
 
-        private void StockButton_Click(object sender, EventArgs e)
+        private void ProductsButton_Click(object sender, EventArgs e)
         {
-            SetContentPanelControl(new StockControl());
+            SetContentPanelControl(new ProductsControl());
         }
 
-        private void OrdersButton_Click(object sender, EventArgs e)
+        private void ManufacturerButton_Click(object sender, EventArgs e)
+        {
+            SetContentPanelControl(new ManufacturerControl());
+        }
+
+        private void OrdersButton_Click_1(object sender, EventArgs e)
         {
             SetContentPanelControl(new OrdersControl());
+
         }
 
-        private void ClientsButton_Click(object sender, EventArgs e)
+        private void ClientsButton_Click_1(object sender, EventArgs e)
         {
             SetContentPanelControl(new ClientControl());
         }
 
-        private void SuppliersButton_Click(object sender, EventArgs e)
+        private void MessagesButton_Click(object sender, EventArgs e)
         {
-            SetContentPanelControl(new SupplierControl());
-        }
 
-        private void ReportsButton_Click(object sender, EventArgs e)
-        {
-            SetContentPanelControl(new ReportControl());
         }
     }
 }

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\fazenda-verdeviva\\fazenda-verdeviva.csproj",
+      "projectUniqueName": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\fazenda-verdeviva.csproj",
       "projectName": "fazenda-verdeviva",
-      "projectPath": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\fazenda-verdeviva\\fazenda-verdeviva.csproj",
+      "projectPath": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\fazenda-verdeviva.csproj",
       "packagesPath": "C:\\Users\\samue\\.nuget\\packages\\",
-      "outputPath": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\fazenda-verdeviva\\obj\\",
+      "outputPath": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\samue\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,6 +28,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

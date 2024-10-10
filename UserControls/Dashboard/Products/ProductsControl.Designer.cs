@@ -29,39 +29,69 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            listBox1 = new ListBox();
+            label1 = new Label();
+            pictureBox1 = new PictureBox();
+            ProductsList = new ListView();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(pictureBox1);
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(982, 100);
+            panel1.Size = new Size(957, 59);
             panel1.TabIndex = 0;
             // 
-            // listBox1
+            // label1
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(3, 109);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(982, 574);
-            listBox1.TabIndex = 1;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            label1.Location = new Point(68, 11);
+            label1.Name = "label1";
+            label1.Size = new Size(135, 37);
+            label1.TabIndex = 4;
+            label1.Text = "Produtos";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.mini_logo;
+            pictureBox1.Location = new Point(3, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(59, 53);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 3;
+            pictureBox1.TabStop = false;
+            // 
+            // ProductsList
+            // 
+            ProductsList.Location = new Point(6, 68);
+            ProductsList.Name = "ProductsList";
+            ProductsList.Size = new Size(954, 555);
+            ProductsList.TabIndex = 1;
+            ProductsList.UseCompatibleStateImageBehavior = false;
             // 
             // ProductsControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(listBox1);
+            Controls.Add(ProductsList);
             Controls.Add(panel1);
             Name = "ProductsControl";
-            Size = new Size(991, 694);
+            Size = new Size(963, 626);
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panel1;
-        private ListBox listBox1;
+        private Label label1;
+        private PictureBox pictureBox1;
+        private ListView ProductsList;
     }
 }

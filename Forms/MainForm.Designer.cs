@@ -30,13 +30,13 @@
         {
             SuspendLayout();
             // 
-            // AccessForm
+            // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1264, 681);
-            Name = "AccessForm";
+            ClientSize = new Size(1184, 661);
+            Name = "MainForm";
             Text = "AccessForm";
             ResumeLayout(false);
         }

@@ -28,33 +28,70 @@
         /// </summary>
         private void InitializeComponent()
         {
+            panel1 = new Panel();
             label1 = new Label();
+            pictureBox1 = new PictureBox();
+            ManufacturersList = new ListView();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(pictureBox1);
+            panel1.Location = new Point(3, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(957, 59);
+            panel1.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Dock = DockStyle.Fill;
-            label1.Font = new Font("Segoe UI", 100F);
-            label1.Location = new Point(0, 0);
+            label1.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            label1.Location = new Point(68, 12);
             label1.Name = "label1";
-            label1.Size = new Size(541, 177);
-            label1.TabIndex = 0;
+            label1.Size = new Size(119, 37);
+            label1.TabIndex = 5;
             label1.Text = "Pedidos";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.mini_logo;
+            pictureBox1.Location = new Point(3, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(59, 53);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 4;
+            pictureBox1.TabStop = false;
+            // 
+            // ManufacturersList
+            // 
+            ManufacturersList.Location = new Point(6, 68);
+            ManufacturersList.Name = "ManufacturersList";
+            ManufacturersList.Size = new Size(954, 555);
+            ManufacturersList.TabIndex = 2;
+            ManufacturersList.UseCompatibleStateImageBehavior = false;
             // 
             // OrdersControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(label1);
+            Controls.Add(ManufacturersList);
+            Controls.Add(panel1);
             Name = "OrdersControl";
-            Size = new Size(1194, 669);
+            Size = new Size(963, 626);
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
+        private Panel panel1;
         private Label label1;
+        private PictureBox pictureBox1;
+        private ListView ManufacturersList;
     }
 }
