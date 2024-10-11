@@ -29,27 +29,39 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            RegisterButton = new Button();
             label1 = new Label();
             pictureBox1 = new PictureBox();
-            ProductsList = new ListView();
+            ContentPanel = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(RegisterButton);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(pictureBox1);
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(957, 59);
+            panel1.Size = new Size(960, 59);
             panel1.TabIndex = 0;
+            // 
+            // RegisterButton
+            // 
+            RegisterButton.Location = new Point(749, 10);
+            RegisterButton.Name = "RegisterButton";
+            RegisterButton.Size = new Size(169, 37);
+            RegisterButton.TabIndex = 8;
+            RegisterButton.Text = "Cadastrar";
+            RegisterButton.UseVisualStyleBackColor = true;
+            RegisterButton.Click += RegisterButton_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
-            label1.Location = new Point(68, 11);
+            label1.Location = new Point(68, 3);
             label1.Name = "label1";
             label1.Size = new Size(135, 37);
             label1.TabIndex = 4;
@@ -65,22 +77,22 @@
             pictureBox1.TabIndex = 3;
             pictureBox1.TabStop = false;
             // 
-            // ProductsList
+            // ContentPanel
             // 
-            ProductsList.Location = new Point(6, 68);
-            ProductsList.Name = "ProductsList";
-            ProductsList.Size = new Size(954, 555);
-            ProductsList.TabIndex = 1;
-            ProductsList.UseCompatibleStateImageBehavior = false;
+            ContentPanel.Location = new Point(3, 65);
+            ContentPanel.Name = "ContentPanel";
+            ContentPanel.Size = new Size(960, 558);
+            ContentPanel.TabIndex = 1;
+            ContentPanel.Paint += ContentPanel_Paint;
             // 
             // ProductsControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(ProductsList);
+            Controls.Add(ContentPanel);
             Controls.Add(panel1);
             Name = "ProductsControl";
-            Size = new Size(963, 626);
+            Size = new Size(966, 626);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -92,6 +104,7 @@
         private Panel panel1;
         private Label label1;
         private PictureBox pictureBox1;
-        private ListView ProductsList;
+        public Button RegisterButton;
+        private Panel ContentPanel;
     }
 }

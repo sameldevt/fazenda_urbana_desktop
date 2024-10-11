@@ -35,7 +35,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1184, 661);
+            ClientSize = new Size(1194, 661);
             Name = "MainForm";
             Text = "AccessForm";
             ResumeLayout(false);

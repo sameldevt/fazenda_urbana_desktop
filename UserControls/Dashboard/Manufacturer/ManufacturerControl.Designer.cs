@@ -31,7 +31,7 @@
             panel1 = new Panel();
             label1 = new Label();
             pictureBox1 = new PictureBox();
-            ManufacturersList = new ListView();
+            ManufacturersList = new FlowLayoutPanel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -49,7 +49,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
-            label1.Location = new Point(68, 12);
+            label1.Location = new Point(68, 3);
             label1.Name = "label1";
             label1.Size = new Size(190, 37);
             label1.TabIndex = 5;
@@ -67,11 +67,11 @@
             // 
             // ManufacturersList
             // 
-            ManufacturersList.Location = new Point(6, 65);
+            ManufacturersList.Location = new Point(3, 65);
             ManufacturersList.Name = "ManufacturersList";
-            ManufacturersList.Size = new Size(954, 555);
+            ManufacturersList.Size = new Size(957, 558);
             ManufacturersList.TabIndex = 1;
-            ManufacturersList.UseCompatibleStateImageBehavior = false;
+            ManufacturersList.Paint += flowLayoutPanel1_Paint;
             // 
             // ManufacturerControl
             // 
@@ -90,8 +90,8 @@
         #endregion
 
         private Panel panel1;
-        private ListView ManufacturersList;
         private PictureBox pictureBox1;
         private Label label1;
+        private FlowLayoutPanel ManufacturersList;
     }
 }

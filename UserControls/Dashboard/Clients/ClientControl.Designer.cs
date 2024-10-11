@@ -28,24 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ManufacturersList = new ListView();
             panel1 = new Panel();
+            flowLayoutPanel1 = new FlowLayoutPanel();
             label1 = new Label();
             pictureBox1 = new PictureBox();
+            ClientsList = new FlowLayoutPanel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // ManufacturersList
-            // 
-            ManufacturersList.Location = new Point(3, 68);
-            ManufacturersList.Name = "ManufacturersList";
-            ManufacturersList.Size = new Size(957, 555);
-            ManufacturersList.TabIndex = 3;
-            ManufacturersList.UseCompatibleStateImageBehavior = false;
-            // 
             // panel1
             // 
+            panel1.Controls.Add(flowLayoutPanel1);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(pictureBox1);
             panel1.Location = new Point(3, 3);
@@ -53,11 +47,18 @@
             panel1.Size = new Size(957, 59);
             panel1.TabIndex = 4;
             // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.Location = new Point(0, 62);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(957, 558);
+            flowLayoutPanel1.TabIndex = 5;
+            // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
-            label1.Location = new Point(68, 12);
+            label1.Location = new Point(68, 3);
             label1.Name = "label1";
             label1.Size = new Size(119, 37);
             label1.TabIndex = 5;
@@ -73,12 +74,20 @@
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
             // 
+            // ClientsList
+            // 
+            ClientsList.Location = new Point(3, 65);
+            ClientsList.Name = "ClientsList";
+            ClientsList.Size = new Size(957, 558);
+            ClientsList.TabIndex = 5;
+            ClientsList.Paint += flowLayoutPanel2_Paint;
+            // 
             // ClientControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(ClientsList);
             Controls.Add(panel1);
-            Controls.Add(ManufacturersList);
             Name = "ClientControl";
             Size = new Size(963, 626);
             panel1.ResumeLayout(false);
@@ -88,10 +97,10 @@
         }
 
         #endregion
-
-        private ListView ManufacturersList;
         private Panel panel1;
         private Label label1;
         private PictureBox pictureBox1;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private FlowLayoutPanel ClientsList;
     }
 }

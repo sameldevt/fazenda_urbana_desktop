@@ -31,7 +31,7 @@
             panel1 = new Panel();
             label1 = new Label();
             pictureBox1 = new PictureBox();
-            ManufacturersList = new ListView();
+            OrdersList = new FlowLayoutPanel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -49,7 +49,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
-            label1.Location = new Point(68, 12);
+            label1.Location = new Point(68, 0);
             label1.Name = "label1";
             label1.Size = new Size(119, 37);
             label1.TabIndex = 5;
@@ -65,19 +65,19 @@
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
             // 
-            // ManufacturersList
+            // OrdersList
             // 
-            ManufacturersList.Location = new Point(6, 68);
-            ManufacturersList.Name = "ManufacturersList";
-            ManufacturersList.Size = new Size(954, 555);
-            ManufacturersList.TabIndex = 2;
-            ManufacturersList.UseCompatibleStateImageBehavior = false;
+            OrdersList.Location = new Point(3, 65);
+            OrdersList.Name = "OrdersList";
+            OrdersList.Size = new Size(957, 558);
+            OrdersList.TabIndex = 2;
+            OrdersList.Paint += flowLayoutPanel1_Paint;
             // 
             // OrdersControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(ManufacturersList);
+            Controls.Add(OrdersList);
             Controls.Add(panel1);
             Name = "OrdersControl";
             Size = new Size(963, 626);
@@ -92,6 +92,6 @@
         private Panel panel1;
         private Label label1;
         private PictureBox pictureBox1;
-        private ListView ManufacturersList;
+        private FlowLayoutPanel OrdersList;
     }
 }

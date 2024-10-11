@@ -1,5 +1,7 @@
 ﻿using fazenda_verdeviva.Forms;
 using fazenda_verdeviva.UserControls.Dashboard;
+using fazenda_verdeviva.UserControls.Dashboard.Employee;
+using fazenda_verdeviva.UserControls.Dashboard.Messages;
 using fazenda_verdeviva.UserControls.Dashboard.Products;
 using fazenda_verdeviva.UserControls.Dashboard.Reports;
 using System;
@@ -24,7 +26,7 @@ namespace fazenda_verdeviva.UserControls
 
             Controls.Add(ContentPanel);
 
-            SetContentPanelControl(new ProductsControl());
+            SetContentPanelControl(ProductsControl.GetInstance());
         }
 
         public static DashboardControl GetInstance()
@@ -40,33 +42,44 @@ namespace fazenda_verdeviva.UserControls
         public void SetContentPanelControl(UserControl control)
         {
             ContentPanel.Controls.Clear();
+            control.Dock = DockStyle.Fill;
             ContentPanel.Controls.Add(control);
         }
 
         private void ProductsButton_Click(object sender, EventArgs e)
         {
-            SetContentPanelControl(new ProductsControl());
+            SetContentPanelControl(ProductsControl.GetInstance());
         }
 
         private void ManufacturerButton_Click(object sender, EventArgs e)
         {
-            SetContentPanelControl(new ManufacturerControl());
+            SetContentPanelControl(ManufacturerControl.GetInstance());
         }
 
         private void OrdersButton_Click_1(object sender, EventArgs e)
         {
-            SetContentPanelControl(new OrdersControl());
+            SetContentPanelControl(OrdersControl.GetInstance());
 
         }
 
         private void ClientsButton_Click_1(object sender, EventArgs e)
         {
-            SetContentPanelControl(new ClientControl());
+            SetContentPanelControl(ClientControl.GetInstance());
         }
 
         private void MessagesButton_Click(object sender, EventArgs e)
         {
-
+            SetContentPanelControl(ContactMessageControl.GetInstance());
         }
+
+        private void EmployeesButton_Click(object sender, EventArgs e)
+        {
+            SetContentPanelControl(EmployeeControl.GetInstance());
+        }
+
+        private void ContentPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }      
     }
 }

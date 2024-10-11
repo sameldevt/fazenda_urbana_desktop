@@ -17,5 +17,9 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
             InitializeComponent();
         }
 
+        private void ContentPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

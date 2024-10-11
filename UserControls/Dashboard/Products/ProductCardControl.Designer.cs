@@ -51,6 +51,7 @@
             ContentPanel.Name = "ContentPanel";
             ContentPanel.Size = new Size(940, 144);
             ContentPanel.TabIndex = 0;
+            ContentPanel.Paint += ContentPanel_Paint;
             // 
             // EditButton
             // 

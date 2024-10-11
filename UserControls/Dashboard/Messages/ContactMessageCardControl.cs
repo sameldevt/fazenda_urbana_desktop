@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace fazenda_verdeviva.UserControls.Dashboard.Stock
+namespace fazenda_verdeviva.UserControls.Dashboard.Messages
 {
-    public partial class CategoryControl : UserControl
+    public partial class ContactMessageCardControl : UserControl
     {
-        public CategoryControl()
+        public ContactMessageCardControl()
         {
             InitializeComponent();
         }

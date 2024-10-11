@@ -41,6 +41,7 @@
             OrdersButton = new Button();
             ManufacturerButton = new Button();
             ProductsButton = new Button();
+            EmployeesButton = new Button();
             TopBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             NavPanel.SuspendLayout();
@@ -48,10 +49,11 @@
             // 
             // ContentPanel
             // 
-            ContentPanel.Location = new Point(234, 71);
+            ContentPanel.Location = new Point(231, 71);
             ContentPanel.Name = "ContentPanel";
-            ContentPanel.Size = new Size(963, 626);
+            ContentPanel.Size = new Size(966, 626);
             ContentPanel.TabIndex = 0;
+            ContentPanel.Paint += ContentPanel_Paint;
             // 
             // TopBar
             // 
@@ -116,6 +118,7 @@
             // 
             // NavPanel
             // 
+            NavPanel.Controls.Add(EmployeesButton);
             NavPanel.Controls.Add(MessagesButton);
             NavPanel.Controls.Add(ClientsButton);
             NavPanel.Controls.Add(OrdersButton);
@@ -128,7 +131,7 @@
             // 
             // MessagesButton
             // 
-            MessagesButton.Location = new Point(0, 201);
+            MessagesButton.Location = new Point(3, 251);
             MessagesButton.Name = "MessagesButton";
             MessagesButton.Size = new Size(219, 44);
             MessagesButton.TabIndex = 4;
@@ -176,6 +179,16 @@
             ProductsButton.UseVisualStyleBackColor = true;
             ProductsButton.Click += ProductsButton_Click;
             // 
+            // EmployeesButton
+            // 
+            EmployeesButton.Location = new Point(3, 201);
+            EmployeesButton.Name = "EmployeesButton";
+            EmployeesButton.Size = new Size(219, 44);
+            EmployeesButton.TabIndex = 5;
+            EmployeesButton.Text = "Funcionarios";
+            EmployeesButton.UseVisualStyleBackColor = true;
+            EmployeesButton.Click += EmployeesButton_Click;
+            // 
             // DashboardControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -207,5 +220,6 @@
         private Label label1;
         private Label label3;
         private Label OperatorEmail;
+        private Button EmployeesButton;
     }
 }
