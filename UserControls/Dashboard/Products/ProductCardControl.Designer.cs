@@ -31,7 +31,7 @@
             ContentPanel = new Panel();
             EditButton = new Button();
             DeleteButton = new Button();
-            label1 = new Label();
+            ProductPrice = new Label();
             ProductDescription = new Label();
             ProductName = new Label();
             ProductImage = new PictureBox();
@@ -43,7 +43,7 @@
             // 
             ContentPanel.Controls.Add(EditButton);
             ContentPanel.Controls.Add(DeleteButton);
-            ContentPanel.Controls.Add(label1);
+            ContentPanel.Controls.Add(ProductPrice);
             ContentPanel.Controls.Add(ProductDescription);
             ContentPanel.Controls.Add(ProductName);
             ContentPanel.Controls.Add(ProductImage);
@@ -51,7 +51,6 @@
             ContentPanel.Name = "ContentPanel";
             ContentPanel.Size = new Size(940, 144);
             ContentPanel.TabIndex = 0;
-            ContentPanel.Paint += ContentPanel_Paint;
             // 
             // EditButton
             // 
@@ -61,6 +60,7 @@
             EditButton.TabIndex = 5;
             EditButton.Text = "Editar";
             EditButton.UseVisualStyleBackColor = true;
+            EditButton.Click += EditButton_Click;
             // 
             // DeleteButton
             // 
@@ -70,17 +70,18 @@
             DeleteButton.TabIndex = 4;
             DeleteButton.Text = "Excluir";
             DeleteButton.UseVisualStyleBackColor = true;
+            DeleteButton.Click += DeleteButton_Click;
             // 
-            // label1
+            // ProductPrice
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
-            label1.ForeColor = Color.Green;
-            label1.Location = new Point(781, 96);
-            label1.Name = "label1";
-            label1.Size = new Size(130, 25);
-            label1.TabIndex = 3;
-            label1.Text = "R$ 10,99 / kg";
+            ProductPrice.AutoSize = true;
+            ProductPrice.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            ProductPrice.ForeColor = Color.Green;
+            ProductPrice.Location = new Point(781, 96);
+            ProductPrice.Name = "ProductPrice";
+            ProductPrice.Size = new Size(130, 25);
+            ProductPrice.TabIndex = 3;
+            ProductPrice.Text = "R$ 10,99 / kg";
             // 
             // ProductDescription
             // 
@@ -105,8 +106,7 @@
             // 
             // ProductImage
             // 
-            ProductImage.Image = Properties.Resources.product_image;
-            ProductImage.InitialImage = Properties.Resources.product_image;
+            ProductImage.InitialImage = null;
             ProductImage.Location = new Point(3, 3);
             ProductImage.Name = "ProductImage";
             ProductImage.Size = new Size(150, 150);
@@ -133,7 +133,7 @@
         private Label ProductName;
         private PictureBox ProductImage;
         private Label label2;
-        private Label label1;
+        private Label ProductPrice;
         private Label ProductDescription;
         private Button EditButton;
         private Button DeleteButton;

@@ -32,7 +32,7 @@
             flowLayoutPanel1 = new FlowLayoutPanel();
             label1 = new Label();
             pictureBox1 = new PictureBox();
-            ClientsList = new FlowLayoutPanel();
+            ContentPanel = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -74,19 +74,18 @@
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
             // 
-            // ClientsList
+            // ContentPanel
             // 
-            ClientsList.Location = new Point(3, 65);
-            ClientsList.Name = "ClientsList";
-            ClientsList.Size = new Size(957, 558);
-            ClientsList.TabIndex = 5;
-            ClientsList.Paint += flowLayoutPanel2_Paint;
+            ContentPanel.Location = new Point(3, 65);
+            ContentPanel.Name = "ContentPanel";
+            ContentPanel.Size = new Size(957, 558);
+            ContentPanel.TabIndex = 5;
             // 
             // ClientControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(ClientsList);
+            Controls.Add(ContentPanel);
             Controls.Add(panel1);
             Name = "ClientControl";
             Size = new Size(963, 626);
@@ -101,6 +100,6 @@
         private Label label1;
         private PictureBox pictureBox1;
         private FlowLayoutPanel flowLayoutPanel1;
-        private FlowLayoutPanel ClientsList;
+        private Panel ContentPanel;
     }
 }

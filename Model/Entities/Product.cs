@@ -5,65 +5,65 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace fazenda_verdeviva.Model.Entities
 {
     public class Product
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [JsonProperty("id")]
         public int Id { get; set; }
 
-        [Required]
+        [JsonProperty("nome")]
         public string Name { get; set; }
 
+        [JsonProperty("descricao")]
         public string Description { get; set; }
 
-        [Required]
-        [Column(TypeName = "decimal(18,2)")]
-        public decimal UnitPrice { get; set; }
-
-        [Required]
-        [Column(TypeName = "decimal(18,2)")]
+        [JsonProperty("precoQuilo")]
         public decimal WeightPrice { get; set; }
 
-        [Required]
+        [JsonProperty("quantidadeEstoque")]
         public int StockQuantity { get; set; }
 
-        [Required]
-        public int CategoryId { get; set; }
-
-        public virtual Category Category { get; set; }
-
+        [JsonProperty("imagemUrl")]
         public string ImageUrl { get; set; }
 
+        [JsonProperty("categoria")]
+        public virtual Category Category { get; set; }
+
+        [JsonProperty("nutrientes")]
         public virtual NutritionalInfo NutritionalInfo { get; set; }
+
+        [JsonProperty("fornecedor")]
+        public virtual Supplier Supplier { get; set; }
     }
 
     public class Category
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+
+        [JsonProperty("nome")]
         public string Name { get; set; }
+
+        [JsonProperty("descricao")]
         public string Description { get; set; }
-        public ICollection<Product> Products { get; set; }
     }
 
     public class NutritionalInfo
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        [JsonProperty("calorias")]
+        public decimal Calories { get; set; }
 
-        public int ProductId { get; set; }
-
-        public virtual Product Product { get; set; }
-
-        public int Calories { get; set; }
+        [JsonProperty("proteinas")]
         public decimal Proteins { get; set; }
+
+        [JsonProperty("carboidratos")]
         public decimal Carbohydrates { get; set; }
+
+        [JsonProperty("fibras")]
         public decimal Fibers { get; set; }
-        public decimal fats { get; set; }
+
+        [JsonProperty("gorduras")]
+        public decimal Fats { get; set; }
     }
 }

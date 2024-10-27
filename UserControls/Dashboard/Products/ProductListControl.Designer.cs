@@ -44,7 +44,6 @@
             ProductsList.Name = "ProductsList";
             ProductsList.Size = new Size(954, 496);
             ProductsList.TabIndex = 2;
-            ProductsList.Paint += ProductsList_Paint;
             // 
             // panel1
             // 
@@ -115,7 +114,7 @@
 
         #endregion
 
-        private FlowLayoutPanel ProductsList;
+        public FlowLayoutPanel ProductsList;
         private Panel panel1;
         private Label FilterLabel;
         private ComboBox FilterProductComboBox;

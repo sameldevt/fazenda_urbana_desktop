@@ -1,9 +1,10 @@
 ﻿using fazenda_verdeviva.Forms;
 using fazenda_verdeviva.UserControls.Dashboard;
-using fazenda_verdeviva.UserControls.Dashboard.Employee;
+using fazenda_verdeviva.UserControls.Dashboard.Employees;
 using fazenda_verdeviva.UserControls.Dashboard.Messages;
 using fazenda_verdeviva.UserControls.Dashboard.Products;
 using fazenda_verdeviva.UserControls.Dashboard.Reports;
+using fazenda_verdeviva.UserControls.Dashboard.Suppliers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -53,7 +54,7 @@ namespace fazenda_verdeviva.UserControls
 
         private void ManufacturerButton_Click(object sender, EventArgs e)
         {
-            SetContentPanelControl(ManufacturerControl.GetInstance());
+            SetContentPanelControl(SupplierControl.GetInstance());
         }
 
         private void OrdersButton_Click_1(object sender, EventArgs e)

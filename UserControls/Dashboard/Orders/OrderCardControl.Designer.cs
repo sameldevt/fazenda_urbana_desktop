@@ -29,66 +29,66 @@
         private void InitializeComponent()
         {
             ContentPanel = new Panel();
-            ManufacturerWebsite = new Label();
-            ManufacturerDescription = new Label();
-            ManufacturerName = new Label();
-            label1 = new Label();
+            OrderPrice = new Label();
+            OrderItemQuantity = new Label();
+            OrderId = new Label();
+            PaymentMethod = new Label();
             ContentPanel.SuspendLayout();
             SuspendLayout();
             // 
             // ContentPanel
             // 
-            ContentPanel.Controls.Add(label1);
-            ContentPanel.Controls.Add(ManufacturerWebsite);
-            ContentPanel.Controls.Add(ManufacturerDescription);
-            ContentPanel.Controls.Add(ManufacturerName);
+            ContentPanel.Controls.Add(PaymentMethod);
+            ContentPanel.Controls.Add(OrderPrice);
+            ContentPanel.Controls.Add(OrderItemQuantity);
+            ContentPanel.Controls.Add(OrderId);
             ContentPanel.Location = new Point(3, 3);
             ContentPanel.Name = "ContentPanel";
             ContentPanel.Size = new Size(940, 107);
             ContentPanel.TabIndex = 1;
             // 
-            // ManufacturerWebsite
+            // OrderPrice
             // 
-            ManufacturerWebsite.AutoSize = true;
-            ManufacturerWebsite.Font = new Font("Segoe UI", 14F);
-            ManufacturerWebsite.ForeColor = Color.DarkGray;
-            ManufacturerWebsite.Location = new Point(3, 39);
-            ManufacturerWebsite.Name = "ManufacturerWebsite";
-            ManufacturerWebsite.Size = new Size(211, 25);
-            ManufacturerWebsite.TabIndex = 7;
-            ManufacturerWebsite.Text = "Quantidade de itens: 13";
+            OrderPrice.AutoSize = true;
+            OrderPrice.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            OrderPrice.ForeColor = Color.Green;
+            OrderPrice.Location = new Point(833, 14);
+            OrderPrice.Name = "OrderPrice";
+            OrderPrice.Size = new Size(94, 25);
+            OrderPrice.TabIndex = 8;
+            OrderPrice.Text = "R$ 49,99 ";
             // 
-            // ManufacturerDescription
+            // OrderItemQuantity
             // 
-            ManufacturerDescription.AutoSize = true;
-            ManufacturerDescription.Font = new Font("Segoe UI", 14F);
-            ManufacturerDescription.ForeColor = Color.DarkGray;
-            ManufacturerDescription.Location = new Point(3, 64);
-            ManufacturerDescription.Name = "ManufacturerDescription";
-            ManufacturerDescription.Size = new Size(769, 25);
-            ManufacturerDescription.TabIndex = 3;
-            ManufacturerDescription.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt";
+            OrderItemQuantity.AutoSize = true;
+            OrderItemQuantity.Font = new Font("Segoe UI", 14F);
+            OrderItemQuantity.ForeColor = Color.DarkGray;
+            OrderItemQuantity.Location = new Point(3, 39);
+            OrderItemQuantity.Name = "OrderItemQuantity";
+            OrderItemQuantity.Size = new Size(211, 25);
+            OrderItemQuantity.TabIndex = 7;
+            OrderItemQuantity.Text = "Quantidade de itens: 13";
             // 
-            // ManufacturerName
+            // OrderId
             // 
-            ManufacturerName.AutoSize = true;
-            ManufacturerName.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
-            ManufacturerName.Location = new Point(3, 2);
-            ManufacturerName.Name = "ManufacturerName";
-            ManufacturerName.Size = new Size(168, 37);
-            ManufacturerName.TabIndex = 2;
-            ManufacturerName.Text = "# 21231122";
+            OrderId.AutoSize = true;
+            OrderId.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            OrderId.Location = new Point(3, 2);
+            OrderId.Name = "OrderId";
+            OrderId.Size = new Size(168, 37);
+            OrderId.TabIndex = 2;
+            OrderId.Text = "# 21231122";
             // 
-            // label1
+            // PaymentMethod
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
-            label1.ForeColor = Color.Green;
-            label1.Location = new Point(833, 14);
-            label1.Name = "label1";
-            label1.Size = new Size(94, 25);
-            label1.TabIndex = 8;
-            label1.Text = "R$ 49,99 ";
+            PaymentMethod.AutoSize = true;
+            PaymentMethod.Font = new Font("Segoe UI", 14F);
+            PaymentMethod.ForeColor = Color.DarkGray;
+            PaymentMethod.Location = new Point(3, 64);
+            PaymentMethod.Name = "PaymentMethod";
+            PaymentMethod.Size = new Size(158, 25);
+            PaymentMethod.TabIndex = 9;
+            PaymentMethod.Text = "Cartão de crédito";
             // 
             // OrderCardControl
             // 
@@ -105,9 +105,10 @@
         #endregion
 
         private Panel ContentPanel;
-        private Label ManufacturerWebsite;
+        private Label OrderItemQuantity;
         private Label ManufacturerDescription;
-        private Label ManufacturerName;
-        private Label label1;
+        private Label OrderId;
+        private Label OrderPrice;
+        private Label PaymentMethod;
     }
 }

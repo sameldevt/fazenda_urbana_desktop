@@ -71,7 +71,6 @@
             OrdersList.Name = "OrdersList";
             OrdersList.Size = new Size(957, 558);
             OrdersList.TabIndex = 2;
-            OrdersList.Paint += flowLayoutPanel1_Paint;
             // 
             // OrdersControl
             // 

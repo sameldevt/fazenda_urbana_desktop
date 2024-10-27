@@ -1,4 +1,7 @@
-﻿using fazenda_verdeviva.UserControls.Dashboard.Messages;
+﻿using fazenda_verdeviva.Model.Entities;
+using fazenda_verdeviva.Services;
+using fazenda_verdeviva.UserControls.Dashboard.Employees;
+using fazenda_verdeviva.UserControls.Dashboard.Messages;
 using fazenda_verdeviva.UserControls.Dashboard.Orders;
 using System;
 using System.Collections.Generic;
@@ -19,7 +22,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard
         {
             InitializeComponent();
             OrdersList.AutoScroll = true;
-            AddOrdersCards();
+            LoadOrdersCards();
         }
 
         public static OrdersControl GetInstance()
@@ -32,34 +35,17 @@ namespace fazenda_verdeviva.UserControls.Dashboard
             return Instance;
         }
 
-        private void AddOrdersCards()
+        public async void LoadOrdersCards()
         {
-            // Simulando alguns produtos
-            string[,] products = new string[,]
+            List<Order> orders = await OrderService.GetAll();
+
+            orders.ForEach(async o =>
             {
-            { "Laptop", "$1000" },
-            { "Smartphone", "$700" },
-            { "Tablet", "$300" },
-            { "Tablet", "$300" },
-            { "Tablet", "$300" },
-            { "Tablet", "$300" },
-            { "Tablet", "$300" },
-            };
+                OrderCardControl orderCard = new OrderCardControl();
 
-            // Loop para criar e adicionar um card de produto para cada produto
-            for (int i = 0; i < products.GetLength(0); i++)
-            {
-                // Cria um novo card de produto usando o UserControl
-                OrderCardControl productCard = new OrderCardControl();
-
-                // Adiciona o card ao FlowLayoutPanel
-                OrdersList.Controls.Add(productCard);
-            }
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
+                orderCard.LoadCardInfo(o);
+                OrdersList.Controls.Add(orderCard);
+            });
         }
     }
 }

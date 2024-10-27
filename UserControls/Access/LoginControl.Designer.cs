@@ -34,7 +34,7 @@
             EmailInputBox = new TextBox();
             PasswordInputBox = new TextBox();
             PasswordInputLabel = new Label();
-            RequestAccessButton = new Button();
+            RegisterButton = new Button();
             ForgotPasswordLink = new LinkLabel();
             ((System.ComponentModel.ISupportInitialize)LogoImageBox).BeginInit();
             SuspendLayout();
@@ -92,15 +92,15 @@
             PasswordInputLabel.TabIndex = 5;
             PasswordInputLabel.Text = "Senha";
             // 
-            // RequestAccessButton
+            // RegisterButton
             // 
-            RequestAccessButton.Location = new Point(475, 583);
-            RequestAccessButton.Name = "RequestAccessButton";
-            RequestAccessButton.Size = new Size(250, 23);
-            RequestAccessButton.TabIndex = 6;
-            RequestAccessButton.Text = "Solicitar acesso";
-            RequestAccessButton.UseVisualStyleBackColor = true;
-            RequestAccessButton.Click += RequestAccessButton_Click;
+            RegisterButton.Location = new Point(475, 583);
+            RegisterButton.Name = "RegisterButton";
+            RegisterButton.Size = new Size(250, 23);
+            RegisterButton.TabIndex = 6;
+            RegisterButton.Text = "Cadastrar";
+            RegisterButton.UseVisualStyleBackColor = true;
+            RegisterButton.Click += RegisterButton_Click;
             // 
             // ForgotPasswordLink
             // 
@@ -112,6 +112,7 @@
             ForgotPasswordLink.TabIndex = 7;
             ForgotPasswordLink.TabStop = true;
             ForgotPasswordLink.Text = "Esqueci minha senha";
+            ForgotPasswordLink.LinkClicked += ForgotPasswordLink_LinkClicked;
             // 
             // LoginControl
             // 
@@ -119,7 +120,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             Controls.Add(ForgotPasswordLink);
-            Controls.Add(RequestAccessButton);
+            Controls.Add(RegisterButton);
             Controls.Add(PasswordInputLabel);
             Controls.Add(PasswordInputBox);
             Controls.Add(EmailInputBox);
@@ -141,7 +142,7 @@
         private TextBox EmailInputBox;
         private TextBox PasswordInputBox;
         private Label PasswordInputLabel;
-        private Button RequestAccessButton;
+        private Button RegisterButton;
         private LinkLabel ForgotPasswordLink;
     }
 }

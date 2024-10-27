@@ -1,4 +1,7 @@
 ﻿using fazenda_verdeviva.Model.Common;
+using fazenda_verdeviva.Model.Dto;
+using fazenda_verdeviva.Model.Entities;
+using Newtonsoft.Json;
 using System;
 using System.CodeDom;
 using System.Collections.Generic;
@@ -10,9 +13,9 @@ namespace fazenda_verdeviva.Services
 {
     internal class ClientService
     {
-        private readonly string ContextUrl = "clientes";
+        private static readonly string ContextUrl = "cliente";
 
-        public async Task GelAll()
+        public static async Task<List<Client>> GetAll()
         {
             string url = $"{Network.BaseUrl}/{ContextUrl}/buscar-todos";
 
@@ -21,57 +24,31 @@ namespace fazenda_verdeviva.Services
             if (response.IsSuccessStatusCode)
             {
                 string responseBody = await response.Content.ReadAsStringAsync();
-                Console.WriteLine(responseBody);
+
+                List<Client> clients = JsonConvert.DeserializeObject<List<Client>>(responseBody);
+
+                return clients;
             }
+
+            return null;
         }
 
-        public async Task GetById(int id)
+
+        public static async Task Update(Client client)
         {
-            string url = $"{Network.BaseUrl}/{ContextUrl}/buscar/{id}";
+            string url = $"{Network.BaseUrl}/{ContextUrl}/atualizar";
 
-            HttpResponseMessage response = await Network.HttpClient.GetAsync(url);
+            string json = JsonConvert.SerializeObject(client);
+            StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
 
-            if (response.IsSuccessStatusCode)
-            {
-                string responseBody = await response.Content.ReadAsStringAsync();
-                Console.WriteLine(responseBody);
-            }
+            await Network.HttpClient.PutAsync(url, content);
         }
 
-        public async Task GetByEmail(int id)
+        public static async Task Delete(int id)
         {
-            string url = $"{Network.BaseUrl}/{ContextUrl}/buscar/{id}";
+            string url = $"{Network.BaseUrl}/{ContextUrl}/remover/{id}";
 
-            HttpResponseMessage response = await Network.HttpClient.GetAsync(url);
-
-            if (response.IsSuccessStatusCode)
-            {
-                string responseBody = await response.Content.ReadAsStringAsync();
-                Console.WriteLine(responseBody);
-            }
-        }
-
-        public async Task Update(int id)
-        {
-            string url = $"{Network.BaseUrl}/{ContextUrl}/buscar/{id}";
-
-            HttpResponseMessage response = await Network.HttpClient.GetAsync(url);
-
-            if (response.IsSuccessStatusCode)
-            {
-                string responseBody = await response.Content.ReadAsStringAsync();
-                Console.WriteLine(responseBody);
-            }
-        }
-
-        public async Task Register()
-        {
- 
-        }
-
-        public async Task Delete(int id)
-        {
-            
+            await Network.HttpClient.DeleteAsync(url);
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using fazenda_verdeviva.Model.Entities;
+using fazenda_verdeviva.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,7 +19,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
         {
             InitializeComponent();
             ProductsList.AutoScroll = true;
-            AddProductCards();
+            LoadProductCards();
         }
 
         public static ProductListControl GetInstance()
@@ -29,35 +31,16 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
             return Instance;
         }
 
-        private void AddProductCards()
+        public async void LoadProductCards()
         {
-            // Simulando alguns produtos
-            string[,] products = new string[,]
-            {
-            { "Laptop", "$1000" },
-            { "Smartphone", "$700" },
-            { "Tablet", "$300" },
-            { "Tablet", "$300" },
-            { "Tablet", "$300" },
-            { "Tablet", "$300" },
-            { "Tablet", "$300" },
-            };
+            List<Product> products = await ProductService.GetAll();
 
-            // Loop para criar e adicionar um card de produto para cada produto
-            for (int i = 0; i < products.GetLength(0); i++)
-            {
-                // Cria um novo card de produto usando o UserControl
+            products.ForEach(async p => {
                 ProductCardControl productCard = new ProductCardControl();
 
-                // Adiciona o card ao FlowLayoutPanel
+                await productCard.LoadCardInfo(p);
                 ProductsList.Controls.Add(productCard);
-            }
-        }
-
-
-        private void ProductsList_Paint(object sender, PaintEventArgs e)
-        {
-
+            });
         }
     }
 }

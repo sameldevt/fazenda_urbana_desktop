@@ -14,51 +14,29 @@ namespace fazenda_verdeviva.UserControls.Dashboard
 {
     public partial class ClientControl : UserControl
     {
-        private static ClientControl? instance;
+        private static ClientControl? Instance;
         private ClientControl()
         {
             InitializeComponent();
-            ClientsList.AutoScroll = true;
-            AddClientCards();
+            Controls.Add(ContentPanel);
+            SetContentPanelControl(ClientListControl.GetInstance());
         }
 
         public static ClientControl GetInstance()
         {
-            if(instance == null)
+            if(Instance == null)
             {
-                instance = new ClientControl();
+                Instance = new ClientControl();
             }
-            return instance;
+            return Instance;
         }
 
-        private void AddClientCards()
+        public void SetContentPanelControl(UserControl control)
         {
-            // Simulando alguns produtos
-            string[,] products = new string[,]
-            {
-            { "Laptop", "$1000" },
-            { "Smartphone", "$700" },
-            { "Tablet", "$300" },
-            { "Tablet", "$300" },
-            { "Tablet", "$300" },
-            { "Tablet", "$300" },
-            { "Tablet", "$300" },
-            };
-
-            // Loop para criar e adicionar um card de produto para cada produto
-            for (int i = 0; i < products.GetLength(0); i++)
-            {
-                // Cria um novo card de produto usando o UserControl
-                ClientCardControl productCard = new ClientCardControl();
-
-                // Adiciona o card ao FlowLayoutPanel
-                ClientsList.Controls.Add(productCard);
-            }
-        }
-
-        private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
+            ContentPanel.Controls.Clear();
+            control.Dock = DockStyle.Fill;
+            ContentPanel.Controls.Add(control);
+            ContentPanel.PerformLayout();
         }
     }
 }
