@@ -30,16 +30,13 @@
         {
             panel1 = new Panel();
             Title = new Label();
-            pictureBox1 = new PictureBox();
-            MessagesList = new FlowLayoutPanel();
+            ContentPanel = new Panel();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.Controls.Add(Title);
-            panel1.Controls.Add(pictureBox1);
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
             panel1.Size = new Size(957, 59);
@@ -49,41 +46,29 @@
             // 
             Title.AutoSize = true;
             Title.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
-            Title.Location = new Point(68, 0);
+            Title.Location = new Point(0, 0);
             Title.Name = "Title";
             Title.Size = new Size(307, 37);
             Title.TabIndex = 5;
             Title.Text = "Mensagens de contato";
             // 
-            // pictureBox1
+            // ContentPanel
             // 
-            pictureBox1.Image = Properties.Resources.mini_logo;
-            pictureBox1.Location = new Point(3, 3);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(59, 53);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 4;
-            pictureBox1.TabStop = false;
-            // 
-            // MessagesList
-            // 
-            MessagesList.Location = new Point(3, 65);
-            MessagesList.Name = "MessagesList";
-            MessagesList.Size = new Size(957, 558);
-            MessagesList.TabIndex = 3;
-            MessagesList.Paint += flowLayoutPanel1_Paint;
+            ContentPanel.Location = new Point(3, 65);
+            ContentPanel.Name = "ContentPanel";
+            ContentPanel.Size = new Size(957, 558);
+            ContentPanel.TabIndex = 3;
             // 
             // ContactMessageControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(MessagesList);
+            Controls.Add(ContentPanel);
             Controls.Add(panel1);
             Name = "ContactMessageControl";
             Size = new Size(963, 626);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -91,7 +76,6 @@
 
         private Panel panel1;
         private Label Title;
-        private PictureBox pictureBox1;
-        private FlowLayoutPanel MessagesList;
+        private Panel ContentPanel;
     }
 }

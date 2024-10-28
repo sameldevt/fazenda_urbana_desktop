@@ -9,7 +9,7 @@ namespace fazenda_verdeviva.Model.Entities
 {
     public class Supplier : User
     {
-        [JsonProperty("cpnj")]
+        [JsonProperty("cnpj")]
         public string CNPJ { get; set; }
         
         [JsonProperty("website")]

@@ -38,7 +38,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
             products.ForEach(async p => {
                 ProductCardControl productCard = new ProductCardControl();
 
-                await productCard.LoadCardInfo(p);
+                productCard.LoadCardInfo(p);
                 ProductsList.Controls.Add(productCard);
             });
         }

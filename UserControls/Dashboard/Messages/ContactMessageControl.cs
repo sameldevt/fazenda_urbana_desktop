@@ -1,4 +1,5 @@
-﻿using fazenda_verdeviva.UserControls.Dashboard.Suppliers;
+﻿using fazenda_verdeviva.UserControls.Dashboard.Employees;
+using fazenda_verdeviva.UserControls.Dashboard.Suppliers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,8 +18,8 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Messages
         private ContactMessageControl()
         {
             InitializeComponent();
-            MessagesList.AutoScroll = true;
-            AddMessagesCards();
+            Controls.Add(ContentPanel);
+            SetContentPanelControl(ContactMessageListControl.GetInstance());
         }
 
         public static ContactMessageControl GetInstance()
@@ -31,34 +32,12 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Messages
             return Instance;
         }
 
-        private void AddMessagesCards()
+        public void SetContentPanelControl(UserControl control)
         {
-            // Simulando alguns produtos
-            string[,] products = new string[,]
-            {
-            { "Laptop", "$1000" },
-            { "Smartphone", "$700" },
-            { "Tablet", "$300" },
-            { "Tablet", "$300" },
-            { "Tablet", "$300" },
-            { "Tablet", "$300" },
-            { "Tablet", "$300" },
-            };
-
-            // Loop para criar e adicionar um card de produto para cada produto
-            for (int i = 0; i < products.GetLength(0); i++)
-            {
-                // Cria um novo card de produto usando o UserControl
-                ContactMessageCardControl productCard = new ContactMessageCardControl();
-
-                // Adiciona o card ao FlowLayoutPanel
-                MessagesList.Controls.Add(productCard);
-            }
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
+            ContentPanel.Controls.Clear();
+            control.Dock = DockStyle.Fill;
+            ContentPanel.Controls.Add(control);
+            ContentPanel.PerformLayout();
         }
     }
 }

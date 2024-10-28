@@ -34,6 +34,12 @@
     <Compile Update="UserControls\Dashboard\Employees\EmployeeListControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UserControls\Dashboard\Messages\ContactMessageListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\Dashboard\Products\ProductDetailsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UserControls\Dashboard\Suppliers\SupllierCardControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

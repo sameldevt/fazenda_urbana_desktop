@@ -1,6 +1,6 @@
-﻿namespace fazenda_verdeviva.UserControls.Dashboard.Employees
+﻿namespace fazenda_verdeviva.UserControls.Dashboard.Messages
 {
-    partial class EmployeeListControl
+    partial class ContactMessageListControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,27 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            EmployeesList = new FlowLayoutPanel();
+            MessagesList = new FlowLayoutPanel();
             SuspendLayout();
             // 
-            // EmployeesList
+            // MessagesList
             // 
-            EmployeesList.Location = new Point(3, 3);
-            EmployeesList.Name = "EmployeesList";
-            EmployeesList.Size = new Size(954, 552);
-            EmployeesList.TabIndex = 6;
+            MessagesList.Location = new Point(3, 3);
+            MessagesList.Name = "MessagesList";
+            MessagesList.Size = new Size(951, 552);
+            MessagesList.TabIndex = 0;
             // 
-            // EmployeeListControl
+            // ContactMessageListControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(EmployeesList);
-            Name = "EmployeeListControl";
-            Size = new Size(960, 558);
+            Controls.Add(MessagesList);
+            Name = "ContactMessageListControl";
+            Size = new Size(957, 558);
             ResumeLayout(false);
         }
 
         #endregion
-        public FlowLayoutPanel EmployeesList;
+
+        private FlowLayoutPanel MessagesList;
     }
 }

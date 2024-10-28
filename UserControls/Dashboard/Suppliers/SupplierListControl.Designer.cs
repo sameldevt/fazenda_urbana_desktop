@@ -28,98 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
-            FilterLabel = new Label();
-            FilterProductComboBox = new ComboBox();
-            SearchButton = new Button();
-            SearchProductTextBox = new TextBox();
-            SearchProductLabel = new Label();
             SupplierList = new FlowLayoutPanel();
-            panel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.Controls.Add(FilterLabel);
-            panel1.Controls.Add(FilterProductComboBox);
-            panel1.Controls.Add(SearchButton);
-            panel1.Controls.Add(SearchProductTextBox);
-            panel1.Controls.Add(SearchProductLabel);
-            panel1.Location = new Point(-2, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(960, 59);
-            panel1.TabIndex = 5;
-            // 
-            // FilterLabel
-            // 
-            FilterLabel.AutoSize = true;
-            FilterLabel.Location = new Point(245, 14);
-            FilterLabel.Name = "FilterLabel";
-            FilterLabel.Size = new Size(37, 15);
-            FilterLabel.TabIndex = 9;
-            FilterLabel.Text = "Filtrar";
-            // 
-            // FilterProductComboBox
-            // 
-            FilterProductComboBox.FormattingEnabled = true;
-            FilterProductComboBox.Location = new Point(245, 32);
-            FilterProductComboBox.Name = "FilterProductComboBox";
-            FilterProductComboBox.Size = new Size(169, 23);
-            FilterProductComboBox.TabIndex = 8;
-            // 
-            // SearchButton
-            // 
-            SearchButton.Image = Properties.Resources.search_icon;
-            SearchButton.Location = new Point(181, 32);
-            SearchButton.Name = "SearchButton";
-            SearchButton.Size = new Size(34, 23);
-            SearchButton.TabIndex = 7;
-            SearchButton.UseVisualStyleBackColor = true;
-            // 
-            // SearchProductTextBox
-            // 
-            SearchProductTextBox.Location = new Point(6, 33);
-            SearchProductTextBox.Name = "SearchProductTextBox";
-            SearchProductTextBox.Size = new Size(169, 23);
-            SearchProductTextBox.TabIndex = 6;
-            // 
-            // SearchProductLabel
-            // 
-            SearchProductLabel.AutoSize = true;
-            SearchProductLabel.Location = new Point(6, 15);
-            SearchProductLabel.Name = "SearchProductLabel";
-            SearchProductLabel.Size = new Size(42, 15);
-            SearchProductLabel.TabIndex = 5;
-            SearchProductLabel.Text = "Buscar";
             // 
             // SupplierList
             // 
-            SupplierList.Location = new Point(-2, 62);
+            SupplierList.Location = new Point(3, 3);
             SupplierList.Name = "SupplierList";
-            SupplierList.Size = new Size(954, 496);
+            SupplierList.Size = new Size(949, 552);
             SupplierList.TabIndex = 4;
             // 
             // SupplierListControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(panel1);
             Controls.Add(SupplierList);
             Name = "SupplierListControl";
             Size = new Size(957, 558);
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private Panel panel1;
-        private Label FilterLabel;
-        private ComboBox FilterProductComboBox;
-        private Button SearchButton;
-        private TextBox SearchProductTextBox;
-        private Label SearchProductLabel;
         public FlowLayoutPanel SupplierList;
     }
 }

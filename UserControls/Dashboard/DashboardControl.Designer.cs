@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardControl));
             ContentPanel = new Panel();
             TopBar = new Panel();
             label3 = new Label();
@@ -36,12 +37,12 @@
             pictureBox1 = new PictureBox();
             CompanyLogo = new Label();
             NavPanel = new Panel();
+            EmployeesButton = new Button();
             MessagesButton = new Button();
             ClientsButton = new Button();
             OrdersButton = new Button();
             ManufacturerButton = new Button();
             ProductsButton = new Button();
-            EmployeesButton = new Button();
             TopBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             NavPanel.SuspendLayout();
@@ -81,7 +82,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(95, 36);
+            label1.Location = new Point(127, 40);
             label1.Name = "label1";
             label1.Size = new Size(143, 15);
             label1.TabIndex = 3;
@@ -98,10 +99,10 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.mini_logo;
-            pictureBox1.Location = new Point(30, 3);
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(3, 3);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(56, 56);
+            pictureBox1.Size = new Size(118, 56);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
@@ -110,7 +111,7 @@
             // 
             CompanyLogo.AutoSize = true;
             CompanyLogo.Font = new Font("Segoe UI", 20F);
-            CompanyLogo.Location = new Point(87, 3);
+            CompanyLogo.Location = new Point(127, 3);
             CompanyLogo.Name = "CompanyLogo";
             CompanyLogo.Size = new Size(132, 37);
             CompanyLogo.TabIndex = 1;
@@ -128,6 +129,16 @@
             NavPanel.Name = "NavPanel";
             NavPanel.Size = new Size(225, 626);
             NavPanel.TabIndex = 2;
+            // 
+            // EmployeesButton
+            // 
+            EmployeesButton.Location = new Point(3, 201);
+            EmployeesButton.Name = "EmployeesButton";
+            EmployeesButton.Size = new Size(219, 44);
+            EmployeesButton.TabIndex = 5;
+            EmployeesButton.Text = "Funcionarios";
+            EmployeesButton.UseVisualStyleBackColor = true;
+            EmployeesButton.Click += EmployeesButton_Click;
             // 
             // MessagesButton
             // 
@@ -178,16 +189,6 @@
             ProductsButton.Text = "Produtos";
             ProductsButton.UseVisualStyleBackColor = true;
             ProductsButton.Click += ProductsButton_Click;
-            // 
-            // EmployeesButton
-            // 
-            EmployeesButton.Location = new Point(3, 201);
-            EmployeesButton.Name = "EmployeesButton";
-            EmployeesButton.Size = new Size(219, 44);
-            EmployeesButton.TabIndex = 5;
-            EmployeesButton.Text = "Funcionarios";
-            EmployeesButton.UseVisualStyleBackColor = true;
-            EmployeesButton.Click += EmployeesButton_Click;
             // 
             // DashboardControl
             // 

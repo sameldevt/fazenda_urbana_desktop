@@ -129,3 +129,6 @@ C:\dev\workspace\vs\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verd
 C:\dev\workspace\vs\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Suppliers.SupllierCardControl.resources
 C:\dev\workspace\vs\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Suppliers.SupplierControl.resources
 C:\dev\workspace\vs\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Suppliers.SupplierListControl.resources
+C:\dev\workspace\vs\fazenda_urbana_desktop\bin\Debug\net8.0-windows\Assets\image-not-found.png
+C:\dev\workspace\vs\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Messages.ContactMessageListControl.resources
+C:\dev\workspace\vs\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Products.ProductDetailsControl.resources

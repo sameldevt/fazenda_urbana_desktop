@@ -30,16 +30,13 @@
         {
             panel1 = new Panel();
             label1 = new Label();
-            pictureBox1 = new PictureBox();
             ContentPanel = new Panel();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(pictureBox1);
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
             panel1.Size = new Size(957, 59);
@@ -49,21 +46,11 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
-            label1.Location = new Point(68, 3);
+            label1.Location = new Point(0, 0);
             label1.Name = "label1";
             label1.Size = new Size(190, 37);
             label1.TabIndex = 5;
             label1.Text = "Fornecedores";
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.mini_logo;
-            pictureBox1.Location = new Point(3, 3);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(59, 53);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 4;
-            pictureBox1.TabStop = false;
             // 
             // ContentPanel
             // 
@@ -82,14 +69,12 @@
             Size = new Size(963, 626);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panel1;
-        private PictureBox pictureBox1;
         private Label label1;
         private Panel ContentPanel;
     }

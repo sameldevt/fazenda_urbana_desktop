@@ -1,37 +1,49 @@
-﻿using fazenda_verdeviva.Model.Common;
-using fazenda_verdeviva.Model.Entities;
-using fazenda_verdeviva.Services;
+﻿using fazenda_verdeviva.Model.Entities;
 using SkiaSharp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.ComponentModel.Design;
 using System.Data;
 using System.Drawing;
-using System.Formats.Asn1;
 using System.Linq;
-using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace fazenda_verdeviva.UserControls.Dashboard.Products
 {
-    public partial class ProductCardControl : UserControl
+    public partial class ProductDetailsControl : UserControl
     {
-        private Product? Product;
-        public ProductCardControl()
+        public static ProductDetailsControl? Instance;
+        public ProductDetailsControl()
         {
             InitializeComponent();
         }
-        public void LoadCardInfo(Product product)
+
+        public static ProductDetailsControl GetInstance()
         {
-            this.Product = product;
+            if (Instance == null)
+            {
+                Instance = new ProductDetailsControl();
+            }
+            return Instance;
+        }
+
+        public void LoadProductInfo(Product product)
+        {
             ProductName.Text = product.Name;
             ProductDescription.Text = product.Description;
             ProductQuantity.Text = $"{product.StockQuantity.ToString()} kg";
             ProductPrice.Text = $"R$ {product.WeightPrice.ToString()}";
-            ProductSupplier.Text = product.Supplier.Name;
+            ProductCategory.Text = product.Category.Name;
+            ProductCalories.Text = $"{product.NutritionalInfo.Calories.ToString()} g";
+            ProductCarbs.Text = $"{product.NutritionalInfo.Carbohydrates.ToString()} g";
+            ProductProteins.Text = $"{product.NutritionalInfo.Proteins.ToString()} g";
+            ProductFibers.Text = $"{product.NutritionalInfo.Fibers.ToString()} g";
+            ProductFats.Text = $"{product.NutritionalInfo.Fats.ToString()} g"; 
+            SupplierName.Text = product.Supplier.Name;
+            SupplierEmail.Text = product.Supplier.Contact?.Email ?? "E-mail não cadastrado";
+            SupplierCnpj.Text = product.Supplier.CNPJ ?? "CPNJ não cadastrado";
             LoadProductImage(product);
         }
 
@@ -66,24 +78,9 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
             }
         }
 
-        private async void DeleteButton_Click(object sender, EventArgs e)
+        private void BackButton_Click(object sender, EventArgs e)
         {
-            await ProductService.Delete(Product!.Id);
-            ProductListControl.GetInstance().ProductsList.Controls.Remove(this);
-        }
-
-        private void EditButton_Click(object sender, EventArgs e)
-        {
-            var editProductControlInstance = EditProductControl.GetInstance();
-            editProductControlInstance.LoadProductInfo(Product);
-            ProductsControl.GetInstance().SetContentPanelControl(editProductControlInstance);
-        }
-
-        private void ProductDetails_Click(object sender, EventArgs e)
-        {
-            var productDetailsControlInstance = ProductDetailsControl.GetInstance();
-            productDetailsControlInstance.LoadProductInfo(Product);
-            ProductsControl.GetInstance().SetContentPanelControl(productDetailsControlInstance);
+            ProductsControl.GetInstance().SetContentPanelControl(ProductListControl.GetInstance());
         }
     }
 }

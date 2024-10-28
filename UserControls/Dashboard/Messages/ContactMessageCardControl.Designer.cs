@@ -29,36 +29,49 @@
         private void InitializeComponent()
         {
             ContentPanel = new Panel();
-            ContactEmail = new Label();
+            MessageDate = new Label();
+            UserEmail = new Label();
             EditButton = new Button();
             DeleteButton = new Button();
+            UserName = new Label();
             MessageContent = new Label();
-            MessageCode = new Label();
             ContentPanel.SuspendLayout();
             SuspendLayout();
             // 
             // ContentPanel
             // 
-            ContentPanel.Controls.Add(ContactEmail);
+            ContentPanel.Controls.Add(MessageDate);
+            ContentPanel.Controls.Add(UserEmail);
             ContentPanel.Controls.Add(EditButton);
             ContentPanel.Controls.Add(DeleteButton);
+            ContentPanel.Controls.Add(UserName);
             ContentPanel.Controls.Add(MessageContent);
-            ContentPanel.Controls.Add(MessageCode);
             ContentPanel.Location = new Point(3, 3);
             ContentPanel.Name = "ContentPanel";
             ContentPanel.Size = new Size(940, 104);
             ContentPanel.TabIndex = 1;
             // 
-            // ContactEmail
+            // MessageDate
             // 
-            ContactEmail.AutoSize = true;
-            ContactEmail.Font = new Font("Segoe UI", 14F);
-            ContactEmail.ForeColor = Color.DarkGray;
-            ContactEmail.Location = new Point(0, 37);
-            ContactEmail.Name = "ContactEmail";
-            ContactEmail.Size = new Size(162, 25);
-            ContactEmail.TabIndex = 7;
-            ContactEmail.Text = "email@email.com";
+            MessageDate.AutoSize = true;
+            MessageDate.Font = new Font("Segoe UI", 10F);
+            MessageDate.ForeColor = Color.DarkGray;
+            MessageDate.Location = new Point(818, 79);
+            MessageDate.Name = "MessageDate";
+            MessageDate.Size = new Size(115, 19);
+            MessageDate.TabIndex = 8;
+            MessageDate.Text = "email@email.com";
+            // 
+            // UserEmail
+            // 
+            UserEmail.AutoSize = true;
+            UserEmail.Font = new Font("Segoe UI", 10F);
+            UserEmail.ForeColor = Color.DarkGray;
+            UserEmail.Location = new Point(4, 79);
+            UserEmail.Name = "UserEmail";
+            UserEmail.Size = new Size(115, 19);
+            UserEmail.TabIndex = 7;
+            UserEmail.Text = "email@email.com";
             // 
             // EditButton
             // 
@@ -78,26 +91,26 @@
             DeleteButton.Text = "Excluir";
             DeleteButton.UseVisualStyleBackColor = true;
             // 
+            // UserName
+            // 
+            UserName.AutoSize = true;
+            UserName.Font = new Font("Segoe UI", 14F);
+            UserName.ForeColor = Color.DarkGray;
+            UserName.Location = new Point(5, 54);
+            UserName.Name = "UserName";
+            UserName.Size = new Size(769, 25);
+            UserName.TabIndex = 3;
+            UserName.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt";
+            // 
             // MessageContent
             // 
             MessageContent.AutoSize = true;
-            MessageContent.Font = new Font("Segoe UI", 14F);
-            MessageContent.ForeColor = Color.DarkGray;
-            MessageContent.Location = new Point(0, 62);
+            MessageContent.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            MessageContent.Location = new Point(5, 11);
             MessageContent.Name = "MessageContent";
-            MessageContent.Size = new Size(769, 25);
-            MessageContent.TabIndex = 3;
-            MessageContent.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt";
-            // 
-            // MessageCode
-            // 
-            MessageCode.AutoSize = true;
-            MessageCode.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
-            MessageCode.Location = new Point(0, 0);
-            MessageCode.Name = "MessageCode";
-            MessageCode.Size = new Size(168, 37);
-            MessageCode.TabIndex = 2;
-            MessageCode.Text = "# 12312312";
+            MessageContent.Size = new Size(95, 21);
+            MessageContent.TabIndex = 2;
+            MessageContent.Text = "# 12312312";
             // 
             // ContactMessageCardControl
             // 
@@ -114,10 +127,11 @@
         #endregion
 
         private Panel ContentPanel;
-        private Label ContactEmail;
+        private Label UserEmail;
         private Button EditButton;
         private Button DeleteButton;
+        private Label UserName;
         private Label MessageContent;
-        private Label MessageCode;
+        private Label MessageDate;
     }
 }
