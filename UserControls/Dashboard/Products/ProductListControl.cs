@@ -15,6 +15,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
     public partial class ProductListControl : UserControl
     {
         private static ProductListControl? Instance;
+
         private ProductListControl()
         {
             InitializeComponent();

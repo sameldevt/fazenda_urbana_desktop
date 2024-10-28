@@ -1,4 +1,5 @@
 ﻿using fazenda_verdeviva.UserControls.Dashboard.Clients;
+using fazenda_verdeviva.UserControls.Dashboard.Products;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,6 +43,12 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Suppliers
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void RegisterButton_Click(object sender, EventArgs e)
+        {
+            RegisterButton.Enabled = false;
+            SetContentPanelControl(RegisterSupplierControl.GetInstance());
         }
     }
 }

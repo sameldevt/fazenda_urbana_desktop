@@ -1,6 +1,8 @@
 ﻿using fazenda_verdeviva.Forms;
+using fazenda_verdeviva.Model.Entities;
 using fazenda_verdeviva.Services;
 using fazenda_verdeviva.UserControls.Access;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +20,15 @@ namespace fazenda_verdeviva.UserControls
         public LoginControl()
         {
             InitializeComponent();
+
+            var employee = LoadEmployeeInfo();
+
+            if (employee != null)
+            {
+                var dashboardControl = DashboardControl.GetInstance();
+                dashboardControl.SetOperator(employee);
+                MainForm.GetInstance().SetContentPanelControl(dashboardControl);
+            }
         }
 
         private async void LoginButton_Click(object sender, EventArgs e)
@@ -25,10 +36,35 @@ namespace fazenda_verdeviva.UserControls
             var email = EmailInputLabel.Text;
             var password = PasswordInputLabel.Text;
 
-            //await AccessService.Login(email, password);
+            //var employee = await AccessService.Login(email, password);
 
-            MainForm mainForm = MainForm.GetInstance();
-            mainForm.SetContentPanelControl(DashboardControl.GetInstance());
+            //SaveEmployeeInfo(employee);
+
+            var dashboardControl = DashboardControl.GetInstance();
+            //dashboardControl.SetOperator(employee);
+            MainForm.GetInstance().SetContentPanelControl(dashboardControl);
+        }
+
+        private void SaveEmployeeInfo(Employee employee)
+        {
+            Directory.CreateDirectory("Operator");
+            string jsonString = JsonConvert.SerializeObject(employee, Formatting.Indented);
+            File.WriteAllText("Operator/employee.json", jsonString);
+        }
+
+        private Employee LoadEmployeeInfo()
+        {
+            if (File.Exists("Operator/employee.json"))
+            {
+                string jsonString = File.ReadAllText("Operator/employee.json");
+                Employee employee = JsonConvert.DeserializeObject<Employee>(jsonString);
+
+                return employee;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         private void RegisterButton_Click(object sender, EventArgs e)

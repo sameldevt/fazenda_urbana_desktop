@@ -1,4 +1,5 @@
 ﻿using fazenda_verdeviva.Model.Entities;
+using fazenda_verdeviva.UserControls.Dashboard.Products;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,10 +12,11 @@ using System.Windows.Forms;
 
 namespace fazenda_verdeviva.UserControls.Dashboard.Suppliers
 {
-    public partial class SupllierCardControl : UserControl
+    public partial class SupplierCardControl : UserControl
     {
         private Supplier? Supplier;
-        public SupllierCardControl()
+
+        public SupplierCardControl()
         {
             InitializeComponent();
         }
@@ -24,7 +26,19 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Suppliers
             this.Supplier = supplier;
             SupplierName.Text = supplier.Name;
             SupplierWebsite.Text = supplier.Website;
-            SupllierCnoj.Text = supplier.CNPJ;
+            SupllierCnpj.Text = supplier.CNPJ;
+        }
+
+        private void ContentPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Details_Click(object sender, EventArgs e)
+        {
+            var editSupplierControl = EditSupplierControl.GetInstance();
+            editSupplierControl.LoadSupplier(Supplier);
+            SupplierControl.GetInstance().SetContentPanelControl(editSupplierControl);
         }
     }
 }

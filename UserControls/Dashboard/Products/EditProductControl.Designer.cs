@@ -28,123 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ProductFibersTextBox = new TextBox();
-            ProductFatsTextBox = new TextBox();
-            FibersLabel = new Label();
-            ProductProteinsTextBox = new TextBox();
-            CaloriesLabel = new Label();
-            ProductCarbsTextBox = new TextBox();
-            ProductCaloriesTextBox = new TextBox();
-            CarbsLabel = new Label();
-            FatsLabel = new Label();
-            ProteinsLabel = new Label();
-            ImageLinkLabel = new Label();
             SaveButton = new Button();
             BackButton = new Button();
+            EditProductLabel = new Label();
+            label11 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label23 = new Label();
+            label10 = new Label();
+            label9 = new Label();
+            label8 = new Label();
+            label7 = new Label();
+            label6 = new Label();
+            label1 = new Label();
+            ProductImage = new PictureBox();
+            ProductFibersTextBox = new TextBox();
+            ProductFatsTextBox = new TextBox();
+            ProductProteinsTextBox = new TextBox();
+            ProductCarbsTextBox = new TextBox();
+            ProductCaloriesTextBox = new TextBox();
+            ImageLinkLabel = new Label();
             ProductImageUrlTextBox = new TextBox();
             ProductQuantityTextBox = new TextBox();
             ProductPriceTextBox = new TextBox();
             ProductDescriptionTextBox = new TextBox();
             ProductNameTextBox = new TextBox();
-            EditProductLabel = new Label();
-            ManufacturerComboBox = new ComboBox();
+            SupplierComboBox = new ComboBox();
             ManufacturerLabel = new Label();
-            CategoryLabel = new Label();
             CategoryComboBox = new ComboBox();
-            ProductQuantityLabel = new Label();
-            ProductValueLabel = new Label();
-            ProductDescriptionLabel = new Label();
-            ProductNameLabel = new Label();
+            ((System.ComponentModel.ISupportInitialize)ProductImage).BeginInit();
             SuspendLayout();
-            // 
-            // ProductFibersTextBox
-            // 
-            ProductFibersTextBox.Location = new Point(350, 410);
-            ProductFibersTextBox.Name = "ProductFibersTextBox";
-            ProductFibersTextBox.Size = new Size(190, 23);
-            ProductFibersTextBox.TabIndex = 77;
-            // 
-            // ProductFatsTextBox
-            // 
-            ProductFatsTextBox.Location = new Point(576, 336);
-            ProductFatsTextBox.Name = "ProductFatsTextBox";
-            ProductFatsTextBox.Size = new Size(190, 23);
-            ProductFatsTextBox.TabIndex = 78;
-            // 
-            // FibersLabel
-            // 
-            FibersLabel.AutoSize = true;
-            FibersLabel.Location = new Point(350, 392);
-            FibersLabel.Name = "FibersLabel";
-            FibersLabel.Size = new Size(38, 15);
-            FibersLabel.TabIndex = 72;
-            FibersLabel.Text = "Fibras";
-            // 
-            // ProductProteinsTextBox
-            // 
-            ProductProteinsTextBox.Location = new Point(127, 410);
-            ProductProteinsTextBox.Name = "ProductProteinsTextBox";
-            ProductProteinsTextBox.Size = new Size(190, 23);
-            ProductProteinsTextBox.TabIndex = 75;
-            // 
-            // CaloriesLabel
-            // 
-            CaloriesLabel.AutoSize = true;
-            CaloriesLabel.Location = new Point(127, 318);
-            CaloriesLabel.Name = "CaloriesLabel";
-            CaloriesLabel.Size = new Size(49, 15);
-            CaloriesLabel.TabIndex = 69;
-            CaloriesLabel.Text = "Calorias";
-            // 
-            // ProductCarbsTextBox
-            // 
-            ProductCarbsTextBox.Location = new Point(350, 336);
-            ProductCarbsTextBox.Name = "ProductCarbsTextBox";
-            ProductCarbsTextBox.Size = new Size(190, 23);
-            ProductCarbsTextBox.TabIndex = 76;
-            // 
-            // ProductCaloriesTextBox
-            // 
-            ProductCaloriesTextBox.Location = new Point(127, 336);
-            ProductCaloriesTextBox.Name = "ProductCaloriesTextBox";
-            ProductCaloriesTextBox.Size = new Size(190, 23);
-            ProductCaloriesTextBox.TabIndex = 74;
-            // 
-            // CarbsLabel
-            // 
-            CarbsLabel.AutoSize = true;
-            CarbsLabel.Location = new Point(350, 318);
-            CarbsLabel.Name = "CarbsLabel";
-            CarbsLabel.Size = new Size(75, 15);
-            CarbsLabel.TabIndex = 71;
-            CarbsLabel.Text = "Carboidratos";
-            // 
-            // FatsLabel
-            // 
-            FatsLabel.AutoSize = true;
-            FatsLabel.Location = new Point(576, 318);
-            FatsLabel.Name = "FatsLabel";
-            FatsLabel.Size = new Size(55, 15);
-            FatsLabel.TabIndex = 73;
-            FatsLabel.Text = "Gorduras";
-            // 
-            // ProteinsLabel
-            // 
-            ProteinsLabel.AutoSize = true;
-            ProteinsLabel.Location = new Point(127, 392);
-            ProteinsLabel.Name = "ProteinsLabel";
-            ProteinsLabel.Size = new Size(56, 15);
-            ProteinsLabel.TabIndex = 70;
-            ProteinsLabel.Text = "Proteinas";
-            // 
-            // ImageLinkLabel
-            // 
-            ImageLinkLabel.AutoSize = true;
-            ImageLinkLabel.Location = new Point(127, 231);
-            ImageLinkLabel.Name = "ImageLinkLabel";
-            ImageLinkLabel.Size = new Size(91, 15);
-            ImageLinkLabel.TabIndex = 65;
-            ImageLinkLabel.Text = "URL da imagem";
             // 
             // SaveButton
             // 
@@ -166,189 +81,326 @@
             BackButton.UseVisualStyleBackColor = true;
             BackButton.Click += BackButton_Click;
             // 
-            // ProductImageUrlTextBox
-            // 
-            ProductImageUrlTextBox.Location = new Point(127, 249);
-            ProductImageUrlTextBox.Name = "ProductImageUrlTextBox";
-            ProductImageUrlTextBox.Size = new Size(190, 23);
-            ProductImageUrlTextBox.TabIndex = 66;
-            // 
-            // ProductQuantityTextBox
-            // 
-            ProductQuantityTextBox.Location = new Point(350, 182);
-            ProductQuantityTextBox.Name = "ProductQuantityTextBox";
-            ProductQuantityTextBox.Size = new Size(190, 23);
-            ProductQuantityTextBox.TabIndex = 64;
-            // 
-            // ProductPriceTextBox
-            // 
-            ProductPriceTextBox.Location = new Point(350, 121);
-            ProductPriceTextBox.Name = "ProductPriceTextBox";
-            ProductPriceTextBox.Size = new Size(190, 23);
-            ProductPriceTextBox.TabIndex = 63;
-            // 
-            // ProductDescriptionTextBox
-            // 
-            ProductDescriptionTextBox.Location = new Point(127, 182);
-            ProductDescriptionTextBox.Multiline = true;
-            ProductDescriptionTextBox.Name = "ProductDescriptionTextBox";
-            ProductDescriptionTextBox.Size = new Size(190, 23);
-            ProductDescriptionTextBox.TabIndex = 62;
-            // 
-            // ProductNameTextBox
-            // 
-            ProductNameTextBox.Location = new Point(127, 121);
-            ProductNameTextBox.Name = "ProductNameTextBox";
-            ProductNameTextBox.Size = new Size(190, 23);
-            ProductNameTextBox.TabIndex = 61;
-            // 
             // EditProductLabel
             // 
             EditProductLabel.AutoSize = true;
             EditProductLabel.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
-            EditProductLabel.Location = new Point(30, 39);
+            EditProductLabel.Location = new Point(28, 19);
             EditProductLabel.Name = "EditProductLabel";
             EditProductLabel.Size = new Size(206, 37);
             EditProductLabel.TabIndex = 60;
             EditProductLabel.Text = "Editar produto";
             // 
-            // ManufacturerComboBox
+            // label11
             // 
-            ManufacturerComboBox.FormattingEnabled = true;
-            ManufacturerComboBox.Items.AddRange(new object[] { "Empresa 1", "Empresa 2", "Empresa 3" });
-            ManufacturerComboBox.Location = new Point(576, 182);
-            ManufacturerComboBox.Name = "ManufacturerComboBox";
-            ManufacturerComboBox.Size = new Size(190, 23);
-            ManufacturerComboBox.TabIndex = 59;
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            label11.Location = new Point(218, 79);
+            label11.Name = "label11";
+            label11.Size = new Size(123, 25);
+            label11.TabIndex = 152;
+            label11.Text = "Informações";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 12F);
+            label5.Location = new Point(220, 252);
+            label5.Name = "label5";
+            label5.Size = new Size(176, 21);
+            label5.TabIndex = 144;
+            label5.Text = "Quantidade em estoque";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F);
+            label4.Location = new Point(220, 302);
+            label4.Name = "label4";
+            label4.Size = new Size(77, 21);
+            label4.TabIndex = 143;
+            label4.Text = "Categoria";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F);
+            label3.Location = new Point(220, 204);
+            label3.Name = "label3";
+            label3.Size = new Size(113, 21);
+            label3.TabIndex = 151;
+            label3.Text = "Valor por quilo";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F);
+            label2.Location = new Point(218, 154);
+            label2.Name = "label2";
+            label2.Size = new Size(77, 21);
+            label2.TabIndex = 142;
+            label2.Text = "Descricao";
+            // 
+            // label23
+            // 
+            label23.AutoSize = true;
+            label23.Font = new Font("Segoe UI", 12F);
+            label23.Location = new Point(220, 104);
+            label23.Name = "label23";
+            label23.Size = new Size(53, 21);
+            label23.TabIndex = 150;
+            label23.Text = "Nome";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 12F);
+            label10.Location = new Point(451, 302);
+            label10.Name = "label10";
+            label10.Size = new Size(75, 21);
+            label10.TabIndex = 149;
+            label10.Text = "Gorduras";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 12F);
+            label9.Location = new Point(451, 252);
+            label9.Name = "label9";
+            label9.Size = new Size(52, 21);
+            label9.TabIndex = 148;
+            label9.Text = "Fibras";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 12F);
+            label8.Location = new Point(451, 204);
+            label8.Name = "label8";
+            label8.Size = new Size(75, 21);
+            label8.TabIndex = 147;
+            label8.Text = "Proteinas";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 12F);
+            label7.Location = new Point(451, 154);
+            label7.Name = "label7";
+            label7.Size = new Size(100, 21);
+            label7.TabIndex = 146;
+            label7.Text = "Carboidratos";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 12F);
+            label6.Location = new Point(451, 104);
+            label6.Name = "label6";
+            label6.Size = new Size(66, 21);
+            label6.TabIndex = 145;
+            label6.Text = "Calorias";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            label1.Location = new Point(451, 79);
+            label1.Name = "label1";
+            label1.Size = new Size(170, 25);
+            label1.TabIndex = 141;
+            label1.Text = "Tabela nutricional";
+            // 
+            // ProductImage
+            // 
+            ProductImage.InitialImage = null;
+            ProductImage.Location = new Point(30, 79);
+            ProductImage.Name = "ProductImage";
+            ProductImage.Size = new Size(150, 150);
+            ProductImage.SizeMode = PictureBoxSizeMode.Zoom;
+            ProductImage.TabIndex = 140;
+            ProductImage.TabStop = false;
+            // 
+            // ProductFibersTextBox
+            // 
+            ProductFibersTextBox.Location = new Point(451, 276);
+            ProductFibersTextBox.Name = "ProductFibersTextBox";
+            ProductFibersTextBox.Size = new Size(190, 23);
+            ProductFibersTextBox.TabIndex = 138;
+            // 
+            // ProductFatsTextBox
+            // 
+            ProductFatsTextBox.Location = new Point(451, 326);
+            ProductFatsTextBox.Name = "ProductFatsTextBox";
+            ProductFatsTextBox.Size = new Size(190, 23);
+            ProductFatsTextBox.TabIndex = 139;
+            // 
+            // ProductProteinsTextBox
+            // 
+            ProductProteinsTextBox.Location = new Point(451, 226);
+            ProductProteinsTextBox.Name = "ProductProteinsTextBox";
+            ProductProteinsTextBox.Size = new Size(190, 23);
+            ProductProteinsTextBox.TabIndex = 136;
+            // 
+            // ProductCarbsTextBox
+            // 
+            ProductCarbsTextBox.Location = new Point(451, 178);
+            ProductCarbsTextBox.Name = "ProductCarbsTextBox";
+            ProductCarbsTextBox.Size = new Size(190, 23);
+            ProductCarbsTextBox.TabIndex = 137;
+            // 
+            // ProductCaloriesTextBox
+            // 
+            ProductCaloriesTextBox.Location = new Point(451, 128);
+            ProductCaloriesTextBox.Name = "ProductCaloriesTextBox";
+            ProductCaloriesTextBox.Size = new Size(190, 23);
+            ProductCaloriesTextBox.TabIndex = 135;
+            // 
+            // ImageLinkLabel
+            // 
+            ImageLinkLabel.AutoSize = true;
+            ImageLinkLabel.Font = new Font("Segoe UI", 12F);
+            ImageLinkLabel.Location = new Point(220, 402);
+            ImageLinkLabel.Name = "ImageLinkLabel";
+            ImageLinkLabel.Size = new Size(121, 21);
+            ImageLinkLabel.TabIndex = 133;
+            ImageLinkLabel.Text = "URL da imagem";
+            // 
+            // ProductImageUrlTextBox
+            // 
+            ProductImageUrlTextBox.Location = new Point(220, 426);
+            ProductImageUrlTextBox.Name = "ProductImageUrlTextBox";
+            ProductImageUrlTextBox.Size = new Size(190, 23);
+            ProductImageUrlTextBox.TabIndex = 134;
+            // 
+            // ProductQuantityTextBox
+            // 
+            ProductQuantityTextBox.Location = new Point(220, 276);
+            ProductQuantityTextBox.Name = "ProductQuantityTextBox";
+            ProductQuantityTextBox.Size = new Size(190, 23);
+            ProductQuantityTextBox.TabIndex = 132;
+            // 
+            // ProductPriceTextBox
+            // 
+            ProductPriceTextBox.Location = new Point(220, 226);
+            ProductPriceTextBox.Name = "ProductPriceTextBox";
+            ProductPriceTextBox.Size = new Size(190, 23);
+            ProductPriceTextBox.TabIndex = 131;
+            // 
+            // ProductDescriptionTextBox
+            // 
+            ProductDescriptionTextBox.Location = new Point(220, 178);
+            ProductDescriptionTextBox.Multiline = true;
+            ProductDescriptionTextBox.Name = "ProductDescriptionTextBox";
+            ProductDescriptionTextBox.Size = new Size(190, 23);
+            ProductDescriptionTextBox.TabIndex = 130;
+            // 
+            // ProductNameTextBox
+            // 
+            ProductNameTextBox.Location = new Point(220, 128);
+            ProductNameTextBox.Name = "ProductNameTextBox";
+            ProductNameTextBox.Size = new Size(190, 23);
+            ProductNameTextBox.TabIndex = 129;
+            // 
+            // SupplierComboBox
+            // 
+            SupplierComboBox.FormattingEnabled = true;
+            SupplierComboBox.Items.AddRange(new object[] { "Empresa 1", "Empresa 2", "Empresa 3" });
+            SupplierComboBox.Location = new Point(220, 376);
+            SupplierComboBox.Name = "SupplierComboBox";
+            SupplierComboBox.Size = new Size(190, 23);
+            SupplierComboBox.TabIndex = 128;
             // 
             // ManufacturerLabel
             // 
             ManufacturerLabel.AutoSize = true;
-            ManufacturerLabel.Location = new Point(576, 164);
+            ManufacturerLabel.Font = new Font("Segoe UI", 12F);
+            ManufacturerLabel.Location = new Point(220, 352);
             ManufacturerLabel.Name = "ManufacturerLabel";
-            ManufacturerLabel.Size = new Size(67, 15);
-            ManufacturerLabel.TabIndex = 58;
+            ManufacturerLabel.Size = new Size(89, 21);
+            ManufacturerLabel.TabIndex = 127;
             ManufacturerLabel.Text = "Fornecedor";
-            // 
-            // CategoryLabel
-            // 
-            CategoryLabel.AutoSize = true;
-            CategoryLabel.Location = new Point(576, 103);
-            CategoryLabel.Name = "CategoryLabel";
-            CategoryLabel.Size = new Size(58, 15);
-            CategoryLabel.TabIndex = 57;
-            CategoryLabel.Text = "Categoria";
             // 
             // CategoryComboBox
             // 
             CategoryComboBox.FormattingEnabled = true;
             CategoryComboBox.Items.AddRange(new object[] { "Frutas", "Verduras", "Legumes", "Folhas" });
-            CategoryComboBox.Location = new Point(576, 121);
+            CategoryComboBox.Location = new Point(220, 326);
             CategoryComboBox.Name = "CategoryComboBox";
-            CategoryComboBox.Size = new Size(192, 23);
-            CategoryComboBox.TabIndex = 56;
-            // 
-            // ProductQuantityLabel
-            // 
-            ProductQuantityLabel.AutoSize = true;
-            ProductQuantityLabel.Location = new Point(350, 164);
-            ProductQuantityLabel.Name = "ProductQuantityLabel";
-            ProductQuantityLabel.Size = new Size(93, 15);
-            ProductQuantityLabel.TabIndex = 55;
-            ProductQuantityLabel.Text = "Quantidade (kg)";
-            // 
-            // ProductValueLabel
-            // 
-            ProductValueLabel.AutoSize = true;
-            ProductValueLabel.Location = new Point(350, 103);
-            ProductValueLabel.Name = "ProductValueLabel";
-            ProductValueLabel.Size = new Size(88, 15);
-            ProductValueLabel.TabIndex = 54;
-            ProductValueLabel.Text = "Preço por quilo";
-            // 
-            // ProductDescriptionLabel
-            // 
-            ProductDescriptionLabel.AutoSize = true;
-            ProductDescriptionLabel.Location = new Point(127, 164);
-            ProductDescriptionLabel.Name = "ProductDescriptionLabel";
-            ProductDescriptionLabel.Size = new Size(53, 15);
-            ProductDescriptionLabel.TabIndex = 53;
-            ProductDescriptionLabel.Text = "Decrição";
-            // 
-            // ProductNameLabel
-            // 
-            ProductNameLabel.AutoSize = true;
-            ProductNameLabel.Location = new Point(127, 103);
-            ProductNameLabel.Name = "ProductNameLabel";
-            ProductNameLabel.Size = new Size(40, 15);
-            ProductNameLabel.TabIndex = 52;
-            ProductNameLabel.Text = "Nome";
+            CategoryComboBox.Size = new Size(190, 23);
+            CategoryComboBox.TabIndex = 126;
             // 
             // EditProductControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(label11);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label23);
+            Controls.Add(label10);
+            Controls.Add(label9);
+            Controls.Add(label8);
+            Controls.Add(label7);
+            Controls.Add(label6);
+            Controls.Add(label1);
+            Controls.Add(ProductImage);
             Controls.Add(ProductFibersTextBox);
             Controls.Add(ProductFatsTextBox);
-            Controls.Add(FibersLabel);
             Controls.Add(ProductProteinsTextBox);
-            Controls.Add(CaloriesLabel);
             Controls.Add(ProductCarbsTextBox);
             Controls.Add(ProductCaloriesTextBox);
-            Controls.Add(CarbsLabel);
-            Controls.Add(FatsLabel);
-            Controls.Add(ProteinsLabel);
             Controls.Add(ImageLinkLabel);
-            Controls.Add(SaveButton);
-            Controls.Add(BackButton);
             Controls.Add(ProductImageUrlTextBox);
             Controls.Add(ProductQuantityTextBox);
             Controls.Add(ProductPriceTextBox);
             Controls.Add(ProductDescriptionTextBox);
             Controls.Add(ProductNameTextBox);
-            Controls.Add(EditProductLabel);
-            Controls.Add(ManufacturerComboBox);
+            Controls.Add(SupplierComboBox);
             Controls.Add(ManufacturerLabel);
-            Controls.Add(CategoryLabel);
             Controls.Add(CategoryComboBox);
-            Controls.Add(ProductQuantityLabel);
-            Controls.Add(ProductValueLabel);
-            Controls.Add(ProductDescriptionLabel);
-            Controls.Add(ProductNameLabel);
+            Controls.Add(SaveButton);
+            Controls.Add(BackButton);
+            Controls.Add(EditProductLabel);
             Name = "EditProductControl";
             Size = new Size(960, 558);
+            ((System.ComponentModel.ISupportInitialize)ProductImage).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private TextBox ProductFibersTextBox;
-        private TextBox ProductFatsTextBox;
-        private Label FibersLabel;
-        private TextBox ProductProteinsTextBox;
-        private Label CaloriesLabel;
-        private TextBox ProductCarbsTextBox;
-        private TextBox ProductCaloriesTextBox;
-        private Label CarbsLabel;
-        private Label FatsLabel;
-        private Label ProteinsLabel;
-        private Label ImageLinkLabel;
         private Button SaveButton;
         private Button BackButton;
+        private Label EditProductLabel;
+        private Label label11;
+        private Label label5;
+        private Label label4;
+        private Label label3;
+        private Label label2;
+        private Label label23;
+        private Label label10;
+        private Label label9;
+        private Label label8;
+        private Label label7;
+        private Label label6;
+        private Label label1;
+        private PictureBox ProductImage;
+        private TextBox ProductFibersTextBox;
+        private TextBox ProductFatsTextBox;
+        private TextBox ProductProteinsTextBox;
+        private TextBox ProductCarbsTextBox;
+        private TextBox ProductCaloriesTextBox;
+        private Label ImageLinkLabel;
         private TextBox ProductImageUrlTextBox;
         private TextBox ProductQuantityTextBox;
         private TextBox ProductPriceTextBox;
         private TextBox ProductDescriptionTextBox;
         private TextBox ProductNameTextBox;
-        private Label EditProductLabel;
-        private ComboBox ManufacturerComboBox;
+        private ComboBox SupplierComboBox;
         private Label ManufacturerLabel;
-        private Label CategoryLabel;
         private ComboBox CategoryComboBox;
-        private Label ProductQuantityLabel;
-        private Label ProductValueLabel;
-        private Label ProductDescriptionLabel;
-        private Label ProductNameLabel;
     }
 }

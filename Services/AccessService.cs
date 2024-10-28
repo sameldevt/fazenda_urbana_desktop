@@ -13,7 +13,7 @@ namespace fazenda_verdeviva.Services
     {
         private static readonly string ContextUrl = "funcionario";
 
-        public static async Task Login(string email, string password)
+        public static async Task<Employee> Login(string email, string password)
         {
             string url = $"{Network.BaseUrl}/{ContextUrl}/login";
 
@@ -26,7 +26,18 @@ namespace fazenda_verdeviva.Services
             string json = JsonConvert.SerializeObject(loginData);
             StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
 
-            await Network.HttpClient.PostAsync(url, content);
+            HttpResponseMessage response = await Network.HttpClient.PostAsync(url, content);
+
+            if (response.IsSuccessStatusCode)
+            {
+                string responseBody = await response.Content.ReadAsStringAsync();
+
+                var employee = JsonConvert.DeserializeObject<Employee>(responseBody);
+
+                return employee;
+            }
+
+            return null;
         }
 
         public static async Task Register(string name, string email, string password)

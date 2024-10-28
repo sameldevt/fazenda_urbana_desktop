@@ -20,10 +20,12 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
     public partial class ProductCardControl : UserControl
     {
         private Product? Product;
+
         public ProductCardControl()
         {
             InitializeComponent();
         }
+
         public void LoadCardInfo(Product product)
         {
             this.Product = product;

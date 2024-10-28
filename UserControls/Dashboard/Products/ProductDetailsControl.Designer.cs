@@ -98,7 +98,7 @@
             ProductPrice.AutoSize = true;
             ProductPrice.Font = new Font("Segoe UI", 14F);
             ProductPrice.ForeColor = Color.Green;
-            ProductPrice.Location = new Point(404, 73);
+            ProductPrice.Location = new Point(436, 73);
             ProductPrice.Name = "ProductPrice";
             ProductPrice.Size = new Size(72, 25);
             ProductPrice.TabIndex = 97;
@@ -109,7 +109,7 @@
             ProductQuantity.AutoSize = true;
             ProductQuantity.Font = new Font("Segoe UI", 14F);
             ProductQuantity.ForeColor = Color.Green;
-            ProductQuantity.Location = new Point(404, 98);
+            ProductQuantity.Location = new Point(436, 98);
             ProductQuantity.Name = "ProductQuantity";
             ProductQuantity.Size = new Size(67, 25);
             ProductQuantity.TabIndex = 98;
@@ -131,7 +131,7 @@
             ProductCategory.AutoSize = true;
             ProductCategory.Font = new Font("Segoe UI", 14F);
             ProductCategory.ForeColor = Color.Green;
-            ProductCategory.Location = new Point(404, 123);
+            ProductCategory.Location = new Point(436, 123);
             ProductCategory.Name = "ProductCategory";
             ProductCategory.Size = new Size(63, 25);
             ProductCategory.TabIndex = 100;
@@ -251,7 +251,7 @@
             SupplierCnpj.AutoSize = true;
             SupplierCnpj.Font = new Font("Segoe UI", 14F);
             SupplierCnpj.ForeColor = Color.Green;
-            SupplierCnpj.Location = new Point(548, 89);
+            SupplierCnpj.Location = new Point(513, 89);
             SupplierCnpj.Name = "SupplierCnpj";
             SupplierCnpj.Size = new Size(55, 25);
             SupplierCnpj.TabIndex = 111;
@@ -263,7 +263,7 @@
             SupplierEmail.AutoSize = true;
             SupplierEmail.Font = new Font("Segoe UI", 14F);
             SupplierEmail.ForeColor = Color.Green;
-            SupplierEmail.Location = new Point(548, 64);
+            SupplierEmail.Location = new Point(513, 64);
             SupplierEmail.Name = "SupplierEmail";
             SupplierEmail.Size = new Size(156, 25);
             SupplierEmail.TabIndex = 110;
@@ -275,7 +275,7 @@
             SupplierName.AutoSize = true;
             SupplierName.Font = new Font("Segoe UI", 14F);
             SupplierName.ForeColor = Color.Green;
-            SupplierName.Location = new Point(548, 39);
+            SupplierName.Location = new Point(513, 39);
             SupplierName.Name = "SupplierName";
             SupplierName.Size = new Size(161, 25);
             SupplierName.TabIndex = 109;

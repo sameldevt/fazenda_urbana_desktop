@@ -37,12 +37,12 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Suppliers
         {
             List<Supplier> suppliers = await SupplierService.GetAll();
 
-            suppliers.ForEach(async s =>
+            suppliers.ForEach(s =>
             {
-                SupllierCardControl supllierCard = new SupllierCardControl();
+                SupplierCardControl supplierCard = new SupplierCardControl();
 
-                supllierCard.LoadCardInfo(s);
-                SupplierList.Controls.Add(supllierCard);
+                supplierCard.LoadCardInfo(s);
+                SupplierList.Controls.Add(supplierCard);
             });
         }
     }

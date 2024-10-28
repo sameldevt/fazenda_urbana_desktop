@@ -1,4 +1,5 @@
 ﻿using fazenda_verdeviva.Forms;
+using fazenda_verdeviva.Model.Entities;
 using fazenda_verdeviva.UserControls.Dashboard;
 using fazenda_verdeviva.UserControls.Dashboard.Employees;
 using fazenda_verdeviva.UserControls.Dashboard.Messages;
@@ -20,6 +21,7 @@ namespace fazenda_verdeviva.UserControls
     public partial class DashboardControl : UserControl
     {
         private static DashboardControl instance;
+        private Employee? Employee;
 
         private DashboardControl()
         {
@@ -39,6 +41,11 @@ namespace fazenda_verdeviva.UserControls
             return instance;
         }
 
+        public void SetOperator(Employee employee)
+        {
+            this.Employee = employee;
+            OperatorEmail.Text = employee.Contact.Email;
+        }
 
         public void SetContentPanelControl(UserControl control)
         {

@@ -31,11 +31,13 @@
             panel1 = new Panel();
             label1 = new Label();
             ContentPanel = new Panel();
+            RegisterButton = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(RegisterButton);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
@@ -59,6 +61,16 @@
             ContentPanel.Size = new Size(957, 558);
             ContentPanel.TabIndex = 1;
             // 
+            // RegisterButton
+            // 
+            RegisterButton.Location = new Point(749, 10);
+            RegisterButton.Name = "RegisterButton";
+            RegisterButton.Size = new Size(169, 37);
+            RegisterButton.TabIndex = 9;
+            RegisterButton.Text = "Cadastrar";
+            RegisterButton.UseVisualStyleBackColor = true;
+            RegisterButton.Click += RegisterButton_Click;
+            // 
             // SupplierControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -77,5 +89,6 @@
         private Panel panel1;
         private Label label1;
         private Panel ContentPanel;
+        public Button RegisterButton;
     }
 }

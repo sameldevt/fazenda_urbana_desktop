@@ -16,6 +16,9 @@
     <Compile Update="UserControls\Dashboard\Clients\ClientListControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UserControls\Dashboard\Common\AddressCardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UserControls\Dashboard\DashboardControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -40,7 +43,13 @@
     <Compile Update="UserControls\Dashboard\Products\ProductDetailsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControls\Dashboard\Suppliers\SupllierCardControl.cs">
+    <Compile Update="UserControls\Dashboard\Suppliers\EditSupplierControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\Dashboard\Suppliers\RegisterSupplierControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\Dashboard\Suppliers\SupplierCardControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UserControls\Dashboard\Messages\ContactMessageCardControl.cs">

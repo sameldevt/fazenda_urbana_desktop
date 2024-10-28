@@ -1,6 +1,6 @@
 ﻿namespace fazenda_verdeviva.UserControls.Dashboard.Suppliers
 {
-    partial class SupllierCardControl
+    partial class SupplierCardControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,74 +30,91 @@
         {
             ContentPanel = new Panel();
             SupplierWebsite = new Label();
-            EditButton = new Button();
-            DeleteButton = new Button();
-            SupllierCnoj = new Label();
+            SupllierCnpj = new Label();
             SupplierName = new Label();
+            Details = new Button();
+            DeleteButton = new Button();
+            EditButton = new Button();
             ContentPanel.SuspendLayout();
             SuspendLayout();
             // 
             // ContentPanel
             // 
-            ContentPanel.Controls.Add(SupplierWebsite);
             ContentPanel.Controls.Add(EditButton);
             ContentPanel.Controls.Add(DeleteButton);
-            ContentPanel.Controls.Add(SupllierCnoj);
+            ContentPanel.Controls.Add(Details);
+            ContentPanel.Controls.Add(SupplierWebsite);
+            ContentPanel.Controls.Add(SupllierCnpj);
             ContentPanel.Controls.Add(SupplierName);
             ContentPanel.Location = new Point(3, 3);
             ContentPanel.Name = "ContentPanel";
-            ContentPanel.Size = new Size(940, 104);
+            ContentPanel.Size = new Size(940, 144);
             ContentPanel.TabIndex = 0;
+            ContentPanel.Paint += ContentPanel_Paint;
             // 
             // SupplierWebsite
             // 
             SupplierWebsite.AutoSize = true;
             SupplierWebsite.Font = new Font("Segoe UI", 14F);
             SupplierWebsite.ForeColor = Color.DarkGray;
-            SupplierWebsite.Location = new Point(0, 37);
+            SupplierWebsite.Location = new Point(3, 40);
             SupplierWebsite.Name = "SupplierWebsite";
             SupplierWebsite.Size = new Size(290, 25);
             SupplierWebsite.TabIndex = 7;
             SupplierWebsite.Text = "www.fazendadealimentos.com.br";
             // 
-            // EditButton
+            // SupllierCnpj
             // 
-            EditButton.Location = new Point(858, 14);
-            EditButton.Name = "EditButton";
-            EditButton.Size = new Size(75, 23);
-            EditButton.TabIndex = 6;
-            EditButton.Text = "Editar";
-            EditButton.UseVisualStyleBackColor = true;
-            // 
-            // DeleteButton
-            // 
-            DeleteButton.Location = new Point(777, 14);
-            DeleteButton.Name = "DeleteButton";
-            DeleteButton.Size = new Size(75, 23);
-            DeleteButton.TabIndex = 5;
-            DeleteButton.Text = "Excluir";
-            DeleteButton.UseVisualStyleBackColor = true;
-            // 
-            // SupllierCnoj
-            // 
-            SupllierCnoj.AutoSize = true;
-            SupllierCnoj.Font = new Font("Segoe UI", 14F);
-            SupllierCnoj.ForeColor = Color.DarkGray;
-            SupllierCnoj.Location = new Point(0, 62);
-            SupllierCnoj.Name = "SupllierCnoj";
-            SupllierCnoj.Size = new Size(769, 25);
-            SupllierCnoj.TabIndex = 3;
-            SupllierCnoj.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt";
+            SupllierCnpj.AutoSize = true;
+            SupllierCnpj.Font = new Font("Segoe UI", 14F);
+            SupllierCnpj.ForeColor = Color.DarkGray;
+            SupllierCnpj.Location = new Point(3, 65);
+            SupllierCnpj.Name = "SupllierCnpj";
+            SupllierCnpj.Size = new Size(769, 25);
+            SupllierCnpj.TabIndex = 3;
+            SupllierCnpj.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt";
             // 
             // SupplierName
             // 
             SupplierName.AutoSize = true;
             SupplierName.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
-            SupplierName.Location = new Point(0, 0);
+            SupplierName.Location = new Point(3, 3);
             SupplierName.Name = "SupplierName";
             SupplierName.Size = new Size(368, 37);
             SupplierName.TabIndex = 2;
             SupplierName.Text = "Fazenda de alimentos LTDA";
+            // 
+            // Details
+            // 
+            Details.BackColor = Color.White;
+            Details.Location = new Point(826, 12);
+            Details.Name = "Details";
+            Details.Size = new Size(95, 33);
+            Details.TabIndex = 8;
+            Details.Text = "Ver detalhes";
+            Details.UseVisualStyleBackColor = false;
+            Details.Click += Details_Click;
+            // 
+            // DeleteButton
+            // 
+            DeleteButton.BackColor = Color.White;
+            DeleteButton.ForeColor = SystemColors.ControlText;
+            DeleteButton.Location = new Point(826, 51);
+            DeleteButton.Name = "DeleteButton";
+            DeleteButton.Size = new Size(95, 33);
+            DeleteButton.TabIndex = 9;
+            DeleteButton.Text = "Excluir";
+            DeleteButton.UseVisualStyleBackColor = false;
+            // 
+            // EditButton
+            // 
+            EditButton.BackColor = Color.White;
+            EditButton.Location = new Point(826, 90);
+            EditButton.Name = "EditButton";
+            EditButton.Size = new Size(95, 35);
+            EditButton.TabIndex = 12;
+            EditButton.Text = "Editar";
+            EditButton.UseVisualStyleBackColor = false;
             // 
             // SupllierCardControl
             // 
@@ -105,7 +122,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(ContentPanel);
             Name = "SupllierCardControl";
-            Size = new Size(946, 111);
+            Size = new Size(946, 150);
             ContentPanel.ResumeLayout(false);
             ContentPanel.PerformLayout();
             ResumeLayout(false);
@@ -115,9 +132,10 @@
 
         private Panel ContentPanel;
         private Label SupplierName;
-        private Label SupllierCnoj;
-        private Button DeleteButton;
+        private Label SupllierCnpj;
         private Label SupplierWebsite;
+        private Button Details;
+        private Button DeleteButton;
         private Button EditButton;
     }
 }

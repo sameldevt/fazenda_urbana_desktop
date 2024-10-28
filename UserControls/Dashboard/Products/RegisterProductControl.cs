@@ -1,6 +1,7 @@
 ﻿using fazenda_verdeviva.Model.Dto;
 using fazenda_verdeviva.Model.Entities;
 using fazenda_verdeviva.Services;
+using SkiaSharp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
     public partial class RegisterProductControl : UserControl
     {
         private static RegisterProductControl? Instance;
+
         private RegisterProductControl()
         {
             InitializeComponent();
@@ -36,7 +38,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != ',')
             {
-                e.Handled = true; 
+                e.Handled = true;
             }
 
             if ((e.KeyChar == '.' || e.KeyChar == ',') && (ProductPriceTextBox.Text.Contains(".") || ProductPriceTextBox.Text.Contains(",")))
@@ -49,7 +51,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
-                e.Handled = true; 
+                e.Handled = true;
             }
         }
 
@@ -57,7 +59,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
-                e.Handled = true; 
+                e.Handled = true;
             }
         }
 
@@ -65,7 +67,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
-                e.Handled = true; 
+                e.Handled = true;
             }
         }
 
@@ -73,7 +75,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
-                e.Handled = true;  
+                e.Handled = true;
             }
         }
 
@@ -81,7 +83,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
-                e.Handled = true; 
+                e.Handled = true;
             }
         }
 
@@ -89,7 +91,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
-                e.Handled = true;  
+                e.Handled = true;
             }
         }
 
@@ -124,5 +126,42 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
             ProductsControl.GetInstance().RegisterButton.Enabled = true;
             ProductsControl.GetInstance().SetContentPanelControl(ProductListControl.GetInstance());
         }
+
+        private void LoadProductImage(object sender, EventArgs e)
+        {
+            LoadProductImage();
+        }
+
+        private async Task LoadProductImage()
+        {
+            using HttpClient client = new HttpClient();
+
+            try
+            {
+                client.DefaultRequestHeaders.UserAgent.ParseAdd("Mozilla/5.0 (Windows NT 10.0; Win64; x64)");
+                byte[] imageData = await client.GetByteArrayAsync(ProductImageUrlTextBox.Text);
+
+                try
+                {
+                    using MemoryStream ms = new MemoryStream(imageData);
+                    ProductImage.Image = Image.FromStream(ms);
+                }
+                catch (ArgumentException)
+                {
+                    using SKBitmap bitmap = SKBitmap.Decode(imageData);
+
+                    using SKImage image = SKImage.FromBitmap(bitmap);
+                    using SKData data = image.Encode(SKEncodedImageFormat.Jpeg, 100);
+
+                    using MemoryStream ms = new MemoryStream(data.ToArray());
+                    ProductImage.Image = Image.FromStream(ms);
+                }
+            }
+            catch (Exception ex)
+            {
+                ProductImage.Image = Image.FromFile("Assets/image-not-found.png");
+            }
+        }
+
     }
 }

@@ -32,10 +32,8 @@
             ContentPanel = new Panel();
             TopBar = new Panel();
             label3 = new Label();
-            label1 = new Label();
             OperatorEmail = new Label();
             pictureBox1 = new PictureBox();
-            CompanyLogo = new Label();
             NavPanel = new Panel();
             EmployeesButton = new Button();
             MessagesButton = new Button();
@@ -58,12 +56,10 @@
             // 
             // TopBar
             // 
-            TopBar.BackColor = Color.White;
+            TopBar.BackColor = Color.FromArgb(104, 159, 57);
             TopBar.Controls.Add(label3);
-            TopBar.Controls.Add(label1);
             TopBar.Controls.Add(OperatorEmail);
             TopBar.Controls.Add(pictureBox1);
-            TopBar.Controls.Add(CompanyLogo);
             TopBar.Location = new Point(3, 3);
             TopBar.Name = "TopBar";
             TopBar.Size = new Size(1194, 62);
@@ -79,15 +75,6 @@
             label3.TabIndex = 5;
             label3.Text = "Autenticado como";
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(127, 40);
-            label1.Name = "label1";
-            label1.Size = new Size(143, 15);
-            label1.TabIndex = 3;
-            label1.Text = "Fazenda urbana Verdeviva";
-            // 
             // OperatorEmail
             // 
             OperatorEmail.AutoSize = true;
@@ -100,22 +87,12 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(3, 3);
+            pictureBox1.Location = new Point(58, 3);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(118, 56);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
-            // 
-            // CompanyLogo
-            // 
-            CompanyLogo.AutoSize = true;
-            CompanyLogo.Font = new Font("Segoe UI", 20F);
-            CompanyLogo.Location = new Point(127, 3);
-            CompanyLogo.Name = "CompanyLogo";
-            CompanyLogo.Size = new Size(132, 37);
-            CompanyLogo.TabIndex = 1;
-            CompanyLogo.Text = "Verdeviva";
             // 
             // NavPanel
             // 
@@ -211,14 +188,12 @@
         private Panel ContentPanel;
         private Panel TopBar;
         private Panel NavPanel;
-        private Label CompanyLogo;
         private PictureBox pictureBox1;
         private Button ClientsButton;
         private Button OrdersButton;
         private Button ManufacturerButton;
         private Button ProductsButton;
         private Button MessagesButton;
-        private Label label1;
         private Label label3;
         private Label OperatorEmail;
         private Button EmployeesButton;

@@ -1,14 +1,70 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\dev\\workspace\\vs\\fazenda_urbana_desktop\\",
+  "WorkspaceRootPath": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\vs\\fazenda_urbana_desktop\\usercontrols\\dashboard\\products\\productdetailscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|solutionrelative:usercontrols\\dashboard\\products\\productdetailscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\usercontrols\\dashboard\\dashboardcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|solutionrelative:usercontrols\\dashboard\\dashboardcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\vs\\fazenda_urbana_desktop\\usercontrols\\dashboard\\products\\productdetailscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|solutionrelative:usercontrols\\dashboard\\products\\productdetailscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\usercontrols\\dashboard\\suppliers\\registersuppliercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|solutionrelative:usercontrols\\dashboard\\suppliers\\registersuppliercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\usercontrols\\dashboard\\suppliers\\supplierlistcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|solutionrelative:usercontrols\\dashboard\\suppliers\\supplierlistcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\usercontrols\\dashboard\\suppliers\\supplierlistcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|solutionrelative:usercontrols\\dashboard\\suppliers\\supplierlistcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\usercontrols\\dashboard\\products\\editproductcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|solutionrelative:usercontrols\\dashboard\\products\\editproductcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\usercontrols\\dashboard\\suppliers\\registersuppliercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|solutionrelative:usercontrols\\dashboard\\suppliers\\registersuppliercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\usercontrols\\dashboard\\products\\registerproductcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|solutionrelative:usercontrols\\dashboard\\products\\registerproductcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\usercontrols\\dashboard\\suppliers\\editsuppliercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|solutionrelative:usercontrols\\dashboard\\suppliers\\editsuppliercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\model\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|solutionrelative:model\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\model\\dto\\supplierdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|solutionrelative:model\\dto\\supplierdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\usercontrols\\dashboard\\suppliers\\editsuppliercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|solutionrelative:usercontrols\\dashboard\\suppliers\\editsuppliercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\usercontrols\\dashboard\\suppliers\\suppliercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|solutionrelative:usercontrols\\dashboard\\suppliers\\suppliercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\usercontrols\\dashboard\\products\\productscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|solutionrelative:usercontrols\\dashboard\\products\\productscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\usercontrols\\dashboard\\products\\registerproductcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|solutionrelative:usercontrols\\dashboard\\products\\registerproductcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\usercontrols\\dashboard\\products\\productscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|solutionrelative:usercontrols\\dashboard\\products\\productscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\usercontrols\\dashboard\\suppliers\\suppliercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|solutionrelative:usercontrols\\dashboard\\suppliers\\suppliercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,8 +73,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 618,
-          "SelectedChildIndex": 3,
+          "DockedWidth": 62,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,27 +86,209 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProductDetailsControl.cs",
-              "DocumentMoniker": "C:\\dev\\workspace\\vs\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Products\\ProductDetailsControl.cs",
-              "RelativeDocumentMoniker": "UserControls\\Dashboard\\Products\\ProductDetailsControl.cs",
-              "ToolTip": "C:\\dev\\workspace\\vs\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Products\\ProductDetailsControl.cs",
-              "RelativeToolTip": "UserControls\\Dashboard\\Products\\ProductDetailsControl.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAQwCsAAAA2AAAA",
+              "DocumentIndex": 2,
+              "Title": "SupplierListControl.cs",
+              "DocumentMoniker": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Suppliers\\SupplierListControl.cs",
+              "RelativeDocumentMoniker": "UserControls\\Dashboard\\Suppliers\\SupplierListControl.cs",
+              "ToolTip": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Suppliers\\SupplierListControl.cs",
+              "RelativeToolTip": "UserControls\\Dashboard\\Suppliers\\SupplierListControl.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T00:41:09.918Z",
+              "WhenOpened": "2024-10-28T20:15:37.731Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProductDetailsControl.cs [Design]",
-              "DocumentMoniker": "C:\\dev\\workspace\\vs\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Products\\ProductDetailsControl.cs",
-              "RelativeDocumentMoniker": "UserControls\\Dashboard\\Products\\ProductDetailsControl.cs",
-              "ToolTip": "C:\\dev\\workspace\\vs\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Products\\ProductDetailsControl.cs [Design]",
-              "RelativeToolTip": "UserControls\\Dashboard\\Products\\ProductDetailsControl.cs [Design]",
+              "DocumentIndex": 3,
+              "Title": "SupplierListControl.cs [Design]",
+              "DocumentMoniker": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Suppliers\\SupplierListControl.cs",
+              "RelativeDocumentMoniker": "UserControls\\Dashboard\\Suppliers\\SupplierListControl.cs",
+              "ToolTip": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Suppliers\\SupplierListControl.cs [Design]",
+              "RelativeToolTip": "UserControls\\Dashboard\\Suppliers\\SupplierListControl.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T00:32:42.717Z",
+              "WhenOpened": "2024-10-28T20:15:35.993Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EditProductControl.cs",
+              "DocumentMoniker": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Products\\EditProductControl.cs",
+              "RelativeDocumentMoniker": "UserControls\\Dashboard\\Products\\EditProductControl.cs",
+              "ToolTip": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Products\\EditProductControl.cs",
+              "RelativeToolTip": "UserControls\\Dashboard\\Products\\EditProductControl.cs",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAAAJcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T19:50:14.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EditSupplierControl.cs [Design]",
+              "DocumentMoniker": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Suppliers\\EditSupplierControl.cs",
+              "RelativeDocumentMoniker": "UserControls\\Dashboard\\Suppliers\\EditSupplierControl.cs",
+              "ToolTip": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Suppliers\\EditSupplierControl.cs [Design]",
+              "RelativeToolTip": "UserControls\\Dashboard\\Suppliers\\EditSupplierControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T19:39:25.295Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\Model\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Model\\Entities\\User.cs",
+              "ToolTip": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\Model\\Entities\\User.cs",
+              "RelativeToolTip": "Model\\Entities\\User.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAMwCgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T20:07:07.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SupplierDto.cs",
+              "DocumentMoniker": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\Model\\Dto\\SupplierDto.cs",
+              "RelativeDocumentMoniker": "Model\\Dto\\SupplierDto.cs",
+              "ToolTip": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\Model\\Dto\\SupplierDto.cs",
+              "RelativeToolTip": "Model\\Dto\\SupplierDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T19:55:48.288Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EditSupplierControl.cs",
+              "DocumentMoniker": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Suppliers\\EditSupplierControl.cs",
+              "RelativeDocumentMoniker": "UserControls\\Dashboard\\Suppliers\\EditSupplierControl.cs",
+              "ToolTip": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Suppliers\\EditSupplierControl.cs",
+              "RelativeToolTip": "UserControls\\Dashboard\\Suppliers\\EditSupplierControl.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAcwDgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T19:46:13.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SupplierControl.cs",
+              "DocumentMoniker": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Suppliers\\SupplierControl.cs",
+              "RelativeDocumentMoniker": "UserControls\\Dashboard\\Suppliers\\SupplierControl.cs",
+              "ToolTip": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Suppliers\\SupplierControl.cs",
+              "RelativeToolTip": "UserControls\\Dashboard\\Suppliers\\SupplierControl.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAowDYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T19:37:58.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "RegisterProductControl.cs [Design]",
+              "DocumentMoniker": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Products\\RegisterProductControl.cs",
+              "RelativeDocumentMoniker": "UserControls\\Dashboard\\Products\\RegisterProductControl.cs",
+              "ToolTip": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Products\\RegisterProductControl.cs [Design]",
+              "RelativeToolTip": "UserControls\\Dashboard\\Products\\RegisterProductControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T19:39:04.91Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ProductsControl.cs",
+              "DocumentMoniker": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Products\\ProductsControl.cs",
+              "RelativeDocumentMoniker": "UserControls\\Dashboard\\Products\\ProductsControl.cs",
+              "ToolTip": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Products\\ProductsControl.cs",
+              "RelativeToolTip": "UserControls\\Dashboard\\Products\\ProductsControl.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T19:38:19.64Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ProductsControl.cs [Design]",
+              "DocumentMoniker": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Products\\ProductsControl.cs",
+              "RelativeDocumentMoniker": "UserControls\\Dashboard\\Products\\ProductsControl.cs",
+              "ToolTip": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Products\\ProductsControl.cs [Design]",
+              "RelativeToolTip": "UserControls\\Dashboard\\Products\\ProductsControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T19:37:18.451Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "SupplierControl.cs [Design]",
+              "DocumentMoniker": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Suppliers\\SupplierControl.cs",
+              "RelativeDocumentMoniker": "UserControls\\Dashboard\\Suppliers\\SupplierControl.cs",
+              "ToolTip": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Suppliers\\SupplierControl.cs [Design]",
+              "RelativeToolTip": "UserControls\\Dashboard\\Suppliers\\SupplierControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T19:37:12.923Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 85,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DashboardControl.cs [Design]",
+              "DocumentMoniker": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\DashboardControl.cs",
+              "RelativeDocumentMoniker": "UserControls\\Dashboard\\DashboardControl.cs",
+              "ToolTip": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\DashboardControl.cs [Design]",
+              "RelativeToolTip": "UserControls\\Dashboard\\DashboardControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T20:24:01.209Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RegisterProductControl.cs",
+              "DocumentMoniker": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Products\\RegisterProductControl.cs",
+              "RelativeDocumentMoniker": "UserControls\\Dashboard\\Products\\RegisterProductControl.cs",
+              "ToolTip": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Products\\RegisterProductControl.cs",
+              "RelativeToolTip": "UserControls\\Dashboard\\Products\\RegisterProductControl.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T19:55:12.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RegisterSupplierControl.cs",
+              "DocumentMoniker": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Suppliers\\RegisterSupplierControl.cs",
+              "RelativeDocumentMoniker": "UserControls\\Dashboard\\Suppliers\\RegisterSupplierControl.cs",
+              "ToolTip": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Suppliers\\RegisterSupplierControl.cs",
+              "RelativeToolTip": "UserControls\\Dashboard\\Suppliers\\RegisterSupplierControl.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAGwAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T19:46:08.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RegisterSupplierControl.cs [Design]",
+              "DocumentMoniker": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Suppliers\\RegisterSupplierControl.cs",
+              "RelativeDocumentMoniker": "UserControls\\Dashboard\\Suppliers\\RegisterSupplierControl.cs",
+              "ToolTip": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Suppliers\\RegisterSupplierControl.cs [Design]",
+              "RelativeToolTip": "UserControls\\Dashboard\\Suppliers\\RegisterSupplierControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T19:38:43.32Z",
               "EditorCaption": " [Design]"
             }
           ]

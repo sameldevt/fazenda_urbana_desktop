@@ -1,5 +1,6 @@
 ﻿using fazenda_verdeviva.Model.Entities;
 using fazenda_verdeviva.Services;
+using SkiaSharp;
 using System;
 using System.CodeDom;
 using System.Collections.Generic;
@@ -17,6 +18,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
     {
         private static EditProductControl? Instance;
         private Product Product;
+
         private EditProductControl()
         {
             InitializeComponent();
@@ -32,7 +34,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
             return Instance;
         }
 
-        public void LoadProductInfo(Product product)
+        public async void LoadProductInfo(Product product)
         {
             Product = product;
             ProductNameTextBox.Text = product.Name;
@@ -45,6 +47,38 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
             ProductFatsTextBox.Text = product.NutritionalInfo.Fats.ToString();
             ProductFibersTextBox.Text = product.NutritionalInfo.Fibers.ToString();
             ProductProteinsTextBox.Text = product.NutritionalInfo.Proteins.ToString();
+            await LoadProductImage(product);
+        }
+
+        private async Task LoadProductImage(Product product)
+        {
+            using HttpClient client = new HttpClient();
+
+            try
+            {
+                client.DefaultRequestHeaders.UserAgent.ParseAdd("Mozilla/5.0 (Windows NT 10.0; Win64; x64)");
+                byte[] imageData = await client.GetByteArrayAsync(product.ImageUrl);
+
+                try
+                {
+                    using MemoryStream ms = new MemoryStream(imageData);
+                    ProductImage.Image = Image.FromStream(ms);
+                }
+                catch (ArgumentException)
+                {
+                    using SKBitmap bitmap = SKBitmap.Decode(imageData);
+
+                    using SKImage image = SKImage.FromBitmap(bitmap);
+                    using SKData data = image.Encode(SKEncodedImageFormat.Jpeg, 100);
+
+                    using MemoryStream ms = new MemoryStream(data.ToArray());
+                    ProductImage.Image = Image.FromStream(ms);
+                }
+            }
+            catch (Exception ex)
+            {
+                ProductImage.Image = Image.FromFile("Assets/image-not-found.png");
+            }
         }
 
         private void ProductPriceTextBox_KeyPress(object sender, KeyPressEventArgs e)
