@@ -29,14 +29,27 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Clients
             ClientMemberSinceDate.Text = $"Membro desde {client.RegistrationDate.ToString("dd/MM/yyyy")}";
         }
 
-        private async void DeleteButton_Click(object sender, EventArgs e)
+        private void DetailsButton_Click(object sender, EventArgs e)
         {
-
+            var clientDetailsControlInstance = ClientDetailsControl.GetInstance();
+            clientDetailsControlInstance.LoadClient(Client);
+            ClientControl.GetInstance().SetContentPanelControl(clientDetailsControlInstance);
         }
 
-        private void EditButton_Click(object sender, EventArgs e)
+        private async void DeleteButton_Click_1(object sender, EventArgs e)
         {
+            var response = await ClientService.Delete(Client!.Id);
 
+            MessageBox.Show(response);
+
+            ProductListControl.GetInstance().ProductsList.Controls.Remove(this);
+        }
+
+        private void EditButton_Click_1(object sender, EventArgs e)
+        {
+            var editClientControlInstance = EditClientControl.GetInstance();
+            editClientControlInstance.LoadClientInfo(Client);
+            ProductsControl.GetInstance().SetContentPanelControl(editClientControlInstance);
         }
     }
 }

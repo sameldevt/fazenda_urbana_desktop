@@ -44,7 +44,7 @@
             ContentPanel.Controls.Add(EmployeeName);
             ContentPanel.Location = new Point(3, 3);
             ContentPanel.Name = "ContentPanel";
-            ContentPanel.Size = new Size(934, 134);
+            ContentPanel.Size = new Size(948, 134);
             ContentPanel.TabIndex = 1;
             // 
             // EmployeeEmail
@@ -92,7 +92,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(ContentPanel);
             Name = "EmployeeCardControl";
-            Size = new Size(940, 140);
+            Size = new Size(954, 140);
             ContentPanel.ResumeLayout(false);
             ContentPanel.PerformLayout();
             ResumeLayout(false);

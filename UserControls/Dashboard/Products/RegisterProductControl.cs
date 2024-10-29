@@ -97,28 +97,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
 
         private async void RegisterButton_Click(object sender, EventArgs e)
         {
-            var product = new RegisterProductDto
-            {
-                Name = ProductNameTextBox.Text,
-                Description = ProductDescriptionTextBox.Text,
-                WeightPrice = decimal.Parse(ProductPriceTextBox.Text),
-                StockQuantity = int.Parse(ProductQuantityTextBox.Text),
-                ImageUrl = ProductImageUrlTextBox.Text,
-                NutritionalInfo = new NutritionalInfoDto
-                {
-                    Calories = decimal.Parse(ProductCaloriesTextBox.Text),
-                    Proteins = decimal.Parse(ProductProteinsTextBox.Text),
-                    Carbohydrates = decimal.Parse(ProductCarbsTextBox.Text),
-                    Fibers = decimal.Parse(ProductFibersTextBox.Text),
-                    Fats = decimal.Parse(ProductFatsTextBox.Text)
-                },
-                CategoryId = CategoryComboBox.SelectedIndex,
-                SupplierId = SupplierComboBox.SelectedIndex,
-            };
-
-            await ProductService.Register(product);
-            ProductsControl.GetInstance().RegisterButton.Enabled = true;
-            ProductsControl.GetInstance().SetContentPanelControl(ProductListControl.GetInstance());
+           
         }
 
         private void BackButton_Click(object sender, EventArgs e)
@@ -163,5 +142,33 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
             }
         }
 
+        private async void RegisterButton_Click_1(object sender, EventArgs e)
+        {
+            var product = new RegisterProductDto
+            {
+                Name = ProductNameTextBox.Text,
+                Description = ProductDescriptionTextBox.Text,
+                WeightPrice = decimal.Parse(ProductPriceTextBox.Text),
+                StockQuantity = int.Parse(ProductQuantityTextBox.Text),
+                ImageUrl = ProductImageUrlTextBox.Text,
+                NutritionalInfo = new NutritionalInfoDto
+                {
+                    Calories = decimal.Parse(ProductCaloriesTextBox.Text),
+                    Proteins = decimal.Parse(ProductProteinsTextBox.Text),
+                    Carbohydrates = decimal.Parse(ProductCarbsTextBox.Text),
+                    Fibers = decimal.Parse(ProductFibersTextBox.Text),
+                    Fats = decimal.Parse(ProductFatsTextBox.Text)
+                },
+                CategoryId = 31,
+                SupplierId = 7,
+            };
+
+            await ProductService.Register(product);
+
+            MessageBox.Show("Produto cadastrado com sucesso");
+
+            ProductsControl.GetInstance().RegisterButton.Enabled = true;
+            ProductsControl.GetInstance().SetContentPanelControl(ProductListControl.GetInstance());
+        }
     }
 }

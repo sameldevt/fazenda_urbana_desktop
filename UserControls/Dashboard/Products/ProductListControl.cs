@@ -20,25 +20,27 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
         {
             InitializeComponent();
             ProductsList.AutoScroll = true;
-            LoadProductCards();
         }
 
         public static ProductListControl GetInstance()
         {
-            if(Instance == null)
+            if (Instance == null)
             {
                 Instance = new ProductListControl();
             }
+
+            Instance.LoadProductCards(); 
             return Instance;
         }
 
         public async void LoadProductCards()
         {
+            ProductsList.Controls.Clear();
             List<Product> products = await ProductService.GetAll();
 
-            products.ForEach(async p => {
+            products.ForEach(p =>
+            {
                 ProductCardControl productCard = new ProductCardControl();
-
                 productCard.LoadCardInfo(p);
                 ProductsList.Controls.Add(productCard);
             });

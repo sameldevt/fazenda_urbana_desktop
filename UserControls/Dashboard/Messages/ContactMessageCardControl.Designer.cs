@@ -48,7 +48,7 @@
             ContentPanel.Controls.Add(MessageContent);
             ContentPanel.Location = new Point(3, 3);
             ContentPanel.Name = "ContentPanel";
-            ContentPanel.Size = new Size(940, 104);
+            ContentPanel.Size = new Size(948, 104);
             ContentPanel.TabIndex = 1;
             // 
             // MessageDate
@@ -118,7 +118,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(ContentPanel);
             Name = "ContactMessageCardControl";
-            Size = new Size(946, 111);
+            Size = new Size(954, 111);
             ContentPanel.ResumeLayout(false);
             ContentPanel.PerformLayout();
             ResumeLayout(false);

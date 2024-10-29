@@ -1,4 +1,5 @@
 ﻿using fazenda_verdeviva.Model.Entities;
+using fazenda_verdeviva.Services;
 using fazenda_verdeviva.UserControls.Dashboard.Products;
 using System;
 using System.Collections.Generic;
@@ -39,6 +40,15 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Suppliers
             var editSupplierControl = EditSupplierControl.GetInstance();
             editSupplierControl.LoadSupplier(Supplier);
             SupplierControl.GetInstance().SetContentPanelControl(editSupplierControl);
+        }
+
+        private async void DeleteButton_Click(object sender, EventArgs e)
+        {
+            var response = await SupplierService.Delete(Supplier!.Id);
+
+            MessageBox.Show(response);
+
+            SupplierListControl.GetInstance().SupplierList.Controls.Remove(this);
         }
     }
 }

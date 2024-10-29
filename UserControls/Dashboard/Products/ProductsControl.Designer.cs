@@ -41,7 +41,7 @@
             panel1.Controls.Add(label1);
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(960, 59);
+            panel1.Size = new Size(954, 59);
             panel1.TabIndex = 0;
             // 
             // RegisterButton
@@ -68,7 +68,7 @@
             // 
             ContentPanel.Location = new Point(3, 65);
             ContentPanel.Name = "ContentPanel";
-            ContentPanel.Size = new Size(960, 558);
+            ContentPanel.Size = new Size(954, 519);
             ContentPanel.TabIndex = 1;
             ContentPanel.Paint += ContentPanel_Paint;
             // 
@@ -79,7 +79,7 @@
             Controls.Add(ContentPanel);
             Controls.Add(panel1);
             Name = "ProductsControl";
-            Size = new Size(966, 626);
+            Size = new Size(960, 587);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

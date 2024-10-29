@@ -16,6 +16,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Suppliers
     public partial class SupplierListControl : UserControl
     {
         private static SupplierListControl? Instance;
+
         public SupplierListControl()
         {
             InitializeComponent();
@@ -30,11 +31,14 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Suppliers
                 Instance = new SupplierListControl();
             }
 
+            Instance.LoadSupplierCards();
             return Instance;
         }
 
         public async void LoadSupplierCards()
         {
+            SupplierList.Controls.Clear();
+
             List<Supplier> suppliers = await SupplierService.GetAll();
 
             suppliers.ForEach(s =>

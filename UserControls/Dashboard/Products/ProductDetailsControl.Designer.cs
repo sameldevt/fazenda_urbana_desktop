@@ -65,7 +65,7 @@
             // 
             // BackButton
             // 
-            BackButton.Location = new Point(753, 484);
+            BackButton.Location = new Point(761, 462);
             BackButton.Name = "BackButton";
             BackButton.Size = new Size(169, 37);
             BackButton.TabIndex = 95;
@@ -409,7 +409,7 @@
             Controls.Add(panel1);
             Controls.Add(panel2);
             Name = "ProductDetailsControl";
-            Size = new Size(960, 558);
+            Size = new Size(954, 519);
             ((System.ComponentModel.ISupportInitialize)ProductImage).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

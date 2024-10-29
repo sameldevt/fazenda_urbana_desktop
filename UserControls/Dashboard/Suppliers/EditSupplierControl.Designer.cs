@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             label11 = new Label();
-            label2 = new Label();
             label23 = new Label();
             SaveButton = new Button();
             BackButton = new Button();
@@ -44,7 +43,8 @@
             Addresses = new FlowLayoutPanel();
             label4 = new Label();
             NameTextBox = new TextBox();
-            RegistrationDateTextBox = new TextBox();
+            label13 = new Label();
+            WebsiteTextBox = new TextBox();
             SuspendLayout();
             // 
             // label11
@@ -56,16 +56,6 @@
             label11.Size = new Size(190, 25);
             label11.TabIndex = 182;
             label11.Text = "Informações básicas";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F);
-            label2.Location = new Point(35, 181);
-            label2.Name = "label2";
-            label2.Size = new Size(126, 21);
-            label2.TabIndex = 172;
-            label2.Text = "Data de cadastro";
             // 
             // label23
             // 
@@ -79,7 +69,7 @@
             // 
             // SaveButton
             // 
-            SaveButton.Location = new Point(756, 494);
+            SaveButton.Location = new Point(761, 462);
             SaveButton.Name = "SaveButton";
             SaveButton.Size = new Size(169, 37);
             SaveButton.TabIndex = 154;
@@ -89,7 +79,7 @@
             // 
             // BackButton
             // 
-            BackButton.Location = new Point(581, 494);
+            BackButton.Location = new Point(586, 462);
             BackButton.Name = "BackButton";
             BackButton.Size = new Size(169, 37);
             BackButton.TabIndex = 155;
@@ -155,7 +145,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F);
-            label3.Location = new Point(35, 231);
+            label3.Location = new Point(35, 181);
             label3.Name = "label3";
             label3.Size = new Size(46, 21);
             label3.TabIndex = 188;
@@ -163,7 +153,7 @@
             // 
             // CnpjTextBox
             // 
-            CnpjTextBox.Location = new Point(37, 255);
+            CnpjTextBox.Location = new Point(37, 205);
             CnpjTextBox.Multiline = true;
             CnpjTextBox.Name = "CnpjTextBox";
             CnpjTextBox.Size = new Size(190, 23);
@@ -194,19 +184,30 @@
             NameTextBox.Size = new Size(190, 23);
             NameTextBox.TabIndex = 192;
             // 
-            // RegistrationDateTextBox
+            // label13
             // 
-            RegistrationDateTextBox.Location = new Point(35, 205);
-            RegistrationDateTextBox.Multiline = true;
-            RegistrationDateTextBox.Name = "RegistrationDateTextBox";
-            RegistrationDateTextBox.Size = new Size(190, 23);
-            RegistrationDateTextBox.TabIndex = 193;
+            label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI", 12F);
+            label13.Location = new Point(35, 231);
+            label13.Name = "label13";
+            label13.Size = new Size(65, 21);
+            label13.TabIndex = 227;
+            label13.Text = "Website";
+            // 
+            // WebsiteTextBox
+            // 
+            WebsiteTextBox.Location = new Point(37, 254);
+            WebsiteTextBox.Multiline = true;
+            WebsiteTextBox.Name = "WebsiteTextBox";
+            WebsiteTextBox.Size = new Size(190, 23);
+            WebsiteTextBox.TabIndex = 226;
             // 
             // EditSupplierControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(RegistrationDateTextBox);
+            Controls.Add(label13);
+            Controls.Add(WebsiteTextBox);
             Controls.Add(NameTextBox);
             Controls.Add(label4);
             Controls.Add(Addresses);
@@ -218,13 +219,12 @@
             Controls.Add(Phone);
             Controls.Add(label1);
             Controls.Add(label11);
-            Controls.Add(label2);
             Controls.Add(label23);
             Controls.Add(SaveButton);
             Controls.Add(BackButton);
             Controls.Add(EditSupplierLabel);
             Name = "EditSupplierControl";
-            Size = new Size(960, 558);
+            Size = new Size(954, 519);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -232,7 +232,6 @@
         #endregion
 
         private Label label11;
-        private Label label2;
         private Label label23;
         private Label label10;
         private Label label9;
@@ -267,6 +266,7 @@
         private FlowLayoutPanel Addresses;
         private Label label4;
         private TextBox NameTextBox;
-        private TextBox RegistrationDateTextBox;
+        private Label label13;
+        private TextBox WebsiteTextBox;
     }
 }

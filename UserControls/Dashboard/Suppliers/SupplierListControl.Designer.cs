@@ -35,7 +35,7 @@
             // 
             SupplierList.Location = new Point(3, 3);
             SupplierList.Name = "SupplierList";
-            SupplierList.Size = new Size(949, 552);
+            SupplierList.Size = new Size(948, 513);
             SupplierList.TabIndex = 4;
             // 
             // SupplierListControl
@@ -44,7 +44,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(SupplierList);
             Name = "SupplierListControl";
-            Size = new Size(957, 558);
+            Size = new Size(954, 519);
             ResumeLayout(false);
         }
 

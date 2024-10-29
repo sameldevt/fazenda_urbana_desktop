@@ -70,7 +70,10 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
 
         private async void DeleteButton_Click(object sender, EventArgs e)
         {
-            await ProductService.Delete(Product!.Id);
+            var response = await ProductService.Delete(Product!.Id);
+
+            MessageBox.Show(response);
+            
             ProductListControl.GetInstance().ProductsList.Controls.Remove(this);
         }
 

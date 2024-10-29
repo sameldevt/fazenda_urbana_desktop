@@ -13,7 +13,13 @@
     <Compile Update="UserControls\Dashboard\Clients\ClientControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UserControls\Dashboard\Clients\ClientDetailsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UserControls\Dashboard\Clients\ClientListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\Dashboard\Clients\EditClientControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UserControls\Dashboard\Common\AddressCardControl.cs">

@@ -21,7 +21,7 @@ namespace fazenda_verdeviva.Model.Entities
         public string Description { get; set; }
 
         [JsonProperty("precoQuilo")]
-        public decimal WeightPrice { get; set; }
+        public double WeightPrice { get; set; }
 
         [JsonProperty("quantidadeEstoque")]
         public int StockQuantity { get; set; }
@@ -52,18 +52,18 @@ namespace fazenda_verdeviva.Model.Entities
     public class NutritionalInfo
     {
         [JsonProperty("calorias")]
-        public decimal Calories { get; set; }
+        public double Calories { get; set; }
 
         [JsonProperty("proteinas")]
-        public decimal Proteins { get; set; }
+        public double Proteins { get; set; }
 
         [JsonProperty("carboidratos")]
-        public decimal Carbohydrates { get; set; }
+        public double Carbohydrates { get; set; }
 
         [JsonProperty("fibras")]
-        public decimal Fibers { get; set; }
+        public double Fibers { get; set; }
 
         [JsonProperty("gorduras")]
-        public decimal Fats { get; set; }
+        public double Fats { get; set; }
     }
 }

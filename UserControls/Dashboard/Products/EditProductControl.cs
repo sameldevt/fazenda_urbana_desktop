@@ -152,12 +152,22 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
 
         private async void SaveButton_Click(object sender, EventArgs e)
         {
-            await ProductService.Update(Product);
+            Product.Name = ProductNameTextBox.Text;
+            Product.Description = ProductDescriptionTextBox.Text;
+            Product.ImageUrl = ProductImageUrlTextBox.Text;
+            Product.WeightPrice = double.Parse(ProductPriceTextBox.Text
+                .Replace("R$ ", "")
+                .Replace(" / kg", ""));
+            Product.StockQuantity = int.Parse(ProductQuantityTextBox.Text);
+            Product.NutritionalInfo.Calories = int.Parse(ProductCaloriesTextBox.Text);
+            Product.NutritionalInfo.Carbohydrates = double.Parse(ProductCarbsTextBox.Text);
+            Product.NutritionalInfo.Fats = double.Parse(ProductFatsTextBox.Text);
+            Product.NutritionalInfo.Fibers = double.Parse(ProductFibersTextBox.Text);
+            Product.NutritionalInfo.Proteins = double.Parse(ProductProteinsTextBox.Text);
 
-            var productList = ProductListControl.GetInstance();
-            productList.ProductsList.Controls.Clear();
-            productList.LoadProductCards();
+            var response = await ProductService.Update(Product);
 
+            MessageBox.Show(response);
             ProductsControl.GetInstance().RegisterButton.Enabled = true;
             ProductsControl.GetInstance().SetContentPanelControl(ProductListControl.GetInstance());
         }

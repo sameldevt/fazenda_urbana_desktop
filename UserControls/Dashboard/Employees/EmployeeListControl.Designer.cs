@@ -35,7 +35,7 @@
             // 
             EmployeesList.Location = new Point(3, 3);
             EmployeesList.Name = "EmployeesList";
-            EmployeesList.Size = new Size(954, 552);
+            EmployeesList.Size = new Size(948, 513);
             EmployeesList.TabIndex = 6;
             // 
             // EmployeeListControl
@@ -44,7 +44,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(EmployeesList);
             Name = "EmployeeListControl";
-            Size = new Size(960, 558);
+            Size = new Size(954, 519);
             ResumeLayout(false);
         }
 

@@ -34,21 +34,26 @@ namespace fazenda_verdeviva.Services
         }
 
 
-        public static async Task Update(Client client)
+        public static async Task<string> Update(Client client)
         {
             string url = $"{Network.BaseUrl}/{ContextUrl}/atualizar";
 
             string json = JsonConvert.SerializeObject(client);
             StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
 
-            await Network.HttpClient.PutAsync(url, content);
+            var response = await Network.HttpClient.PutAsync(url, content);
+
+            return await response.Content.ReadAsStringAsync();
         }
 
-        public static async Task Delete(int id)
+        public static async Task<string> Delete(int id)
         {
             string url = $"{Network.BaseUrl}/{ContextUrl}/remover/{id}";
 
-            await Network.HttpClient.DeleteAsync(url);
+            var response = await Network.HttpClient.DeleteAsync(url);
+
+            return await response.Content.ReadAsStringAsync();
+
         }
     }
 }

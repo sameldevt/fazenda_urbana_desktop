@@ -50,19 +50,19 @@
             // 
             ContentPanel.Location = new Point(231, 71);
             ContentPanel.Name = "ContentPanel";
-            ContentPanel.Size = new Size(966, 626);
+            ContentPanel.Size = new Size(960, 587);
             ContentPanel.TabIndex = 0;
             ContentPanel.Paint += ContentPanel_Paint;
             // 
             // TopBar
             // 
-            TopBar.BackColor = Color.FromArgb(104, 159, 57);
+            TopBar.BackColor = Color.White;
             TopBar.Controls.Add(label3);
             TopBar.Controls.Add(OperatorEmail);
             TopBar.Controls.Add(pictureBox1);
             TopBar.Location = new Point(3, 3);
             TopBar.Name = "TopBar";
-            TopBar.Size = new Size(1194, 62);
+            TopBar.Size = new Size(1188, 62);
             TopBar.TabIndex = 1;
             // 
             // label3
@@ -104,7 +104,7 @@
             NavPanel.Controls.Add(ProductsButton);
             NavPanel.Location = new Point(3, 71);
             NavPanel.Name = "NavPanel";
-            NavPanel.Size = new Size(225, 626);
+            NavPanel.Size = new Size(225, 587);
             NavPanel.TabIndex = 2;
             // 
             // EmployeesButton
@@ -175,7 +175,7 @@
             Controls.Add(TopBar);
             Controls.Add(ContentPanel);
             Name = "DashboardControl";
-            Size = new Size(1200, 700);
+            Size = new Size(1194, 661);
             TopBar.ResumeLayout(false);
             TopBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

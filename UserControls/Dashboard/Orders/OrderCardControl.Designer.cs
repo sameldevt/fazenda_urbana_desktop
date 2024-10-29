@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             ContentPanel = new Panel();
+            PaymentMethod = new Label();
             OrderPrice = new Label();
             OrderItemQuantity = new Label();
             OrderId = new Label();
-            PaymentMethod = new Label();
             ContentPanel.SuspendLayout();
             SuspendLayout();
             // 
@@ -44,15 +44,27 @@
             ContentPanel.Controls.Add(OrderId);
             ContentPanel.Location = new Point(3, 3);
             ContentPanel.Name = "ContentPanel";
-            ContentPanel.Size = new Size(940, 107);
+            ContentPanel.Size = new Size(948, 107);
             ContentPanel.TabIndex = 1;
+            // 
+            // PaymentMethod
+            // 
+            PaymentMethod.AutoSize = true;
+            PaymentMethod.Font = new Font("Segoe UI", 14F);
+            PaymentMethod.ForeColor = Color.DarkGray;
+            PaymentMethod.Location = new Point(3, 64);
+            PaymentMethod.Name = "PaymentMethod";
+            PaymentMethod.Size = new Size(158, 25);
+            PaymentMethod.TabIndex = 9;
+            PaymentMethod.Text = "Cartão de crédito";
             // 
             // OrderPrice
             // 
+            OrderPrice.Anchor = AnchorStyles.None;
             OrderPrice.AutoSize = true;
             OrderPrice.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             OrderPrice.ForeColor = Color.Green;
-            OrderPrice.Location = new Point(833, 14);
+            OrderPrice.Location = new Point(774, 12);
             OrderPrice.Name = "OrderPrice";
             OrderPrice.Size = new Size(94, 25);
             OrderPrice.TabIndex = 8;
@@ -79,24 +91,13 @@
             OrderId.TabIndex = 2;
             OrderId.Text = "# 21231122";
             // 
-            // PaymentMethod
-            // 
-            PaymentMethod.AutoSize = true;
-            PaymentMethod.Font = new Font("Segoe UI", 14F);
-            PaymentMethod.ForeColor = Color.DarkGray;
-            PaymentMethod.Location = new Point(3, 64);
-            PaymentMethod.Name = "PaymentMethod";
-            PaymentMethod.Size = new Size(158, 25);
-            PaymentMethod.TabIndex = 9;
-            PaymentMethod.Text = "Cartão de crédito";
-            // 
             // OrderCardControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(ContentPanel);
             Name = "OrderCardControl";
-            Size = new Size(946, 113);
+            Size = new Size(954, 113);
             ContentPanel.ResumeLayout(false);
             ContentPanel.PerformLayout();
             ResumeLayout(false);

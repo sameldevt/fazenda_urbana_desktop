@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             ContentPanel = new Panel();
+            DetailsButton = new Button();
             EditButton = new Button();
             DeleteButton = new Button();
             ClientMemberSinceDate = new Label();
@@ -40,6 +41,7 @@
             // 
             // ContentPanel
             // 
+            ContentPanel.Controls.Add(DetailsButton);
             ContentPanel.Controls.Add(EditButton);
             ContentPanel.Controls.Add(DeleteButton);
             ContentPanel.Controls.Add(ClientMemberSinceDate);
@@ -47,26 +49,42 @@
             ContentPanel.Controls.Add(ClientImage);
             ContentPanel.Location = new Point(3, 3);
             ContentPanel.Name = "ContentPanel";
-            ContentPanel.Size = new Size(940, 144);
+            ContentPanel.Size = new Size(948, 144);
             ContentPanel.TabIndex = 1;
+            // 
+            // DetailsButton
+            // 
+            DetailsButton.BackColor = Color.White;
+            DetailsButton.Location = new Point(826, 12);
+            DetailsButton.Name = "DetailsButton";
+            DetailsButton.Size = new Size(95, 33);
+            DetailsButton.TabIndex = 10;
+            DetailsButton.Text = "Ver detalhes";
+            DetailsButton.UseVisualStyleBackColor = false;
+            DetailsButton.Click += DetailsButton_Click;
             // 
             // EditButton
             // 
-            EditButton.Location = new Point(852, 14);
+            EditButton.BackColor = Color.White;
+            EditButton.Location = new Point(826, 90);
             EditButton.Name = "EditButton";
-            EditButton.Size = new Size(75, 23);
-            EditButton.TabIndex = 5;
+            EditButton.Size = new Size(95, 35);
+            EditButton.TabIndex = 9;
             EditButton.Text = "Editar";
-            EditButton.UseVisualStyleBackColor = true;
+            EditButton.UseVisualStyleBackColor = false;
+            EditButton.Click += EditButton_Click_1;
             // 
             // DeleteButton
             // 
-            DeleteButton.Location = new Point(771, 14);
+            DeleteButton.BackColor = Color.White;
+            DeleteButton.ForeColor = SystemColors.ControlText;
+            DeleteButton.Location = new Point(826, 51);
             DeleteButton.Name = "DeleteButton";
-            DeleteButton.Size = new Size(75, 23);
-            DeleteButton.TabIndex = 4;
+            DeleteButton.Size = new Size(95, 33);
+            DeleteButton.TabIndex = 8;
             DeleteButton.Text = "Excluir";
-            DeleteButton.UseVisualStyleBackColor = true;
+            DeleteButton.UseVisualStyleBackColor = false;
+            DeleteButton.Click += DeleteButton_Click_1;
             // 
             // ClientMemberSinceDate
             // 
@@ -106,7 +124,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(ContentPanel);
             Name = "ClientCardControl";
-            Size = new Size(946, 150);
+            Size = new Size(954, 150);
             ContentPanel.ResumeLayout(false);
             ContentPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)ClientImage).EndInit();
@@ -116,10 +134,11 @@
         #endregion
 
         private Panel ContentPanel;
-        private Button EditButton;
-        private Button DeleteButton;
         private Label ClientMemberSinceDate;
         private Label ClientName;
         private PictureBox ClientImage;
+        private Button DetailsButton;
+        private Button EditButton;
+        private Button DeleteButton;
     }
 }

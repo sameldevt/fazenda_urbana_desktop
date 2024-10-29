@@ -35,7 +35,7 @@
             // 
             MessagesList.Location = new Point(3, 3);
             MessagesList.Name = "MessagesList";
-            MessagesList.Size = new Size(951, 552);
+            MessagesList.Size = new Size(948, 513);
             MessagesList.TabIndex = 0;
             // 
             // ContactMessageListControl
@@ -44,7 +44,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(MessagesList);
             Name = "ContactMessageListControl";
-            Size = new Size(957, 558);
+            Size = new Size(954, 519);
             ResumeLayout(false);
         }
 

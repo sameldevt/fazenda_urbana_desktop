@@ -35,7 +35,7 @@
             // 
             ClientsList.Location = new Point(3, 3);
             ClientsList.Name = "ClientsList";
-            ClientsList.Size = new Size(954, 552);
+            ClientsList.Size = new Size(948, 513);
             ClientsList.TabIndex = 4;
             // 
             // ClientListControl
@@ -44,7 +44,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(ClientsList);
             Name = "ClientListControl";
-            Size = new Size(960, 558);
+            Size = new Size(954, 519);
             ResumeLayout(false);
         }
 

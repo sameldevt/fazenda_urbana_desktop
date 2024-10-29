@@ -63,7 +63,7 @@
             // 
             // SaveButton
             // 
-            SaveButton.Location = new Point(749, 485);
+            SaveButton.Location = new Point(761, 462);
             SaveButton.Name = "SaveButton";
             SaveButton.Size = new Size(169, 37);
             SaveButton.TabIndex = 67;
@@ -73,7 +73,7 @@
             // 
             // BackButton
             // 
-            BackButton.Location = new Point(574, 485);
+            BackButton.Location = new Point(586, 462);
             BackButton.Name = "BackButton";
             BackButton.Size = new Size(169, 37);
             BackButton.TabIndex = 68;
@@ -365,7 +365,7 @@
             Controls.Add(BackButton);
             Controls.Add(EditProductLabel);
             Name = "EditProductControl";
-            Size = new Size(960, 558);
+            Size = new Size(954, 519);
             ((System.ComponentModel.ISupportInitialize)ProductImage).EndInit();
             ResumeLayout(false);
             PerformLayout();

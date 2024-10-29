@@ -32,31 +32,38 @@ namespace fazenda_verdeviva.Services
             return null;
         }
 
-        public static async Task Update(Product product)
+        public static async Task<string> Update(Product product)
         {
             string url = $"{Network.BaseUrl}/{ContextUrl}/atualizar";
 
             string json = JsonConvert.SerializeObject(product);
             StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
 
-            await Network.HttpClient.PutAsync(url, content);
+            var response = await Network.HttpClient.PutAsync(url, content);
+
+            return await response.Content.ReadAsStringAsync();
         }
 
-        public static async Task Register(RegisterProductDto product)
+        public static async Task<string> Register(RegisterProductDto product)
         {
             string url = $"{Network.BaseUrl}/{ContextUrl}/cadastrar";
 
             string json = JsonConvert.SerializeObject(product);
             StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
 
-            await Network.HttpClient.PostAsync(url, content);
+            var response = await Network.HttpClient.PostAsync(url, content);
+
+
+            return await response.Content.ReadAsStringAsync();
         }
 
-        public static async Task Delete(int id)
+            public static async Task<string> Delete(int id)
         {
             string url = $"{Network.BaseUrl}/{ContextUrl}/remover/{id}";
 
-            await Network.HttpClient.DeleteAsync(url);
+            var response = await Network.HttpClient.DeleteAsync(url);
+
+            return await response.Content.ReadAsStringAsync();
         }
     }
 }

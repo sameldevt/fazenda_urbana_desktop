@@ -15,6 +15,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Suppliers
     public partial class SupplierControl : UserControl
     {
         private static SupplierControl? Instance;
+
         private SupplierControl()
         {
             InitializeComponent();

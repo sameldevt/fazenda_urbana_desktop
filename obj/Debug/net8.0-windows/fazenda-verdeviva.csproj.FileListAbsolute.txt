@@ -156,3 +156,5 @@ C:\dev\workspace\visual-studio\fazenda_urbana_desktop\obj\Debug\net8.0-windows\f
 C:\dev\workspace\visual-studio\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Suppliers.EditSupplierControl.resources
 C:\dev\workspace\visual-studio\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Suppliers.SupplierCardControl.resources
 C:\dev\workspace\visual-studio\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Suppliers.RegisterSupplierControl.resources
+C:\dev\workspace\visual-studio\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Clients.ClientDetailsControl.resources
+C:\dev\workspace\visual-studio\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Clients.EditClientControl.resources

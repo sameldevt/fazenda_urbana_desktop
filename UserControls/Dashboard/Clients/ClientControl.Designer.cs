@@ -41,7 +41,7 @@
             panel1.Controls.Add(label1);
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(957, 59);
+            panel1.Size = new Size(954, 59);
             panel1.TabIndex = 4;
             // 
             // flowLayoutPanel1
@@ -65,7 +65,7 @@
             // 
             ContentPanel.Location = new Point(3, 65);
             ContentPanel.Name = "ContentPanel";
-            ContentPanel.Size = new Size(957, 558);
+            ContentPanel.Size = new Size(954, 519);
             ContentPanel.TabIndex = 5;
             // 
             // ClientControl
@@ -75,7 +75,7 @@
             Controls.Add(ContentPanel);
             Controls.Add(panel1);
             Name = "ClientControl";
-            Size = new Size(963, 626);
+            Size = new Size(960, 587);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

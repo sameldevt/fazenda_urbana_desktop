@@ -39,7 +39,7 @@
             panel1.Controls.Add(label1);
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(957, 59);
+            panel1.Size = new Size(954, 59);
             panel1.TabIndex = 1;
             // 
             // label1
@@ -56,7 +56,7 @@
             // 
             OrdersList.Location = new Point(3, 65);
             OrdersList.Name = "OrdersList";
-            OrdersList.Size = new Size(957, 558);
+            OrdersList.Size = new Size(954, 519);
             OrdersList.TabIndex = 2;
             // 
             // OrdersControl
@@ -66,7 +66,7 @@
             Controls.Add(OrdersList);
             Controls.Add(panel1);
             Name = "OrdersControl";
-            Size = new Size(963, 626);
+            Size = new Size(960, 587);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

@@ -39,7 +39,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Suppliers
         {
             this.Supplier = supplier;
             NameTextBox.Text = supplier.Name;
-            RegistrationDateTextBox.Text = supplier.RegistrationDate.ToString("dd/MM/yyyy");
+            WebsiteTextBox.Text = supplier.Website;
             CnpjTextBox.Text = supplier.CNPJ;
             PhoneTextBox.Text = supplier.Contact?.Phone ?? "";
             EmailTextBox.Text = supplier.Contact?.Email ?? "";

@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             ContentPanel = new Panel();
+            EditButton = new Button();
+            DeleteButton = new Button();
+            Details = new Button();
             SupplierWebsite = new Label();
             SupllierCnpj = new Label();
             SupplierName = new Label();
-            Details = new Button();
-            DeleteButton = new Button();
-            EditButton = new Button();
             ContentPanel.SuspendLayout();
             SuspendLayout();
             // 
@@ -48,9 +48,42 @@
             ContentPanel.Controls.Add(SupplierName);
             ContentPanel.Location = new Point(3, 3);
             ContentPanel.Name = "ContentPanel";
-            ContentPanel.Size = new Size(940, 144);
+            ContentPanel.Size = new Size(948, 144);
             ContentPanel.TabIndex = 0;
             ContentPanel.Paint += ContentPanel_Paint;
+            // 
+            // EditButton
+            // 
+            EditButton.BackColor = Color.White;
+            EditButton.Location = new Point(826, 90);
+            EditButton.Name = "EditButton";
+            EditButton.Size = new Size(95, 35);
+            EditButton.TabIndex = 12;
+            EditButton.Text = "Editar";
+            EditButton.UseVisualStyleBackColor = false;
+            // 
+            // DeleteButton
+            // 
+            DeleteButton.BackColor = Color.White;
+            DeleteButton.ForeColor = SystemColors.ControlText;
+            DeleteButton.Location = new Point(826, 51);
+            DeleteButton.Name = "DeleteButton";
+            DeleteButton.Size = new Size(95, 33);
+            DeleteButton.TabIndex = 9;
+            DeleteButton.Text = "Excluir";
+            DeleteButton.UseVisualStyleBackColor = false;
+            DeleteButton.Click += DeleteButton_Click;
+            // 
+            // Details
+            // 
+            Details.BackColor = Color.White;
+            Details.Location = new Point(826, 12);
+            Details.Name = "Details";
+            Details.Size = new Size(95, 33);
+            Details.TabIndex = 8;
+            Details.Text = "Ver detalhes";
+            Details.UseVisualStyleBackColor = false;
+            Details.Click += Details_Click;
             // 
             // SupplierWebsite
             // 
@@ -84,45 +117,13 @@
             SupplierName.TabIndex = 2;
             SupplierName.Text = "Fazenda de alimentos LTDA";
             // 
-            // Details
-            // 
-            Details.BackColor = Color.White;
-            Details.Location = new Point(826, 12);
-            Details.Name = "Details";
-            Details.Size = new Size(95, 33);
-            Details.TabIndex = 8;
-            Details.Text = "Ver detalhes";
-            Details.UseVisualStyleBackColor = false;
-            Details.Click += Details_Click;
-            // 
-            // DeleteButton
-            // 
-            DeleteButton.BackColor = Color.White;
-            DeleteButton.ForeColor = SystemColors.ControlText;
-            DeleteButton.Location = new Point(826, 51);
-            DeleteButton.Name = "DeleteButton";
-            DeleteButton.Size = new Size(95, 33);
-            DeleteButton.TabIndex = 9;
-            DeleteButton.Text = "Excluir";
-            DeleteButton.UseVisualStyleBackColor = false;
-            // 
-            // EditButton
-            // 
-            EditButton.BackColor = Color.White;
-            EditButton.Location = new Point(826, 90);
-            EditButton.Name = "EditButton";
-            EditButton.Size = new Size(95, 35);
-            EditButton.TabIndex = 12;
-            EditButton.Text = "Editar";
-            EditButton.UseVisualStyleBackColor = false;
-            // 
-            // SupllierCardControl
+            // SupplierCardControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(ContentPanel);
-            Name = "SupllierCardControl";
-            Size = new Size(946, 150);
+            Name = "SupplierCardControl";
+            Size = new Size(954, 150);
             ContentPanel.ResumeLayout(false);
             ContentPanel.PerformLayout();
             ResumeLayout(false);

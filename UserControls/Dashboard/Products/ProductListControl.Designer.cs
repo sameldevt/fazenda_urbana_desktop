@@ -35,7 +35,7 @@
             // 
             ProductsList.Location = new Point(3, 3);
             ProductsList.Name = "ProductsList";
-            ProductsList.Size = new Size(954, 552);
+            ProductsList.Size = new Size(948, 513);
             ProductsList.TabIndex = 2;
             // 
             // ProductListControl
@@ -44,7 +44,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(ProductsList);
             Name = "ProductListControl";
-            Size = new Size(960, 558);
+            Size = new Size(954, 519);
             ResumeLayout(false);
         }
 

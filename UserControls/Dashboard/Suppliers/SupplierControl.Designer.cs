@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            RegisterButton = new Button();
             label1 = new Label();
             ContentPanel = new Panel();
-            RegisterButton = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -41,8 +41,18 @@
             panel1.Controls.Add(label1);
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(957, 59);
+            panel1.Size = new Size(954, 59);
             panel1.TabIndex = 0;
+            // 
+            // RegisterButton
+            // 
+            RegisterButton.Location = new Point(749, 10);
+            RegisterButton.Name = "RegisterButton";
+            RegisterButton.Size = new Size(169, 37);
+            RegisterButton.TabIndex = 9;
+            RegisterButton.Text = "Cadastrar";
+            RegisterButton.UseVisualStyleBackColor = true;
+            RegisterButton.Click += RegisterButton_Click;
             // 
             // label1
             // 
@@ -58,18 +68,8 @@
             // 
             ContentPanel.Location = new Point(3, 65);
             ContentPanel.Name = "ContentPanel";
-            ContentPanel.Size = new Size(957, 558);
+            ContentPanel.Size = new Size(954, 519);
             ContentPanel.TabIndex = 1;
-            // 
-            // RegisterButton
-            // 
-            RegisterButton.Location = new Point(749, 10);
-            RegisterButton.Name = "RegisterButton";
-            RegisterButton.Size = new Size(169, 37);
-            RegisterButton.TabIndex = 9;
-            RegisterButton.Text = "Cadastrar";
-            RegisterButton.UseVisualStyleBackColor = true;
-            RegisterButton.Click += RegisterButton_Click;
             // 
             // SupplierControl
             // 
@@ -78,7 +78,7 @@
             Controls.Add(ContentPanel);
             Controls.Add(panel1);
             Name = "SupplierControl";
-            Size = new Size(963, 626);
+            Size = new Size(960, 587);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

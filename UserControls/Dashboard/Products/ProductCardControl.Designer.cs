@@ -61,7 +61,7 @@
             ContentPanel.Controls.Add(ProductImage);
             ContentPanel.Location = new Point(3, 3);
             ContentPanel.Name = "ContentPanel";
-            ContentPanel.Size = new Size(940, 144);
+            ContentPanel.Size = new Size(942, 144);
             ContentPanel.TabIndex = 0;
             // 
             // ProductSupplier
@@ -201,7 +201,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(ContentPanel);
             Name = "ProductCardControl";
-            Size = new Size(946, 150);
+            Size = new Size(948, 150);
             ContentPanel.ResumeLayout(false);
             ContentPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)ProductImage).EndInit();

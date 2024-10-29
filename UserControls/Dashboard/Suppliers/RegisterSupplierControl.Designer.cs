@@ -173,7 +173,7 @@
             // 
             // RegisterButton
             // 
-            RegisterButton.Location = new Point(743, 494);
+            RegisterButton.Location = new Point(761, 462);
             RegisterButton.Name = "RegisterButton";
             RegisterButton.Size = new Size(169, 37);
             RegisterButton.TabIndex = 209;
@@ -183,7 +183,7 @@
             // 
             // BackButton
             // 
-            BackButton.Location = new Point(568, 494);
+            BackButton.Location = new Point(586, 462);
             BackButton.Name = "BackButton";
             BackButton.Size = new Size(169, 37);
             BackButton.TabIndex = 210;
@@ -380,7 +380,7 @@
             Controls.Add(label23);
             Controls.Add(EditSupplierLabel);
             Name = "RegisterSupplierControl";
-            Size = new Size(960, 558);
+            Size = new Size(954, 519);
             ResumeLayout(false);
             PerformLayout();
         }

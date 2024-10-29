@@ -177,16 +177,17 @@
             // 
             // RegisterButton
             // 
-            RegisterButton.Location = new Point(747, 486);
+            RegisterButton.Location = new Point(761, 462);
             RegisterButton.Name = "RegisterButton";
             RegisterButton.Size = new Size(169, 37);
             RegisterButton.TabIndex = 40;
             RegisterButton.Text = "Cadastrar";
             RegisterButton.UseVisualStyleBackColor = true;
+            RegisterButton.Click += RegisterButton_Click_1;
             // 
             // BackButton
             // 
-            BackButton.Location = new Point(572, 486);
+            BackButton.Location = new Point(586, 462);
             BackButton.Name = "BackButton";
             BackButton.Size = new Size(169, 37);
             BackButton.TabIndex = 41;
@@ -367,7 +368,7 @@
             Controls.Add(ManufacturerLabel);
             Controls.Add(CategoryComboBox);
             Name = "RegisterProductControl";
-            Size = new Size(960, 558);
+            Size = new Size(954, 519);
             ((System.ComponentModel.ISupportInitialize)ProductImage).EndInit();
             ResumeLayout(false);
             PerformLayout();
