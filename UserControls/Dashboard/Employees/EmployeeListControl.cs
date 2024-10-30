@@ -15,7 +15,7 @@ using System.Windows.Forms;
 
 namespace fazenda_verdeviva.UserControls.Dashboard.Employees
 {
-    public partial class EmployeeListControl : UserControl, ListControlInterface
+    public partial class EmployeeListControl : UserControl, ControlInterface
     {
         private static EmployeeListControl? Instance;
         private EmployeeListControl()
@@ -53,7 +53,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Employees
             }
             catch (Exception ex)
             {
-                EmployeeControl.GetInstance().SetContentPanelControl(new NoResourceFound(Instance));
+                EmployeeControl.GetInstance().SetContentPanelControl(NoResourceFound.GetInstance());
             }
         }
     }

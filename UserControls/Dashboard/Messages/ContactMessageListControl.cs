@@ -15,7 +15,7 @@ using System.Windows.Forms;
 
 namespace fazenda_verdeviva.UserControls.Dashboard.Messages
 {
-    public partial class ContactMessageListControl : UserControl, ListControlInterface
+    public partial class ContactMessageListControl : UserControl, ControlInterface
     {
         private static ContactMessageListControl? Instance;
         public ContactMessageListControl()
@@ -54,7 +54,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Messages
             }
             catch (Exception ex)
             {
-                ContactMessageControl.GetInstance().SetContentPanelControl(new NoResourceFound(Instance));
+                ContactMessageControl.GetInstance().SetContentPanelControl(NoResourceFound.GetInstance());
             }
         }
     }

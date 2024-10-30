@@ -15,7 +15,7 @@ using System.Windows.Forms;
 
 namespace fazenda_verdeviva.UserControls.Dashboard.Suppliers
 {
-    public partial class SupplierListControl : UserControl, ListControlInterface
+    public partial class SupplierListControl : UserControl, ControlInterface
     {
         private static SupplierListControl? Instance;
 
@@ -55,7 +55,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Suppliers
             }
             catch (Exception ex)
             {
-                SupplierControl.GetInstance().SetContentPanelControl(new NoResourceFound(Instance));
+                SupplierControl.GetInstance().SetContentPanelControl(NoResourceFound.GetInstance());
             }
         }
     }

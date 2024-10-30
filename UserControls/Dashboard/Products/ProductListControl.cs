@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace fazenda_verdeviva.UserControls.Dashboard.Products
 {
-    public partial class ProductListControl : UserControl, ListControlInterface
+    public partial class ProductListControl : UserControl, ControlInterface
     {
         private static ProductListControl? Instance;
 
@@ -52,7 +52,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
             }
             catch (Exception ex) 
             { 
-                ProductsControl.GetInstance().SetContentPanelControl(new NoResourceFound(Instance));
+                ProductsControl.GetInstance().SetContentPanelControl(NoResourceFound.GetInstance());
             }
         }
     }

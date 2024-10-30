@@ -15,7 +15,7 @@ using System.Windows.Forms;
 
 namespace fazenda_verdeviva.UserControls.Dashboard.Clients
 {
-    public partial class ClientListControl : UserControl, ListControlInterface
+    public partial class ClientListControl : UserControl, ControlInterface
     {
         private static ClientListControl? Instance;
         private ClientListControl()
@@ -53,7 +53,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Clients
             }
             catch (Exception ex) 
             {
-                ClientControl.GetInstance().SetContentPanelControl(new NoResourceFound(Instance));
+                ClientControl.GetInstance().SetContentPanelControl(NoResourceFound.GetInstance());
             }
         }
     }

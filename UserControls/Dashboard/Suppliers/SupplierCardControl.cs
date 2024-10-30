@@ -37,7 +37,9 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Suppliers
 
         private void Details_Click(object sender, EventArgs e)
         {
-            
+            var supplierDetailsControlInstance = SupplierDetailsControl.GetInstance();
+            supplierDetailsControlInstance.LoadSupplier(Supplier);
+            SupplierControl.GetInstance().SetContentPanelControl(supplierDetailsControlInstance);
         }
 
         private async void DeleteButton_Click(object sender, EventArgs e)

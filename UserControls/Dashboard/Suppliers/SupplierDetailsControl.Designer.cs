@@ -184,6 +184,7 @@
             BackButton.TabIndex = 229;
             BackButton.Text = "Voltar";
             BackButton.UseVisualStyleBackColor = true;
+            BackButton.Click += BackButton_Click;
             // 
             // EditSupplierLabel
             // 

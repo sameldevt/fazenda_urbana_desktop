@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace fazenda_verdeviva.UserControls.Utils
 {
-    public interface ListControlInterface
+    public interface ControlInterface
     {
-        Task LoadCards();
     }
 }

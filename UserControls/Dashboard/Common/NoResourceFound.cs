@@ -14,17 +14,23 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Common
     public partial class NoResourceFound : UserControl
     {
         private static NoResourceFound? Instance;
-        private static ListControlInterface? ListControl;
-        public NoResourceFound(ListControlInterface listControl)
+        private NoResourceFound()
         {
             InitializeComponent();
-            ListControl = listControl;
         }
 
-        private async void RefreshButton_Click(object sender, EventArgs e)
+        public static NoResourceFound GetInstance()
         {
-            await ListControl.LoadCards();
+            if (Instance == null)
+            {
+                Instance = new NoResourceFound();
+            }
 
+            return Instance;
+        }
+
+        private void RefreshButton_Click(object sender, EventArgs e)
+        {
         }
     }
 }
