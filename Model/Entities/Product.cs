@@ -37,6 +37,11 @@ namespace fazenda_verdeviva.Model.Entities
 
         [JsonProperty("fornecedor")]
         public virtual Supplier Supplier { get; set; }
+
+        public override string ToString()
+        {
+            return JsonConvert.SerializeObject(this, Formatting.Indented);
+        }
     }
 
     public class Category

@@ -166,6 +166,8 @@
             // 
             // ProductDescription
             // 
+            ProductDescription.AllowDrop = true;
+            ProductDescription.AutoEllipsis = true;
             ProductDescription.AutoSize = true;
             ProductDescription.Font = new Font("Segoe UI", 14F);
             ProductDescription.ForeColor = Color.DarkGray;

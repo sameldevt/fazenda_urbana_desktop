@@ -97,6 +97,9 @@
     <Compile Update="UserControls\Dashboard\Suppliers\SupplierControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UserControls\Dashboard\Suppliers\SupplierDetailsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UserControls\Dashboard\Suppliers\SupplierListControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

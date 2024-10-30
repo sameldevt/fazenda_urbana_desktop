@@ -37,9 +37,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Suppliers
 
         private void Details_Click(object sender, EventArgs e)
         {
-            var editSupplierControl = EditSupplierControl.GetInstance();
-            editSupplierControl.LoadSupplier(Supplier);
-            SupplierControl.GetInstance().SetContentPanelControl(editSupplierControl);
+            
         }
 
         private async void DeleteButton_Click(object sender, EventArgs e)
@@ -49,6 +47,13 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Suppliers
             MessageBox.Show(response);
 
             SupplierListControl.GetInstance().SupplierList.Controls.Remove(this);
+        }
+
+        private void EditButton_Click(object sender, EventArgs e)
+        {
+            var editSupplierControl = EditSupplierControl.GetInstance();
+            editSupplierControl.LoadSupplier(Supplier);
+            SupplierControl.GetInstance().SetContentPanelControl(editSupplierControl);
         }
     }
 }

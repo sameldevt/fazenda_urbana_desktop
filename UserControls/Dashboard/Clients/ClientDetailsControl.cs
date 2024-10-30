@@ -39,6 +39,9 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Clients
 
         private void BackButton_Click(object sender, EventArgs e)
         {
+            Client = null;
+            Addresses.Controls.Clear();
+            Orders.Controls.Clear();
             ClientControl.GetInstance().SetContentPanelControl(ClientListControl.GetInstance());
         }
 

@@ -61,6 +61,7 @@
             EditButton.TabIndex = 12;
             EditButton.Text = "Editar";
             EditButton.UseVisualStyleBackColor = false;
+            EditButton.Click += EditButton_Click;
             // 
             // DeleteButton
             // 

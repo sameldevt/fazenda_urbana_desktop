@@ -272,6 +272,7 @@
             ProductImageUrlTextBox.Name = "ProductImageUrlTextBox";
             ProductImageUrlTextBox.Size = new Size(190, 23);
             ProductImageUrlTextBox.TabIndex = 134;
+            ProductImageUrlTextBox.Leave += LoadProductImage;
             // 
             // ProductQuantityTextBox
             // 
