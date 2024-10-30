@@ -26,6 +26,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Clients
         {
             this.Client = client;
             ClientName.Text = client.Name;
+            ClientEmail.Text = client.Contact.Email;
             ClientMemberSinceDate.Text = $"Membro desde {client.RegistrationDate.ToString("dd/MM/yyyy")}";
         }
 
@@ -38,18 +39,18 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Clients
 
         private async void DeleteButton_Click_1(object sender, EventArgs e)
         {
-            var response = await ClientService.Delete(Client!.Id);
+            var response = await ClientService.GetInstance().Delete(Client!.Id);
 
             MessageBox.Show(response);
 
-            ProductListControl.GetInstance().ProductsList.Controls.Remove(this);
+            ClientListControl.GetInstance().ClientsList.Controls.Remove(this);
         }
 
         private void EditButton_Click_1(object sender, EventArgs e)
         {
             var editClientControlInstance = EditClientControl.GetInstance();
             editClientControlInstance.LoadClientInfo(Client);
-            ProductsControl.GetInstance().SetContentPanelControl(editClientControlInstance);
+            ClientControl.GetInstance().SetContentPanelControl(editClientControlInstance);
         }
     }
 }

@@ -9,11 +9,23 @@ using System.Threading.Tasks;
 
 namespace fazenda_verdeviva.Services
 {
-    internal class OrderService
+    internal class OrderService : ServiceInterface<Order>
     {
-        private static readonly string ContextUrl = "pedidos";
+        private readonly string ContextUrl = "pedidos";
+        private static OrderService? Instance;
 
-        public static async Task<List<Order>> GetAll()
+        private OrderService() { }
+
+        public static OrderService GetInstance()
+        {
+            if (Instance == null)
+            {
+                Instance = new OrderService();
+            }
+            return Instance;
+        }
+
+        public async Task<List<Order>> GetAll()
         {
             string url = $"{Network.BaseUrl}/{ContextUrl}/buscar-todos";
 
@@ -31,7 +43,7 @@ namespace fazenda_verdeviva.Services
             return null;
         }
 
-        public static async Task Update(Order order)
+        public async Task Update(Order order)
         {
             string url = $"{Network.BaseUrl}/{ContextUrl}/atualizar";
 
@@ -41,7 +53,7 @@ namespace fazenda_verdeviva.Services
             await Network.HttpClient.PutAsync(url, content);
         }
 
-        public static async Task Delete(int id)
+        public async Task Delete(int id)
         {
             string url = $"{Network.BaseUrl}/{ContextUrl}/remover/{id}";
 

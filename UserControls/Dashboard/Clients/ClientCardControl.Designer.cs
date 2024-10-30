@@ -35,12 +35,14 @@
             ClientMemberSinceDate = new Label();
             ClientName = new Label();
             ClientImage = new PictureBox();
+            ClientEmail = new Label();
             ContentPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ClientImage).BeginInit();
             SuspendLayout();
             // 
             // ContentPanel
             // 
+            ContentPanel.Controls.Add(ClientEmail);
             ContentPanel.Controls.Add(DetailsButton);
             ContentPanel.Controls.Add(EditButton);
             ContentPanel.Controls.Add(DeleteButton);
@@ -91,7 +93,7 @@
             ClientMemberSinceDate.AutoSize = true;
             ClientMemberSinceDate.Font = new Font("Segoe UI", 14F);
             ClientMemberSinceDate.ForeColor = Color.DarkGray;
-            ClientMemberSinceDate.Location = new Point(159, 40);
+            ClientMemberSinceDate.Location = new Point(159, 65);
             ClientMemberSinceDate.Name = "ClientMemberSinceDate";
             ClientMemberSinceDate.Size = new Size(238, 25);
             ClientMemberSinceDate.TabIndex = 2;
@@ -118,6 +120,17 @@
             ClientImage.TabIndex = 0;
             ClientImage.TabStop = false;
             // 
+            // ClientEmail
+            // 
+            ClientEmail.AutoSize = true;
+            ClientEmail.Font = new Font("Segoe UI", 14F);
+            ClientEmail.ForeColor = Color.DarkGray;
+            ClientEmail.Location = new Point(159, 40);
+            ClientEmail.Name = "ClientEmail";
+            ClientEmail.Size = new Size(162, 25);
+            ClientEmail.TabIndex = 11;
+            ClientEmail.Text = "email@email.com";
+            // 
             // ClientCardControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -140,5 +153,6 @@
         private Button DetailsButton;
         private Button EditButton;
         private Button DeleteButton;
+        private Label ClientEmail;
     }
 }

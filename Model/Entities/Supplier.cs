@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace fazenda_verdeviva.Model.Entities
 {
-    public class Supplier : User
+    public class Supplier : User, EntityInterface
     {
         [JsonProperty("cnpj")]
         public string CNPJ { get; set; }

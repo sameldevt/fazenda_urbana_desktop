@@ -9,11 +9,23 @@ using System.Threading.Tasks;
 
 namespace fazenda_verdeviva.Services
 {
-    internal class ContactMessageService
+    internal class ContactMessageService : ServiceInterface<ContactMessage>
     {
-        private static readonly string ContextUrl = "contato";
+        private readonly string ContextUrl = "contato";
+        private static ContactMessageService? Instance;
 
-        public static async Task<List<ContactMessage>> GetAll()
+        private ContactMessageService() { }
+
+        public static ContactMessageService GetInstance()
+        {
+            if(Instance == null)
+            {
+                Instance = new ContactMessageService();
+            }
+            return Instance;
+        }
+
+        public async Task<List<ContactMessage>> GetAll()
         {
             string url = $"{Network.BaseUrl}/{ContextUrl}/buscar-todos";
 
@@ -32,7 +44,7 @@ namespace fazenda_verdeviva.Services
         }
 
 
-        public static async Task Update(ContactMessage contactMessage)
+        public async Task Update(ContactMessage contactMessage)
         {
             string url = $"{Network.BaseUrl}/{ContextUrl}/atualizar";
 
@@ -42,7 +54,7 @@ namespace fazenda_verdeviva.Services
             await Network.HttpClient.PutAsync(url, content);
         }
 
-        public static async Task Delete(int id)
+        public async Task Delete(int id)
         {
             string url = $"{Network.BaseUrl}/{ContextUrl}/remover/{id}";
 

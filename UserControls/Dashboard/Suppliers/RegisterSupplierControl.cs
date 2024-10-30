@@ -79,11 +79,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Suppliers
                 Addresses = addresses
             };
 
-            await SupplierService.Register(supplier);
-
-            var supplierList = SupplierListControl.GetInstance();
-            supplierList.SupplierList.Controls.Clear();
-            supplierList.LoadSupplierCards();
+            await SupplierService.GetInstance().Register(supplier);
 
             SupplierControl.GetInstance().RegisterButton.Enabled = true;
             SupplierControl.GetInstance().SetContentPanelControl(SupplierListControl.GetInstance());

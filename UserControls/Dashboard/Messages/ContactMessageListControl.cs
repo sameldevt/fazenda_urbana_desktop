@@ -1,6 +1,8 @@
 ﻿using fazenda_verdeviva.Model.Entities;
 using fazenda_verdeviva.Services;
+using fazenda_verdeviva.UserControls.Dashboard.Common;
 using fazenda_verdeviva.UserControls.Dashboard.Employees;
+using fazenda_verdeviva.UserControls.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,14 +15,13 @@ using System.Windows.Forms;
 
 namespace fazenda_verdeviva.UserControls.Dashboard.Messages
 {
-    public partial class ContactMessageListControl : UserControl
+    public partial class ContactMessageListControl : UserControl, ListControlInterface
     {
         private static ContactMessageListControl? Instance;
         public ContactMessageListControl()
         {
             InitializeComponent();
             MessagesList.AutoScroll = true;
-            LoadMessageCards();
         }
 
         public static ContactMessageListControl GetInstance()
@@ -29,20 +30,32 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Messages
             {
                 Instance = new ContactMessageListControl();
             }
+
+            Instance.Refresh();
+            Instance.LoadCards();
             return Instance;
         }
 
-        public async void LoadMessageCards()
+        public async Task LoadCards()
         {
-            List<ContactMessage> messages = await ContactMessageService.GetAll();
+            MessagesList.Controls.Clear();
 
-            messages.ForEach(async m =>
+            List<ContactMessage> messages = await ContactMessageService.GetInstance().GetAll();
+
+            try
             {
-                ContactMessageCardControl messageCard = new ContactMessageCardControl();
+                messages.ForEach(async m =>
+                {
+                    ContactMessageCardControl messageCard = new ContactMessageCardControl();
 
-                messageCard.LoadCardInfo(m);
-                MessagesList.Controls.Add(messageCard);
-            });
+                    messageCard.LoadCardInfo(m);
+                    MessagesList.Controls.Add(messageCard);
+                });
+            }
+            catch (Exception ex)
+            {
+                ContactMessageControl.GetInstance().SetContentPanelControl(new NoResourceFound(Instance));
+            }
         }
     }
 }

@@ -54,7 +54,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Clients
             Client.Contact.Phone = PhoneTextBox.Text;
             Client.Contact.Email = EmailTextBox.Text;
 
-            var response = await ClientService.Update(Client);
+            var response = await ClientService.GetInstance().Update(Client);
 
             MessageBox.Show(response);
             ClientControl.GetInstance().SetContentPanelControl(ClientListControl.GetInstance());

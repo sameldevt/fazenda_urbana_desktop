@@ -122,7 +122,6 @@ C:\dev\workspace\vs\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verd
 C:\dev\workspace\vs\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Employees.EmployeeCardControl.resources
 C:\dev\workspace\vs\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Employees.EmployeeControl.resources
 C:\dev\workspace\vs\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Employees.EmployeeListControl.resources
-C:\dev\workspace\vs\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Suppliers.SupllierCardControl.resources
 C:\dev\workspace\vs\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Suppliers.SupplierControl.resources
 C:\dev\workspace\vs\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Suppliers.SupplierListControl.resources
 C:\dev\workspace\vs\fazenda_urbana_desktop\bin\Debug\net8.0-windows\Assets\image-not-found.png
@@ -158,3 +157,14 @@ C:\dev\workspace\visual-studio\fazenda_urbana_desktop\obj\Debug\net8.0-windows\f
 C:\dev\workspace\visual-studio\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Suppliers.RegisterSupplierControl.resources
 C:\dev\workspace\visual-studio\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Clients.ClientDetailsControl.resources
 C:\dev\workspace\visual-studio\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Clients.EditClientControl.resources
+C:\dev\workspace\vs\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Clients.ClientDetailsControl.resources
+C:\dev\workspace\vs\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Clients.EditClientControl.resources
+C:\dev\workspace\vs\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Common.AddressCardControl.resources
+C:\dev\workspace\vs\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Suppliers.EditSupplierControl.resources
+C:\dev\workspace\vs\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Suppliers.RegisterSupplierControl.resources
+C:\dev\workspace\vs\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Suppliers.SupplierCardControl.resources
+C:\dev\workspace\vs\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Suppliers.SupplierDetailsControl.resources
+C:\dev\workspace\vs\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Common.NoResourceFound.resources
+C:\dev\workspace\vs\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Orders.OrdersDetailsControl.resources
+C:\dev\workspace\vs\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Orders.OrderProductControl.resources
+C:\dev\workspace\vs\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Orders.OrderListControl.resources

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace fazenda_verdeviva.Model.Entities
 {
-    public class Order
+    public class Order : EntityInterface
     {
 
         [JsonProperty("id")]
@@ -44,20 +44,15 @@ namespace fazenda_verdeviva.Model.Entities
 
     public class OrderItem
     {
-        [JsonProperty("id")]
-        public int Id { get; set; }
 
-        [JsonProperty("pedido")]
-        public virtual Order Order { get; set; }
-
-        [JsonProperty("produto")]
-        public virtual Product Product { get; set; }
+        [JsonProperty("produtoId")]
+        public virtual int ProductId { get; set; }
 
         [JsonProperty("quantidade")]
         public int Quantity { get; set; }
 
         [JsonProperty("subTotal")]
-        public decimal SubTotal { get; set; }
+        public decimal SubTotal { get; init; }
 
         public OrderItem() { }
     }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace fazenda_verdeviva.Model.Entities
 {
-    public class Employee : User
+    public class Employee : User, EntityInterface
     {
         [JsonProperty("cargo")]
         public string Position { get; set; }

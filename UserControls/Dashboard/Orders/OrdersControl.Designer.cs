@@ -30,7 +30,7 @@
         {
             panel1 = new Panel();
             label1 = new Label();
-            OrdersList = new FlowLayoutPanel();
+            ContentPanel = new Panel();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -52,18 +52,18 @@
             label1.TabIndex = 5;
             label1.Text = "Pedidos";
             // 
-            // OrdersList
+            // ContentPanel
             // 
-            OrdersList.Location = new Point(3, 65);
-            OrdersList.Name = "OrdersList";
-            OrdersList.Size = new Size(954, 519);
-            OrdersList.TabIndex = 2;
+            ContentPanel.Location = new Point(3, 68);
+            ContentPanel.Name = "ContentPanel";
+            ContentPanel.Size = new Size(954, 516);
+            ContentPanel.TabIndex = 2;
             // 
             // OrdersControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(OrdersList);
+            Controls.Add(ContentPanel);
             Controls.Add(panel1);
             Name = "OrdersControl";
             Size = new Size(960, 587);
@@ -76,6 +76,6 @@
 
         private Panel panel1;
         private Label label1;
-        private FlowLayoutPanel OrdersList;
+        private Panel ContentPanel;
     }
 }

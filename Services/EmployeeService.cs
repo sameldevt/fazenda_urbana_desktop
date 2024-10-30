@@ -10,11 +10,23 @@ using System.Threading.Tasks;
 
 namespace fazenda_verdeviva.Services
 {
-    internal class EmployeeService
+    internal class EmployeeService : ServiceInterface<Employee>
     {
-        private static readonly string ContextUrl = "funcionario";
+        private readonly string ContextUrl = "funcionario";
+        private static EmployeeService? Instance;
 
-        public static async Task<List<Employee>> GetAll()
+        private EmployeeService() { }
+
+        public static EmployeeService GetInstance()
+        {
+            if (Instance == null)
+            {
+                Instance = new EmployeeService();
+            }
+            return Instance;
+        }
+
+        public async Task<List<Employee>> GetAll()
         {
             string url = $"{Network.BaseUrl}/{ContextUrl}/buscar-todos";
 
@@ -32,7 +44,7 @@ namespace fazenda_verdeviva.Services
             return null;
         }
 
-        public static async Task Update(Employee employee)
+        public async Task Update(Employee employee)
         {
             string url = $"{Network.BaseUrl}/{ContextUrl}/atualizar";
 
@@ -42,7 +54,7 @@ namespace fazenda_verdeviva.Services
             await Network.HttpClient.PutAsync(url, content);
         }
 
-        public static async Task Register(RegisterEmployeeDto employee)
+        public async Task Register(RegisterEmployeeDto employee)
         {
             string url = $"{Network.BaseUrl}/{ContextUrl}/cadastrar";
 
@@ -52,7 +64,7 @@ namespace fazenda_verdeviva.Services
             await Network.HttpClient.PostAsync(url, content);
         }
 
-        public static async Task Delete(int id)
+        public async Task Delete(int id)
         {
             string url = $"{Network.BaseUrl}/{ContextUrl}/remover/{id}";
 

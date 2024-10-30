@@ -1,6 +1,8 @@
 ﻿using fazenda_verdeviva.Model.Entities;
 using fazenda_verdeviva.Services;
+using fazenda_verdeviva.UserControls.Dashboard.Common;
 using fazenda_verdeviva.UserControls.Dashboard.Employees;
+using fazenda_verdeviva.UserControls.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,15 +15,14 @@ using System.Windows.Forms;
 
 namespace fazenda_verdeviva.UserControls.Dashboard.Suppliers
 {
-    public partial class SupplierListControl : UserControl
+    public partial class SupplierListControl : UserControl, ListControlInterface
     {
         private static SupplierListControl? Instance;
 
-        public SupplierListControl()
+        private SupplierListControl()
         {
             InitializeComponent();
             SupplierList.AutoScroll = true;
-            LoadSupplierCards();
         }
 
         public static SupplierListControl GetInstance()
@@ -31,23 +32,31 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Suppliers
                 Instance = new SupplierListControl();
             }
 
-            Instance.LoadSupplierCards();
+            Instance.Refresh();
+            Instance.LoadCards();
             return Instance;
         }
 
-        public async void LoadSupplierCards()
+        public async Task LoadCards()
         {
             SupplierList.Controls.Clear();
 
-            List<Supplier> suppliers = await SupplierService.GetAll();
+            List<Supplier> suppliers = await SupplierService.GetInstance().GetAll();
 
-            suppliers.ForEach(s =>
+            try
             {
-                SupplierCardControl supplierCard = new SupplierCardControl();
+                suppliers.ForEach(s =>
+                {
+                    SupplierCardControl supplierCard = new SupplierCardControl();
 
-                supplierCard.LoadCardInfo(s);
-                SupplierList.Controls.Add(supplierCard);
-            });
+                    supplierCard.LoadCardInfo(s);
+                    SupplierList.Controls.Add(supplierCard);
+                });
+            }
+            catch (Exception ex)
+            {
+                SupplierControl.GetInstance().SetContentPanelControl(new NoResourceFound(Instance));
+            }
         }
     }
 }

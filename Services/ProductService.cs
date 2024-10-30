@@ -10,11 +10,23 @@ using Newtonsoft.Json;
 
 namespace fazenda_verdeviva.Services
 {
-    internal class ProductService
+    internal class ProductService : ServiceInterface<Product>
     {
-        private static readonly string ContextUrl = "produtos";
+        private readonly string ContextUrl = "produtos";
+        private static ProductService? Instance;
 
-        public static async Task<List<Product>> GetAll()
+        private ProductService() { }
+
+        public static ProductService GetInstance()
+        {
+            if (Instance == null)
+            {
+                Instance = new ProductService();
+            }
+            return Instance;
+        }
+
+        public async Task<List<Product>> GetAll()
         {
             string url = $"{Network.BaseUrl}/{ContextUrl}/buscar-todos";
 
@@ -32,7 +44,25 @@ namespace fazenda_verdeviva.Services
             return null;
         }
 
-        public static async Task<string> Update(Product product)
+        public async Task<Product> GetById(int id)
+        {
+            string url = $"{Network.BaseUrl}/{ContextUrl}/buscar/{id}";
+
+            HttpResponseMessage response = await Network.HttpClient.GetAsync(url);
+
+            if (response.IsSuccessStatusCode)
+            {
+                string responseBody = await response.Content.ReadAsStringAsync();
+
+                Product product = JsonConvert.DeserializeObject<Product>(responseBody);
+
+                return product;
+            }
+
+            return null;
+        }
+
+        public async Task<string> Update(Product product)
         {
             string url = $"{Network.BaseUrl}/{ContextUrl}/atualizar";
 
@@ -44,7 +74,7 @@ namespace fazenda_verdeviva.Services
             return await response.Content.ReadAsStringAsync();
         }
 
-        public static async Task<string> Register(RegisterProductDto product)
+        public async Task<string> Register(RegisterProductDto product)
         {
             string url = $"{Network.BaseUrl}/{ContextUrl}/cadastrar";
 
@@ -57,7 +87,7 @@ namespace fazenda_verdeviva.Services
             return await response.Content.ReadAsStringAsync();
         }
 
-            public static async Task<string> Delete(int id)
+        public async Task<string> Delete(int id)
         {
             string url = $"{Network.BaseUrl}/{ContextUrl}/remover/{id}";
 

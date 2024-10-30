@@ -25,6 +25,9 @@
     <Compile Update="UserControls\Dashboard\Common\AddressCardControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UserControls\Dashboard\Common\NoResourceFound.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UserControls\Dashboard\DashboardControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -44,6 +47,15 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UserControls\Dashboard\Messages\ContactMessageListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\Dashboard\Orders\OrderListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\Dashboard\Orders\OrderProductControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\Dashboard\Orders\OrdersDetailsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UserControls\Dashboard\Products\ProductDetailsControl.cs">

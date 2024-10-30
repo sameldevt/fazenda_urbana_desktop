@@ -1,6 +1,8 @@
 ﻿using fazenda_verdeviva.Model.Entities;
 using fazenda_verdeviva.Services;
 using fazenda_verdeviva.UserControls.Dashboard.Clients;
+using fazenda_verdeviva.UserControls.Dashboard.Common;
+using fazenda_verdeviva.UserControls.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,14 +15,13 @@ using System.Windows.Forms;
 
 namespace fazenda_verdeviva.UserControls.Dashboard.Employees
 {
-    public partial class EmployeeListControl : UserControl
+    public partial class EmployeeListControl : UserControl, ListControlInterface
     {
         private static EmployeeListControl? Instance;
         private EmployeeListControl()
         {
             InitializeComponent();
             EmployeesList.AutoScroll = true;
-            LoadEmployeesCards();
         }
 
         public static EmployeeListControl GetInstance()
@@ -30,20 +31,30 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Employees
                 Instance = new EmployeeListControl();
             }
 
+            Instance.LoadCards();
             return Instance;
         }
 
-        public async void LoadEmployeesCards()
+        public async Task LoadCards()
         {
-            List<Employee> employees = await EmployeeService.GetAll();
+            EmployeesList.Controls.Clear();
 
-            employees.ForEach(async e =>
+            List<Employee> employees = await EmployeeService.GetInstance().GetAll();
+
+            try
             {
-                EmployeeCardControl employeeCard = new EmployeeCardControl();
+                employees.ForEach(async e =>
+                {
+                    EmployeeCardControl employeeCard = new EmployeeCardControl();
 
-                employeeCard.LoadCardInfo(e);
-                EmployeesList.Controls.Add(employeeCard);
-            });
+                    employeeCard.LoadCardInfo(e);
+                    EmployeesList.Controls.Add(employeeCard);
+                });
+            }
+            catch (Exception ex)
+            {
+                EmployeeControl.GetInstance().SetContentPanelControl(new NoResourceFound(Instance));
+            }
         }
     }
 }

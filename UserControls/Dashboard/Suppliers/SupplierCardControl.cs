@@ -42,7 +42,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Suppliers
 
         private async void DeleteButton_Click(object sender, EventArgs e)
         {
-            var response = await SupplierService.Delete(Supplier!.Id);
+            var response = await SupplierService.GetInstance().Delete(Supplier!.Id);
 
             MessageBox.Show(response);
 

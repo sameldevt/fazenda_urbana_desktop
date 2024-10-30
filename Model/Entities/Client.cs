@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace fazenda_verdeviva.Model.Entities
 {
-    public class Client : User
+    public class Client : User, EntityInterface
     {
         [JsonProperty("senha")]
         public string Password { get; set; }

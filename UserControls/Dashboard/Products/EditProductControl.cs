@@ -165,7 +165,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
             Product.NutritionalInfo.Fibers = double.Parse(ProductFibersTextBox.Text);
             Product.NutritionalInfo.Proteins = double.Parse(ProductProteinsTextBox.Text);
 
-            var response = await ProductService.Update(Product);
+            var response = await ProductService.GetInstance().Update(Product);
 
             MessageBox.Show(response);
             ProductsControl.GetInstance().RegisterButton.Enabled = true;

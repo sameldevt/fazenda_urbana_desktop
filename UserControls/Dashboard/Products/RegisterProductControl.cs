@@ -163,7 +163,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
                 SupplierId = 7,
             };
 
-            await ProductService.Register(product);
+            await ProductService.GetInstance().Register(product);
 
             MessageBox.Show("Produto cadastrado com sucesso");
 

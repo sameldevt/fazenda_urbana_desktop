@@ -19,17 +19,16 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Clients
     {
         private static ClientDetailsControl? Instance;
         private Client? Client;
-        
+
         private ClientDetailsControl()
         {
             InitializeComponent();
             Addresses.AutoScroll = true;
-            Orders.AutoScroll = true;
         }
 
         public static ClientDetailsControl GetInstance()
         {
-            if(Instance == null)
+            if (Instance == null)
             {
                 Instance = new ClientDetailsControl();
             }
@@ -41,7 +40,6 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Clients
         {
             Client = null;
             Addresses.Controls.Clear();
-            Orders.Controls.Clear();
             ClientControl.GetInstance().SetContentPanelControl(ClientListControl.GetInstance());
         }
 
@@ -52,7 +50,6 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Clients
             PhoneTextBox.Text = client.Contact?.Phone ?? "";
             EmailTextBox.Text = client.Contact?.Email ?? "";
             LoadAddressCards(client);
-            LoadOrdersCards(client);
         }
 
         public void LoadAddressCards(Client client)
@@ -65,14 +62,9 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Clients
             }
         }
 
-        public void LoadOrdersCards(Client client)
+        private void ClientDetailsControl_Load(object sender, EventArgs e)
         {
-            foreach (var order in client.Orders)
-            {
-                OrderCardControl orderCard = new OrderCardControl();
-                orderCard.LoadCardInfo(order);
-                Orders.Controls.Add(orderCard);
-            }
+
         }
     }
 }

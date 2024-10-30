@@ -61,6 +61,7 @@
             WebsiteTextBox.Location = new Point(33, 255);
             WebsiteTextBox.Multiline = true;
             WebsiteTextBox.Name = "WebsiteTextBox";
+            WebsiteTextBox.ReadOnly = true;
             WebsiteTextBox.Size = new Size(190, 23);
             WebsiteTextBox.TabIndex = 242;
             // 
@@ -69,6 +70,7 @@
             NameTextBox.Location = new Point(33, 156);
             NameTextBox.Multiline = true;
             NameTextBox.Name = "NameTextBox";
+            NameTextBox.ReadOnly = true;
             NameTextBox.Size = new Size(190, 23);
             NameTextBox.TabIndex = 241;
             // 
@@ -94,6 +96,7 @@
             CnpjTextBox.Location = new Point(33, 206);
             CnpjTextBox.Multiline = true;
             CnpjTextBox.Name = "CnpjTextBox";
+            CnpjTextBox.ReadOnly = true;
             CnpjTextBox.Size = new Size(190, 23);
             CnpjTextBox.TabIndex = 238;
             // 
@@ -121,6 +124,7 @@
             // 
             EmailTextBox.Location = new Point(33, 399);
             EmailTextBox.Name = "EmailTextBox";
+            EmailTextBox.ReadOnly = true;
             EmailTextBox.Size = new Size(190, 23);
             EmailTextBox.TabIndex = 235;
             // 
@@ -128,6 +132,7 @@
             // 
             PhoneTextBox.Location = new Point(33, 349);
             PhoneTextBox.Name = "PhoneTextBox";
+            PhoneTextBox.ReadOnly = true;
             PhoneTextBox.Size = new Size(190, 23);
             PhoneTextBox.TabIndex = 234;
             // 
@@ -173,7 +178,7 @@
             // 
             // BackButton
             // 
-            BackButton.Location = new Point(582, 463);
+            BackButton.Location = new Point(759, 463);
             BackButton.Name = "BackButton";
             BackButton.Size = new Size(169, 37);
             BackButton.TabIndex = 229;

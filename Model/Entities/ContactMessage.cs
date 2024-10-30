@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace fazenda_verdeviva.Model.Entities
 {
-    public class ContactMessage
+    public class ContactMessage : EntityInterface
     {
         [JsonProperty("nomeUsuario")]
         public string UserName { get; set; }

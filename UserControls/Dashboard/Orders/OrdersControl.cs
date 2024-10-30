@@ -3,6 +3,7 @@ using fazenda_verdeviva.Services;
 using fazenda_verdeviva.UserControls.Dashboard.Employees;
 using fazenda_verdeviva.UserControls.Dashboard.Messages;
 using fazenda_verdeviva.UserControls.Dashboard.Orders;
+using fazenda_verdeviva.UserControls.Dashboard.Products;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,8 +22,9 @@ namespace fazenda_verdeviva.UserControls.Dashboard
         private OrdersControl()
         {
             InitializeComponent();
-            OrdersList.AutoScroll = true;
-            LoadOrdersCards();
+            Controls.Add(ContentPanel);
+            SetContentPanelControl(OrderListControl.GetInstance());
+
         }
 
         public static OrdersControl GetInstance()
@@ -35,17 +37,12 @@ namespace fazenda_verdeviva.UserControls.Dashboard
             return Instance;
         }
 
-        public async void LoadOrdersCards()
+        public void SetContentPanelControl(UserControl control)
         {
-            List<Order> orders = await OrderService.GetAll();
-
-            orders.ForEach(async o =>
-            {
-                OrderCardControl orderCard = new OrderCardControl();
-
-                orderCard.LoadCardInfo(o);
-                OrdersList.Controls.Add(orderCard);
-            });
+            ContentPanel.Controls.Clear();
+            control.Dock = DockStyle.Fill;
+            ContentPanel.Controls.Add(control);
+            ContentPanel.PerformLayout();
         }
     }
 }

@@ -1,5 +1,7 @@
 ﻿using fazenda_verdeviva.Model.Entities;
 using fazenda_verdeviva.Services;
+using fazenda_verdeviva.UserControls.Dashboard.Common;
+using fazenda_verdeviva.UserControls.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,7 +14,7 @@ using System.Windows.Forms;
 
 namespace fazenda_verdeviva.UserControls.Dashboard.Products
 {
-    public partial class ProductListControl : UserControl
+    public partial class ProductListControl : UserControl, ListControlInterface
     {
         private static ProductListControl? Instance;
 
@@ -29,21 +31,29 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
                 Instance = new ProductListControl();
             }
 
-            Instance.LoadProductCards(); 
+            Instance.LoadCards(); 
             return Instance;
         }
 
-        public async void LoadProductCards()
+        public async Task LoadCards()
         {
             ProductsList.Controls.Clear();
-            List<Product> products = await ProductService.GetAll();
 
-            products.ForEach(p =>
+            List<Product> products = await ProductService.GetInstance().GetAll();
+
+            try
             {
-                ProductCardControl productCard = new ProductCardControl();
-                productCard.LoadCardInfo(p);
-                ProductsList.Controls.Add(productCard);
-            });
+                products.ForEach(p =>
+                {
+                    ProductCardControl productCard = new ProductCardControl();
+                    productCard.LoadCardInfo(p);
+                    ProductsList.Controls.Add(productCard);
+                });
+            }
+            catch (Exception ex) 
+            { 
+                ProductsControl.GetInstance().SetContentPanelControl(new NoResourceFound(Instance));
+            }
         }
     }
 }

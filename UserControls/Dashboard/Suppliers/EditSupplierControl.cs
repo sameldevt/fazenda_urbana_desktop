@@ -58,11 +58,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Suppliers
 
         private async void SaveButton_Click(object sender, EventArgs e)
         {
-            await SupplierService.Update(Supplier);
-
-            var supplierList = SupplierListControl.GetInstance();
-            supplierList.SupplierList.Controls.Clear();
-            supplierList.LoadSupplierCards();
+            await SupplierService.GetInstance().Update(Supplier);
 
             SupplierControl.GetInstance().RegisterButton.Enabled = true;
             SupplierControl.GetInstance().SetContentPanelControl(SupplierListControl.GetInstance());

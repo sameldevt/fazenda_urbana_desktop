@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 
 namespace fazenda_verdeviva.Model.Entities
 {
-    public class Product
+    public class Product : EntityInterface
     {
         [JsonProperty("id")]
         public int Id { get; set; }

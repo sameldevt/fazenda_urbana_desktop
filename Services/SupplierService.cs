@@ -10,11 +10,23 @@ using System.Threading.Tasks;
 
 namespace fazenda_verdeviva.Services
 {
-    internal class SupplierService
+    internal class SupplierService : ServiceInterface<Supplier>
     {
-        private static readonly string ContextUrl = "fornecedores";
+        private readonly string ContextUrl = "fornecedores";
+        private static SupplierService? Instance;
 
-        public static async Task<List<Supplier>> GetAll()
+        private SupplierService() { }
+
+        public static SupplierService GetInstance()
+        {
+            if (Instance == null)
+            {
+                Instance = new SupplierService();
+            }
+            return Instance;
+        }
+
+        public async Task<List<Supplier>> GetAll()
         {
             string url = $"{Network.BaseUrl}/{ContextUrl}/listar-todos";
 
@@ -32,7 +44,7 @@ namespace fazenda_verdeviva.Services
             return null;
         }
 
-        public static async Task<string> Update(Supplier supplier)
+        public async Task<string> Update(Supplier supplier)
         {
             string url = $"{Network.BaseUrl}/{ContextUrl}/atualizar";
 
@@ -44,7 +56,7 @@ namespace fazenda_verdeviva.Services
             return await response.Content.ReadAsStringAsync();
         }
 
-        public static async Task<string> Register(RegisterSupplierDto supplier)
+        public async Task<string> Register(RegisterSupplierDto supplier)
         {
             string url = $"{Network.BaseUrl}/{ContextUrl}/cadastrar";
 
@@ -56,7 +68,7 @@ namespace fazenda_verdeviva.Services
             return await response.Content.ReadAsStringAsync();
         }
 
-        public static async Task<string> Delete(int id)
+        public async Task<string> Delete(int id)
         {
             string url = $"{Network.BaseUrl}/{ContextUrl}/remover/{id}";
 

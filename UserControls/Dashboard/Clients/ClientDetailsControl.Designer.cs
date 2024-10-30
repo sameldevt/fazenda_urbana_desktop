@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             BackButton = new Button();
-            Orders = new FlowLayoutPanel();
-            label2 = new Label();
             label4 = new Label();
             Addresses = new FlowLayoutPanel();
             NameTextBox = new TextBox();
@@ -54,28 +52,11 @@
             BackButton.UseVisualStyleBackColor = true;
             BackButton.Click += BackButton_Click;
             // 
-            // Orders
-            // 
-            Orders.Location = new Point(300, 286);
-            Orders.Name = "Orders";
-            Orders.Size = new Size(625, 155);
-            Orders.TabIndex = 266;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
-            label2.Location = new Point(300, 258);
-            label2.Name = "label2";
-            label2.Size = new Size(82, 25);
-            label2.TabIndex = 268;
-            label2.Text = "Pedidos";
-            // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
-            label4.Location = new Point(300, 73);
+            label4.Location = new Point(320, 87);
             label4.Name = "label4";
             label4.Size = new Size(103, 25);
             label4.TabIndex = 267;
@@ -83,16 +64,17 @@
             // 
             // Addresses
             // 
-            Addresses.Location = new Point(300, 100);
+            Addresses.Location = new Point(320, 121);
             Addresses.Name = "Addresses";
-            Addresses.Size = new Size(625, 155);
+            Addresses.Size = new Size(400, 249);
             Addresses.TabIndex = 265;
             // 
             // NameTextBox
             // 
-            NameTextBox.Location = new Point(30, 154);
+            NameTextBox.Location = new Point(30, 136);
             NameTextBox.Multiline = true;
             NameTextBox.Name = "NameTextBox";
+            NameTextBox.ReadOnly = true;
             NameTextBox.Size = new Size(190, 23);
             NameTextBox.TabIndex = 264;
             // 
@@ -100,7 +82,7 @@
             // 
             Email.AutoSize = true;
             Email.Font = new Font("Segoe UI", 12F);
-            Email.Location = new Point(30, 271);
+            Email.Location = new Point(30, 260);
             Email.Name = "Email";
             Email.Size = new Size(54, 21);
             Email.TabIndex = 263;
@@ -108,15 +90,17 @@
             // 
             // EmailTextBox
             // 
-            EmailTextBox.Location = new Point(30, 295);
+            EmailTextBox.Location = new Point(30, 284);
             EmailTextBox.Name = "EmailTextBox";
+            EmailTextBox.ReadOnly = true;
             EmailTextBox.Size = new Size(190, 23);
             EmailTextBox.TabIndex = 262;
             // 
             // PhoneTextBox
             // 
-            PhoneTextBox.Location = new Point(30, 245);
+            PhoneTextBox.Location = new Point(30, 234);
             PhoneTextBox.Name = "PhoneTextBox";
+            PhoneTextBox.ReadOnly = true;
             PhoneTextBox.Size = new Size(190, 23);
             PhoneTextBox.TabIndex = 261;
             // 
@@ -124,7 +108,7 @@
             // 
             Phone.AutoSize = true;
             Phone.Font = new Font("Segoe UI", 12F);
-            Phone.Location = new Point(30, 221);
+            Phone.Location = new Point(30, 210);
             Phone.Name = "Phone";
             Phone.Size = new Size(67, 21);
             Phone.TabIndex = 260;
@@ -134,7 +118,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
-            label1.Location = new Point(30, 189);
+            label1.Location = new Point(30, 185);
             label1.Name = "label1";
             label1.Size = new Size(224, 25);
             label1.TabIndex = 259;
@@ -144,7 +128,7 @@
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
-            label11.Location = new Point(30, 102);
+            label11.Location = new Point(30, 87);
             label11.Name = "label11";
             label11.Size = new Size(190, 25);
             label11.TabIndex = 258;
@@ -154,7 +138,7 @@
             // 
             label23.AutoSize = true;
             label23.Font = new Font("Segoe UI", 12F);
-            label23.Location = new Point(30, 130);
+            label23.Location = new Point(30, 112);
             label23.Name = "label23";
             label23.Size = new Size(53, 21);
             label23.TabIndex = 257;
@@ -175,8 +159,6 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(BackButton);
-            Controls.Add(Orders);
-            Controls.Add(label2);
             Controls.Add(label4);
             Controls.Add(Addresses);
             Controls.Add(NameTextBox);
@@ -190,6 +172,7 @@
             Controls.Add(EditSupplierLabel);
             Name = "ClientDetailsControl";
             Size = new Size(954, 519);
+            Load += ClientDetailsControl_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -197,8 +180,6 @@
         #endregion
 
         private Button BackButton;
-        private FlowLayoutPanel Orders;
-        private Label label2;
         private Label label4;
         private FlowLayoutPanel Addresses;
         private TextBox NameTextBox;
