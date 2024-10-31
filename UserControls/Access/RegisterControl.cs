@@ -35,7 +35,13 @@ namespace fazenda_verdeviva.UserControls
             var email = EmailInputBox.Text;
             var password = PasswordInputBox.Text;
 
-            await AccessService.Register(name, email, password);
+            var response = await AccessService.Register(name, email, password);
+
+            if (response)
+            {
+                MainForm accessForm = MainForm.GetInstance();
+                accessForm.SetContentPanelControl(new LoginControl());
+            }       
         }
         private void ReturnToLoginButton_Click(object sender, EventArgs e)
         {

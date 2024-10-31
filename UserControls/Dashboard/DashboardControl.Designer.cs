@@ -195,7 +195,7 @@
         private Button ProductsButton;
         private Button MessagesButton;
         private Label label3;
-        private Label OperatorEmail;
+        public Label OperatorEmail;
         private Button EmployeesButton;
     }
 }

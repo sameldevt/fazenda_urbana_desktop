@@ -21,7 +21,7 @@ namespace fazenda_verdeviva.UserControls
     public partial class DashboardControl : UserControl
     {
         private static DashboardControl instance;
-        private Employee? Employee;
+        public Employee? Employee;
 
         private DashboardControl()
         {
@@ -41,10 +41,10 @@ namespace fazenda_verdeviva.UserControls
             return instance;
         }
 
-        public void SetOperator(Employee employee)
+        public void SaveUser(Employee employee)
         {
-            this.Employee = employee;
-            OperatorEmail.Text = employee.Contact?.Email ?? "email@operador.com";
+            Employee = employee;
+            OperatorEmail.Text = employee.Contact.Email;
         }
 
         public void SetContentPanelControl(UserControl control)

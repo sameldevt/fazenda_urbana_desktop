@@ -1,5 +1,6 @@
 ﻿using fazenda_verdeviva.Model.Common;
 using fazenda_verdeviva.Model.Entities;
+using fazenda_verdeviva.UserControls;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,7 @@ namespace fazenda_verdeviva.Services
     {
         private static readonly string ContextUrl = "operador";
 
-        public static async Task<Employee> Login(string email, string password)
+        public static async Task<bool> Login(string email, string password)
         {
             string url = $"{Network.BaseUrl}/{ContextUrl}/entrar";
 
@@ -27,21 +28,23 @@ namespace fazenda_verdeviva.Services
             StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
 
             HttpResponseMessage response = await Network.HttpClient.PostAsync(url, content);
+            var responseBody = await response.Content.ReadAsStringAsync();
 
             if (response.IsSuccessStatusCode)
             {
-                string responseBody = await response.Content.ReadAsStringAsync();
-
-                MessageBox.Show(responseBody);
                 var employee = JsonConvert.DeserializeObject<Employee>(responseBody);
-
-                return employee;
+                var dashboard = DashboardControl.GetInstance();
+                dashboard.SaveUser(employee);
+                
+                return true;
             }
+            var responseData = JsonConvert.DeserializeObject<Dictionary<string, object>>(responseBody);
 
-            return null;
+            MessageBox.Show($"Erro ao logar. Motivo: {responseData["Message"]}");
+            return false;
         }
 
-        public static async Task<string> Register(string name, string email, string password)
+        public static async Task<bool> Register(string name, string email, string password)
         {
             string url = $"{Network.BaseUrl}/{ContextUrl}/registrar";
 
@@ -60,12 +63,18 @@ namespace fazenda_verdeviva.Services
             StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
 
             var response = await Network.HttpClient.PostAsync(url, content);
-
             var responseBody = await response.Content.ReadAsStringAsync();
 
-            MessageBox.Show(await response.Content.ReadAsStringAsync());
+            if (response.IsSuccessStatusCode)
+            {
+                MessageBox.Show("Funcíonario cadastrado com sucesso.");
+                return true;
+            }
 
-            return responseBody;
+            var responseData = JsonConvert.DeserializeObject<Dictionary<string, object>>(responseBody);
+
+            MessageBox.Show($"Erro ao cadastrar funcionário. Motivo: {responseData["Message"]}");
+            return false;
         }
 
         public static async Task ChangePassword(string email, string newPassword)

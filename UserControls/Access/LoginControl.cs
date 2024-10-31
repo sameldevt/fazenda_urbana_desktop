@@ -26,7 +26,6 @@ namespace fazenda_verdeviva.UserControls
             if (employee != null)
             {
                 var dashboardControl = DashboardControl.GetInstance();
-                dashboardControl.SetOperator(employee);
                 MainForm.GetInstance().SetContentPanelControl(dashboardControl);
             }
         }
@@ -36,13 +35,14 @@ namespace fazenda_verdeviva.UserControls
             var email = EmailInputBox.Text;
             var password = PasswordInputBox.Text;
 
-            var employee = await AccessService.Login(email, password);
+            var response = await AccessService.Login(email, password);
 
-            SaveEmployeeInfo(employee);
-
-            var dashboardControl = DashboardControl.GetInstance();
-            dashboardControl.SetOperator(employee);
-            MainForm.GetInstance().SetContentPanelControl(dashboardControl);
+            if (response)
+            {
+                var dashboardControl = DashboardControl.GetInstance();
+                SaveEmployeeInfo(dashboardControl.Employee);
+                MainForm.GetInstance().SetContentPanelControl(dashboardControl);
+            }
         }
 
         private void SaveEmployeeInfo(Employee employee)
