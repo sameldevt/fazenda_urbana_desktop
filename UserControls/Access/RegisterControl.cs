@@ -42,5 +42,10 @@ namespace fazenda_verdeviva.UserControls
             MainForm accessForm = MainForm.GetInstance();
             accessForm.SetContentPanelControl(new LoginControl());
         }
+
+        private void PasswordInputBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

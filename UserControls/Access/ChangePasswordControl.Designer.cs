@@ -59,8 +59,10 @@
             // 
             // PasswordInputBox
             // 
+            PasswordInputBox.HideSelection = false;
             PasswordInputBox.Location = new Point(475, 495);
             PasswordInputBox.Name = "PasswordInputBox";
+            PasswordInputBox.PasswordChar = '*';
             PasswordInputBox.Size = new Size(250, 23);
             PasswordInputBox.TabIndex = 12;
             // 

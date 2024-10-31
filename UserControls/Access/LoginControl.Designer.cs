@@ -82,6 +82,7 @@
             PasswordInputBox.Name = "PasswordInputBox";
             PasswordInputBox.Size = new Size(250, 23);
             PasswordInputBox.TabIndex = 4;
+            PasswordInputBox.PasswordChar = '*';
             // 
             // PasswordInputLabel
             // 

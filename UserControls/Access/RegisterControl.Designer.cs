@@ -83,6 +83,8 @@
             PasswordInputBox.Name = "PasswordInputBox";
             PasswordInputBox.Size = new Size(250, 23);
             PasswordInputBox.TabIndex = 4;
+            PasswordInputBox.TextChanged += PasswordInputBox_TextChanged;
+            PasswordInputBox.PasswordChar = '*';    
             // 
             // PasswordInputLabel
             // 
@@ -119,7 +121,7 @@
             NameInputLabel.TabIndex = 9;
             NameInputLabel.Text = "Nome completo";
             // 
-            // RequestAccessControl
+            // RegisterControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -133,7 +135,7 @@
             Controls.Add(RegisterButton);
             Controls.Add(LogoImageBox);
             Controls.Add(EmailInputLabel);
-            Name = "RequestAccessControl";
+            Name = "RegisterControl";
             Size = new Size(1200, 700);
             ((System.ComponentModel.ISupportInitialize)LogoImageBox).EndInit();
             ResumeLayout(false);
