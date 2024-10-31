@@ -12,7 +12,7 @@ namespace fazenda_verdeviva.Services
 {
     internal class EmployeeService : ServiceInterface<Employee>
     {
-        private readonly string ContextUrl = "funcionario";
+        private readonly string ContextUrl = "funcionarios";
         private static EmployeeService? Instance;
 
         private EmployeeService() { }

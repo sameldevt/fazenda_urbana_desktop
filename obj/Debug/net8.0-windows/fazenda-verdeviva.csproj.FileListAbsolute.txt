@@ -168,3 +168,8 @@ C:\dev\workspace\vs\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verd
 C:\dev\workspace\vs\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Orders.OrdersDetailsControl.resources
 C:\dev\workspace\vs\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Orders.OrderProductControl.resources
 C:\dev\workspace\vs\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Orders.OrderListControl.resources
+C:\dev\workspace\visual-studio\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Common.NoResourceFound.resources
+C:\dev\workspace\visual-studio\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Orders.OrderListControl.resources
+C:\dev\workspace\visual-studio\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Orders.OrderProductControl.resources
+C:\dev\workspace\visual-studio\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Orders.OrdersDetailsControl.resources
+C:\dev\workspace\visual-studio\fazenda_urbana_desktop\obj\Debug\net8.0-windows\fazenda_verdeviva.UserControls.Dashboard.Suppliers.SupplierDetailsControl.resources

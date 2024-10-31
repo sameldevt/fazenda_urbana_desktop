@@ -44,7 +44,7 @@ namespace fazenda_verdeviva.UserControls
         public void SetOperator(Employee employee)
         {
             this.Employee = employee;
-            OperatorEmail.Text = employee.Contact.Email;
+            OperatorEmail.Text = employee.Contact?.Email ?? "email@operador.com";
         }
 
         public void SetContentPanelControl(UserControl control)

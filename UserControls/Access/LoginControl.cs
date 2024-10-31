@@ -33,15 +33,15 @@ namespace fazenda_verdeviva.UserControls
 
         private async void LoginButton_Click(object sender, EventArgs e)
         {
-            var email = EmailInputLabel.Text;
-            var password = PasswordInputLabel.Text;
+            var email = EmailInputBox.Text;
+            var password = PasswordInputBox.Text;
 
-            //var employee = await AccessService.Login(email, password);
+            var employee = await AccessService.Login(email, password);
 
-            //SaveEmployeeInfo(employee);
+            SaveEmployeeInfo(employee);
 
             var dashboardControl = DashboardControl.GetInstance();
-            //dashboardControl.SetOperator(employee);
+            dashboardControl.SetOperator(employee);
             MainForm.GetInstance().SetContentPanelControl(dashboardControl);
         }
 

@@ -11,11 +11,11 @@ namespace fazenda_verdeviva.Services
 {
     internal class AccessService
     {
-        private static readonly string ContextUrl = "funcionario";
+        private static readonly string ContextUrl = "operador";
 
         public static async Task<Employee> Login(string email, string password)
         {
-            string url = $"{Network.BaseUrl}/{ContextUrl}/login";
+            string url = $"{Network.BaseUrl}/{ContextUrl}/entrar";
 
             var loginData = new
             {
@@ -32,6 +32,7 @@ namespace fazenda_verdeviva.Services
             {
                 string responseBody = await response.Content.ReadAsStringAsync();
 
+                MessageBox.Show(responseBody);
                 var employee = JsonConvert.DeserializeObject<Employee>(responseBody);
 
                 return employee;
@@ -40,9 +41,9 @@ namespace fazenda_verdeviva.Services
             return null;
         }
 
-        public static async Task Register(string name, string email, string password)
+        public static async Task<string> Register(string name, string email, string password)
         {
-            string url = $"{Network.BaseUrl}/{ContextUrl}/register";
+            string url = $"{Network.BaseUrl}/{ContextUrl}/registrar";
 
             var registerData = new
             {
@@ -58,7 +59,13 @@ namespace fazenda_verdeviva.Services
             string json = JsonConvert.SerializeObject(registerData);
             StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
 
-            await Network.HttpClient.PostAsync(url, content);
+            var response = await Network.HttpClient.PostAsync(url, content);
+
+            var responseBody = await response.Content.ReadAsStringAsync();
+
+            MessageBox.Show(await response.Content.ReadAsStringAsync());
+
+            return responseBody;
         }
 
         public static async Task ChangePassword(string email, string newPassword)
