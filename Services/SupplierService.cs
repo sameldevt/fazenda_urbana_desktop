@@ -12,7 +12,7 @@ namespace fazenda_verdeviva.Services
 {
     internal class SupplierService : ServiceInterface<Supplier>
     {
-        private readonly string ContextUrl = "fornecedores";
+        private readonly string ContextUrl = "fornecedor";
         private static SupplierService? Instance;
 
         private SupplierService() { }

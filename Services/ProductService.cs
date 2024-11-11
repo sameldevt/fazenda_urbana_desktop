@@ -12,7 +12,7 @@ namespace fazenda_verdeviva.Services
 {
     internal class ProductService : ServiceInterface<Product>
     {
-        private readonly string ContextUrl = "produtos";
+        private readonly string ContextUrl = "produto";
         private static ProductService? Instance;
 
         private ProductService() { }

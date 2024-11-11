@@ -11,7 +11,7 @@ namespace fazenda_verdeviva.Services
 {
     internal class OrderService : ServiceInterface<Order>
     {
-        private readonly string ContextUrl = "pedidos";
+        private readonly string ContextUrl = "pedido";
         private static OrderService? Instance;
 
         private OrderService() { }
