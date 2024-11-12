@@ -46,6 +46,8 @@ namespace fazenda_verdeviva.Model.Entities
 
     public class Category
     {
+        [JsonProperty("id")]
+        public int Id { get; set; }
 
         [JsonProperty("nome")]
         public string Name { get; set; }

@@ -83,7 +83,6 @@ namespace fazenda_verdeviva.Services
 
             var response = await Network.HttpClient.PostAsync(url, content);
 
-
             return await response.Content.ReadAsStringAsync();
         }
 
@@ -92,6 +91,36 @@ namespace fazenda_verdeviva.Services
             string url = $"{Network.BaseUrl}/{ContextUrl}/remover/{id}";
 
             var response = await Network.HttpClient.DeleteAsync(url);
+
+            return await response.Content.ReadAsStringAsync();
+        }
+
+        public async Task<List<Category>> GetCategoriesAsync()
+        {
+            string url = $"{Network.BaseUrl}/{ContextUrl}/buscar-categorias";
+
+            HttpResponseMessage response = await Network.HttpClient.GetAsync(url);
+
+            if (response.IsSuccessStatusCode)
+            {
+                string responseBody = await response.Content.ReadAsStringAsync();
+
+                List<Category> categories = JsonConvert.DeserializeObject<List<Category>>(responseBody);
+
+                return categories;
+            }
+
+            return null;
+        }
+
+        public async Task<string> RegisterCategory(RegisterCategoryDto category)
+        {
+            string url = $"{Network.BaseUrl}/{ContextUrl}/cadastrar-categoria";
+
+            string json = JsonConvert.SerializeObject(category);
+            StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var response = await Network.HttpClient.PostAsync(url, content);
 
             return await response.Content.ReadAsStringAsync();
         }

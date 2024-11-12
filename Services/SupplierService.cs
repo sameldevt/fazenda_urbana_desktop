@@ -28,7 +28,7 @@ namespace fazenda_verdeviva.Services
 
         public async Task<List<Supplier>> GetAll()
         {
-            string url = $"{Network.BaseUrl}/{ContextUrl}/listar-todos";
+            string url = $"{Network.BaseUrl}/{ContextUrl}/buscar-todos";
 
             HttpResponseMessage response = await Network.HttpClient.GetAsync(url);
 

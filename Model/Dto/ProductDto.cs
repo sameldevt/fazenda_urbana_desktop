@@ -34,6 +34,15 @@ namespace fazenda_verdeviva.Model.Dto
         public int SupplierId { get; set; }
     }
 
+    public record RegisterCategoryDto
+    {
+        [JsonProperty("nome")]
+        public string Name { get; set; }
+
+        [JsonProperty("descricao")]
+        public string Description { get; set; }
+    }
+
     public record NutritionalInfoDto
     {
         [JsonProperty("calorias")]

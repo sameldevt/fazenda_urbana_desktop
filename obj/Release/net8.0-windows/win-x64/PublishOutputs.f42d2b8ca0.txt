@@ -1,9 +1,0 @@
-C:\dev\workspace\visual-studio\fazenda_urbana_desktop\publish-folder\Assets\image-not-found.png
-C:\dev\workspace\visual-studio\fazenda_urbana_desktop\publish-folder\fazenda-verdeviva.exe
-C:\dev\workspace\visual-studio\fazenda_urbana_desktop\publish-folder\fazenda-verdeviva.dll
-C:\dev\workspace\visual-studio\fazenda_urbana_desktop\publish-folder\fazenda-verdeviva.deps.json
-C:\dev\workspace\visual-studio\fazenda_urbana_desktop\publish-folder\fazenda-verdeviva.runtimeconfig.json
-C:\dev\workspace\visual-studio\fazenda_urbana_desktop\publish-folder\fazenda-verdeviva.pdb
-C:\dev\workspace\visual-studio\fazenda_urbana_desktop\publish-folder\Newtonsoft.Json.dll
-C:\dev\workspace\visual-studio\fazenda_urbana_desktop\publish-folder\SkiaSharp.dll
-C:\dev\workspace\visual-studio\fazenda_urbana_desktop\publish-folder\libSkiaSharp.dll

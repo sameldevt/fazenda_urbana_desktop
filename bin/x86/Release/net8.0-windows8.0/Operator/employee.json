@@ -1,0 +1,12 @@
+{
+  "cargo": "Operador",
+  "numeroRegistro": null,
+  "id": 3,
+  "nome": "nome",
+  "dataCadastro": "2024-11-12T15:40:18.3482991",
+  "contato": {
+    "telefone": "",
+    "email": "nome@email.com"
+  },
+  "enderecos": []
+}

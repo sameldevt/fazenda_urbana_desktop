@@ -1,6 +1,7 @@
 ﻿using fazenda_verdeviva.Model.Dto;
 using fazenda_verdeviva.Model.Entities;
 using fazenda_verdeviva.Services;
+using fazenda_verdeviva.UserControls.Dashboard.Suppliers;
 using SkiaSharp;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace fazenda_verdeviva.UserControls.Dashboard.Products
 {
@@ -31,7 +31,56 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
                 Instance = new RegisterProductControl();
             }
 
+            Instance.LoadSuppliers();
+            Instance.LoadCategories();
+            Instance.ClearProductInfos();
             return Instance;
+        }
+
+        private async Task LoadCategories()
+        {
+            var categories = await ProductService.GetInstance().GetCategoriesAsync();
+
+            if (categories != null && categories.Any())
+            {
+                CategoryComboBox.DataSource = null;
+
+                CategoryComboBox.DisplayMember = "Name";
+                CategoryComboBox.ValueMember = "Id";
+                CategoryComboBox.DataSource = categories;
+
+                CategoryComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            }
+        }
+
+        private async void LoadSuppliers()
+        { 
+            var suppliers = await SupplierService.GetInstance().GetAll();
+
+            if (suppliers != null && suppliers.Any()) 
+            {
+                SupplierComboBox.DisplayMember = "Name";
+                SupplierComboBox.ValueMember = "Id";
+                SupplierComboBox.DataSource = suppliers;
+
+                SupplierComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            }
+        }
+
+        private void ClearProductInfos()
+        {
+            ProductNameTextBox.Text = string.Empty;
+            ProductDescriptionTextBox.Text = string.Empty;
+            ProductPriceTextBox.Text = string.Empty;
+            ProductQuantityTextBox.Text = string.Empty;
+            ProductImageUrlTextBox.Text = string.Empty;
+            ProductCaloriesTextBox.Text = string.Empty;
+            ProductCarbsTextBox.Text = string.Empty;
+            ProductProteinsTextBox.Text = string.Empty;
+            ProductFibersTextBox.Text = string.Empty;
+            ProductFatsTextBox.Text = string.Empty;
+
+            ProductImage.Image = null;
         }
 
         private void ProductPriceTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -97,7 +146,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
 
         private async void RegisterButton_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void BackButton_Click(object sender, EventArgs e)
@@ -159,16 +208,72 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
                     Fibers = decimal.Parse(ProductFibersTextBox.Text),
                     Fats = decimal.Parse(ProductFatsTextBox.Text)
                 },
-                CategoryId = 31,
-                SupplierId = 7,
+                CategoryId = (int)CategoryComboBox.SelectedValue,
+                SupplierId = (int)SupplierComboBox.SelectedValue,
             };
 
-            await ProductService.GetInstance().Register(product);
+            var response = await ProductService.GetInstance().Register(product);
 
             MessageBox.Show("Produto cadastrado com sucesso");
 
             ProductsControl.GetInstance().RegisterButton.Enabled = true;
             ProductsControl.GetInstance().SetContentPanelControl(ProductListControl.GetInstance());
+        }
+
+        private async Task ShowRegisterCategoryForm()
+        {
+            Form prompt = new Form()
+            {
+                Width = 400,
+                Height = 260,
+                FormBorderStyle = FormBorderStyle.FixedDialog,
+                Text = "Cadastrar categoria",
+                StartPosition = FormStartPosition.CenterScreen
+            };
+
+            Label categoryNameLabel = new Label() { Left = 20, Top = 20, Text = "Nome" };
+            TextBox categoryNameTextBox = new TextBox() { Left = 20, Top = 50, Width = 340 };
+
+            Label categoryDescriptionLabel = new Label() { Left = 20, Top = 90, Text = "Descrição" };
+            TextBox categoryDescriptionTextBox = new TextBox() { Left = 20, Top = 120, Width = 340 };
+
+            Button confirmation = new Button() { Text = "Cadastrar", Left = 260, Width = 100, Top = 160, Height = 30, DialogResult = DialogResult.OK };
+
+            confirmation.Click += (sender, e) => { prompt.Close(); };
+
+            prompt.Controls.Add(categoryNameLabel);
+            prompt.Controls.Add(categoryNameTextBox);
+            prompt.Controls.Add(categoryDescriptionLabel);
+            prompt.Controls.Add(categoryDescriptionTextBox);
+            prompt.Controls.Add(confirmation);
+
+            prompt.AcceptButton = confirmation;
+
+            if (prompt.ShowDialog() == DialogResult.OK)
+            {
+                var category = new RegisterCategoryDto
+                {
+                    Name = categoryNameTextBox.Text,
+                    Description = categoryDescriptionTextBox.Text
+                };
+
+                var productService = ProductService.GetInstance();
+                await productService.RegisterCategory(category);
+            }
+        }
+
+        private async void RegisterCategoryButton_Click(object sender, EventArgs e)
+        {
+            await ShowRegisterCategoryForm();
+            await LoadCategories();
+        }
+
+        private void RegisterSupplierButton_Click(object sender, EventArgs e)
+        {
+            ProductsControl.GetInstance().SetContentPanelControl(ProductListControl.GetInstance());
+            var supplierControl = SupplierControl.GetInstance();
+            supplierControl.SetContentPanelControl(RegisterSupplierControl.GetInstance());
+            DashboardControl.GetInstance().SetContentPanelControl(supplierControl); ;
         }
     }
 }
