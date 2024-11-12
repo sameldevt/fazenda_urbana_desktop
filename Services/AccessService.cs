@@ -35,9 +35,10 @@ namespace fazenda_verdeviva.Services
                 var employee = JsonConvert.DeserializeObject<Employee>(responseBody);
                 var dashboard = DashboardControl.GetInstance();
                 dashboard.SaveUser(employee);
-                
+
                 return true;
             }
+
             var responseData = JsonConvert.DeserializeObject<Dictionary<string, object>>(responseBody);
 
             MessageBox.Show($"Erro ao logar. Motivo: {responseData["Message"]}");

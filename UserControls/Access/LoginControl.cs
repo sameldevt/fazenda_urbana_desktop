@@ -34,7 +34,6 @@ namespace fazenda_verdeviva.UserControls
         {
             var email = EmailInputBox.Text;
             var password = PasswordInputBox.Text;
-            MainForm.GetInstance().SetContentPanelControl(DashboardControl.GetInstance());
 
             var response = await AccessService.Login(email, password);
 

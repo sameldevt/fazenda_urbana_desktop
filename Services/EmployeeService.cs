@@ -32,8 +32,6 @@ namespace fazenda_verdeviva.Services
 
             HttpResponseMessage response = await Network.HttpClient.GetAsync(url);
 
-            MessageBox.Show(await response.Content.ReadAsStringAsync());
-
             if (response.IsSuccessStatusCode)
             {
                 string responseBody = await response.Content.ReadAsStringAsync();
