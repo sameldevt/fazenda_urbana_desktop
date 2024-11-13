@@ -124,7 +124,7 @@
             ProductQuantity.AutoSize = true;
             ProductQuantity.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ProductQuantity.ForeColor = Color.Green;
-            ProductQuantity.Location = new Point(344, 65);
+            ProductQuantity.Location = new Point(357, 65);
             ProductQuantity.Name = "ProductQuantity";
             ProductQuantity.Size = new Size(69, 21);
             ProductQuantity.TabIndex = 6;
