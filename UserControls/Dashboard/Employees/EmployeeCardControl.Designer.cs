@@ -128,6 +128,7 @@
             DeleteButton.TabIndex = 5;
             DeleteButton.Text = "Excluir";
             DeleteButton.UseVisualStyleBackColor = true;
+            DeleteButton.Click += DeleteButton_Click;
             // 
             // EmployeeName
             // 

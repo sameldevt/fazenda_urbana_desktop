@@ -95,6 +95,7 @@ namespace fazenda_verdeviva.Services
                     MessageBox.Show($"{responseData["Message"]}");
                     break;
                 default:
+                    MessageBox.Show($"{responseData["Message"]}");
                     break;
             }
         }
@@ -103,7 +104,25 @@ namespace fazenda_verdeviva.Services
         {
             string url = $"{Network.BaseUrl}/{ContextUrl}/remover/{id}";
 
-            await Network.HttpClient.DeleteAsync(url);
+            var response = await Network.HttpClient.DeleteAsync(url);
+
+            string responseBody = await response.Content.ReadAsStringAsync();
+            var responseData = JsonConvert.DeserializeObject<Dictionary<string, object>>(responseBody);
+
+            switch (response.StatusCode)
+            {
+                case HttpStatusCode.OK:
+                    MessageBox.Show("Funcionário deletado com sucesso.");
+                    break;
+                case HttpStatusCode.BadRequest:
+                    MessageBox.Show($"{responseData["Message"]}");
+                    break;
+                case HttpStatusCode.NotFound:
+                    MessageBox.Show($"{responseData["Message"]}");
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
