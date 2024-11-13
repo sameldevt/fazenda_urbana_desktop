@@ -40,7 +40,6 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Employees
         {
             NameTextBox.Text = string.Empty;
             PositionTextBox.Text = string.Empty;
-            RegistrationNumberTextBox.Text = string.Empty;
             PhoneTextBox.Text = string.Empty;
             EmailTextBox.Text = string.Empty;
             AddressesList.Controls.Clear();
@@ -79,7 +78,6 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Employees
                 Name = NameTextBox.Text,
                 Password = "senhapadrao",
                 Position = PositionTextBox.Text,
-                RegistrationNumber = RegistrationNumberTextBox.Text,
                 Contact = new Contact
                 {
                     Email = EmailTextBox.Text,

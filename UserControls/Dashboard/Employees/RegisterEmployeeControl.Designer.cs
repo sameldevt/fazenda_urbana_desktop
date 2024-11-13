@@ -30,8 +30,6 @@
         {
             NewEmployeeLabel = new Label();
             AddAddressButton = new Button();
-            label13 = new Label();
-            RegistrationNumberTextBox = new TextBox();
             AddressesList = new FlowLayoutPanel();
             label12 = new Label();
             label10 = new Label();
@@ -80,24 +78,6 @@
             AddAddressButton.Text = "Adicionar endereço";
             AddAddressButton.UseVisualStyleBackColor = true;
             AddAddressButton.Click += AddAddressButton_Click;
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI", 12F);
-            label13.Location = new Point(48, 228);
-            label13.Name = "label13";
-            label13.Size = new Size(147, 21);
-            label13.TabIndex = 255;
-            label13.Text = "Número de registro";
-            // 
-            // RegistrationNumberTextBox
-            // 
-            RegistrationNumberTextBox.Location = new Point(50, 251);
-            RegistrationNumberTextBox.Multiline = true;
-            RegistrationNumberTextBox.Name = "RegistrationNumberTextBox";
-            RegistrationNumberTextBox.Size = new Size(190, 23);
-            RegistrationNumberTextBox.TabIndex = 254;
             // 
             // AddressesList
             // 
@@ -349,8 +329,6 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(AddAddressButton);
-            Controls.Add(label13);
-            Controls.Add(RegistrationNumberTextBox);
             Controls.Add(AddressesList);
             Controls.Add(label12);
             Controls.Add(label10);
@@ -389,8 +367,6 @@
 
         private Label NewEmployeeLabel;
         private Button AddAddressButton;
-        private Label label13;
-        private TextBox RegistrationNumberTextBox;
         private FlowLayoutPanel AddressesList;
         private Label label12;
         private Label label10;
