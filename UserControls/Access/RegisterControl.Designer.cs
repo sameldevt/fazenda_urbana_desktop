@@ -81,10 +81,10 @@
             // 
             PasswordInputBox.Location = new Point(475, 538);
             PasswordInputBox.Name = "PasswordInputBox";
+            PasswordInputBox.PasswordChar = '*';
             PasswordInputBox.Size = new Size(250, 23);
             PasswordInputBox.TabIndex = 4;
             PasswordInputBox.TextChanged += PasswordInputBox_TextChanged;
-            PasswordInputBox.PasswordChar = '*';    
             // 
             // PasswordInputLabel
             // 
@@ -117,9 +117,9 @@
             NameInputLabel.AutoSize = true;
             NameInputLabel.Location = new Point(475, 411);
             NameInputLabel.Name = "NameInputLabel";
-            NameInputLabel.Size = new Size(94, 15);
+            NameInputLabel.Size = new Size(40, 15);
             NameInputLabel.TabIndex = 9;
-            NameInputLabel.Text = "Nome completo";
+            NameInputLabel.Text = "Nome";
             // 
             // RegisterControl
             // 

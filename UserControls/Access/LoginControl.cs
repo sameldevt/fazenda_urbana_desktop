@@ -31,11 +31,30 @@ namespace fazenda_verdeviva.UserControls
                 Instance = new LoginControl();
             }
 
+            Instance.ClearInputs();
             return Instance;
+        }
+
+        private void ClearInputs()
+        {
+            EmailInputBox.Text = string.Empty;
+            PasswordInputBox.Text = string.Empty;
         }
 
         private async void LoginButton_Click(object sender, EventArgs e)
         {
+            if(EmailInputBox.Text == "")
+            {
+                MessageBox.Show("Por favor, digite um e-mail.");
+                return;
+            }
+
+            if(PasswordInputBox.Text == "")
+            {
+                MessageBox.Show("Por favor, digite uma senha.");
+                return;
+            }
+
             var email = EmailInputBox.Text;
             var password = PasswordInputBox.Text;
 

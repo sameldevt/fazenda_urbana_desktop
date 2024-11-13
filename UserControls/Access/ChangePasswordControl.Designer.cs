@@ -35,12 +35,14 @@
             ChangePasswordButton = new Button();
             LogoImageBox = new PictureBox();
             EmailInputLabel = new Label();
+            ConfirmPasswordInputBox = new TextBox();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)LogoImageBox).BeginInit();
             SuspendLayout();
             // 
             // ReturnButton
             // 
-            ReturnButton.Location = new Point(475, 580);
+            ReturnButton.Location = new Point(475, 619);
             ReturnButton.Name = "ReturnButton";
             ReturnButton.Size = new Size(250, 23);
             ReturnButton.TabIndex = 14;
@@ -75,7 +77,7 @@
             // 
             // ChangePasswordButton
             // 
-            ChangePasswordButton.Location = new Point(475, 551);
+            ChangePasswordButton.Location = new Point(475, 590);
             ChangePasswordButton.Name = "ChangePasswordButton";
             ChangePasswordButton.Size = new Size(250, 23);
             ChangePasswordButton.TabIndex = 10;
@@ -103,10 +105,30 @@
             EmailInputLabel.TabIndex = 8;
             EmailInputLabel.Text = "E-mail";
             // 
+            // ConfirmPasswordInputBox
+            // 
+            ConfirmPasswordInputBox.HideSelection = false;
+            ConfirmPasswordInputBox.Location = new Point(475, 551);
+            ConfirmPasswordInputBox.Name = "ConfirmPasswordInputBox";
+            ConfirmPasswordInputBox.PasswordChar = '*';
+            ConfirmPasswordInputBox.Size = new Size(250, 23);
+            ConfirmPasswordInputBox.TabIndex = 15;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(475, 533);
+            label1.Name = "label1";
+            label1.Size = new Size(124, 15);
+            label1.TabIndex = 16;
+            label1.Text = "Confirmar nova senha";
+            // 
             // ChangePasswordControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(label1);
+            Controls.Add(ConfirmPasswordInputBox);
             Controls.Add(ReturnButton);
             Controls.Add(PasswordInputLabel);
             Controls.Add(PasswordInputBox);
@@ -130,5 +152,7 @@
         private Button ChangePasswordButton;
         private PictureBox LogoImageBox;
         private Label EmailInputLabel;
+        private TextBox ConfirmPasswordInputBox;
+        private Label label1;
     }
 }

@@ -1,0 +1,12 @@
+{
+  "cargo": "Operador",
+  "numeroRegistro": null,
+  "id": 10,
+  "nome": "operador",
+  "dataCadastro": "2024-11-13T12:10:40.4966902",
+  "contato": {
+    "telefone": "",
+    "email": "operador@verdeviva.com"
+  },
+  "enderecos": []
+}
