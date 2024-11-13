@@ -41,6 +41,7 @@
             OrdersButton = new Button();
             ManufacturerButton = new Button();
             ProductsButton = new Button();
+            ExitButton = new Button();
             TopBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             NavPanel.SuspendLayout();
@@ -87,7 +88,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(58, 3);
+            pictureBox1.Location = new Point(16, 0);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(118, 56);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -96,6 +97,7 @@
             // 
             // NavPanel
             // 
+            NavPanel.Controls.Add(ExitButton);
             NavPanel.Controls.Add(EmployeesButton);
             NavPanel.Controls.Add(MessagesButton);
             NavPanel.Controls.Add(ClientsButton);
@@ -167,6 +169,16 @@
             ProductsButton.UseVisualStyleBackColor = true;
             ProductsButton.Click += ProductsButton_Click;
             // 
+            // ExitButton
+            // 
+            ExitButton.Location = new Point(3, 540);
+            ExitButton.Name = "ExitButton";
+            ExitButton.Size = new Size(219, 44);
+            ExitButton.TabIndex = 6;
+            ExitButton.Text = "Sair";
+            ExitButton.UseVisualStyleBackColor = true;
+            ExitButton.Click += ExitButton_Click;
+            // 
             // DashboardControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -197,5 +209,6 @@
         private Label label3;
         public Label OperatorEmail;
         private Button EmployeesButton;
+        private Button ExitButton;
     }
 }

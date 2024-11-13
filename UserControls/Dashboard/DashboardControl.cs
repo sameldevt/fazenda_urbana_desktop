@@ -38,6 +38,7 @@ namespace fazenda_verdeviva.UserControls
             {
                 instance = new DashboardControl();
             }
+
             return instance;
         }
 
@@ -88,6 +89,13 @@ namespace fazenda_verdeviva.UserControls
         private void ContentPanel_Paint(object sender, PaintEventArgs e)
         {
 
-        }      
+        }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            var mainFormInstance = MainForm.GetInstance();
+            mainFormInstance.DeleteEmployeeInfo();
+            mainFormInstance.SetContentPanelControl(LoginControl.GetInstance());
+        }
     }
 }

@@ -14,7 +14,7 @@ namespace fazenda_verdeviva.Services
     {
         private static readonly string ContextUrl = "operador";
 
-        public static async Task<bool> Login(string email, string password)
+        public static async Task<Employee> Login(string email, string password)
         {
             string url = $"{Network.BaseUrl}/{ContextUrl}/entrar";
 
@@ -28,21 +28,18 @@ namespace fazenda_verdeviva.Services
             StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
 
             HttpResponseMessage response = await Network.HttpClient.PostAsync(url, content);
-            var responseBody = await response.Content.ReadAsStringAsync();
+            string responseBody = await response.Content.ReadAsStringAsync();
 
             if (response.IsSuccessStatusCode)
             {
                 var employee = JsonConvert.DeserializeObject<Employee>(responseBody);
-                var dashboard = DashboardControl.GetInstance();
-                dashboard.SaveUser(employee);
-
-                return true;
+                return employee;
             }
 
             var responseData = JsonConvert.DeserializeObject<Dictionary<string, object>>(responseBody);
 
-            MessageBox.Show($"Erro ao logar. Motivo: {responseData["Message"]}");
-            return false;
+            MessageBox.Show($"{responseData["Message"]}");
+            return null;
         }
 
         public static async Task<bool> Register(string name, string email, string password)

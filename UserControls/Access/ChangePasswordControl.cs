@@ -41,7 +41,7 @@ namespace fazenda_verdeviva.UserControls.Access
         private void ReturnButton_Click(object sender, EventArgs e)
         {
             MainForm accessForm = MainForm.GetInstance();
-            accessForm.SetContentPanelControl(new LoginControl());
+            accessForm.SetContentPanelControl(LoginControl.GetInstance());
         }
 
 

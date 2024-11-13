@@ -17,17 +17,21 @@ namespace fazenda_verdeviva.UserControls
 {
     public partial class LoginControl : UserControl
     {
-        public LoginControl()
+        private static LoginControl Instance;
+
+        private LoginControl()
         {
             InitializeComponent();
+        }
 
-            var employee = LoadEmployeeInfo();
-
-            if (employee != null)
+        public static LoginControl GetInstance()
+        {
+            if(Instance == null)
             {
-                var dashboardControl = DashboardControl.GetInstance();
-                MainForm.GetInstance().SetContentPanelControl(dashboardControl);
+                Instance = new LoginControl();
             }
+
+            return Instance;
         }
 
         private async void LoginButton_Click(object sender, EventArgs e)
@@ -35,36 +39,27 @@ namespace fazenda_verdeviva.UserControls
             var email = EmailInputBox.Text;
             var password = PasswordInputBox.Text;
 
-            var response = await AccessService.Login(email, password);
+            var employee = await AccessService.Login(email, password);
 
-            if (response)
+            if (employee != null)
             {
                 var dashboardControl = DashboardControl.GetInstance();
-                SaveEmployeeInfo(dashboardControl.Employee);
+                dashboardControl.SaveUser(employee);
+                SaveEmployeeInfo(employee);
                 MainForm.GetInstance().SetContentPanelControl(dashboardControl);
             }
         }
 
         private void SaveEmployeeInfo(Employee employee)
         {
-            Directory.CreateDirectory("Operator");
+            if (!Directory.Exists("Employee"))
+            {
+                Directory.CreateDirectory("Employee");
+            }
+
             string jsonString = JsonConvert.SerializeObject(employee, Formatting.Indented);
-            File.WriteAllText("Operator/employee.json", jsonString);
-        }
+            File.WriteAllText("Employee/employee.json", jsonString);
 
-        private Employee LoadEmployeeInfo()
-        {
-            if (File.Exists("Operator/employee.json"))
-            {
-                string jsonString = File.ReadAllText("Operator/employee.json");
-                Employee employee = JsonConvert.DeserializeObject<Employee>(jsonString);
-
-                return employee;
-            }
-            else
-            {
-                return null;
-            }
         }
 
         private void RegisterButton_Click(object sender, EventArgs e)

@@ -40,13 +40,13 @@ namespace fazenda_verdeviva.UserControls
             if (response)
             {
                 MainForm accessForm = MainForm.GetInstance();
-                accessForm.SetContentPanelControl(new LoginControl());
+                accessForm.SetContentPanelControl(LoginControl.GetInstance());
             }       
         }
         private void ReturnToLoginButton_Click(object sender, EventArgs e)
         {
             MainForm accessForm = MainForm.GetInstance();
-            accessForm.SetContentPanelControl(new LoginControl());
+            accessForm.SetContentPanelControl(LoginControl.GetInstance());
         }
 
         private void PasswordInputBox_TextChanged(object sender, EventArgs e)
