@@ -60,22 +60,24 @@
             RegistrationNumberLabel.AutoSize = true;
             RegistrationNumberLabel.Font = new Font("Segoe UI", 14F);
             RegistrationNumberLabel.ForeColor = Color.Green;
-            RegistrationNumberLabel.Location = new Point(190, 62);
+            RegistrationNumberLabel.Location = new Point(190, 87);
             RegistrationNumberLabel.Name = "RegistrationNumberLabel";
             RegistrationNumberLabel.Size = new Size(82, 25);
             RegistrationNumberLabel.TabIndex = 11;
             RegistrationNumberLabel.Text = "1231312";
+            RegistrationNumberLabel.Visible = false;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 14F);
             label2.ForeColor = Color.DarkGray;
-            label2.Location = new Point(3, 62);
+            label2.Location = new Point(3, 87);
             label2.Name = "label2";
             label2.Size = new Size(181, 25);
             label2.TabIndex = 10;
             label2.Text = "Número de registro:";
+            label2.Visible = false;
             // 
             // PositionLabel
             // 
@@ -104,7 +106,7 @@
             EmployeeEmail.AutoSize = true;
             EmployeeEmail.Font = new Font("Segoe UI", 14F);
             EmployeeEmail.ForeColor = Color.Green;
-            EmployeeEmail.Location = new Point(3, 87);
+            EmployeeEmail.Location = new Point(3, 62);
             EmployeeEmail.Name = "EmployeeEmail";
             EmployeeEmail.Size = new Size(218, 25);
             EmployeeEmail.TabIndex = 7;

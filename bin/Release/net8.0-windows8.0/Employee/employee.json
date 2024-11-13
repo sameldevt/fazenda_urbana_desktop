@@ -1,12 +1,22 @@
 {
-  "cargo": "Operador",
+  "cargo": "Plantador",
   "numeroRegistro": null,
-  "id": 10,
-  "nome": "operador",
-  "dataCadastro": "2024-11-13T12:10:40.4966902",
+  "id": 19,
+  "nome": "Thales Silva",
+  "dataCadastro": "2024-11-13T15:15:16.4635065",
   "contato": {
-    "telefone": "",
-    "email": "operador@verdeviva.com"
+    "telefone": "1198732213",
+    "email": "tsilva@verdeviva.com.br"
   },
-  "enderecos": []
+  "enderecos": [
+    {
+      "logradouro": "Rua São Paulo",
+      "numero": "8392",
+      "cidade": "São Paulo",
+      "cep": "03922-132",
+      "complemento": "Não possui",
+      "estado": "SP",
+      "informacoesAdicionais": null
+    }
+  ]
 }

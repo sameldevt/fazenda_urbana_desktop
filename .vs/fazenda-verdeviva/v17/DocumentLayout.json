@@ -3,32 +3,20 @@
   "WorkspaceRootPath": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\usercontrols\\dashboard\\employees\\registeremployeecontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|solutionrelative:usercontrols\\dashboard\\employees\\registeremployeecontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\usercontrols\\dashboard\\employees\\employeecardcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|solutionrelative:usercontrols\\dashboard\\employees\\employeecardcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\usercontrols\\dashboard\\employees\\employeelistcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|solutionrelative:usercontrols\\dashboard\\employees\\employeelistcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\usercontrols\\dashboard\\employees\\employeecardcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|solutionrelative:usercontrols\\dashboard\\employees\\employeecardcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\usercontrols\\dashboard\\products\\productcardcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|solutionrelative:usercontrols\\dashboard\\products\\productcardcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\usercontrols\\dashboard\\employees\\employeecardcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|solutionrelative:usercontrols\\dashboard\\employees\\employeecardcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|solutionrelative:services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\model\\common\\network.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|solutionrelative:model\\common\\network.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\model\\dto\\employeedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|solutionrelative:model\\dto\\employeedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -37,20 +25,45 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 612,
-          "SelectedChildIndex": 5,
+          "DockedWidth": 794,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EmployeeService.cs",
-              "DocumentMoniker": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\Services\\EmployeeService.cs",
-              "RelativeDocumentMoniker": "Services\\EmployeeService.cs",
-              "ToolTip": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\Services\\EmployeeService.cs",
-              "RelativeToolTip": "Services\\EmployeeService.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAlwHkAAAAaAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "EmployeeCardControl.cs [Design]",
+              "DocumentMoniker": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Employees\\EmployeeCardControl.cs",
+              "RelativeDocumentMoniker": "UserControls\\Dashboard\\Employees\\EmployeeCardControl.cs",
+              "ToolTip": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Employees\\EmployeeCardControl.cs [Design]",
+              "RelativeToolTip": "UserControls\\Dashboard\\Employees\\EmployeeCardControl.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T14:59:11.002Z",
+              "WhenOpened": "2024-11-13T15:17:48.188Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EmployeeListControl.cs",
+              "DocumentMoniker": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Employees\\EmployeeListControl.cs",
+              "RelativeDocumentMoniker": "UserControls\\Dashboard\\Employees\\EmployeeListControl.cs",
+              "ToolTip": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Employees\\EmployeeListControl.cs",
+              "RelativeToolTip": "UserControls\\Dashboard\\Employees\\EmployeeListControl.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACIAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T15:15:46.181Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Network.cs",
+              "DocumentMoniker": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\Model\\Common\\Network.cs",
+              "RelativeDocumentMoniker": "Model\\Common\\Network.cs",
+              "ToolTip": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\Model\\Common\\Network.cs",
+              "RelativeToolTip": "Model\\Common\\Network.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T15:14:07.905Z",
               "EditorCaption": ""
             },
             {
@@ -60,88 +73,24 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EmployeeCardControl.cs [Design]",
-              "DocumentMoniker": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Employees\\EmployeeCardControl.cs",
-              "RelativeDocumentMoniker": "UserControls\\Dashboard\\Employees\\EmployeeCardControl.cs",
-              "ToolTip": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Employees\\EmployeeCardControl.cs [Design]",
-              "RelativeToolTip": "UserControls\\Dashboard\\Employees\\EmployeeCardControl.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T14:57:48.372Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EmployeeCardControl.cs",
-              "DocumentMoniker": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Employees\\EmployeeCardControl.cs",
-              "RelativeDocumentMoniker": "UserControls\\Dashboard\\Employees\\EmployeeCardControl.cs",
-              "ToolTip": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Employees\\EmployeeCardControl.cs",
-              "RelativeToolTip": "UserControls\\Dashboard\\Employees\\EmployeeCardControl.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAwBEAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T14:57:42.771Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RegisterEmployeeControl.cs",
-              "DocumentMoniker": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Employees\\RegisterEmployeeControl.cs",
-              "RelativeDocumentMoniker": "UserControls\\Dashboard\\Employees\\RegisterEmployeeControl.cs",
-              "ToolTip": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Employees\\RegisterEmployeeControl.cs",
-              "RelativeToolTip": "UserControls\\Dashboard\\Employees\\RegisterEmployeeControl.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAwFAAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T13:54:07.397Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Network.cs",
-              "DocumentMoniker": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\Model\\Common\\Network.cs",
-              "RelativeDocumentMoniker": "Model\\Common\\Network.cs",
-              "ToolTip": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\Model\\Common\\Network.cs",
-              "RelativeToolTip": "Model\\Common\\Network.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T13:57:38.336Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "EmployeeDto.cs",
-              "DocumentMoniker": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\Model\\Dto\\EmployeeDto.cs",
-              "RelativeDocumentMoniker": "Model\\Dto\\EmployeeDto.cs",
-              "ToolTip": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\Model\\Dto\\EmployeeDto.cs",
-              "RelativeToolTip": "Model\\Dto\\EmployeeDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T16:18:36.237Z",
-              "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedWidth": 328,
+          "DockedWidth": 430,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ProductCardControl.cs",
-              "DocumentMoniker": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Products\\ProductCardControl.cs",
-              "RelativeDocumentMoniker": "UserControls\\Dashboard\\Products\\ProductCardControl.cs",
-              "ToolTip": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Products\\ProductCardControl.cs",
-              "RelativeToolTip": "UserControls\\Dashboard\\Products\\ProductCardControl.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAE0AAAAJAAAAAAAAAA==",
+              "Title": "EmployeeCardControl.cs",
+              "DocumentMoniker": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Employees\\EmployeeCardControl.cs",
+              "RelativeDocumentMoniker": "UserControls\\Dashboard\\Employees\\EmployeeCardControl.cs",
+              "ToolTip": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Employees\\EmployeeCardControl.cs",
+              "RelativeToolTip": "UserControls\\Dashboard\\Employees\\EmployeeCardControl.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T14:57:58.742Z",
+              "WhenOpened": "2024-11-13T15:15:30.67Z",
               "EditorCaption": ""
             }
           ]
