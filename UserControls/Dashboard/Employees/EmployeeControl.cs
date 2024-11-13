@@ -38,5 +38,11 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Employees
             ContentPanel.Controls.Add(control);
             ContentPanel.PerformLayout();
         }
+
+        private void RegisterButton_Click(object sender, EventArgs e)
+        {
+            RegisterButton.Enabled = false;
+            SetContentPanelControl(RegisterEmployeeControl.GetInstance());
+        }
     }
 }

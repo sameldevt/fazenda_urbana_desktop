@@ -23,7 +23,16 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Employees
         {
             this.Employee = employee;
             EmployeeName.Text = employee.Name;
+            PositionLabel.Text = employee.Position;
+            RegistrationNumberLabel.Text = employee.RegistrationNumber;
             EmployeeEmail.Text = employee.Contact.Email;
+        }
+
+        private void EditButton_Click(object sender, EventArgs e)
+        {
+            var editEmployeeControlInstance = EditEmployeeControl.GetInstance();
+            editEmployeeControlInstance.LoadEmployeeInfo(Employee);
+            EmployeeControl.GetInstance().SetContentPanelControl(editEmployeeControlInstance);
         }
     }
 }

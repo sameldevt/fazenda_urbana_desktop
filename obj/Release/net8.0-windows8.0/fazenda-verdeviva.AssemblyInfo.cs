@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("fazenda-verdeviva")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c6861a973ee50bda51aa3c48f09fefc5d80fc20e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d7d08d695b0fa8512818e113f0d2fcb36696b9c3")]
 [assembly: System.Reflection.AssemblyProductAttribute("fazenda-verdeviva")]
 [assembly: System.Reflection.AssemblyTitleAttribute("fazenda-verdeviva")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

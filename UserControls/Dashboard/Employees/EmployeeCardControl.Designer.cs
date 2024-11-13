@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             ContentPanel = new Panel();
+            RegistrationNumberLabel = new Label();
+            label2 = new Label();
+            PositionLabel = new Label();
+            label1 = new Label();
             EmployeeEmail = new Label();
             EditButton = new Button();
             DeleteButton = new Button();
@@ -38,6 +42,10 @@
             // 
             // ContentPanel
             // 
+            ContentPanel.Controls.Add(RegistrationNumberLabel);
+            ContentPanel.Controls.Add(label2);
+            ContentPanel.Controls.Add(PositionLabel);
+            ContentPanel.Controls.Add(label1);
             ContentPanel.Controls.Add(EmployeeEmail);
             ContentPanel.Controls.Add(EditButton);
             ContentPanel.Controls.Add(DeleteButton);
@@ -47,12 +55,56 @@
             ContentPanel.Size = new Size(948, 134);
             ContentPanel.TabIndex = 1;
             // 
+            // RegistrationNumberLabel
+            // 
+            RegistrationNumberLabel.AutoSize = true;
+            RegistrationNumberLabel.Font = new Font("Segoe UI", 14F);
+            RegistrationNumberLabel.ForeColor = Color.Green;
+            RegistrationNumberLabel.Location = new Point(190, 62);
+            RegistrationNumberLabel.Name = "RegistrationNumberLabel";
+            RegistrationNumberLabel.Size = new Size(82, 25);
+            RegistrationNumberLabel.TabIndex = 11;
+            RegistrationNumberLabel.Text = "1231312";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 14F);
+            label2.ForeColor = Color.DarkGray;
+            label2.Location = new Point(3, 62);
+            label2.Name = "label2";
+            label2.Size = new Size(181, 25);
+            label2.TabIndex = 10;
+            label2.Text = "Número de registro:";
+            // 
+            // PositionLabel
+            // 
+            PositionLabel.AutoSize = true;
+            PositionLabel.Font = new Font("Segoe UI", 14F);
+            PositionLabel.ForeColor = Color.Green;
+            PositionLabel.Location = new Point(76, 37);
+            PositionLabel.Name = "PositionLabel";
+            PositionLabel.Size = new Size(60, 25);
+            PositionLabel.TabIndex = 9;
+            PositionLabel.Text = "cargo";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 14F);
+            label1.ForeColor = Color.DarkGray;
+            label1.Location = new Point(3, 37);
+            label1.Name = "label1";
+            label1.Size = new Size(67, 25);
+            label1.TabIndex = 8;
+            label1.Text = "Cargo:";
+            // 
             // EmployeeEmail
             // 
             EmployeeEmail.AutoSize = true;
             EmployeeEmail.Font = new Font("Segoe UI", 14F);
-            EmployeeEmail.ForeColor = Color.DarkGray;
-            EmployeeEmail.Location = new Point(0, 37);
+            EmployeeEmail.ForeColor = Color.Green;
+            EmployeeEmail.Location = new Point(3, 87);
             EmployeeEmail.Name = "EmployeeEmail";
             EmployeeEmail.Size = new Size(218, 25);
             EmployeeEmail.TabIndex = 7;
@@ -66,6 +118,7 @@
             EditButton.TabIndex = 6;
             EditButton.Text = "Editar";
             EditButton.UseVisualStyleBackColor = true;
+            EditButton.Click += EditButton_Click;
             // 
             // DeleteButton
             // 
@@ -105,5 +158,9 @@
         private Button EditButton;
         private Button DeleteButton;
         private Label EmployeeName;
+        private Label PositionLabel;
+        private Label label1;
+        private Label label2;
+        private Label RegistrationNumberLabel;
     }
 }

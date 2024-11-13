@@ -165,7 +165,7 @@
             // 
             EditSupplierLabel.AutoSize = true;
             EditSupplierLabel.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
-            EditSupplierLabel.Location = new Point(50, 18);
+            EditSupplierLabel.Location = new Point(28, 19);
             EditSupplierLabel.Name = "EditSupplierLabel";
             EditSupplierLabel.Size = new Size(290, 37);
             EditSupplierLabel.TabIndex = 194;

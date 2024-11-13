@@ -62,3 +62,5 @@ C:\dev\workspace\visual-studio\fazenda_urbana_desktop\obj\Release\net8.0-windows
 C:\dev\workspace\visual-studio\fazenda_urbana_desktop\obj\Release\net8.0-windows8.0\fazenda-verdeviva.pdb
 C:\dev\workspace\visual-studio\fazenda_urbana_desktop\obj\Release\net8.0-windows8.0\fazenda-verdeviva.genruntimeconfig.cache
 C:\dev\workspace\visual-studio\fazenda_urbana_desktop\obj\Release\net8.0-windows8.0\ref\fazenda-verdeviva.dll
+C:\dev\workspace\visual-studio\fazenda_urbana_desktop\obj\Release\net8.0-windows8.0\fazenda_verdeviva.UserControls.Dashboard.Employees.EditEmployeeControl.resources
+C:\dev\workspace\visual-studio\fazenda_urbana_desktop\obj\Release\net8.0-windows8.0\fazenda_verdeviva.UserControls.Dashboard.Employees.RegisterEmployeeControl.resources

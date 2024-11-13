@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            RegisterButton = new Button();
             flowLayoutPanel1 = new FlowLayoutPanel();
             label1 = new Label();
             ContentPanel = new Panel();
@@ -37,12 +38,23 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(RegisterButton);
             panel1.Controls.Add(flowLayoutPanel1);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
             panel1.Size = new Size(954, 59);
             panel1.TabIndex = 5;
+            // 
+            // RegisterButton
+            // 
+            RegisterButton.Location = new Point(749, 10);
+            RegisterButton.Name = "RegisterButton";
+            RegisterButton.Size = new Size(169, 37);
+            RegisterButton.TabIndex = 10;
+            RegisterButton.Text = "Cadastrar";
+            RegisterButton.UseVisualStyleBackColor = true;
+            RegisterButton.Click += RegisterButton_Click;
             // 
             // flowLayoutPanel1
             // 
@@ -87,5 +99,6 @@
         private FlowLayoutPanel flowLayoutPanel1;
         private Label label1;
         private Panel ContentPanel;
+        public Button RegisterButton;
     }
 }

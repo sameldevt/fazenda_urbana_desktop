@@ -29,15 +29,13 @@
         private void InitializeComponent()
         {
             ContentPanel = new Panel();
+            ClientEmail = new Label();
             DetailsButton = new Button();
             EditButton = new Button();
             DeleteButton = new Button();
             ClientMemberSinceDate = new Label();
             ClientName = new Label();
-            ClientImage = new PictureBox();
-            ClientEmail = new Label();
             ContentPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)ClientImage).BeginInit();
             SuspendLayout();
             // 
             // ContentPanel
@@ -48,11 +46,21 @@
             ContentPanel.Controls.Add(DeleteButton);
             ContentPanel.Controls.Add(ClientMemberSinceDate);
             ContentPanel.Controls.Add(ClientName);
-            ContentPanel.Controls.Add(ClientImage);
             ContentPanel.Location = new Point(3, 3);
             ContentPanel.Name = "ContentPanel";
             ContentPanel.Size = new Size(948, 144);
             ContentPanel.TabIndex = 1;
+            // 
+            // ClientEmail
+            // 
+            ClientEmail.AutoSize = true;
+            ClientEmail.Font = new Font("Segoe UI", 14F);
+            ClientEmail.ForeColor = Color.DarkGray;
+            ClientEmail.Location = new Point(3, 40);
+            ClientEmail.Name = "ClientEmail";
+            ClientEmail.Size = new Size(162, 25);
+            ClientEmail.TabIndex = 11;
+            ClientEmail.Text = "email@email.com";
             // 
             // DetailsButton
             // 
@@ -93,7 +101,7 @@
             ClientMemberSinceDate.AutoSize = true;
             ClientMemberSinceDate.Font = new Font("Segoe UI", 14F);
             ClientMemberSinceDate.ForeColor = Color.DarkGray;
-            ClientMemberSinceDate.Location = new Point(159, 65);
+            ClientMemberSinceDate.Location = new Point(3, 65);
             ClientMemberSinceDate.Name = "ClientMemberSinceDate";
             ClientMemberSinceDate.Size = new Size(238, 25);
             ClientMemberSinceDate.TabIndex = 2;
@@ -103,33 +111,11 @@
             // 
             ClientName.AutoSize = true;
             ClientName.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
-            ClientName.Location = new Point(159, 3);
+            ClientName.Location = new Point(3, 3);
             ClientName.Name = "ClientName";
             ClientName.Size = new Size(135, 37);
             ClientName.TabIndex = 1;
             ClientName.Text = "Demonio";
-            // 
-            // ClientImage
-            // 
-            ClientImage.Image = Properties.Resources.purchase;
-            ClientImage.InitialImage = Properties.Resources.product_image;
-            ClientImage.Location = new Point(3, 3);
-            ClientImage.Name = "ClientImage";
-            ClientImage.Size = new Size(150, 150);
-            ClientImage.SizeMode = PictureBoxSizeMode.Zoom;
-            ClientImage.TabIndex = 0;
-            ClientImage.TabStop = false;
-            // 
-            // ClientEmail
-            // 
-            ClientEmail.AutoSize = true;
-            ClientEmail.Font = new Font("Segoe UI", 14F);
-            ClientEmail.ForeColor = Color.DarkGray;
-            ClientEmail.Location = new Point(159, 40);
-            ClientEmail.Name = "ClientEmail";
-            ClientEmail.Size = new Size(162, 25);
-            ClientEmail.TabIndex = 11;
-            ClientEmail.Text = "email@email.com";
             // 
             // ClientCardControl
             // 
@@ -140,7 +126,6 @@
             Size = new Size(954, 150);
             ContentPanel.ResumeLayout(false);
             ContentPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)ClientImage).EndInit();
             ResumeLayout(false);
         }
 
@@ -149,7 +134,6 @@
         private Panel ContentPanel;
         private Label ClientMemberSinceDate;
         private Label ClientName;
-        private PictureBox ClientImage;
         private Button DetailsButton;
         private Button EditButton;
         private Button DeleteButton;
