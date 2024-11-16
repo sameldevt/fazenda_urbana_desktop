@@ -24,7 +24,7 @@ namespace fazenda_verdeviva.Model.Entities
         public double WeightPrice { get; set; }
 
         [JsonProperty("quantidadeEstoque")]
-        public int StockQuantity { get; set; }
+        public decimal StockQuantity { get; set; }
 
         [JsonProperty("imagemUrl")]
         public string ImageUrl { get; set; }
