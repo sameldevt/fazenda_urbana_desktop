@@ -39,6 +39,11 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Suppliers
             WebsiteTextBox.Text = supplier.Website;
             PhoneTextBox.Text = supplier.Contact?.Phone ?? "";
             EmailTextBox.Text = supplier.Contact?.Email ?? "";
+            NameTextBox.Enabled = false;
+            CnpjTextBox.Enabled = false;
+            WebsiteTextBox.Enabled = false;
+            PhoneTextBox.Enabled = false;
+            EmailTextBox.Enabled = false;
             LoadAddresses();
         }
 
