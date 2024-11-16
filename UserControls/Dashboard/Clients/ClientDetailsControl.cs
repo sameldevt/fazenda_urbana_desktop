@@ -49,6 +49,9 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Clients
             NameTextBox.Text = client.Name;
             PhoneTextBox.Text = client.Contact?.Phone ?? "";
             EmailTextBox.Text = client.Contact?.Email ?? "";
+            NameTextBox.Enabled = false;
+            PhoneTextBox.Enabled = false;
+            EmailTextBox.Enabled = false;
             LoadAddressCards(client);
         }
 
