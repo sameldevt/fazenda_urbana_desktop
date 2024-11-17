@@ -39,5 +39,10 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Messages
             ContentPanel.Controls.Add(control);
             ContentPanel.PerformLayout();
         }
+
+        private void RefreshButton_Click(object sender, EventArgs e)
+        {
+            SetContentPanelControl(ContactMessageListControl.GetInstance());
+        }
     }
 }

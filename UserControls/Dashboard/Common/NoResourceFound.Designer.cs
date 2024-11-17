@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            RefreshButton = new Button();
             SuspendLayout();
             // 
             // label1
@@ -43,22 +42,10 @@
             label1.TabIndex = 0;
             label1.Text = "Nenhum item encontrado";
             // 
-            // RefreshButton
-            // 
-            RefreshButton.BackColor = Color.White;
-            RefreshButton.Location = new Point(399, 438);
-            RefreshButton.Name = "RefreshButton";
-            RefreshButton.Size = new Size(150, 33);
-            RefreshButton.TabIndex = 11;
-            RefreshButton.Text = "Atualizar lista";
-            RefreshButton.UseVisualStyleBackColor = false;
-            RefreshButton.Click += RefreshButton_Click;
-            // 
             // NoResourceFound
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(RefreshButton);
             Controls.Add(label1);
             Name = "NoResourceFound";
             Size = new Size(948, 513);
@@ -69,6 +56,5 @@
         #endregion
 
         private Label label1;
-        private Button RefreshButton;
     }
 }

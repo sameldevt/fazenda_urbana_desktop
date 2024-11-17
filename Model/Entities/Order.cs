@@ -49,7 +49,7 @@ namespace fazenda_verdeviva.Model.Entities
         public virtual int ProductId { get; set; }
 
         [JsonProperty("quantidade")]
-        public int Quantity { get; set; }
+        public decimal Quantity { get; set; }
 
         [JsonProperty("subTotal")]
         public decimal SubTotal { get; init; }

@@ -23,7 +23,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
 
         public static ProductsControl GetInstance()
         {
-            if(Instance == null)
+            if (Instance == null)
             {
                 Instance = new ProductsControl();
             }
@@ -53,6 +53,11 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
         private void ContentPanel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void RefreshButton_Click(object sender, EventArgs e)
+        {
+            SetContentPanelControl(ProductListControl.GetInstance());
         }
     }
 }

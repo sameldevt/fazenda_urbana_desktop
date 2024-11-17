@@ -34,9 +34,7 @@ namespace fazenda_verdeviva.Services
             if (response.IsSuccessStatusCode)
             {
                 string responseBody = await response.Content.ReadAsStringAsync();
-
                 List<Order> orders = JsonConvert.DeserializeObject<List<Order>>(responseBody);
-
                 return orders;
             }
 

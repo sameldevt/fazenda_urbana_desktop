@@ -41,9 +41,9 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
             ProductProteins.Text = $"{product.NutritionalInfo.Proteins.ToString()} g";
             ProductFibers.Text = $"{product.NutritionalInfo.Fibers.ToString()} g";
             ProductFats.Text = $"{product.NutritionalInfo.Fats.ToString()} g"; 
-            SupplierName.Text = product.Supplier.Name;
-            SupplierEmail.Text = product.Supplier.Contact?.Email ?? "E-mail não cadastrado";
-            SupplierCnpj.Text = product.Supplier.CNPJ ?? "CPNJ não cadastrado";
+            //SupplierName.Text = product.Supplier.Name;
+            //SupplierEmail.Text = product.Supplier.Contact?.Email ?? "E-mail não cadastrado";
+            //SupplierCnpj.Text = product.Supplier.CNPJ ?? "CPNJ não cadastrado";
             LoadProductImage(product);
         }
 

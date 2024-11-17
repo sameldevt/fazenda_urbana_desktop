@@ -1,6 +1,6 @@
 ﻿namespace fazenda_verdeviva.UserControls.Dashboard.Reports
 {
-    partial class AllReportsControl
+    partial class ReportsListControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,17 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            ReportsList = new FlowLayoutPanel();
             SuspendLayout();
             // 
-            // AllReportsControl
+            // ReportsList
+            // 
+            ReportsList.Location = new Point(3, 3);
+            ReportsList.Name = "ReportsList";
+            ReportsList.Size = new Size(948, 513);
+            ReportsList.TabIndex = 3;
+            // 
+            // ReportsListControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Name = "AllReportsControl";
-            Size = new Size(982, 663);
+            Controls.Add(ReportsList);
+            Name = "ReportsListControl";
+            Size = new Size(954, 519);
             ResumeLayout(false);
         }
 
         #endregion
+
+        public FlowLayoutPanel ReportsList;
     }
 }

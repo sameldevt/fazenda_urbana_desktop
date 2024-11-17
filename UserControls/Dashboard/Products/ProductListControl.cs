@@ -40,7 +40,6 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
             ProductsList.Controls.Clear();
 
             List<Product> products = await ProductService.GetInstance().GetAll();
-
             try
             {
                 products.ForEach(p =>
@@ -51,7 +50,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
                 });
             }
             catch (Exception ex) 
-            { 
+            {
                 ProductsControl.GetInstance().SetContentPanelControl(NoResourceFound.GetInstance());
             }
         }

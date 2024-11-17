@@ -67,6 +67,12 @@
     <Compile Update="UserControls\Dashboard\Products\ProductDetailsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UserControls\Dashboard\Reports\ReportCardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\Dashboard\Reports\ReportsListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UserControls\Dashboard\Suppliers\EditSupplierControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -103,13 +109,7 @@
     <Compile Update="UserControls\Dashboard\Products\RegisterProductControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControls\Dashboard\Reports\AllReportsControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Update="UserControls\Dashboard\Reports\ReportControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="UserControls\Dashboard\Reports\ReportsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UserControls\Dashboard\Suppliers\SupplierControl.cs">

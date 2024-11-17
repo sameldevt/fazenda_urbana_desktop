@@ -29,77 +29,79 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            ExitButton = new Button();
-            button2 = new Button();
-            AllReportsButton = new Button();
-            panel2 = new Panel();
+            RefreshButton = new Button();
+            RegisterButton = new Button();
+            label1 = new Label();
+            ContentPanel = new Panel();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.Controls.Add(ExitButton);
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(AllReportsButton);
+            panel1.Controls.Add(RefreshButton);
+            panel1.Controls.Add(RegisterButton);
+            panel1.Controls.Add(label1);
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(200, 663);
-            panel1.TabIndex = 0;
+            panel1.Size = new Size(954, 59);
+            panel1.TabIndex = 1;
             // 
-            // ExitButton
+            // RefreshButton
             // 
-            ExitButton.Location = new Point(3, 61);
-            ExitButton.Name = "ExitButton";
-            ExitButton.Size = new Size(194, 23);
-            ExitButton.TabIndex = 2;
-            ExitButton.Text = "Sair";
-            ExitButton.UseVisualStyleBackColor = true;
-            ExitButton.Click += ExitButton_Click;
+            RefreshButton.Location = new Point(574, 10);
+            RefreshButton.Name = "RefreshButton";
+            RefreshButton.Size = new Size(169, 37);
+            RefreshButton.TabIndex = 12;
+            RefreshButton.Text = "Atualizar lista";
+            RefreshButton.UseVisualStyleBackColor = true;
+            RefreshButton.Click += RefreshButton_Click;
             // 
-            // button2
+            // RegisterButton
             // 
-            button2.Location = new Point(3, 32);
-            button2.Name = "button2";
-            button2.Size = new Size(194, 23);
-            button2.TabIndex = 1;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            RegisterButton.Location = new Point(749, 10);
+            RegisterButton.Name = "RegisterButton";
+            RegisterButton.Size = new Size(169, 37);
+            RegisterButton.TabIndex = 8;
+            RegisterButton.Text = "Gerar novo";
+            RegisterButton.UseVisualStyleBackColor = true;
+            RegisterButton.Click += RegisterButton_Click;
             // 
-            // AllReportsButton
+            // label1
             // 
-            AllReportsButton.Location = new Point(3, 3);
-            AllReportsButton.Name = "AllReportsButton";
-            AllReportsButton.Size = new Size(194, 23);
-            AllReportsButton.TabIndex = 0;
-            AllReportsButton.Text = "Todos os relatórios";
-            AllReportsButton.UseVisualStyleBackColor = true;
-            AllReportsButton.Click += AllReportsButton_Click;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            label1.Location = new Point(0, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(148, 37);
+            label1.TabIndex = 4;
+            label1.Text = "Relatórios";
             // 
-            // panel2
+            // ContentPanel
             // 
-            panel2.Location = new Point(209, 3);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(982, 663);
-            panel2.TabIndex = 1;
+            ContentPanel.Location = new Point(3, 65);
+            ContentPanel.Name = "ContentPanel";
+            ContentPanel.Size = new Size(954, 519);
+            ContentPanel.TabIndex = 2;
             // 
             // ReportControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(panel2);
+            Controls.Add(ContentPanel);
             Controls.Add(panel1);
             Name = "ReportControl";
-            Size = new Size(1194, 669);
+            Size = new Size(960, 587);
             panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panel1;
-        private Panel panel2;
-        private Button button2;
-        private Button AllReportsButton;
-        private Button ExitButton;
+        public Button RefreshButton;
+        public Button RegisterButton;
+        private Label label1;
+        private Panel ContentPanel;
     }
 }

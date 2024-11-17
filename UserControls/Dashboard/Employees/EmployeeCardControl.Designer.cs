@@ -52,7 +52,7 @@
             ContentPanel.Controls.Add(EmployeeName);
             ContentPanel.Location = new Point(3, 3);
             ContentPanel.Name = "ContentPanel";
-            ContentPanel.Size = new Size(948, 134);
+            ContentPanel.Size = new Size(922, 134);
             ContentPanel.TabIndex = 1;
             // 
             // RegistrationNumberLabel
@@ -114,7 +114,7 @@
             // 
             // EditButton
             // 
-            EditButton.Location = new Point(858, 14);
+            EditButton.Location = new Point(831, 14);
             EditButton.Name = "EditButton";
             EditButton.Size = new Size(75, 23);
             EditButton.TabIndex = 6;
@@ -124,7 +124,7 @@
             // 
             // DeleteButton
             // 
-            DeleteButton.Location = new Point(777, 14);
+            DeleteButton.Location = new Point(750, 14);
             DeleteButton.Name = "DeleteButton";
             DeleteButton.Size = new Size(75, 23);
             DeleteButton.TabIndex = 5;
@@ -148,7 +148,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(ContentPanel);
             Name = "EmployeeCardControl";
-            Size = new Size(954, 140);
+            Size = new Size(928, 140);
             ContentPanel.ResumeLayout(false);
             ContentPanel.PerformLayout();
             ResumeLayout(false);

@@ -1,6 +1,6 @@
-﻿namespace fazenda_verdeviva.UserControls.Dashboard.Products
+﻿namespace fazenda_verdeviva.UserControls.Dashboard.Reports
 {
-    partial class ProductCardControl
+    partial class ReportCardControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             ContentPanel = new Panel();
+            ProductSupplier = new Label();
+            label3 = new Label();
             label2 = new Label();
             label1 = new Label();
             ProductDetails = new Button();
@@ -45,6 +47,8 @@
             // 
             // ContentPanel
             // 
+            ContentPanel.Controls.Add(ProductSupplier);
+            ContentPanel.Controls.Add(label3);
             ContentPanel.Controls.Add(label2);
             ContentPanel.Controls.Add(label1);
             ContentPanel.Controls.Add(ProductDetails);
@@ -58,7 +62,29 @@
             ContentPanel.Location = new Point(3, 3);
             ContentPanel.Name = "ContentPanel";
             ContentPanel.Size = new Size(942, 144);
-            ContentPanel.TabIndex = 0;
+            ContentPanel.TabIndex = 1;
+            // 
+            // ProductSupplier
+            // 
+            ProductSupplier.AutoSize = true;
+            ProductSupplier.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ProductSupplier.ForeColor = Color.Green;
+            ProductSupplier.Location = new Point(257, 117);
+            ProductSupplier.Name = "ProductSupplier";
+            ProductSupplier.Size = new Size(123, 21);
+            ProductSupplier.TabIndex = 11;
+            ProductSupplier.Text = "Alimentos zika";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F);
+            label3.ForeColor = Color.DarkGray;
+            label3.Location = new Point(159, 117);
+            label3.Name = "label3";
+            label3.Size = new Size(92, 21);
+            label3.TabIndex = 10;
+            label3.Text = "Fornecedor:";
             // 
             // label2
             // 
@@ -91,7 +117,6 @@
             ProductDetails.TabIndex = 7;
             ProductDetails.Text = "Ver detalhes";
             ProductDetails.UseVisualStyleBackColor = false;
-            ProductDetails.Click += ProductDetails_Click;
             // 
             // ProductQuantity
             // 
@@ -113,7 +138,6 @@
             EditButton.TabIndex = 5;
             EditButton.Text = "Editar";
             EditButton.UseVisualStyleBackColor = false;
-            EditButton.Click += EditButton_Click;
             // 
             // DeleteButton
             // 
@@ -125,7 +149,6 @@
             DeleteButton.TabIndex = 4;
             DeleteButton.Text = "Excluir";
             DeleteButton.UseVisualStyleBackColor = false;
-            DeleteButton.Click += DeleteButton_Click;
             // 
             // ProductPrice
             // 
@@ -171,12 +194,12 @@
             ProductImage.TabIndex = 0;
             ProductImage.TabStop = false;
             // 
-            // ProductCardControl
+            // ReportCardControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(ContentPanel);
-            Name = "ProductCardControl";
+            Name = "ReportCardControl";
             Size = new Size(948, 150);
             ContentPanel.ResumeLayout(false);
             ContentPanel.PerformLayout();
@@ -187,15 +210,17 @@
         #endregion
 
         private Panel ContentPanel;
-        private Label ProductName;
-        private PictureBox ProductImage;
+        private Label ProductSupplier;
+        private Label label3;
         private Label label2;
-        private Label ProductPrice;
-        private Label ProductDescription;
+        private Label label1;
+        private Button ProductDetails;
+        private Label ProductQuantity;
         private Button EditButton;
         private Button DeleteButton;
-        private Label ProductQuantity;
-        private Button ProductDetails;
-        private Label label1;
+        private Label ProductPrice;
+        private Label ProductDescription;
+        private Label ProductName;
+        private PictureBox ProductImage;
     }
 }

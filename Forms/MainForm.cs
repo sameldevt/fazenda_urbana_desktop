@@ -21,6 +21,9 @@ namespace fazenda_verdeviva.Forms
         private MainForm()
         {
             InitializeComponent();
+            this.Text = "Fazenda VerdeViva";
+            this.FormBorderStyle = FormBorderStyle.FixedSingle; 
+            this.MaximizeBox = false;
 
             contentPanel = new Panel
             {

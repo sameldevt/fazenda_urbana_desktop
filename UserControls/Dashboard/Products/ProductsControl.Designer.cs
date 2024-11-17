@@ -32,11 +32,13 @@
             RegisterButton = new Button();
             label1 = new Label();
             ContentPanel = new Panel();
+            RefreshButton = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(RefreshButton);
             panel1.Controls.Add(RegisterButton);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(3, 3);
@@ -72,6 +74,16 @@
             ContentPanel.TabIndex = 1;
             ContentPanel.Paint += ContentPanel_Paint;
             // 
+            // RefreshButton
+            // 
+            RefreshButton.Location = new Point(574, 10);
+            RefreshButton.Name = "RefreshButton";
+            RefreshButton.Size = new Size(169, 37);
+            RefreshButton.TabIndex = 12;
+            RefreshButton.Text = "Atualizar lista";
+            RefreshButton.UseVisualStyleBackColor = true;
+            RefreshButton.Click += RefreshButton_Click;
+            // 
             // ProductsControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -91,5 +103,6 @@
         private Label label1;
         public Button RegisterButton;
         private Panel ContentPanel;
+        public Button RefreshButton;
     }
 }

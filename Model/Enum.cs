@@ -13,4 +13,38 @@ namespace fazenda_verdeviva.Model
         PAGO,
         AGUARDANDO_PAGAMENTO,
     }
+
+    public enum HarvestType
+    {
+        Fruits,
+        Grains,
+        Vegetables,
+        Legumes
+    }
+
+    public enum CultureCycle
+    {
+        Short,
+        Medium,
+        Long
+    }
+
+    public enum EquipmentType
+    {
+        Irrigation,
+        TemperatureControl,
+        IndoorCultivation,
+        Sowing,
+        Harvesting,
+        Storage,
+        Composting,
+        Monitoring,
+        Transportation,
+        GeneralGardening,
+        HydroponicSystem,
+        ProtectiveEquipment,
+        Automation,
+        Fertilization,
+        PestControl
+    }
 }

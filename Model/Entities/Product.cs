@@ -34,14 +34,6 @@ namespace fazenda_verdeviva.Model.Entities
 
         [JsonProperty("nutrientes")]
         public virtual NutritionalInfo NutritionalInfo { get; set; }
-
-        [JsonProperty("fornecedor")]
-        public virtual Supplier Supplier { get; set; }
-
-        public override string ToString()
-        {
-            return JsonConvert.SerializeObject(this, Formatting.Indented);
-        }
     }
 
     public class Category
@@ -54,6 +46,9 @@ namespace fazenda_verdeviva.Model.Entities
 
         [JsonProperty("descricao")]
         public string Description { get; set; }
+
+        [JsonProperty("dataCriacao")]
+        public DateTime CreationDate { get; set; }
     }
 
     public class NutritionalInfo

@@ -24,7 +24,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard
 
         public static ClientControl GetInstance()
         {
-            if(Instance == null)
+            if (Instance == null)
             {
                 Instance = new ClientControl();
             }
@@ -37,6 +37,11 @@ namespace fazenda_verdeviva.UserControls.Dashboard
             control.Dock = DockStyle.Fill;
             ContentPanel.Controls.Add(control);
             ContentPanel.PerformLayout();
+        }
+
+        private void RefreshButton_Click(object sender, EventArgs e)
+        {
+            SetContentPanelControl(ClientListControl.GetInstance());
         }
     }
 }

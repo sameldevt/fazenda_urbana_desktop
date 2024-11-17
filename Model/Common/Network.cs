@@ -10,8 +10,8 @@ namespace fazenda_verdeviva.Model.Common
 {
     public static class Network
     {
-        //public static readonly string BaseUrl = "http://localhost:5085";
-        public static readonly string BaseUrl = "http://3.219.74.46";
+        public static readonly string BaseUrl = "http://localhost:5085";
+        //public static readonly string BaseUrl = "http://3.219.74.46";
         public static readonly HttpClient HttpClient = new HttpClient();
     }
 }

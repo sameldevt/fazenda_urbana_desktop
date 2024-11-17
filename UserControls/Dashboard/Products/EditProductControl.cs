@@ -1,4 +1,5 @@
-﻿using fazenda_verdeviva.Model.Entities;
+﻿using fazenda_verdeviva.Model.Dto;
+using fazenda_verdeviva.Model.Entities;
 using fazenda_verdeviva.Services;
 using SkiaSharp;
 using System;
@@ -31,9 +32,57 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
                 Instance = new EditProductControl();
             }
 
+            Instance.LoadSuppliers();
+            Instance.LoadCategories();
+            Instance.ClearProductInfos();
             return Instance;
         }
 
+        private async Task LoadCategories()
+        {
+            var categories = await ProductService.GetInstance().GetCategoriesAsync();
+
+            if (categories != null && categories.Any())
+            {
+                CategoryComboBox.DataSource = null;
+
+                CategoryComboBox.DisplayMember = "Name";
+                CategoryComboBox.ValueMember = "Id";
+                CategoryComboBox.DataSource = categories;
+
+                CategoryComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            }
+        }
+
+        private async void LoadSuppliers()
+        {
+            var suppliers = await SupplierService.GetInstance().GetAll();
+
+            if (suppliers != null && suppliers.Any())
+            {
+                SupplierComboBox.DisplayMember = "Name";
+                SupplierComboBox.ValueMember = "Id";
+                SupplierComboBox.DataSource = suppliers;
+
+                SupplierComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            }
+        }
+
+        private void ClearProductInfos()
+        {
+            ProductNameTextBox.Text = string.Empty;
+            ProductDescriptionTextBox.Text = string.Empty;
+            ProductPriceTextBox.Text = string.Empty;
+            ProductQuantityTextBox.Text = string.Empty;
+            ProductImageUrlTextBox.Text = string.Empty;
+            ProductCaloriesTextBox.Text = string.Empty;
+            ProductCarbsTextBox.Text = string.Empty;
+            ProductProteinsTextBox.Text = string.Empty;
+            ProductFibersTextBox.Text = string.Empty;
+            ProductFatsTextBox.Text = string.Empty;
+
+            ProductImage.Image = null;
+        }
         public async void LoadProductInfo(Product product)
         {
             Product = product;
@@ -81,15 +130,14 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
             }
         }
 
+
         private void ProductPriceTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Verifica se a tecla pressionada é um número, controle, ponto ou vírgula
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != ',')
             {
-                e.Handled = true;  // Cancela a entrada se não for permitido
+                e.Handled = true;
             }
 
-            // Permite apenas um ponto ou vírgula no TextBox
             if ((e.KeyChar == '.' || e.KeyChar == ',') && (ProductPriceTextBox.Text.Contains(".") || ProductPriceTextBox.Text.Contains(",")))
             {
                 e.Handled = true;
@@ -98,74 +146,76 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
 
         private void ProductQuantityTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Verifica se a tecla pressionada não é um número e nem um controle (como backspace)
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
-                e.Handled = true;  // Cancela a entrada se não for número
+                e.Handled = true;
             }
         }
 
         private void ProductCaloriesTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Verifica se a tecla pressionada não é um número e nem um controle (como backspace)
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
-                e.Handled = true;  // Cancela a entrada se não for número
+                e.Handled = true;
             }
         }
 
         private void ProductProteinsTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Verifica se a tecla pressionada não é um número e nem um controle (como backspace)
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
-                e.Handled = true;  // Cancela a entrada se não for número
+                e.Handled = true;
             }
         }
 
         private void ProductCarbsTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Verifica se a tecla pressionada não é um número e nem um controle (como backspace)
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
-                e.Handled = true;  // Cancela a entrada se não for número
+                e.Handled = true;
             }
         }
 
         private void ProductFibersTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Verifica se a tecla pressionada não é um número e nem um controle (como backspace)
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
-                e.Handled = true;  // Cancela a entrada se não for número
+                e.Handled = true;
             }
         }
 
         private void ProductFatsTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Verifica se a tecla pressionada não é um número e nem um controle (como backspace)
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
-                e.Handled = true;  // Cancela a entrada se não for número
+                e.Handled = true;
             }
         }
 
         private async void SaveButton_Click(object sender, EventArgs e)
         {
-            Product.Name = ProductNameTextBox.Text;
-            Product.Description = ProductDescriptionTextBox.Text;
-            Product.ImageUrl = ProductImageUrlTextBox.Text;
-            Product.WeightPrice = double.Parse(ProductPriceTextBox.Text
+            var updateProductDto = new UpdateProductDto
+            {
+                Id = Product.Id,
+                Name = ProductNameTextBox.Text,
+                Description = ProductDescriptionTextBox.Text,
+                WeightPrice = decimal.Parse(ProductPriceTextBox.Text
                 .Replace("R$ ", "")
-                .Replace(" / kg", ""));
-            Product.StockQuantity = int.Parse(ProductQuantityTextBox.Text);
-            Product.NutritionalInfo.Calories = int.Parse(ProductCaloriesTextBox.Text);
-            Product.NutritionalInfo.Carbohydrates = double.Parse(ProductCarbsTextBox.Text);
-            Product.NutritionalInfo.Fats = double.Parse(ProductFatsTextBox.Text);
-            Product.NutritionalInfo.Fibers = double.Parse(ProductFibersTextBox.Text);
-            Product.NutritionalInfo.Proteins = double.Parse(ProductProteinsTextBox.Text);
+                .Replace(" / kg", "")),
+                StockQuantity = int.Parse(ProductQuantityTextBox.Text),
+                NutritionalInfo = new NutritionalInfoDto
+                {
+                    Calories = decimal.Parse(ProductCaloriesTextBox.Text),
+                    Proteins = decimal.Parse(ProductProteinsTextBox.Text),
+                    Carbohydrates = decimal.Parse(ProductCarbsTextBox.Text),
+                    Fibers = decimal.Parse(ProductFibersTextBox.Text),
+                    Fats = decimal.Parse(ProductFatsTextBox.Text)
+                },
+                CategoryId = (int)CategoryComboBox.SelectedValue,
+                SupplierId = (int)SupplierComboBox.SelectedValue,
+            };
 
-            var response = await ProductService.GetInstance().Update(Product);
+            var response = await ProductService.GetInstance().Update(updateProductDto);
 
             MessageBox.Show(response);
             ProductsControl.GetInstance().RegisterButton.Enabled = true;

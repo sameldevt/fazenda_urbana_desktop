@@ -1,4 +1,5 @@
-﻿using System;
+﻿using fazenda_verdeviva.Model.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,17 @@ using System.Windows.Forms;
 
 namespace fazenda_verdeviva.UserControls.Dashboard.Reports
 {
-    public partial class AllReportsControl : UserControl
+    public partial class ReportCardControl : UserControl
     {
-        public AllReportsControl()
+        private Report Report;
+        public ReportCardControl()
         {
             InitializeComponent();
+        }
+
+        public void LoadCardInfo(Report report)
+        {
+            this.Report = report;
         }
     }
 }

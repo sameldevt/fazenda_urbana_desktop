@@ -32,6 +32,7 @@
             flowLayoutPanel1 = new FlowLayoutPanel();
             label1 = new Label();
             ContentPanel = new Panel();
+            RefreshButton = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -68,10 +69,21 @@
             ContentPanel.Size = new Size(954, 519);
             ContentPanel.TabIndex = 5;
             // 
+            // RefreshButton
+            // 
+            RefreshButton.Location = new Point(749, 10);
+            RefreshButton.Name = "RefreshButton";
+            RefreshButton.Size = new Size(169, 37);
+            RefreshButton.TabIndex = 12;
+            RefreshButton.Text = "Atualizar lista";
+            RefreshButton.UseVisualStyleBackColor = true;
+            RefreshButton.Click += RefreshButton_Click;
+            // 
             // ClientControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(RefreshButton);
             Controls.Add(ContentPanel);
             Controls.Add(panel1);
             Name = "ClientControl";
@@ -86,5 +98,6 @@
         private Label label1;
         private FlowLayoutPanel flowLayoutPanel1;
         private Panel ContentPanel;
+        public Button RefreshButton;
     }
 }

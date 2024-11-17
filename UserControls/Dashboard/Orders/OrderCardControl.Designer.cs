@@ -46,13 +46,13 @@
             ContentPanel.Controls.Add(OrderId);
             ContentPanel.Location = new Point(3, 3);
             ContentPanel.Name = "ContentPanel";
-            ContentPanel.Size = new Size(934, 107);
+            ContentPanel.Size = new Size(904, 107);
             ContentPanel.TabIndex = 1;
             // 
             // Details
             // 
             Details.BackColor = Color.White;
-            Details.Location = new Point(837, 71);
+            Details.Location = new Point(792, 64);
             Details.Name = "Details";
             Details.Size = new Size(95, 33);
             Details.TabIndex = 9;
@@ -77,7 +77,7 @@
             OrderPrice.AutoSize = true;
             OrderPrice.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             OrderPrice.ForeColor = Color.Green;
-            OrderPrice.Location = new Point(843, 12);
+            OrderPrice.Location = new Point(793, 12);
             OrderPrice.Name = "OrderPrice";
             OrderPrice.Size = new Size(94, 25);
             OrderPrice.TabIndex = 8;
@@ -110,7 +110,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(ContentPanel);
             Name = "OrderCardControl";
-            Size = new Size(940, 113);
+            Size = new Size(910, 113);
             ContentPanel.ResumeLayout(false);
             ContentPanel.PerformLayout();
             ResumeLayout(false);

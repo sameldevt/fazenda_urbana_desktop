@@ -44,5 +44,10 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Employees
             RegisterButton.Enabled = false;
             SetContentPanelControl(RegisterEmployeeControl.GetInstance());
         }
+
+        private void RefreshButton_Click(object sender, EventArgs e)
+        {
+            SetContentPanelControl(EmployeeListControl.GetInstance());
+        }
     }
 }

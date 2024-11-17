@@ -51,5 +51,10 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Suppliers
             RegisterButton.Enabled = false;
             SetContentPanelControl(RegisterSupplierControl.GetInstance());
         }
+
+        private void RefreshButton_Click(object sender, EventArgs e)
+        {
+            SetContentPanelControl(SupplierListControl.GetInstance());
+        }
     }
 }

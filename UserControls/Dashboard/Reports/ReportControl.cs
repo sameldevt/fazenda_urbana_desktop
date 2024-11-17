@@ -1,4 +1,5 @@
-﻿using System;
+﻿using fazenda_verdeviva.UserControls.Dashboard.Products;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,19 +13,41 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Reports
 {
     public partial class ReportControl : UserControl
     {
-        public ReportControl()
+        private static ReportControl? Instance;
+
+        private ReportControl()
         {
             InitializeComponent();
+            Controls.Add(ContentPanel);
+            SetContentPanelControl(ReportsListControl.GetInstance());
         }
 
-        private void ExitButton_Click(object sender, EventArgs e)
+        public static ReportControl GetInstance()
         {
-            Application.Exit();
+            if( Instance == null)
+            {
+                Instance = new ReportControl();
+            }
+
+            return Instance;
+        }
+        public void SetContentPanelControl(UserControl control)
+        {
+            ContentPanel.Controls.Clear();
+            control.Dock = DockStyle.Fill;
+            ContentPanel.Controls.Add(control);
+            ContentPanel.PerformLayout();
         }
 
-        private void AllReportsButton_Click(object sender, EventArgs e)
+
+        private void RefreshButton_Click(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void RegisterButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

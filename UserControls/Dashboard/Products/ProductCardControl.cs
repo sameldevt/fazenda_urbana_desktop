@@ -33,7 +33,6 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
             ProductDescription.Text = product.Description;
             ProductQuantity.Text = $"{product.StockQuantity.ToString("F2")} kg";
             ProductPrice.Text = $"R$ {product.WeightPrice.ToString("F2")}";
-            ProductSupplier.Text = product.Supplier.Name;
             LoadProductImage(product);
         }
 

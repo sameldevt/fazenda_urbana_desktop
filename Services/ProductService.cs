@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.DirectoryServices.ActiveDirectory;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,11 +36,10 @@ namespace fazenda_verdeviva.Services
             if (response.IsSuccessStatusCode)
             {
                 string responseBody = await response.Content.ReadAsStringAsync();
-
                 List<Product> products = JsonConvert.DeserializeObject<List<Product>>(responseBody);
-
                 return products;
             }
+
 
             return null;
         }
@@ -62,7 +62,7 @@ namespace fazenda_verdeviva.Services
             return null;
         }
 
-        public async Task<string> Update(Product product)
+        public async Task<string> Update(UpdateProductDto product)
         {
             string url = $"{Network.BaseUrl}/{ContextUrl}/atualizar";
 
