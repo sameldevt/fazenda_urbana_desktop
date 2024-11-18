@@ -48,4 +48,24 @@ namespace fazenda_verdeviva.Model
         ControleDePragas
     }
 
+    public enum SupplyCategory
+    {
+        Fertilizante,
+        Pesticida,
+        Semente,
+        Solo,
+        Composto,
+        Irrigacao,
+        Iluminacao,
+        Recipiente,
+        SolucaoNutritiva,
+        Ferramenta,
+        ControleClimatico,
+        MeioDeCrescimento,
+        CoberturaProtetora,
+        EstruturaDeSuporte,
+        Embalagem,
+        DispositivoDeMonitoramento
+    }
+
 }

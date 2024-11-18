@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace fazenda_verdeviva.Model.Entities
 {
-    public class Farm
+    public class Farm : EntityInterface
     {
         [JsonProperty("id")]
         public int Id { get; set; }
@@ -31,16 +31,16 @@ namespace fazenda_verdeviva.Model.Entities
         public ICollection<Equipment> Equipments { get; set; }
 
         [JsonProperty("colheitas")]
-        public ICollection<Crop> Crops { get; set; }
+        public ICollection<Harvest> Harvests { get; set; }
 
         [JsonProperty("numeroEstufas")]
         public int GreenhousesCount { get; set; }
 
         [JsonProperty("ativo")]
-        public bool Active { get; set; }
+        public bool IsActive { get; set; }
     }
 
-    public class Crop
+    public class Harvest : EntityInterface
     {
         [JsonProperty("id")]
         public int Id { get; set; }
@@ -63,11 +63,12 @@ namespace fazenda_verdeviva.Model.Entities
         [JsonProperty("culturaId")]
         public int CultureId { get; set; }
 
-        [JsonProperty("cutura")]
-        public Culture Culture { get; set; }
+        [JsonProperty("fazendaId")]
+        public int FarmId { get; set; }
+
     }
 
-    public class Culture
+    public class Culture : EntityInterface
     {
         [JsonProperty("id")]
         public int Id { get; set; }

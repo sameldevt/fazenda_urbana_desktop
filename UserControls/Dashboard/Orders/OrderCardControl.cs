@@ -15,6 +15,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Orders
     public partial class OrderCardControl : UserControl
     {
         private Order? Order;
+
         public OrderCardControl()
         {
             InitializeComponent();

@@ -18,6 +18,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Orders
     public partial class OrderListControl : UserControl, ControlInterface
     {
         private static OrderListControl? Instance;
+
         public OrderListControl()
         {
             InitializeComponent();

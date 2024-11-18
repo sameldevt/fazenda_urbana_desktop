@@ -26,6 +26,24 @@ namespace fazenda_verdeviva.Services
             return Instance;
         }
 
+        public async Task<Supplier> GetById(int id)
+        {
+            string url = $"{Network.BaseUrl}/{ContextUrl}/buscar/{id}";
+
+            HttpResponseMessage response = await Network.HttpClient.GetAsync(url);
+
+            if (response.IsSuccessStatusCode)
+            {
+                string responseBody = await response.Content.ReadAsStringAsync();
+
+                Supplier supplier = JsonConvert.DeserializeObject<Supplier>(responseBody);
+
+                return supplier;
+            }
+
+            return null;
+
+        }
         public async Task<List<Supplier>> GetAll()
         {
             string url = $"{Network.BaseUrl}/{ContextUrl}/buscar-todos";

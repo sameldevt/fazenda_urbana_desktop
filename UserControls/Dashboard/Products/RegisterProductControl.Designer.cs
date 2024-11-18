@@ -97,9 +97,9 @@
             NewProductLabel.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
             NewProductLabel.Location = new Point(28, 19);
             NewProductLabel.Name = "NewProductLabel";
-            NewProductLabel.Size = new Size(200, 37);
+            NewProductLabel.Size = new Size(254, 37);
             NewProductLabel.TabIndex = 14;
-            NewProductLabel.Text = "Novo produto";
+            NewProductLabel.Text = "Cadastrar produto";
             // 
             // ProductNameTextBox
             // 

@@ -31,7 +31,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
                 Instance = new ProductListControl();
             }
 
-            Instance.LoadCards(); 
+            Instance.LoadCards();
             return Instance;
         }
 

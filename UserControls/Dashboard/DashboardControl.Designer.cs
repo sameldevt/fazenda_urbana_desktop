@@ -35,13 +35,19 @@
             OperatorEmail = new Label();
             pictureBox1 = new PictureBox();
             NavPanel = new Panel();
-            EmployeesButton = new Button();
+            ReportsButton = new Button();
+            SupplyButton = new Button();
+            EquipmentButton = new Button();
+            FarmButton = new Button();
+            CultureButton = new Button();
+            HarvestButton = new Button();
             MessagesButton = new Button();
+            EmployeesButton = new Button();
             ClientsButton = new Button();
             OrdersButton = new Button();
             ManufacturerButton = new Button();
-            ProductsButton = new Button();
             ExitButton = new Button();
+            ProductsButton = new Button();
             TopBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             NavPanel.SuspendLayout();
@@ -97,43 +103,109 @@
             // 
             // NavPanel
             // 
-            NavPanel.Controls.Add(ExitButton);
-            NavPanel.Controls.Add(EmployeesButton);
+            NavPanel.Controls.Add(ReportsButton);
+            NavPanel.Controls.Add(SupplyButton);
+            NavPanel.Controls.Add(EquipmentButton);
+            NavPanel.Controls.Add(FarmButton);
+            NavPanel.Controls.Add(CultureButton);
+            NavPanel.Controls.Add(HarvestButton);
             NavPanel.Controls.Add(MessagesButton);
+            NavPanel.Controls.Add(EmployeesButton);
             NavPanel.Controls.Add(ClientsButton);
             NavPanel.Controls.Add(OrdersButton);
             NavPanel.Controls.Add(ManufacturerButton);
+            NavPanel.Controls.Add(ExitButton);
             NavPanel.Controls.Add(ProductsButton);
             NavPanel.Location = new Point(3, 71);
             NavPanel.Name = "NavPanel";
             NavPanel.Size = new Size(225, 587);
             NavPanel.TabIndex = 2;
             // 
-            // EmployeesButton
+            // ReportsButton
             // 
-            EmployeesButton.Location = new Point(3, 201);
-            EmployeesButton.Name = "EmployeesButton";
-            EmployeesButton.Size = new Size(219, 44);
-            EmployeesButton.TabIndex = 5;
-            EmployeesButton.Text = "Funcionarios";
-            EmployeesButton.UseVisualStyleBackColor = true;
-            EmployeesButton.Click += EmployeesButton_Click;
+            ReportsButton.Location = new Point(3, 393);
+            ReportsButton.Name = "ReportsButton";
+            ReportsButton.Size = new Size(219, 33);
+            ReportsButton.TabIndex = 12;
+            ReportsButton.Text = "Relatórios";
+            ReportsButton.UseVisualStyleBackColor = true;
+            ReportsButton.Click += ReportsButton_Click;
+            // 
+            // SupplyButton
+            // 
+            SupplyButton.Location = new Point(3, 354);
+            SupplyButton.Name = "SupplyButton";
+            SupplyButton.Size = new Size(219, 33);
+            SupplyButton.TabIndex = 11;
+            SupplyButton.Text = "Insumos";
+            SupplyButton.UseVisualStyleBackColor = true;
+            SupplyButton.Click += SupplyButton_Click;
+            // 
+            // EquipmentButton
+            // 
+            EquipmentButton.Location = new Point(3, 315);
+            EquipmentButton.Name = "EquipmentButton";
+            EquipmentButton.Size = new Size(219, 33);
+            EquipmentButton.TabIndex = 10;
+            EquipmentButton.Text = "Equipamentos";
+            EquipmentButton.UseVisualStyleBackColor = true;
+            EquipmentButton.Click += EquipmentButton_Click;
+            // 
+            // FarmButton
+            // 
+            FarmButton.Location = new Point(3, 276);
+            FarmButton.Name = "FarmButton";
+            FarmButton.Size = new Size(219, 33);
+            FarmButton.TabIndex = 9;
+            FarmButton.Text = "Fazendas";
+            FarmButton.UseVisualStyleBackColor = true;
+            FarmButton.Click += FarmButton_Click;
+            // 
+            // CultureButton
+            // 
+            CultureButton.Location = new Point(3, 237);
+            CultureButton.Name = "CultureButton";
+            CultureButton.Size = new Size(219, 33);
+            CultureButton.TabIndex = 8;
+            CultureButton.Text = "Culturas";
+            CultureButton.UseVisualStyleBackColor = true;
+            CultureButton.Click += CultureButton_Click;
+            // 
+            // HarvestButton
+            // 
+            HarvestButton.Location = new Point(3, 198);
+            HarvestButton.Name = "HarvestButton";
+            HarvestButton.Size = new Size(219, 33);
+            HarvestButton.TabIndex = 7;
+            HarvestButton.Text = "Colheitas";
+            HarvestButton.UseVisualStyleBackColor = true;
+            HarvestButton.Click += HarvestButton_Click;
             // 
             // MessagesButton
             // 
-            MessagesButton.Location = new Point(3, 251);
+            MessagesButton.Location = new Point(3, 432);
             MessagesButton.Name = "MessagesButton";
-            MessagesButton.Size = new Size(219, 44);
+            MessagesButton.Size = new Size(219, 33);
             MessagesButton.TabIndex = 4;
             MessagesButton.Text = "Mensagens de contato";
             MessagesButton.UseVisualStyleBackColor = true;
             MessagesButton.Click += MessagesButton_Click;
             // 
+            // EmployeesButton
+            // 
+            EmployeesButton.Location = new Point(3, 159);
+            EmployeesButton.Name = "EmployeesButton";
+            EmployeesButton.Size = new Size(219, 33);
+            EmployeesButton.TabIndex = 5;
+            EmployeesButton.Text = "Funcionarios";
+            EmployeesButton.UseVisualStyleBackColor = true;
+            EmployeesButton.Click += EmployeesButton_Click;
+            // 
             // ClientsButton
             // 
-            ClientsButton.Location = new Point(3, 151);
+            ClientsButton.Location = new Point(3, 120);
             ClientsButton.Name = "ClientsButton";
-            ClientsButton.Size = new Size(219, 44);
+            ClientsButton.Size = new Size(219, 33);
             ClientsButton.TabIndex = 3;
             ClientsButton.Text = "Clientes";
             ClientsButton.UseVisualStyleBackColor = true;
@@ -141,9 +213,9 @@
             // 
             // OrdersButton
             // 
-            OrdersButton.Location = new Point(3, 101);
+            OrdersButton.Location = new Point(3, 81);
             OrdersButton.Name = "OrdersButton";
-            OrdersButton.Size = new Size(219, 44);
+            OrdersButton.Size = new Size(219, 33);
             OrdersButton.TabIndex = 2;
             OrdersButton.Text = "Pedidos";
             OrdersButton.UseVisualStyleBackColor = true;
@@ -151,23 +223,13 @@
             // 
             // ManufacturerButton
             // 
-            ManufacturerButton.Location = new Point(3, 53);
+            ManufacturerButton.Location = new Point(3, 42);
             ManufacturerButton.Name = "ManufacturerButton";
-            ManufacturerButton.Size = new Size(219, 44);
+            ManufacturerButton.Size = new Size(219, 33);
             ManufacturerButton.TabIndex = 1;
             ManufacturerButton.Text = "Fornecedores";
             ManufacturerButton.UseVisualStyleBackColor = true;
             ManufacturerButton.Click += ManufacturerButton_Click;
-            // 
-            // ProductsButton
-            // 
-            ProductsButton.Location = new Point(3, 3);
-            ProductsButton.Name = "ProductsButton";
-            ProductsButton.Size = new Size(219, 44);
-            ProductsButton.TabIndex = 0;
-            ProductsButton.Text = "Produtos";
-            ProductsButton.UseVisualStyleBackColor = true;
-            ProductsButton.Click += ProductsButton_Click;
             // 
             // ExitButton
             // 
@@ -178,6 +240,16 @@
             ExitButton.Text = "Sair";
             ExitButton.UseVisualStyleBackColor = true;
             ExitButton.Click += ExitButton_Click;
+            // 
+            // ProductsButton
+            // 
+            ProductsButton.Location = new Point(3, 3);
+            ProductsButton.Name = "ProductsButton";
+            ProductsButton.Size = new Size(219, 33);
+            ProductsButton.TabIndex = 0;
+            ProductsButton.Text = "Produtos";
+            ProductsButton.UseVisualStyleBackColor = true;
+            ProductsButton.Click += ProductsButton_Click;
             // 
             // DashboardControl
             // 
@@ -210,5 +282,11 @@
         public Label OperatorEmail;
         private Button EmployeesButton;
         private Button ExitButton;
+        private Button ReportsButton;
+        private Button SupplyButton;
+        private Button EquipmentButton;
+        private Button FarmButton;
+        private Button CultureButton;
+        private Button HarvestButton;
     }
 }

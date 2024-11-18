@@ -24,7 +24,6 @@ namespace fazenda_verdeviva.UserControls.Dashboard
             InitializeComponent();
             Controls.Add(ContentPanel);
             SetContentPanelControl(OrderListControl.GetInstance());
-
         }
 
         public static OrdersControl GetInstance()

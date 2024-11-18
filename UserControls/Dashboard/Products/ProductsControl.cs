@@ -39,20 +39,10 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
             ContentPanel.PerformLayout();
         }
 
-        private void ProductsList_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void RegisterButton_Click(object sender, EventArgs e)
         {
             RegisterButton.Enabled = false;
             SetContentPanelControl(RegisterProductControl.GetInstance());
-        }
-
-        private void ContentPanel_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void RefreshButton_Click(object sender, EventArgs e)

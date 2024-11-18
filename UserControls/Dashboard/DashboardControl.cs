@@ -1,11 +1,16 @@
 ﻿using fazenda_verdeviva.Forms;
 using fazenda_verdeviva.Model.Entities;
 using fazenda_verdeviva.UserControls.Dashboard;
+using fazenda_verdeviva.UserControls.Dashboard.Cultures;
 using fazenda_verdeviva.UserControls.Dashboard.Employees;
+using fazenda_verdeviva.UserControls.Dashboard.Equipments;
+using fazenda_verdeviva.UserControls.Dashboard.Farms;
+using fazenda_verdeviva.UserControls.Dashboard.Harvests;
 using fazenda_verdeviva.UserControls.Dashboard.Messages;
 using fazenda_verdeviva.UserControls.Dashboard.Products;
 using fazenda_verdeviva.UserControls.Dashboard.Reports;
 using fazenda_verdeviva.UserControls.Dashboard.Suppliers;
+using fazenda_verdeviva.UserControls.Dashboard.Supplies;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -91,11 +96,44 @@ namespace fazenda_verdeviva.UserControls
 
         }
 
+
+        private void HarvestButton_Click(object sender, EventArgs e)
+        {
+            SetContentPanelControl(HarvestControl.GetInstance());
+        }
+
+        private void CultureButton_Click(object sender, EventArgs e)
+        {
+            SetContentPanelControl(CultureControl.GetInstance());
+        }
+
+        private void FarmButton_Click(object sender, EventArgs e)
+        {
+            SetContentPanelControl(FarmControl.GetInstance());
+        }
+
+        private void EquipmentButton_Click(object sender, EventArgs e)
+        {
+            SetContentPanelControl(EquipmentControl.GetInstance());
+        }
+
+        private void SupplyButton_Click(object sender, EventArgs e)
+        {
+            SetContentPanelControl(SupplyControl.GetInstance());
+
+        }
+
         private void ExitButton_Click(object sender, EventArgs e)
         {
             var mainFormInstance = MainForm.GetInstance();
             mainFormInstance.DeleteEmployeeInfo();
             mainFormInstance.SetContentPanelControl(LoginControl.GetInstance());
+        }
+
+        private void ReportsButton_Click(object sender, EventArgs e)
+        {
+            SetContentPanelControl(ReportControl.GetInstance());
+
         }
     }
 }

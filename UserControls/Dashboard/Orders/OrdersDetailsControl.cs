@@ -76,7 +76,8 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Orders
         {
             Client = null;
             Order = null;
-            ProductList = null;
+            ProductList.Clear();
+            Products.Controls.Clear();
             OrdersControl.GetInstance().SetContentPanelControl(OrderListControl.GetInstance());
         }
     }

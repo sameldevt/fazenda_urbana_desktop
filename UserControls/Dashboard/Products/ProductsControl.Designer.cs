@@ -72,7 +72,6 @@
             ContentPanel.Name = "ContentPanel";
             ContentPanel.Size = new Size(954, 519);
             ContentPanel.TabIndex = 1;
-            ContentPanel.Paint += ContentPanel_Paint;
             // 
             // RefreshButton
             // 

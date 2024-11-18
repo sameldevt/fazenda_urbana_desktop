@@ -28,6 +28,21 @@
     <Compile Update="UserControls\Dashboard\Common\NoResourceFound.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UserControls\Dashboard\Cultures\CultureCardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\Dashboard\Cultures\CultureControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\Dashboard\Cultures\CultureListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\Dashboard\Cultures\EditCultureControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\Dashboard\Cultures\RegisterCultureControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UserControls\Dashboard\DashboardControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -50,6 +65,51 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UserControls\Dashboard\Employees\RegisterEmployeeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\Dashboard\Equipments\EditEquipmentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\Dashboard\Equipments\EquipmentCardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\Dashboard\Equipments\EquipmentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\Dashboard\Equipments\EquipmentListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\Dashboard\Equipments\RegisterEquipmentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\Dashboard\Farms\EditFarmControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\Dashboard\Farms\FarmCardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\Dashboard\Farms\FarmControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\Dashboard\Farms\FarmListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\Dashboard\Farms\RegisterFarmControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\Dashboard\Harvests\HarvestDetailsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\Dashboard\Harvests\HarvestCardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\Dashboard\Harvests\HarvestControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\Dashboard\Harvests\HarvestListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\Dashboard\Harvests\RegisterHarvestControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UserControls\Dashboard\Messages\ContactMessageListControl.cs">
@@ -119,6 +179,21 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UserControls\Dashboard\Suppliers\SupplierListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\Dashboard\Supplies\EditSupplyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\Dashboard\Supplies\RegisterSupplyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\Dashboard\Supplies\SupplyCardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\Dashboard\Supplies\SupplyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\Dashboard\Supplies\SupplyListControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>

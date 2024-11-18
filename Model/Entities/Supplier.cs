@@ -23,7 +23,7 @@ namespace fazenda_verdeviva.Model.Entities
 
     }
 
-    public class Supply
+    public class Supply : EntityInterface
     {
         [JsonProperty("id")]
         public int Id { get; set; }
@@ -59,7 +59,7 @@ namespace fazenda_verdeviva.Model.Entities
         public int SupplierId { get; set; }
     }
 
-    public class Equipment
+    public class Equipment : EntityInterface
     {
         [JsonProperty("id")]
         public int Id { get; set; }
