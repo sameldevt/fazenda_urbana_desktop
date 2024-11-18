@@ -8,43 +8,44 @@ namespace fazenda_verdeviva.Model
 {
     public enum OrderStatus
     {
-        ENTREGUE,
-        EM_TRANSITO,
-        PAGO,
-        AGUARDANDO_PAGAMENTO,
+        Entregue,
+        EmTransito,
+        Pago,
+        AguardandoPagamento,
     }
 
     public enum HarvestType
     {
-        Fruits,
-        Grains,
-        Vegetables,
-        Legumes
+        Frutas,
+        Graos,
+        Vegetais,
+        Leguminosas
     }
 
     public enum CultureCycle
     {
-        Short,
-        Medium,
-        Long
+        Curto,
+        Medio,
+        Longo
     }
 
     public enum EquipmentType
     {
-        Irrigation,
-        TemperatureControl,
-        IndoorCultivation,
-        Sowing,
-        Harvesting,
-        Storage,
-        Composting,
-        Monitoring,
-        Transportation,
-        GeneralGardening,
-        HydroponicSystem,
-        ProtectiveEquipment,
-        Automation,
-        Fertilization,
-        PestControl
+        Irrigacao,
+        ControleDeTemperatura,
+        CultivoInterno,
+        Semeadura,
+        Colheita,
+        Armazenamento,
+        Compostagem,
+        Monitoramento,
+        Transporte,
+        JardinagemGeral,
+        SistemaHidroponico,
+        EquipamentoDeProtecao,
+        Automacao,
+        Fertilizacao,
+        ControleDePragas
     }
+
 }

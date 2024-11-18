@@ -57,7 +57,7 @@
             ContentPanel.Controls.Add(ProductImage);
             ContentPanel.Location = new Point(3, 3);
             ContentPanel.Name = "ContentPanel";
-            ContentPanel.Size = new Size(942, 144);
+            ContentPanel.Size = new Size(912, 144);
             ContentPanel.TabIndex = 0;
             // 
             // label2
@@ -85,7 +85,7 @@
             // ProductDetails
             // 
             ProductDetails.BackColor = Color.White;
-            ProductDetails.Location = new Point(826, 12);
+            ProductDetails.Location = new Point(814, 7);
             ProductDetails.Name = "ProductDetails";
             ProductDetails.Size = new Size(95, 33);
             ProductDetails.TabIndex = 7;
@@ -107,7 +107,7 @@
             // EditButton
             // 
             EditButton.BackColor = Color.White;
-            EditButton.Location = new Point(826, 90);
+            EditButton.Location = new Point(814, 85);
             EditButton.Name = "EditButton";
             EditButton.Size = new Size(95, 35);
             EditButton.TabIndex = 5;
@@ -119,7 +119,7 @@
             // 
             DeleteButton.BackColor = Color.White;
             DeleteButton.ForeColor = SystemColors.ControlText;
-            DeleteButton.Location = new Point(826, 51);
+            DeleteButton.Location = new Point(814, 46);
             DeleteButton.Name = "DeleteButton";
             DeleteButton.Size = new Size(95, 33);
             DeleteButton.TabIndex = 4;
@@ -177,7 +177,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(ContentPanel);
             Name = "ProductCardControl";
-            Size = new Size(948, 150);
+            Size = new Size(918, 150);
             ContentPanel.ResumeLayout(false);
             ContentPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)ProductImage).EndInit();

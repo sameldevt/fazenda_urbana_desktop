@@ -19,6 +19,8 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Orders
         private static OrdersDetailsControl? Instance;
         private Order? Order;
         private List<OrderItem>? ProductList;
+        private Client? Client;
+
         private OrdersDetailsControl()
         {
             InitializeComponent();
@@ -38,8 +40,6 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Orders
         public async void LoadOrderInfo(Order order)
         {
             Order = order;
-            NameTextBox.Text = order.Client.Name;
-            EmailTextBox.Text = order.Client.Contact.Email;
             OrderDateTextBox.Text = order.OrderDate.ToString("dd/MM/yyyy");
             OrderStatusTextBox.Text = order.Status.ToString().Replace("_", " ").ToLower();
             OrderTotalTextBox.Text = order.Total.ToString();
@@ -47,6 +47,16 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Orders
             OrderTotalItensTextBox.Text = order.Items.Count.ToString();
             ProductList = new List<OrderItem>(order.Items);
             LoadProducts();
+            await LoadClientInfo();
+        }
+
+        private async Task LoadClientInfo()
+        {
+            var client = await ClientService.GetInstance().GetById(Order!.ClientId);
+
+            NameTextBox.Text = client.Name;
+            EmailTextBox.Text = client.Contact.Email;
+            this.Client = client;
         }
 
         private void LoadProducts()
@@ -64,6 +74,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Orders
 
         private void BackButton_Click(object sender, EventArgs e)
         {
+            Client = null;
             Order = null;
             ProductList = null;
             OrdersControl.GetInstance().SetContentPanelControl(OrderListControl.GetInstance());

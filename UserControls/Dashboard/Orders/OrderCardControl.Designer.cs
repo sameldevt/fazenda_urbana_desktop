@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             ContentPanel = new Panel();
+            label2 = new Label();
+            label1 = new Label();
             Details = new Button();
             PaymentMethod = new Label();
             OrderPrice = new Label();
@@ -39,6 +41,8 @@
             // 
             // ContentPanel
             // 
+            ContentPanel.Controls.Add(label2);
+            ContentPanel.Controls.Add(label1);
             ContentPanel.Controls.Add(Details);
             ContentPanel.Controls.Add(PaymentMethod);
             ContentPanel.Controls.Add(OrderPrice);
@@ -48,6 +52,28 @@
             ContentPanel.Name = "ContentPanel";
             ContentPanel.Size = new Size(904, 107);
             ContentPanel.TabIndex = 1;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 14F);
+            label2.ForeColor = Color.DarkGray;
+            label2.Location = new Point(3, 39);
+            label2.Name = "label2";
+            label2.Size = new Size(191, 25);
+            label2.TabIndex = 11;
+            label2.Text = "Quantidade de itens: ";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 14F);
+            label1.ForeColor = Color.DarkGray;
+            label1.Location = new Point(3, 64);
+            label1.Name = "label1";
+            label1.Size = new Size(196, 25);
+            label1.TabIndex = 10;
+            label1.Text = "Forma de pagamento:";
             // 
             // Details
             // 
@@ -64,8 +90,8 @@
             // 
             PaymentMethod.AutoSize = true;
             PaymentMethod.Font = new Font("Segoe UI", 14F);
-            PaymentMethod.ForeColor = Color.DarkGray;
-            PaymentMethod.Location = new Point(3, 64);
+            PaymentMethod.ForeColor = Color.Green;
+            PaymentMethod.Location = new Point(222, 65);
             PaymentMethod.Name = "PaymentMethod";
             PaymentMethod.Size = new Size(158, 25);
             PaymentMethod.TabIndex = 9;
@@ -87,12 +113,13 @@
             // 
             OrderItemQuantity.AutoSize = true;
             OrderItemQuantity.Font = new Font("Segoe UI", 14F);
-            OrderItemQuantity.ForeColor = Color.DarkGray;
-            OrderItemQuantity.Location = new Point(3, 39);
+            OrderItemQuantity.ForeColor = Color.Green;
+            OrderItemQuantity.Location = new Point(222, 39);
             OrderItemQuantity.Name = "OrderItemQuantity";
-            OrderItemQuantity.Size = new Size(211, 25);
+            OrderItemQuantity.Size = new Size(32, 25);
             OrderItemQuantity.TabIndex = 7;
-            OrderItemQuantity.Text = "Quantidade de itens: 13";
+            OrderItemQuantity.Text = "13";
+            OrderItemQuantity.TextAlign = ContentAlignment.TopCenter;
             // 
             // OrderId
             // 
@@ -125,5 +152,7 @@
         private Label OrderPrice;
         private Label PaymentMethod;
         private Button Details;
+        private Label label2;
+        private Label label1;
     }
 }

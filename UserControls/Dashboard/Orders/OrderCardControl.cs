@@ -24,7 +24,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Orders
         {
             this.Order = order;
             OrderId.Text = $"# {order.Id.ToString().PadLeft(10, '0')}";
-            OrderItemQuantity.Text = $"Quantidade de itens: {order.Items.Count.ToString()}";
+            OrderItemQuantity.Text = $"{order.Items.Count.ToString()}";
             OrderPrice.Text = $"R$ {order.Total.ToString().Replace('.', ',')}";
             PaymentMethod.Text = order.PaymentMethod;
         }

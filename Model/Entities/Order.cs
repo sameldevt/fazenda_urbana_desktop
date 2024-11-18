@@ -15,8 +15,8 @@ namespace fazenda_verdeviva.Model.Entities
         [JsonProperty("id")]
         public int Id { get; set; }
 
-        [JsonProperty("cliente")]
-        public virtual Client Client { get; set; }
+        [JsonProperty("clienteId")]
+        public int ClientId { get; set; }
 
         [JsonProperty("dataPedido")]
         public DateTime OrderDate { get; set; }
