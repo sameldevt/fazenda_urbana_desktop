@@ -47,7 +47,6 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Messages
                 messages.ForEach(async m =>
                 {
                     ContactMessageCardControl messageCard = new ContactMessageCardControl();
-
                     messageCard.LoadCardInfo(m);
                     MessagesList.Controls.Add(messageCard);
                 });

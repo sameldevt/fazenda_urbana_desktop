@@ -27,7 +27,7 @@ namespace fazenda_verdeviva.Services
 
         public async Task<List<ContactMessage>> GetAll()
         {
-            string url = $"{Network.BaseUrl}/{ContextUrl}/buscar-todos";
+            string url = $"{Network.BaseUrl}/{ContextUrl}/buscar-todas";
 
             HttpResponseMessage response = await Network.HttpClient.GetAsync(url);
 

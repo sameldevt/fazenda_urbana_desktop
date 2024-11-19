@@ -9,6 +9,9 @@ namespace fazenda_verdeviva.Model.Entities
 {
     public class ContactMessage : EntityInterface
     {
+        [JsonProperty("id")]
+        public int Id { get; set; }
+
         [JsonProperty("nomeUsuario")]
         public string UserName { get; set; }
 

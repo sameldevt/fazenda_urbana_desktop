@@ -22,10 +22,16 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Messages
         public void LoadCardInfo(ContactMessage contactMessage)
         {
             this.ContactMessage = contactMessage;
-            MessageContent.Text = contactMessage.Content;
+            MessageId.Text = contactMessage.Id.ToString().PadLeft(10, '0');
+            Content.Text = contactMessage.Content;
             UserName.Text = contactMessage.UserName;
             UserEmail.Text = contactMessage.UserEmail;
             MessageDate.Text = contactMessage.Date.ToString("dd/MM/yyyy");
+        }
+
+        private void UserName_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
