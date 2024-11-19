@@ -35,7 +35,6 @@
             OperatorEmail = new Label();
             pictureBox1 = new PictureBox();
             NavPanel = new Panel();
-            ReportsButton = new Button();
             SupplyButton = new Button();
             EquipmentButton = new Button();
             FarmButton = new Button();
@@ -103,7 +102,6 @@
             // 
             // NavPanel
             // 
-            NavPanel.Controls.Add(ReportsButton);
             NavPanel.Controls.Add(SupplyButton);
             NavPanel.Controls.Add(EquipmentButton);
             NavPanel.Controls.Add(FarmButton);
@@ -120,16 +118,6 @@
             NavPanel.Name = "NavPanel";
             NavPanel.Size = new Size(225, 587);
             NavPanel.TabIndex = 2;
-            // 
-            // ReportsButton
-            // 
-            ReportsButton.Location = new Point(3, 393);
-            ReportsButton.Name = "ReportsButton";
-            ReportsButton.Size = new Size(219, 33);
-            ReportsButton.TabIndex = 12;
-            ReportsButton.Text = "Relatórios";
-            ReportsButton.UseVisualStyleBackColor = true;
-            ReportsButton.Click += ReportsButton_Click;
             // 
             // SupplyButton
             // 
@@ -183,7 +171,7 @@
             // 
             // MessagesButton
             // 
-            MessagesButton.Location = new Point(3, 432);
+            MessagesButton.Location = new Point(3, 393);
             MessagesButton.Name = "MessagesButton";
             MessagesButton.Size = new Size(219, 33);
             MessagesButton.TabIndex = 4;
@@ -282,7 +270,6 @@
         public Label OperatorEmail;
         private Button EmployeesButton;
         private Button ExitButton;
-        private Button ReportsButton;
         private Button SupplyButton;
         private Button EquipmentButton;
         private Button FarmButton;
