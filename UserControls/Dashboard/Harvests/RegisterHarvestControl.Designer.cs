@@ -54,6 +54,7 @@
             BackButton.TabIndex = 340;
             BackButton.Text = "Voltar";
             BackButton.UseVisualStyleBackColor = true;
+            BackButton.Click += BackButton_Click;
             // 
             // SaveButton
             // 
@@ -63,6 +64,7 @@
             SaveButton.TabIndex = 354;
             SaveButton.Text = "Cadastrar";
             SaveButton.UseVisualStyleBackColor = true;
+            SaveButton.Click += SaveButton_Click;
             // 
             // CultureComboBox
             // 
@@ -102,7 +104,7 @@
             // 
             // EndDate
             // 
-            EndDate.Enabled = false;
+            EndDate.Format = DateTimePickerFormat.Short;
             EndDate.Location = new Point(40, 180);
             EndDate.Name = "EndDate";
             EndDate.Size = new Size(190, 23);
@@ -120,7 +122,8 @@
             // 
             // StartDate
             // 
-            StartDate.Enabled = false;
+            StartDate.Format = DateTimePickerFormat.Short;
+            StartDate.ImeMode = ImeMode.NoControl;
             StartDate.Location = new Point(40, 127);
             StartDate.Name = "StartDate";
             StartDate.Size = new Size(190, 23);
@@ -168,21 +171,17 @@
             // 
             // HarvestedQuantity
             // 
-            HarvestedQuantity.Enabled = false;
             HarvestedQuantity.Location = new Point(39, 280);
             HarvestedQuantity.Multiline = true;
             HarvestedQuantity.Name = "HarvestedQuantity";
-            HarvestedQuantity.ReadOnly = true;
             HarvestedQuantity.Size = new Size(190, 23);
             HarvestedQuantity.TabIndex = 363;
             // 
             // HarvestedArea
             // 
-            HarvestedArea.Enabled = false;
             HarvestedArea.Location = new Point(39, 230);
             HarvestedArea.Multiline = true;
             HarvestedArea.Name = "HarvestedArea";
-            HarvestedArea.ReadOnly = true;
             HarvestedArea.Size = new Size(190, 23);
             HarvestedArea.TabIndex = 361;
             // 
@@ -192,9 +191,9 @@
             label17.Font = new Font("Segoe UI", 12F);
             label17.Location = new Point(39, 206);
             label17.Name = "label17";
-            label17.Size = new Size(96, 21);
+            label17.Size = new Size(130, 21);
             label17.TabIndex = 360;
-            label17.Text = "Área colhida";
+            label17.Text = "Área colhida (m²)";
             // 
             // RegisterHarvestControl
             // 

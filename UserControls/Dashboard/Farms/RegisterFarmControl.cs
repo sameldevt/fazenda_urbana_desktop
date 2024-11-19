@@ -40,8 +40,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Farms
 
             Instance.LoadEmployees();
             Instance.LoadEquipments();
-            Instance.LoadHarvests();
-            Instance.ClearFarmInfos();
+            Instance.LoadIsActive();
             return Instance;
         }
 
@@ -61,9 +60,12 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Farms
         {
             DbEmployees = await EmployeeService.GetInstance().GetAll();
 
-            foreach (var e in DbEmployees)
+            if (DbEmployees != null && DbEmployees.Any())
             {
-                EmployeeCheckedList.Items.Add(e);
+                foreach (var e in DbEmployees)
+                {
+                    EmployeeCheckedList.Items.Add(e);
+                }
             }
         }
 
@@ -71,19 +73,12 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Farms
         {
             DbEquipments = await EquipmentService.GetInstance().GetAll();
 
-            foreach (var e in DbEquipments)
+            if (DbEquipments != null && DbEquipments.Any())
             {
-                EquipmentsCheckedList.Items.Add(e);
-            }
-        }
-
-        private async void LoadHarvests()
-        {
-            DbHarvests = await HarvestService.GetInstance().GetAll();
-
-            foreach (var h in DbHarvests)
-            {
-                HarvestsCheckedList.Items.Add(h);
+                foreach (var e in DbEquipments)
+                {
+                    EquipmentsCheckedList.Items.Add(e);
+                }
             }
         }
 
@@ -93,37 +88,6 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Farms
             LocationTextBox.Text = string.Empty;
             FoundationDate.Text = string.Empty;
             NumberOfGreenhouses.Text = string.Empty;
-            EmployeeCheckedList.SelectedIndex = 0;
-            EquipmentsCheckedList.SelectedIndex = 0;
-            HarvestsCheckedList.SelectedIndex = 0;
-            IsActiveComboBox.SelectedIndex = 0;
-        }
-
-        private void BackButton_Click(object sender, EventArgs e)
-        {
-            FarmControl.GetInstance().RegisterButton.Enabled = true;
-            FarmControl.GetInstance().SetContentPanelControl(FarmListControl.GetInstance());
-        }
-   
-        private async void SaveButton_Click(object sender, EventArgs e)
-        {
-            var farm = new RegisterFarmDto
-            {
-                Name = FarmName.Text,
-                Location = LocationTextBox.Text,
-                Area = double.Parse(AreaTextBox.Text),
-                FoundationDate = FoundationDate.Value,
-                EmployeeIds = Employees.Select(e => e.Id).ToArray(),
-                EquipmentIds = Equipments.Select(e => e.Id).ToArray(),
-                HarvestIds = Harvests.Select(e => e.Id).ToArray(),
-                NumberOfGreenhouses = int.Parse(NumberOfGreenhouses.Text),
-                IsActive = IsActiveComboBox.SelectedValue.Equals("Sim"),
-            };
-
-            await FarmService.GetInstance().Register(farm);
-
-            FarmControl.GetInstance().RegisterButton.Enabled = true;
-            FarmControl.GetInstance().SetContentPanelControl(FarmListControl.GetInstance());
         }
 
         private void EmployeeCheckedList_ItemCheck(object sender, ItemCheckEventArgs e)
@@ -172,28 +136,32 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Farms
             }
         }
 
-        private void HarvestsCheckedList_ItemCheck(object sender, ItemCheckEventArgs e)
+        private void BackButton_Click(object sender, EventArgs e)
         {
-            int index = e.Index;
-
-            if (HarvestsCheckedList.Items[index] is Harvest harvest)
-            {
-                if (e.NewValue == CheckState.Checked)
-                {
-                    if (!Harvests.Contains(harvest))
-                    {
-                        Harvests.Add(harvest);
-                    }
-                }
-                else
-                {
-                    if (Harvests.Contains(harvest))
-                    {
-                        Harvests.Remove(harvest);
-                    }
-                }
-            }
+            Instance.ClearFarmInfos();
+            FarmControl.GetInstance().RegisterButton.Enabled = true;
+            FarmControl.GetInstance().SetContentPanelControl(FarmListControl.GetInstance());
         }
 
+        private async void SaveButton_Click(object sender, EventArgs e)
+        {
+            var farm = new RegisterFarmDto
+            {
+                Name = FarmName.Text,
+                Location = LocationTextBox.Text,
+                Area = double.Parse(AreaTextBox.Text),
+                FoundationDate = FoundationDate.Value,
+                EmployeeIds = Employees.Select(e => e.Id).ToArray(),
+                EquipmentIds = Equipments.Select(e => e.Id).ToArray(),
+                HarvestIds = Harvests.Select(e => e.Id).ToArray(),
+                NumberOfGreenhouses = int.Parse(NumberOfGreenhouses.Text),
+                IsActive = IsActiveComboBox.SelectedValue.Equals("Sim"),
+            };
+
+            await FarmService.GetInstance().Register(farm);
+
+            FarmControl.GetInstance().RegisterButton.Enabled = true;
+            FarmControl.GetInstance().SetContentPanelControl(FarmListControl.GetInstance());
+        }
     }
 }

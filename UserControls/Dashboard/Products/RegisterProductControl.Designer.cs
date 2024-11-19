@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ManufacturerLabel = new Label();
-            SupplierComboBox = new ComboBox();
             CategoryComboBox = new ComboBox();
             NewProductLabel = new Label();
             ProductNameTextBox = new TextBox();
@@ -59,28 +57,8 @@
             label5 = new Label();
             label11 = new Label();
             RegisterCategoryButton = new Button();
-            RegisterSupplierButton = new Button();
             ((System.ComponentModel.ISupportInitialize)ProductImage).BeginInit();
             SuspendLayout();
-            // 
-            // ManufacturerLabel
-            // 
-            ManufacturerLabel.AutoSize = true;
-            ManufacturerLabel.Font = new Font("Segoe UI", 12F);
-            ManufacturerLabel.Location = new Point(211, 430);
-            ManufacturerLabel.Name = "ManufacturerLabel";
-            ManufacturerLabel.Size = new Size(89, 21);
-            ManufacturerLabel.TabIndex = 12;
-            ManufacturerLabel.Text = "Fornecedor";
-            // 
-            // SupplierComboBox
-            // 
-            SupplierComboBox.FormattingEnabled = true;
-            SupplierComboBox.Items.AddRange(new object[] { "Empresa 1", "Empresa 2", "Empresa 3" });
-            SupplierComboBox.Location = new Point(211, 454);
-            SupplierComboBox.Name = "SupplierComboBox";
-            SupplierComboBox.Size = new Size(190, 23);
-            SupplierComboBox.TabIndex = 13;
             // 
             // CategoryComboBox
             // 
@@ -345,21 +323,10 @@
             RegisterCategoryButton.UseVisualStyleBackColor = true;
             RegisterCategoryButton.Click += RegisterCategoryButton_Click;
             // 
-            // RegisterSupplierButton
-            // 
-            RegisterSupplierButton.Location = new Point(209, 478);
-            RegisterSupplierButton.Name = "RegisterSupplierButton";
-            RegisterSupplierButton.Size = new Size(192, 23);
-            RegisterSupplierButton.TabIndex = 127;
-            RegisterSupplierButton.Text = "Cadastrar";
-            RegisterSupplierButton.UseVisualStyleBackColor = true;
-            RegisterSupplierButton.Click += RegisterSupplierButton_Click;
-            // 
             // RegisterProductControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(RegisterSupplierButton);
             Controls.Add(RegisterCategoryButton);
             Controls.Add(label11);
             Controls.Add(label5);
@@ -388,8 +355,6 @@
             Controls.Add(ProductDescriptionTextBox);
             Controls.Add(ProductNameTextBox);
             Controls.Add(NewProductLabel);
-            Controls.Add(SupplierComboBox);
-            Controls.Add(ManufacturerLabel);
             Controls.Add(CategoryComboBox);
             Name = "RegisterProductControl";
             Size = new Size(954, 519);
@@ -399,8 +364,6 @@
         }
 
         #endregion
-        private Label ManufacturerLabel;
-        private ComboBox SupplierComboBox;
         private ComboBox CategoryComboBox;
         private Label NewProductLabel;
         private TextBox ProductNameTextBox;
@@ -430,6 +393,5 @@
         private Label label5;
         private Label label11;
         private Button RegisterCategoryButton;
-        private Button RegisterSupplierButton;
     }
 }

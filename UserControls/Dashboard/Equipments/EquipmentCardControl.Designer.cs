@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             ContentPanel = new Panel();
+            EquipmentSupplier = new Label();
+            label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            ProductDetails = new Button();
             EquipmentType = new Label();
             EditButton = new Button();
             DeleteButton = new Button();
@@ -39,8 +40,6 @@
             EquipmentDescription = new Label();
             EquipmentName = new Label();
             EquipmentImage = new PictureBox();
-            label3 = new Label();
-            EquipmentSupplier = new Label();
             ContentPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)EquipmentImage).BeginInit();
             SuspendLayout();
@@ -51,7 +50,6 @@
             ContentPanel.Controls.Add(label3);
             ContentPanel.Controls.Add(label2);
             ContentPanel.Controls.Add(label1);
-            ContentPanel.Controls.Add(ProductDetails);
             ContentPanel.Controls.Add(EquipmentType);
             ContentPanel.Controls.Add(EditButton);
             ContentPanel.Controls.Add(DeleteButton);
@@ -63,6 +61,28 @@
             ContentPanel.Name = "ContentPanel";
             ContentPanel.Size = new Size(922, 172);
             ContentPanel.TabIndex = 1;
+            // 
+            // EquipmentSupplier
+            // 
+            EquipmentSupplier.AutoSize = true;
+            EquipmentSupplier.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            EquipmentSupplier.ForeColor = Color.Green;
+            EquipmentSupplier.Location = new Point(276, 108);
+            EquipmentSupplier.Name = "EquipmentSupplier";
+            EquipmentSupplier.Size = new Size(73, 21);
+            EquipmentSupplier.TabIndex = 11;
+            EquipmentSupplier.Text = "R$ 10,99";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F);
+            label3.ForeColor = Color.DarkGray;
+            label3.Location = new Point(178, 107);
+            label3.Name = "label3";
+            label3.Size = new Size(92, 21);
+            label3.TabIndex = 10;
+            label3.Text = "Fornecedor:";
             // 
             // label2
             // 
@@ -86,16 +106,6 @@
             label1.TabIndex = 8;
             label1.Text = "Marca:";
             // 
-            // ProductDetails
-            // 
-            ProductDetails.BackColor = Color.White;
-            ProductDetails.Location = new Point(824, 7);
-            ProductDetails.Name = "ProductDetails";
-            ProductDetails.Size = new Size(95, 33);
-            ProductDetails.TabIndex = 7;
-            ProductDetails.Text = "Ver detalhes";
-            ProductDetails.UseVisualStyleBackColor = false;
-            // 
             // EquipmentType
             // 
             EquipmentType.AutoSize = true;
@@ -110,23 +120,25 @@
             // EditButton
             // 
             EditButton.BackColor = Color.White;
-            EditButton.Location = new Point(824, 87);
+            EditButton.Location = new Point(824, 46);
             EditButton.Name = "EditButton";
             EditButton.Size = new Size(95, 35);
             EditButton.TabIndex = 5;
             EditButton.Text = "Editar";
             EditButton.UseVisualStyleBackColor = false;
+            EditButton.Click += EditButton_Click;
             // 
             // DeleteButton
             // 
             DeleteButton.BackColor = Color.White;
             DeleteButton.ForeColor = SystemColors.ControlText;
-            DeleteButton.Location = new Point(824, 46);
+            DeleteButton.Location = new Point(824, 7);
             DeleteButton.Name = "DeleteButton";
             DeleteButton.Size = new Size(95, 33);
             DeleteButton.TabIndex = 4;
             DeleteButton.Text = "Excluir";
             DeleteButton.UseVisualStyleBackColor = false;
+            DeleteButton.Click += DeleteButton_Click;
             // 
             // EquipmentBrand
             // 
@@ -172,28 +184,6 @@
             EquipmentImage.TabIndex = 0;
             EquipmentImage.TabStop = false;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F);
-            label3.ForeColor = Color.DarkGray;
-            label3.Location = new Point(178, 107);
-            label3.Name = "label3";
-            label3.Size = new Size(92, 21);
-            label3.TabIndex = 10;
-            label3.Text = "Fornecedor:";
-            // 
-            // EquipmentSupplier
-            // 
-            EquipmentSupplier.AutoSize = true;
-            EquipmentSupplier.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            EquipmentSupplier.ForeColor = Color.Green;
-            EquipmentSupplier.Location = new Point(276, 108);
-            EquipmentSupplier.Name = "EquipmentSupplier";
-            EquipmentSupplier.Size = new Size(73, 21);
-            EquipmentSupplier.TabIndex = 11;
-            EquipmentSupplier.Text = "R$ 10,99";
-            // 
             // EquipmentCardControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -212,7 +202,6 @@
         private Panel ContentPanel;
         private Label label2;
         private Label label1;
-        private Button ProductDetails;
         private Label EquipmentType;
         private Button EditButton;
         private Button DeleteButton;

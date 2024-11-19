@@ -64,7 +64,6 @@
             // 
             // AreaTextBox
             // 
-            AreaTextBox.Enabled = false;
             AreaTextBox.Location = new Point(63, 340);
             AreaTextBox.Name = "AreaTextBox";
             AreaTextBox.Size = new Size(190, 23);
@@ -76,8 +75,9 @@
             SaveButton.Name = "SaveButton";
             SaveButton.Size = new Size(169, 37);
             SaveButton.TabIndex = 229;
-            SaveButton.Text = "Cadastrar";
+            SaveButton.Text = "Editar";
             SaveButton.UseVisualStyleBackColor = true;
+            SaveButton.Click += SaveButton_Click;
             // 
             // BackButton
             // 
@@ -87,6 +87,7 @@
             BackButton.TabIndex = 230;
             BackButton.Text = "Voltar";
             BackButton.UseVisualStyleBackColor = true;
+            BackButton.Click += BackButton_Click;
             // 
             // IsActiveComboBox
             // 
@@ -119,6 +120,7 @@
             // 
             // FoundationDate
             // 
+            FoundationDate.Format = DateTimePickerFormat.Short;
             FoundationDate.Location = new Point(63, 240);
             FoundationDate.Name = "FoundationDate";
             FoundationDate.Size = new Size(190, 23);
@@ -126,7 +128,6 @@
             // 
             // LocationTextBox
             // 
-            LocationTextBox.Enabled = false;
             LocationTextBox.Location = new Point(63, 190);
             LocationTextBox.Name = "LocationTextBox";
             LocationTextBox.Size = new Size(190, 23);
@@ -174,7 +175,6 @@
             // 
             // NumberOfGreenhouses
             // 
-            NumberOfGreenhouses.Enabled = false;
             NumberOfGreenhouses.Location = new Point(63, 290);
             NumberOfGreenhouses.Name = "NumberOfGreenhouses";
             NumberOfGreenhouses.Size = new Size(190, 23);
@@ -182,7 +182,6 @@
             // 
             // FarmName
             // 
-            FarmName.Enabled = false;
             FarmName.Location = new Point(63, 140);
             FarmName.Name = "FarmName";
             FarmName.Size = new Size(190, 23);

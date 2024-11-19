@@ -58,6 +58,7 @@
             // 
             // ExpirationDate
             // 
+            ExpirationDate.Format = DateTimePickerFormat.Short;
             ExpirationDate.Location = new Point(422, 228);
             ExpirationDate.Name = "ExpirationDate";
             ExpirationDate.Size = new Size(190, 23);
@@ -75,6 +76,7 @@
             // 
             // ManufacturingDate
             // 
+            ManufacturingDate.Format = DateTimePickerFormat.Short;
             ManufacturingDate.Location = new Point(422, 178);
             ManufacturingDate.Name = "ManufacturingDate";
             ManufacturingDate.Size = new Size(190, 23);
@@ -111,6 +113,7 @@
             // 
             // PurchaseDate
             // 
+            PurchaseDate.Format = DateTimePickerFormat.Short;
             PurchaseDate.Location = new Point(422, 128);
             PurchaseDate.Name = "PurchaseDate";
             PurchaseDate.Size = new Size(190, 23);
@@ -230,6 +233,7 @@
             RegisterButton.TabIndex = 210;
             RegisterButton.Text = "Editar";
             RegisterButton.UseVisualStyleBackColor = true;
+            RegisterButton.Click += RegisterButton_Click;
             // 
             // BackButton
             // 
@@ -239,6 +243,7 @@
             BackButton.TabIndex = 211;
             BackButton.Text = "Voltar";
             BackButton.UseVisualStyleBackColor = true;
+            BackButton.Click += BackButton_Click;
             // 
             // ImageUrl
             // 

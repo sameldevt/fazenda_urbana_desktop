@@ -57,6 +57,8 @@
             label1 = new Label();
             label11 = new Label();
             label23 = new Label();
+            label2 = new Label();
+            FarmComboBox = new ComboBox();
             SuspendLayout();
             // 
             // NewEmployeeLabel
@@ -324,10 +326,31 @@
             label23.TabIndex = 228;
             label23.Text = "Nome";
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F);
+            label2.Location = new Point(50, 227);
+            label2.Name = "label2";
+            label2.Size = new Size(66, 21);
+            label2.TabIndex = 257;
+            label2.Text = "Fazenda";
+            // 
+            // FarmComboBox
+            // 
+            FarmComboBox.FormattingEnabled = true;
+            FarmComboBox.Items.AddRange(new object[] { "Frutas", "Verduras", "Legumes", "Folhas" });
+            FarmComboBox.Location = new Point(50, 251);
+            FarmComboBox.Name = "FarmComboBox";
+            FarmComboBox.Size = new Size(190, 23);
+            FarmComboBox.TabIndex = 258;
+            // 
             // RegisterEmployeeControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(FarmComboBox);
+            Controls.Add(label2);
             Controls.Add(AddAddressButton);
             Controls.Add(AddressesList);
             Controls.Add(label12);
@@ -394,5 +417,7 @@
         private Label label1;
         private Label label11;
         private Label label23;
+        private Label label2;
+        private ComboBox FarmComboBox;
     }
 }

@@ -31,24 +31,47 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Supplies
                 Instance = new EditSupplyControl();
             }
 
+            Instance.LoadSuppliers();
             Instance.LoadCategories();
+            Instance.ClearSupplyInfos();
             return Instance;
+        }
+
+        private void ClearSupplyInfos()
+        {
+            SupplyName.Text = string.Empty;
+            SupplyDescription.Text = string.Empty;
+            StockQuantity.Text = string.Empty;
+            UnitPrice.Text = string.Empty;
+            ImageUrl.Text = string.Empty;
+            PurchaseDate.Text = string.Empty;
+            ManufacturingDate.Text = string.Empty;
+            ExpirationDate.Text = string.Empty;
+        }
+
+        private async void LoadSuppliers()
+        {
+            var suppliers = await SupplierService.GetInstance().GetAll();
+
+            if (suppliers != null && suppliers.Any())
+            {
+                SupplierComboBox.DisplayMember = "Name";
+                SupplierComboBox.ValueMember = "Id";
+                SupplierComboBox.DataSource = suppliers;
+
+                SupplierComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            }
         }
 
         private void LoadCategories()
         {
             var categories = Enum.GetValues(typeof(SupplyCategory));
 
-            CategoryComboBox.DataSource = null;
-            CategoryComboBox.Items.Clear();
-
-            foreach (var category in categories)
-            {
-                CategoryComboBox.Items.Add(category.ToString());
-            }
+            CategoryComboBox.DataSource = categories;
 
             CategoryComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
         }
+
 
         public void LoadSupplyInfo(Supply supply)
         {
@@ -62,6 +85,8 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Supplies
             PurchaseDate.Value = supply.PurchaseDate;
             ManufacturingDate.Value = supply.ManufactureDate;
             ExpirationDate.Value = supply.ExpirationDate;
+
+            CategoryComboBox.SelectedText = supply.Category;
 
             LoadSupplyImage();
         }
@@ -102,8 +127,18 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Supplies
             }
         }
 
-        private async void SaveButton_Click(object sender, EventArgs e)
+        private async void RegisterButton_Click(object sender, EventArgs e)
         {
+            Supply.Name = SupplyName.Text;
+            Supply.Description = SupplyDescription.Text;
+            Supply.Category = CategoryComboBox.Text;
+            Supply.ImageUrl = ImageUrl.Text;
+            Supply.StockQuantity = decimal.Parse(StockQuantity.Text);
+            Supply.UnitPrice = decimal.Parse(UnitPrice.Text);
+            Supply.PurchaseDate = PurchaseDate.Value;
+            Supply.ManufactureDate = ManufacturingDate.Value;
+            Supply.ExpirationDate = ExpirationDate.Value;
+            Supply.SupplierId = (int)SupplierComboBox.SelectedValue;
 
             await SupplyService.GetInstance().Update(Supply);
 
@@ -117,5 +152,4 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Supplies
             SupplyControl.GetInstance().SetContentPanelControl(SupplyListControl.GetInstance());
         }
     }
-
 }

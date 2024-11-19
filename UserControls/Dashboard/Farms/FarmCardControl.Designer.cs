@@ -108,6 +108,7 @@
             EditButton.TabIndex = 9;
             EditButton.Text = "Editar";
             EditButton.UseVisualStyleBackColor = false;
+            EditButton.Click += EditButton_Click;
             // 
             // DeleteButton
             // 
@@ -119,6 +120,7 @@
             DeleteButton.TabIndex = 8;
             DeleteButton.Text = "Excluir";
             DeleteButton.UseVisualStyleBackColor = false;
+            DeleteButton.Click += DeleteButton_Click;
             // 
             // Area
             // 

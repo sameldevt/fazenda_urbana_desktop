@@ -72,6 +72,7 @@
             RegisterButton.TabIndex = 10;
             RegisterButton.Text = "Cadastrar";
             RegisterButton.UseVisualStyleBackColor = true;
+            RegisterButton.Click += RegisterButton_Click;
             // 
             // flowLayoutPanel1
             // 

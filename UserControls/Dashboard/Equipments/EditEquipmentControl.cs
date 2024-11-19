@@ -32,6 +32,8 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Equipments
                 Instance = new EditEquipmentControl();
             }
 
+            Instance.LoadFarms();
+            Instance.LoadSuppliers();
             Instance.LoadEquipmentTypes();
             return Instance;
         }
@@ -40,18 +42,12 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Equipments
         {
             var types = Enum.GetValues(typeof(EquipmentType));
 
-            TypeComboBox.DataSource = null;
-            TypeComboBox.Items.Clear();
-
-            foreach (var type in types)
-            {
-                TypeComboBox.Items.Add(type.ToString());
-            }
+            TypeComboBox.DataSource = types;
 
             TypeComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
-        private async void LoadSuppliers()
+        private async Task LoadSuppliers()
         {
             var suppliers = await SupplierService.GetInstance().GetAll();
 
@@ -65,17 +61,17 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Equipments
             }
         }
 
-        private async void LoadFarms()
+        private async Task LoadFarms()
         {
             var farms = await FarmService.GetInstance().GetAll();
 
             if (farms != null && farms.Any())
             {
-                SupplierComboBox.DisplayMember = "Name";
-                SupplierComboBox.ValueMember = "Id";
-                SupplierComboBox.DataSource = farms;
+                LocationComboBox.DisplayMember = "Name";
+                LocationComboBox.ValueMember = "Id";
+                LocationComboBox.DataSource = farms;
 
-                SupplierComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+                LocationComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             }
         }
 
@@ -85,7 +81,6 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Equipments
             EquipmentDescription.Text = string.Empty;
             EquipmentBrand.Text = string.Empty;
             EquipmentModel.Text = string.Empty;
-            PurchaseDate.Value = DateTime.MinValue;
             ImageUrl.Text = string.Empty;
             ManufacturingYear.Text = string.Empty;
             AcquisitionValue.Text = string.Empty;
@@ -128,24 +123,34 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Equipments
             }
         }
 
-        public void LoadEquipmentInfo(Equipment equipment)
+        public async void LoadEquipmentInfo(Equipment equipment)
         {
             Equipment = equipment;
 
-            equipment.Name = EquipmentName.Text;
-            equipment.Description = EquipmentDescription.Text;
-            equipment.ImageUrl = ImageUrl.Text;
-            equipment.Type = (EquipmentType)Enum.Parse(typeof(EquipmentType), TypeComboBox.SelectedValue.ToString());
-            equipment.Brand = EquipmentBrand.Text;
-            equipment.Model = EquipmentModel.Text;
-            equipment.PurchaseDate = PurchaseDate.Value;
-            equipment.ManufactureYear = ManufacturingYear.Text;
-            equipment.AcquisitionValue = decimal.Parse(AcquisitionValue.Text);
+            EquipmentName.Text = equipment.Name;
+            EquipmentDescription.Text = equipment.Description;
+            ImageUrl.Text = equipment.ImageUrl;
+            TypeComboBox.SelectedText = equipment.Type.ToString();
+            EquipmentBrand.Text = equipment.Brand;
+            EquipmentModel.Text = equipment.Model;
+            PurchaseDate.Value = equipment.PurchaseDate;
+            ManufacturingYear.Text = equipment.ManufactureYear;
+            AcquisitionValue.Text = equipment.AcquisitionValue.ToString();
+
+            var farm = await FarmService.GetInstance().GetById(equipment.FarmId);
+
+            LocationComboBox.SelectedText = farm.Name;
+            LocationComboBox.SelectedValue = farm.Id;
+
+            var supplier = await SupplierService.GetInstance().GetById(equipment.SupplierId);
+
+            SupplierComboBox.SelectedText = supplier.Name;
+            SupplierComboBox.SelectedValue = supplier.Id;
 
             LoadEquipmentImage();
         }
 
-        private async void SaveButton_Click(object sender, EventArgs e)
+        private async void RegisterButton_Click(object sender, EventArgs e)
         {
             var farm = await FarmService.GetInstance().GetById((int)LocationComboBox.SelectedValue);
             var supplier = await SupplierService.GetInstance().GetById(((int)SupplierComboBox.SelectedValue));
@@ -153,24 +158,23 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Equipments
             Equipment.Name = EquipmentName.Text;
             Equipment.Description = EquipmentDescription.Text;
             Equipment.ImageUrl = ImageUrl.Text;
-            Equipment.Type = (EquipmentType)Enum.Parse(typeof(EquipmentType), TypeComboBox.SelectedValue.ToString());
-            Equipment.Brand = EquipmentBrand.Text;
+            Equipment.Type = (EquipmentType)TypeComboBox.SelectedItem;
             Equipment.Model = EquipmentModel.Text;
             Equipment.PurchaseDate = PurchaseDate.Value;
             Equipment.ManufactureYear = ManufacturingYear.Text;
             Equipment.AcquisitionValue = decimal.Parse(AcquisitionValue.Text);
             Equipment.CurrentLocation = farm.Name;
             Equipment.SupplierId = supplier.Id;
-
             await EquipmentService.GetInstance().Update(Equipment);
 
             EquipmentControl.GetInstance().SetContentPanelControl(EquipmentListControl.GetInstance());
+
         }
 
         private void BackButton_Click(object sender, EventArgs e)
         {
             EquipmentControl.GetInstance().SetContentPanelControl(EquipmentListControl.GetInstance());
+
         }
     }
-
 }

@@ -1,14 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\",
+  "WorkspaceRootPath": "C:\\dev\\workspace\\vs\\fazenda_urbana_desktop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\usercontrols\\dashboard\\dashboardcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\vs\\fazenda_urbana_desktop\\usercontrols\\dashboard\\products\\productlistcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|solutionrelative:usercontrols\\dashboard\\products\\productlistcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\vs\\fazenda_urbana_desktop\\usercontrols\\dashboard\\products\\productscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|solutionrelative:usercontrols\\dashboard\\products\\productscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\vs\\fazenda_urbana_desktop\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|solutionrelative:services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\vs\\fazenda_urbana_desktop\\usercontrols\\dashboard\\dashboardcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|solutionrelative:usercontrols\\dashboard\\dashboardcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\usercontrols\\dashboard\\dashboardcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|solutionrelative:usercontrols\\dashboard\\dashboardcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\vs\\fazenda_urbana_desktop\\usercontrols\\dashboard\\products\\productlistcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|solutionrelative:usercontrols\\dashboard\\products\\productlistcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\vs\\fazenda_urbana_desktop\\usercontrols\\dashboard\\products\\productcardcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|solutionrelative:usercontrols\\dashboard\\products\\productcardcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\vs\\fazenda_urbana_desktop\\usercontrols\\dashboard\\orders\\orderproductcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|solutionrelative:usercontrols\\dashboard\\orders\\orderproductcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|c:\\dev\\workspace\\vs\\fazenda_urbana_desktop\\usercontrols\\dashboard\\products\\productcardcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E68D5E42-695E-4706-9C28-D567AB412E6D}|fazenda-verdeviva.csproj|solutionrelative:usercontrols\\dashboard\\products\\productcardcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,9 +41,86 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 71,
-          "SelectedChildIndex": 4,
+          "DockedWidth": 452,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DashboardControl.cs",
+              "DocumentMoniker": "C:\\dev\\workspace\\vs\\fazenda_urbana_desktop\\UserControls\\Dashboard\\DashboardControl.cs",
+              "RelativeDocumentMoniker": "UserControls\\Dashboard\\DashboardControl.cs",
+              "ToolTip": "C:\\dev\\workspace\\vs\\fazenda_urbana_desktop\\UserControls\\Dashboard\\DashboardControl.cs",
+              "RelativeToolTip": "UserControls\\Dashboard\\DashboardControl.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAACQAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T04:15:50.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductListControl.cs",
+              "DocumentMoniker": "C:\\dev\\workspace\\vs\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Products\\ProductListControl.cs",
+              "RelativeDocumentMoniker": "UserControls\\Dashboard\\Products\\ProductListControl.cs",
+              "ToolTip": "C:\\dev\\workspace\\vs\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Products\\ProductListControl.cs",
+              "RelativeToolTip": "UserControls\\Dashboard\\Products\\ProductListControl.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAA4wDEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T03:59:35.263Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductsControl.cs",
+              "DocumentMoniker": "C:\\dev\\workspace\\vs\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Products\\ProductsControl.cs",
+              "RelativeDocumentMoniker": "UserControls\\Dashboard\\Products\\ProductsControl.cs",
+              "ToolTip": "C:\\dev\\workspace\\vs\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Products\\ProductsControl.cs",
+              "RelativeToolTip": "UserControls\\Dashboard\\Products\\ProductsControl.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAIwDEAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T04:02:15.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\dev\\workspace\\vs\\fazenda_urbana_desktop\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "Services\\ProductService.cs",
+              "ToolTip": "C:\\dev\\workspace\\vs\\fazenda_urbana_desktop\\Services\\ProductService.cs",
+              "RelativeToolTip": "Services\\ProductService.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAwwCkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T03:59:48.803Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductListControl.cs [Design]",
+              "DocumentMoniker": "C:\\dev\\workspace\\vs\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Products\\ProductListControl.cs",
+              "RelativeDocumentMoniker": "UserControls\\Dashboard\\Products\\ProductListControl.cs",
+              "ToolTip": "C:\\dev\\workspace\\vs\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Products\\ProductListControl.cs [Design]",
+              "RelativeToolTip": "UserControls\\Dashboard\\Products\\ProductListControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T04:02:24.641Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OrderProductControl.cs",
+              "DocumentMoniker": "C:\\dev\\workspace\\vs\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Orders\\OrderProductControl.cs",
+              "RelativeDocumentMoniker": "UserControls\\Dashboard\\Orders\\OrderProductControl.cs",
+              "ToolTip": "C:\\dev\\workspace\\vs\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Orders\\OrderProductControl.cs",
+              "RelativeToolTip": "UserControls\\Dashboard\\Orders\\OrderProductControl.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABIAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T04:03:36.396Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -30,40 +131,36 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DashboardControl.cs [Design]",
-              "DocumentMoniker": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\DashboardControl.cs",
-              "RelativeDocumentMoniker": "UserControls\\Dashboard\\DashboardControl.cs",
-              "ToolTip": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\DashboardControl.cs [Design]",
-              "RelativeToolTip": "UserControls\\Dashboard\\DashboardControl.cs [Design]",
+              "DocumentIndex": 7,
+              "Title": "ProductCardControl.cs [Design]",
+              "DocumentMoniker": "C:\\dev\\workspace\\vs\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Products\\ProductCardControl.cs",
+              "RelativeDocumentMoniker": "UserControls\\Dashboard\\Products\\ProductCardControl.cs",
+              "ToolTip": "C:\\dev\\workspace\\vs\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Products\\ProductCardControl.cs [Design]",
+              "RelativeToolTip": "UserControls\\Dashboard\\Products\\ProductCardControl.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T21:21:48.117Z",
+              "WhenOpened": "2024-11-19T03:59:29.479Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DashboardControl.cs",
-              "DocumentMoniker": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\DashboardControl.cs",
-              "RelativeDocumentMoniker": "UserControls\\Dashboard\\DashboardControl.cs",
-              "ToolTip": "C:\\dev\\workspace\\visual-studio\\fazenda_urbana_desktop\\UserControls\\Dashboard\\DashboardControl.cs",
-              "RelativeToolTip": "UserControls\\Dashboard\\DashboardControl.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAAAIcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T21:18:10.07Z",
-              "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedWidth": 323,
-          "SelectedChildIndex": -1,
-          "Children": []
-        },
-        {
-          "DockedWidth": 145,
-          "SelectedChildIndex": -1,
-          "Children": []
+          "DockedWidth": 452,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductCardControl.cs",
+              "DocumentMoniker": "C:\\dev\\workspace\\vs\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Products\\ProductCardControl.cs",
+              "RelativeDocumentMoniker": "UserControls\\Dashboard\\Products\\ProductCardControl.cs",
+              "ToolTip": "C:\\dev\\workspace\\vs\\fazenda_urbana_desktop\\UserControls\\Dashboard\\Products\\ProductCardControl.cs",
+              "RelativeToolTip": "UserControls\\Dashboard\\Products\\ProductCardControl.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAqwBoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T04:03:47.172Z",
+              "EditorCaption": ""
+            }
+          ]
         }
       ]
     }

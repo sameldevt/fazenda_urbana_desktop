@@ -136,6 +136,7 @@
             RegisterButton.TabIndex = 138;
             RegisterButton.Text = "Cadastrar";
             RegisterButton.UseVisualStyleBackColor = true;
+            RegisterButton.Click += RegisterButton_Click;
             // 
             // BackButton
             // 
@@ -145,6 +146,7 @@
             BackButton.TabIndex = 139;
             BackButton.Text = "Voltar";
             BackButton.UseVisualStyleBackColor = true;
+            BackButton.Click += BackButton_Click;
             // 
             // ImageUrl
             // 
@@ -224,6 +226,7 @@
             // 
             // PurchaseDate
             // 
+            PurchaseDate.Format = DateTimePickerFormat.Short;
             PurchaseDate.Location = new Point(209, 375);
             PurchaseDate.Name = "PurchaseDate";
             PurchaseDate.Size = new Size(190, 23);

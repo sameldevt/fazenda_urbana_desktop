@@ -18,7 +18,10 @@ namespace fazenda_verdeviva.Model.Dto
         public string Password { get; set; }
 
         [JsonProperty("cargo")]
-        public string Position { get; init; } 
+        public string Position { get; init; }
+
+        [JsonProperty("fazendaId")]
+        public int FarmId { get; set; }
 
         [JsonProperty("numeroRegistro")]
         public string RegistrationNumber { get; init; } 

@@ -32,6 +32,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Employees
                 Instance = new RegisterEmployeeControl();
             }
 
+            Instance.LoadSuppliers();
             Instance.ClearEmployeeInfos();
             return Instance;
         }
@@ -51,6 +52,19 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Employees
             StateTextBox.Controls.Clear();
         }
 
+        private async void LoadSuppliers()
+        {
+            var farms = await FarmService.GetInstance().GetAll();
+
+            if (farms != null && farms.Any())
+            {
+                FarmComboBox.DisplayMember = "Name";
+                FarmComboBox.ValueMember = "Id";
+                FarmComboBox.DataSource = farms;
+
+                FarmComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            }
+        }
         private async void RegisterButton_Click(object sender, EventArgs e)
         {
             var addresses = new List<Address>();
@@ -78,6 +92,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Employees
                 Name = NameTextBox.Text,
                 Password = "senhapadrao",
                 Position = PositionTextBox.Text,
+                FarmId = (int)FarmComboBox.SelectedValue,
                 Contact = new Contact
                 {
                     Email = EmailTextBox.Text,

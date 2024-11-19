@@ -32,6 +32,8 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Supplies
                 Instance = new RegisterSupplyControl();
             }
 
+            Instance.LoadSuppliers();
+            Instance.LoadCategories();
             Instance.ClearSupplyInfos();
             return Instance;
         }
@@ -40,30 +42,37 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Supplies
         {
             SupplyName.Text = string.Empty;
             SupplyDescription.Text = string.Empty;
-            StockQuantity.Text = string.Empty;  
+            StockQuantity.Text = string.Empty;
             UnitPrice.Text = string.Empty;
             ImageUrl.Text = string.Empty;
             PurchaseDate.Text = string.Empty;
             ManufacturingDate.Text = string.Empty;
             ExpirationDate.Text = string.Empty;
-
-            SupplyImage = null;
         }
 
         private void LoadCategories()
         {
             var categories = Enum.GetValues(typeof(SupplyCategory));
 
-            CategoryComboBox.DataSource = null;
-            CategoryComboBox.Items.Clear();
-
-            foreach (var category in categories)
-            {
-                CategoryComboBox.Items.Add(category.ToString());
-            }
+            CategoryComboBox.DataSource = categories;
 
             CategoryComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
         }
+
+        private async void LoadSuppliers()
+        {
+            var suppliers = await SupplierService.GetInstance().GetAll();
+
+            if (suppliers != null && suppliers.Any())
+            {
+                SupplierComboBox.DisplayMember = "Name";
+                SupplierComboBox.ValueMember = "Id";
+                SupplierComboBox.DataSource = suppliers;
+
+                SupplierComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            }
+        }
+
 
         private void LoadSupplyImage(object sender, EventArgs e)
         {

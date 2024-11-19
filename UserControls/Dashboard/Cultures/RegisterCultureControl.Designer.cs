@@ -38,10 +38,14 @@
             ImageLinkLabel = new Label();
             SaveButton = new Button();
             BackButton = new Button();
-            EstimatedHarvestDate = new TextBox();
-            PlantingDate = new TextBox();
             CultureName = new TextBox();
             label = new Label();
+            PlantingDate = new DateTimePicker();
+            EstimatedHarvestDate = new DateTimePicker();
+            FarmComboBox = new ComboBox();
+            label1 = new Label();
+            ProductComboBox = new ComboBox();
+            label4 = new Label();
             SuspendLayout();
             // 
             // CycleComboBox
@@ -76,7 +80,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F);
-            label5.Location = new Point(65, 264);
+            label5.Location = new Point(286, 116);
             label5.Name = "label5";
             label5.Size = new Size(116, 21);
             label5.TabIndex = 170;
@@ -116,7 +120,7 @@
             // 
             ImageLinkLabel.AutoSize = true;
             ImageLinkLabel.Font = new Font("Segoe UI", 12F);
-            ImageLinkLabel.Location = new Point(65, 316);
+            ImageLinkLabel.Location = new Point(286, 168);
             ImageLinkLabel.Name = "ImageLinkLabel";
             ImageLinkLabel.Size = new Size(194, 21);
             ImageLinkLabel.TabIndex = 165;
@@ -141,25 +145,8 @@
             BackButton.Text = "Voltar";
             BackButton.UseVisualStyleBackColor = true;
             // 
-            // EstimatedHarvestDate
-            // 
-            EstimatedHarvestDate.Enabled = false;
-            EstimatedHarvestDate.Location = new Point(63, 340);
-            EstimatedHarvestDate.Name = "EstimatedHarvestDate";
-            EstimatedHarvestDate.Size = new Size(190, 23);
-            EstimatedHarvestDate.TabIndex = 166;
-            // 
-            // PlantingDate
-            // 
-            PlantingDate.Enabled = false;
-            PlantingDate.Location = new Point(65, 288);
-            PlantingDate.Name = "PlantingDate";
-            PlantingDate.Size = new Size(190, 23);
-            PlantingDate.TabIndex = 164;
-            // 
             // CultureName
             // 
-            CultureName.Enabled = false;
             CultureName.Location = new Point(65, 140);
             CultureName.Name = "CultureName";
             CultureName.Size = new Size(190, 23);
@@ -175,10 +162,70 @@
             label.TabIndex = 162;
             label.Text = "Cadastrar cultura";
             // 
+            // PlantingDate
+            // 
+            PlantingDate.Format = DateTimePickerFormat.Short;
+            PlantingDate.Location = new Point(286, 140);
+            PlantingDate.Name = "PlantingDate";
+            PlantingDate.Size = new Size(190, 23);
+            PlantingDate.TabIndex = 367;
+            // 
+            // EstimatedHarvestDate
+            // 
+            EstimatedHarvestDate.Format = DateTimePickerFormat.Short;
+            EstimatedHarvestDate.Location = new Point(286, 192);
+            EstimatedHarvestDate.Name = "EstimatedHarvestDate";
+            EstimatedHarvestDate.Size = new Size(190, 23);
+            EstimatedHarvestDate.TabIndex = 368;
+            // 
+            // FarmComboBox
+            // 
+            FarmComboBox.FormattingEnabled = true;
+            FarmComboBox.Items.AddRange(new object[] { "Empresa 1", "Empresa 2", "Empresa 3" });
+            FarmComboBox.Location = new Point(65, 286);
+            FarmComboBox.Name = "FarmComboBox";
+            FarmComboBox.Size = new Size(190, 23);
+            FarmComboBox.TabIndex = 370;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F);
+            label1.Location = new Point(65, 264);
+            label1.Name = "label1";
+            label1.Size = new Size(66, 21);
+            label1.TabIndex = 369;
+            label1.Text = "Fazenda";
+            // 
+            // ProductComboBox
+            // 
+            ProductComboBox.FormattingEnabled = true;
+            ProductComboBox.Items.AddRange(new object[] { "Empresa 1", "Empresa 2", "Empresa 3" });
+            ProductComboBox.Location = new Point(65, 334);
+            ProductComboBox.Name = "ProductComboBox";
+            ProductComboBox.Size = new Size(190, 23);
+            ProductComboBox.TabIndex = 372;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F);
+            label4.Location = new Point(65, 312);
+            label4.Name = "label4";
+            label4.Size = new Size(66, 21);
+            label4.TabIndex = 371;
+            label4.Text = "Produto";
+            // 
             // RegisterCultureControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(ProductComboBox);
+            Controls.Add(label4);
+            Controls.Add(FarmComboBox);
+            Controls.Add(label1);
+            Controls.Add(EstimatedHarvestDate);
+            Controls.Add(PlantingDate);
             Controls.Add(CycleComboBox);
             Controls.Add(TypeComboBox);
             Controls.Add(label11);
@@ -189,8 +236,6 @@
             Controls.Add(ImageLinkLabel);
             Controls.Add(SaveButton);
             Controls.Add(BackButton);
-            Controls.Add(EstimatedHarvestDate);
-            Controls.Add(PlantingDate);
             Controls.Add(CultureName);
             Controls.Add(label);
             Name = "RegisterCultureControl";
@@ -211,9 +256,13 @@
         private Label ImageLinkLabel;
         private Button SaveButton;
         private Button BackButton;
-        private TextBox EstimatedHarvestDate;
-        private TextBox PlantingDate;
         private TextBox CultureName;
         private Label label;
+        private DateTimePicker PlantingDate;
+        private DateTimePicker EstimatedHarvestDate;
+        private ComboBox FarmComboBox;
+        private Label label1;
+        private ComboBox ProductComboBox;
+        private Label label4;
     }
 }

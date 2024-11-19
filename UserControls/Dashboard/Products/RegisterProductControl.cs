@@ -31,7 +31,6 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
                 Instance = new RegisterProductControl();
             }
 
-            Instance.LoadSuppliers();
             Instance.LoadCategories();
             Instance.ClearProductInfos();
             return Instance;
@@ -52,21 +51,6 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
                 CategoryComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             }
         }
-
-        private async void LoadSuppliers()
-        { 
-            var suppliers = await SupplierService.GetInstance().GetAll();
-
-            if (suppliers != null && suppliers.Any()) 
-            {
-                SupplierComboBox.DisplayMember = "Name";
-                SupplierComboBox.ValueMember = "Id";
-                SupplierComboBox.DataSource = suppliers;
-
-                SupplierComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
-            }
-        }
-
         private void ClearProductInfos()
         {
             ProductNameTextBox.Text = string.Empty;
@@ -209,7 +193,6 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
                     Fats = decimal.Parse(ProductFatsTextBox.Text)
                 },
                 CategoryId = (int)CategoryComboBox.SelectedValue,
-                SupplierId = (int)SupplierComboBox.SelectedValue,
             };
 
             var response = await ProductService.GetInstance().Register(product);

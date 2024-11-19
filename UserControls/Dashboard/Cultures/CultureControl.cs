@@ -42,5 +42,11 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Cultures
         {
             SetContentPanelControl(CultureListControl.GetInstance());
         }
+
+        private void RegisterButton_Click(object sender, EventArgs e)
+        {
+            RegisterButton.Enabled = false;
+            SetContentPanelControl(RegisterCultureControl.GetInstance());
+        }
     }
 }

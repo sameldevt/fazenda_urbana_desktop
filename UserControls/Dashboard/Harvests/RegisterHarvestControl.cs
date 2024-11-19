@@ -38,7 +38,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Harvests
 
         private async void LoadProducts()
         {
-            if (ProductComboBox.SelectedIndex == 0)
+            if (ProductComboBox.Items.Count == 0)
             {
                 var products = await ProductService.GetInstance().GetAll();
 
@@ -85,14 +85,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Harvests
             EndDate.Value = DateTime.Now;
         }
 
-
-        private void BackButton_Click(object sender, EventArgs e)
-        {
-            HarvestControl.GetInstance().RegisterButton.Enabled = true;
-            HarvestControl.GetInstance().SetContentPanelControl(HarvestListControl.GetInstance());
-        }
-
-        private async void RegisterButton_Click(object sender, EventArgs e)
+        private async void SaveButton_Click(object sender, EventArgs e)
         {
             var harvest = new RegisterHarvestDto
             {
@@ -106,6 +99,13 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Harvests
 
             await HarvestService.GetInstance().Register(harvest);
 
+            HarvestControl.GetInstance().RegisterButton.Enabled = true;
+            HarvestControl.GetInstance().SetContentPanelControl(HarvestListControl.GetInstance());
+
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
             HarvestControl.GetInstance().RegisterButton.Enabled = true;
             HarvestControl.GetInstance().SetContentPanelControl(HarvestListControl.GetInstance());
         }

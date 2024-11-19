@@ -12,7 +12,7 @@ namespace fazenda_verdeviva.Model.Entities
         [JsonProperty("id")]
         public int Id { get; set; }
 
-        [JsonProperty("name")]
+        [JsonProperty("nome")]
         public string Name { get; set; }
 
         [JsonProperty("localizacao")]

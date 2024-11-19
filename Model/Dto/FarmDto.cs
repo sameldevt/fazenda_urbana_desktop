@@ -77,5 +77,8 @@ namespace fazenda_verdeviva.Model.Dto
 
         [JsonProperty("dataColheitaPrevista")]
         public DateTime EstimatedHarvestDate { get; set; }
+
+        [JsonProperty("fazendaId")]
+        public int FarmId { get; set; }
     }
 }

@@ -42,14 +42,17 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
             List<Product> products = await ProductService.GetInstance().GetAll();
             try
             {
+
                 products.ForEach(p =>
                 {
                     ProductCardControl productCard = new ProductCardControl();
                     productCard.LoadCardInfo(p);
                     ProductsList.Controls.Add(productCard);
                 });
+                MessageBox.Show("fdsafds");
+
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 ProductsControl.GetInstance().SetContentPanelControl(NoResourceFound.GetInstance());
             }

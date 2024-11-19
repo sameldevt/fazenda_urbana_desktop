@@ -50,5 +50,4 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Harvests
             SetContentPanelControl(HarvestListControl.GetInstance());
         }
     }
-
 }

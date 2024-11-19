@@ -133,6 +133,7 @@
             // 
             // PurchaseDate
             // 
+            PurchaseDate.Format = DateTimePickerFormat.Short;
             PurchaseDate.Location = new Point(209, 376);
             PurchaseDate.Name = "PurchaseDate";
             PurchaseDate.Size = new Size(190, 23);
@@ -252,6 +253,7 @@
             RegisterButton.TabIndex = 179;
             RegisterButton.Text = "Editar";
             RegisterButton.UseVisualStyleBackColor = true;
+            RegisterButton.Click += RegisterButton_Click;
             // 
             // BackButton
             // 
@@ -261,6 +263,7 @@
             BackButton.TabIndex = 180;
             BackButton.Text = "Voltar";
             BackButton.UseVisualStyleBackColor = true;
+            BackButton.Click += BackButton_Click;
             // 
             // ImageUrl
             // 

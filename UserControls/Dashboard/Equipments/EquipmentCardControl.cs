@@ -24,7 +24,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Equipments
 
         public async void LoadCardInfo(Equipment equipment)
         {
-            this.Equipment = equipment;
+            Equipment = equipment;
             EquipmentName.Text = equipment.Name;
             EquipmentDescription.Text = equipment.Description;
             EquipmentBrand.Text = equipment.Brand;
@@ -81,5 +81,4 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Equipments
             EquipmentListControl.GetInstance().EquipmentList.Controls.Remove(this);
         }
     }
-
 }

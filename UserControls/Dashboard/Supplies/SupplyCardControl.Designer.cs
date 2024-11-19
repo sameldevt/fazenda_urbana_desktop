@@ -164,6 +164,7 @@
             DeleteButton.TabIndex = 4;
             DeleteButton.Text = "Excluir";
             DeleteButton.UseVisualStyleBackColor = false;
+            DeleteButton.Click += DeleteButton_Click;
             // 
             // StockQuantity
             // 

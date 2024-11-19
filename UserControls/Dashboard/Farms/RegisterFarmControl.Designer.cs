@@ -40,7 +40,6 @@
             FoundationDate = new DateTimePicker();
             label4 = new Label();
             label6 = new Label();
-            label5 = new Label();
             label7 = new Label();
             IsActiveComboBox = new ComboBox();
             SaveButton = new Button();
@@ -49,7 +48,6 @@
             AreaTextBox = new TextBox();
             EmployeeCheckedList = new CheckedListBox();
             EquipmentsCheckedList = new CheckedListBox();
-            HarvestsCheckedList = new CheckedListBox();
             SuspendLayout();
             // 
             // label
@@ -104,7 +102,6 @@
             // 
             // NumberOfGreenhouses
             // 
-            NumberOfGreenhouses.Enabled = false;
             NumberOfGreenhouses.Location = new Point(63, 290);
             NumberOfGreenhouses.Name = "NumberOfGreenhouses";
             NumberOfGreenhouses.Size = new Size(190, 23);
@@ -112,7 +109,6 @@
             // 
             // FarmName
             // 
-            FarmName.Enabled = false;
             FarmName.Location = new Point(63, 140);
             FarmName.Name = "FarmName";
             FarmName.Size = new Size(190, 23);
@@ -130,7 +126,6 @@
             // 
             // LocationTextBox
             // 
-            LocationTextBox.Enabled = false;
             LocationTextBox.Location = new Point(63, 190);
             LocationTextBox.Name = "LocationTextBox";
             LocationTextBox.Size = new Size(190, 23);
@@ -138,6 +133,7 @@
             // 
             // FoundationDate
             // 
+            FoundationDate.Format = DateTimePickerFormat.Short;
             FoundationDate.Location = new Point(63, 240);
             FoundationDate.Name = "FoundationDate";
             FoundationDate.Size = new Size(190, 23);
@@ -162,16 +158,6 @@
             label6.Size = new Size(109, 21);
             label6.TabIndex = 192;
             label6.Text = "Equipamentos";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 12F);
-            label5.Location = new Point(692, 116);
-            label5.Name = "label5";
-            label5.Size = new Size(74, 21);
-            label5.TabIndex = 195;
-            label5.Text = "Colheitas";
             // 
             // label7
             // 
@@ -210,6 +196,7 @@
             BackButton.TabIndex = 202;
             BackButton.Text = "Voltar";
             BackButton.UseVisualStyleBackColor = true;
+            BackButton.Click += BackButton_Click;
             // 
             // label8
             // 
@@ -223,7 +210,6 @@
             // 
             // AreaTextBox
             // 
-            AreaTextBox.Enabled = false;
             AreaTextBox.Location = new Point(63, 340);
             AreaTextBox.Name = "AreaTextBox";
             AreaTextBox.Size = new Size(190, 23);
@@ -247,20 +233,10 @@
             EquipmentsCheckedList.TabIndex = 209;
             EquipmentsCheckedList.ItemCheck += EquipmentsCheckedList_ItemCheck;
             // 
-            // HarvestsCheckedList
-            // 
-            HarvestsCheckedList.FormattingEnabled = true;
-            HarvestsCheckedList.Location = new Point(692, 143);
-            HarvestsCheckedList.Name = "HarvestsCheckedList";
-            HarvestsCheckedList.Size = new Size(161, 274);
-            HarvestsCheckedList.TabIndex = 210;
-            HarvestsCheckedList.ItemCheck += HarvestsCheckedList_ItemCheck;
-            // 
             // RegisterFarmControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(HarvestsCheckedList);
             Controls.Add(EquipmentsCheckedList);
             Controls.Add(EmployeeCheckedList);
             Controls.Add(label8);
@@ -269,7 +245,6 @@
             Controls.Add(BackButton);
             Controls.Add(IsActiveComboBox);
             Controls.Add(label7);
-            Controls.Add(label5);
             Controls.Add(label6);
             Controls.Add(label4);
             Controls.Add(FoundationDate);
@@ -302,7 +277,6 @@
         private DateTimePicker FoundationDate;
         private Label label4;
         private Label label6;
-        private Label label5;
         private Label label7;
         private ComboBox IsActiveComboBox;
         private Button SaveButton;
@@ -311,6 +285,5 @@
         private TextBox AreaTextBox;
         private CheckedListBox EmployeeCheckedList;
         private CheckedListBox EquipmentsCheckedList;
-        private CheckedListBox HarvestsCheckedList;
     }
 }

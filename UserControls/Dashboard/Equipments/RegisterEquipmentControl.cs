@@ -32,6 +32,9 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Equipments
                 Instance = new RegisterEquipmentControl();
             }
 
+            Instance.LoadFarms();
+            Instance.LoadSuppliers();
+            Instance.LoadEquipmentTypes();
             Instance.ClearEquipmentInfos();
             return Instance;
         }
@@ -40,16 +43,11 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Equipments
         {
             var types = Enum.GetValues(typeof(EquipmentType));
 
-            TypeComboBox.DataSource = null;
-            TypeComboBox.Items.Clear();
-
-            foreach (var type in types)
-            {
-                TypeComboBox.Items.Add(type.ToString());
-            }
+            TypeComboBox.DataSource = types;
 
             TypeComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
         }
+
 
         private async void LoadSuppliers()
         {
@@ -71,11 +69,11 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Equipments
 
             if (farms != null && farms.Any())
             {
-                SupplierComboBox.DisplayMember = "Name";
-                SupplierComboBox.ValueMember = "Id";
-                SupplierComboBox.DataSource = farms;
+                LocationComboBox.DisplayMember = "Name";
+                LocationComboBox.ValueMember = "Id";
+                LocationComboBox.DataSource = farms;
 
-                SupplierComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+                LocationComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             }
         }
 
@@ -85,16 +83,14 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Equipments
             EquipmentDescription.Text = string.Empty;
             EquipmentBrand.Text = string.Empty;
             EquipmentModel.Text = string.Empty;
-            PurchaseDate.Value = DateTime.MinValue;
             ImageUrl.Text = string.Empty;
             ManufacturingYear.Text = string.Empty;
             AcquisitionValue.Text = string.Empty;
-            EquipmentImage = null;
         }
 
-        private void LoadEquipmentImage(object sender, EventArgs e)
+        private async void LoadEquipmentImage(object sender, EventArgs e)
         {
-            LoadEquipmentImage();
+            await LoadEquipmentImage();
         }
 
         private async Task LoadEquipmentImage()
@@ -114,7 +110,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Equipments
                 catch (ArgumentException)
                 {
                     using SKBitmap bitmap = SKBitmap.Decode(imageData);
-                    
+
                     using SKImage image = SKImage.FromBitmap(bitmap);
                     using SKData data = image.Encode(SKEncodedImageFormat.Jpeg, 100);
 
@@ -138,13 +134,14 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Equipments
                 Name = EquipmentName.Text,
                 Description = EquipmentDescription.Text,
                 ImageUrl = ImageUrl.Text,
-                Type = (EquipmentType)Enum.Parse(typeof(EquipmentType), TypeComboBox.SelectedValue.ToString()),
+                Type = (EquipmentType)TypeComboBox.SelectedItem,
                 Brand = EquipmentBrand.Text,
                 Model = EquipmentModel.Text,
                 PurchaseDate = PurchaseDate.Value,
                 ManufacturingYear = ManufacturingYear.Text,
                 AcquisitionValue = decimal.Parse(AcquisitionValue.Text),
                 CurrentLocation = farm.Name,
+                FarmId = farm.Id,
                 SupplierId = supplier.Id
             };
 

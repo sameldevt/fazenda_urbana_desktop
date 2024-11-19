@@ -31,39 +31,57 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Cultures
                 Instance = new RegisterCultureControl();
             }
 
+            Instance.LoadProducts();
             Instance.LoadTypes();
             Instance.LoadCycles();
+            Instance.LoadFarms();
             Instance.ClearCultureInfos();
             return Instance;
+        }
+
+        private async void LoadProducts()
+        {
+            var products = await ProductService.GetInstance().GetAll();
+
+            if (products != null && products.Any())
+            {
+                ProductComboBox.DataSource = products;
+                ProductComboBox.DisplayMember = "Name";
+                ProductComboBox.ValueMember = "Id";
+
+                ProductComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            }
+        }
+
+        private async void LoadFarms()
+        {
+            var farms = await FarmService.GetInstance().GetAll();
+
+            if(farms != null && farms.Any())
+            {
+                FarmComboBox.DataSource = farms;
+                FarmComboBox.DisplayMember = "Name";
+                FarmComboBox.ValueMember = "Id";
+
+                FarmComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            }
         }
 
         public void LoadTypes()
         {
             var types = Enum.GetValues(typeof(HarvestType));
 
-            TypeComboBox.DataSource = null;
-            TypeComboBox.Items.Clear();
-
-            foreach (var type in types)
-            {
-                TypeComboBox.Items.Add(type.ToString());
-            }
+            TypeComboBox.DataSource = types;
 
             TypeComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         public void LoadCycles()
         {
-            var types = Enum.GetValues(typeof(CultureCycle));
+            var cycles = Enum.GetValues(typeof(CultureCycle));
 
-            CycleComboBox.DataSource = null;
-            CycleComboBox.Items.Clear();
-
-            foreach (var type in types)
-            {
-                CycleComboBox.Items.Add(type.ToString());
-            }
-
+            CycleComboBox.DataSource = cycles;
+            
             CycleComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
@@ -87,18 +105,19 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Cultures
             var culture = new RegisterCultureDto
             {
                 Name = CultureName.Text,
-                Type = (HarvestType)Enum.Parse(typeof(HarvestType), TypeComboBox.SelectedText),
-                Cycle = (CultureCycle)Enum.Parse(typeof(CultureCycle), CycleComboBox.SelectedText),
-                PlantingDate = DateTime.Parse(PlantingDate.Text),
-                EstimatedHarvestDate = DateTime.Parse(EstimatedHarvestDate.Text)
+                Type = (HarvestType)Enum.Parse(typeof(HarvestType), TypeComboBox.Text),
+                Cycle = (CultureCycle)Enum.Parse(typeof(CultureCycle), CycleComboBox.Text),
+                PlantingDate = PlantingDate.Value,
+                EstimatedHarvestDate = EstimatedHarvestDate.Value,
+                FarmId = (int)FarmComboBox.SelectedValue
             };
 
             await CultureService.GetInstance().Register(culture);
 
             ClearCultureInfos();
 
+            CultureControl.GetInstance().RegisterButton.Enabled = true;
             CultureControl.GetInstance().SetContentPanelControl(CultureListControl.GetInstance());
-
         }
     }
 

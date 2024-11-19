@@ -96,5 +96,8 @@ namespace fazenda_verdeviva.Model.Entities
 
         [JsonProperty("fornecedorId")]
         public int SupplierId { get; set; }
+
+        [JsonProperty("fazendaId")]
+        public int FarmId { get; set; }
     }
 }
