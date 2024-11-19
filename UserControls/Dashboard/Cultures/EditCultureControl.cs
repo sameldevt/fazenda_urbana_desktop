@@ -52,28 +52,16 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Cultures
         {
             var types = Enum.GetValues(typeof(HarvestType));
 
-            TypeComboBox.DataSource = null;
-            TypeComboBox.Items.Clear();
-
-            foreach (var type in types)
-            {
-                TypeComboBox.Items.Add(type.ToString());  
-            }
+            TypeComboBox.DataSource = types;
 
             TypeComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         public void LoadCycles()
         {
-            var types = Enum.GetValues(typeof(CultureCycle));
+            var cycles = Enum.GetValues(typeof(CultureCycle));
 
-            CycleComboBox.DataSource = null;
-            CycleComboBox.Items.Clear();
-
-            foreach (var type in types)
-            {
-                CycleComboBox.Items.Add(type.ToString());
-            }
+            CycleComboBox.DataSource = cycles;
 
             CycleComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
         }
@@ -93,16 +81,18 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Cultures
             CultureControl.GetInstance().SetContentPanelControl(CultureListControl.GetInstance());
         }
 
-        private async Task SaveButton_Click(object sender, EventArgs e)
+        private async void SaveButton_Click(object sender, EventArgs e)
         {
             var updateCultureDto = new Culture
             {
                 Id = Culture.Id,
                 Name = CultureName.Text,
-                Type = (HarvestType)Enum.Parse(typeof(HarvestType), TypeComboBox.SelectedText),
-                Cycle = (CultureCycle)Enum.Parse(typeof(CultureCycle), CycleComboBox.SelectedText),
+                Type = (HarvestType)TypeComboBox.SelectedValue,
+                Cycle = (CultureCycle)CycleComboBox.SelectedValue,
                 PlantingDate = DateTime.Parse(PlantingDate.Text),
-                EstimatedHarvestDate = DateTime.Parse(EstimatedHarvestDate.Text)
+                EstimatedHarvestDate = DateTime.Parse(EstimatedHarvestDate.Text),
+                FarmId = Culture.FarmId,
+                ProductId = Culture.ProductId,
             };
 
             await CultureService.GetInstance().Update(updateCultureDto);

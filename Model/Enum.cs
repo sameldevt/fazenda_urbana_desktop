@@ -32,7 +32,7 @@ namespace fazenda_verdeviva.Model
     public enum EquipmentType
     {
         Irrigacao,
-        ControleDeTemperatura,
+        ControleTemperatura,
         CultivoInterno,
         Semeadura,
         Colheita,
@@ -42,10 +42,10 @@ namespace fazenda_verdeviva.Model
         Transporte,
         JardinagemGeral,
         SistemaHidroponico,
-        EquipamentoDeProtecao,
+        EquipamentoProtecao,
         Automacao,
         Fertilizacao,
-        ControleDePragas
+        ControlePragas
     }
 
     public enum SupplyCategory

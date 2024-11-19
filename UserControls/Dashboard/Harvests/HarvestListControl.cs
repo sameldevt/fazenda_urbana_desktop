@@ -39,7 +39,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Harvests
         {
             HarvestsList.Controls.Clear();
 
-            List<Harvest> harvests = await HarvestService.GetInstance().GetAll();
+            List<Harvest> harvests = await ColheitaService.GetInstance().GetAll();
 
             try
             {

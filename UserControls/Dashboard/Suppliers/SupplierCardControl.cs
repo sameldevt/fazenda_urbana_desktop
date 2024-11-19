@@ -46,8 +46,6 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Suppliers
         {
             var response = await SupplierService.GetInstance().Delete(Supplier!.Id);
 
-            MessageBox.Show(response);
-
             SupplierListControl.GetInstance().SupplierList.Controls.Remove(this);
         }
 

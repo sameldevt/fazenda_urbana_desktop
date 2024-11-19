@@ -41,6 +41,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Farms
             Instance.LoadEmployees();
             Instance.LoadEquipments();
             Instance.LoadIsActive();
+            Instance.ClearFarmInfos();
             return Instance;
         }
 

@@ -36,8 +36,8 @@
             label5 = new Label();
             FarmLocation = new TextBox();
             label9 = new Label();
-            textBox2 = new TextBox();
-            FarmName = new Label();
+            FarmName = new TextBox();
+            label2112 = new Label();
             label1 = new Label();
             EndDate = new DateTimePicker();
             label8 = new Label();
@@ -65,6 +65,7 @@
             BackButton.TabIndex = 313;
             BackButton.Text = "Voltar";
             BackButton.UseVisualStyleBackColor = true;
+            BackButton.Click += BackButton_Click;
             // 
             // ProductName
             // 
@@ -136,25 +137,25 @@
             label9.TabIndex = 373;
             label9.Text = "Localização";
             // 
-            // textBox2
-            // 
-            textBox2.Enabled = false;
-            textBox2.Location = new Point(501, 133);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.ReadOnly = true;
-            textBox2.Size = new Size(190, 23);
-            textBox2.TabIndex = 372;
-            // 
             // FarmName
             // 
-            FarmName.AutoSize = true;
-            FarmName.Font = new Font("Segoe UI", 12F);
-            FarmName.Location = new Point(501, 109);
+            FarmName.Enabled = false;
+            FarmName.Location = new Point(501, 133);
+            FarmName.Multiline = true;
             FarmName.Name = "FarmName";
-            FarmName.Size = new Size(53, 21);
-            FarmName.TabIndex = 371;
-            FarmName.Text = "Nome";
+            FarmName.ReadOnly = true;
+            FarmName.Size = new Size(190, 23);
+            FarmName.TabIndex = 372;
+            // 
+            // label2112
+            // 
+            label2112.AutoSize = true;
+            label2112.Font = new Font("Segoe UI", 12F);
+            label2112.Location = new Point(501, 109);
+            label2112.Name = "label2112";
+            label2112.Size = new Size(53, 21);
+            label2112.TabIndex = 371;
+            label2112.Text = "Nome";
             // 
             // label1
             // 
@@ -169,6 +170,7 @@
             // EndDate
             // 
             EndDate.Enabled = false;
+            EndDate.Format = DateTimePickerFormat.Short;
             EndDate.Location = new Point(37, 233);
             EndDate.Name = "EndDate";
             EndDate.Size = new Size(190, 23);
@@ -187,6 +189,7 @@
             // StartDate
             // 
             StartDate.Enabled = false;
+            StartDate.Format = DateTimePickerFormat.Short;
             StartDate.Location = new Point(37, 180);
             StartDate.Name = "StartDate";
             StartDate.Size = new Size(190, 23);
@@ -333,8 +336,8 @@
             Controls.Add(label5);
             Controls.Add(FarmLocation);
             Controls.Add(label9);
-            Controls.Add(textBox2);
             Controls.Add(FarmName);
+            Controls.Add(label2112);
             Controls.Add(label1);
             Controls.Add(EndDate);
             Controls.Add(label8);
@@ -368,8 +371,8 @@
         private Label label5;
         private TextBox FarmLocation;
         private Label label9;
-        private TextBox textBox2;
-        private Label FarmName;
+        private TextBox FarmName;
+        private Label label2112;
         private Label label1;
         private DateTimePicker EndDate;
         private Label label8;

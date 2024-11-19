@@ -44,7 +44,7 @@
             NumberOfGreenhouses = new TextBox();
             FarmName = new TextBox();
             label = new Label();
-            HarvestsCheckedList = new CheckedListBox();
+            CulturesCheckedList = new CheckedListBox();
             EquipmentsCheckedList = new CheckedListBox();
             EmployeeCheckedList = new CheckedListBox();
             label5 = new Label();
@@ -58,9 +58,9 @@
             label8.Font = new Font("Segoe UI", 12F);
             label8.Location = new Point(63, 316);
             label8.Name = "label8";
-            label8.Size = new Size(78, 21);
+            label8.Size = new Size(84, 21);
             label8.TabIndex = 232;
-            label8.Text = "Área (km)";
+            label8.Text = "Área (km²)";
             // 
             // AreaTextBox
             // 
@@ -197,14 +197,14 @@
             label.TabIndex = 208;
             label.Text = "Editar fazenda";
             // 
-            // HarvestsCheckedList
+            // CulturesCheckedList
             // 
-            HarvestsCheckedList.FormattingEnabled = true;
-            HarvestsCheckedList.Location = new Point(692, 140);
-            HarvestsCheckedList.Name = "HarvestsCheckedList";
-            HarvestsCheckedList.Size = new Size(161, 274);
-            HarvestsCheckedList.TabIndex = 238;
-            HarvestsCheckedList.ItemCheck += HarvestsCheckedList_ItemCheck;
+            CulturesCheckedList.FormattingEnabled = true;
+            CulturesCheckedList.Location = new Point(692, 140);
+            CulturesCheckedList.Name = "CulturesCheckedList";
+            CulturesCheckedList.Size = new Size(161, 274);
+            CulturesCheckedList.TabIndex = 238;
+            CulturesCheckedList.ItemCheck += CulturesCheckedList_ItemCheck;
             // 
             // EquipmentsCheckedList
             // 
@@ -230,9 +230,9 @@
             label5.Font = new Font("Segoe UI", 12F);
             label5.Location = new Point(692, 116);
             label5.Name = "label5";
-            label5.Size = new Size(74, 21);
+            label5.Size = new Size(68, 21);
             label5.TabIndex = 235;
-            label5.Text = "Colheitas";
+            label5.Text = "Culturas";
             // 
             // label6
             // 
@@ -258,7 +258,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(HarvestsCheckedList);
+            Controls.Add(CulturesCheckedList);
             Controls.Add(EquipmentsCheckedList);
             Controls.Add(EmployeeCheckedList);
             Controls.Add(label5);
@@ -303,7 +303,7 @@
         private TextBox NumberOfGreenhouses;
         private TextBox FarmName;
         private Label label;
-        private CheckedListBox HarvestsCheckedList;
+        private CheckedListBox CulturesCheckedList;
         private CheckedListBox EquipmentsCheckedList;
         private CheckedListBox EmployeeCheckedList;
         private Label label5;

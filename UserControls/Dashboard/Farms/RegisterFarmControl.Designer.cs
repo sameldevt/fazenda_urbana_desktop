@@ -204,9 +204,9 @@
             label8.Font = new Font("Segoe UI", 12F);
             label8.Location = new Point(63, 316);
             label8.Name = "label8";
-            label8.Size = new Size(78, 21);
+            label8.Size = new Size(84, 21);
             label8.TabIndex = 204;
-            label8.Text = "Área (km)";
+            label8.Text = "Área (km²)";
             // 
             // AreaTextBox
             // 

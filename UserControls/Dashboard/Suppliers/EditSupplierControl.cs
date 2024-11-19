@@ -32,7 +32,19 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Suppliers
                 Instance = new EditSupplierControl();
             }
 
+            Instance.ClearSupplierInfo();
             return Instance;
+        }
+
+        private void ClearSupplierInfo()
+        {
+            NameTextBox.Text = string.Empty;
+            CnpjTextBox.Text = string.Empty;
+            WebsiteTextBox.Text = string.Empty;
+            PhoneTextBox.Text = string.Empty;
+            EmailTextBox.Text = string.Empty;
+
+            Addresses.Controls.Clear();
         }
 
         public void LoadSupplier(Supplier supplier)

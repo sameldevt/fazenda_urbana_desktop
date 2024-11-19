@@ -80,5 +80,8 @@ namespace fazenda_verdeviva.Model.Dto
 
         [JsonProperty("fazendaId")]
         public int FarmId { get; set; }
+
+        [JsonProperty("produtoId")]
+        public int ProductId { get; set; }
     }
 }

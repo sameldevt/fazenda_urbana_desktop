@@ -34,7 +34,6 @@
             FoundationDate = new Label();
             Location = new Label();
             EditButton = new Button();
-            DeleteButton = new Button();
             Area = new Label();
             FarmName = new Label();
             ContentPanel.SuspendLayout();
@@ -47,7 +46,6 @@
             ContentPanel.Controls.Add(FoundationDate);
             ContentPanel.Controls.Add(Location);
             ContentPanel.Controls.Add(EditButton);
-            ContentPanel.Controls.Add(DeleteButton);
             ContentPanel.Controls.Add(Area);
             ContentPanel.Controls.Add(FarmName);
             ContentPanel.Location = new Point(3, 3);
@@ -102,25 +100,13 @@
             // EditButton
             // 
             EditButton.BackColor = Color.White;
-            EditButton.Location = new Point(824, 51);
+            EditButton.Location = new Point(824, 11);
             EditButton.Name = "EditButton";
             EditButton.Size = new Size(95, 35);
             EditButton.TabIndex = 9;
             EditButton.Text = "Editar";
             EditButton.UseVisualStyleBackColor = false;
             EditButton.Click += EditButton_Click;
-            // 
-            // DeleteButton
-            // 
-            DeleteButton.BackColor = Color.White;
-            DeleteButton.ForeColor = SystemColors.ControlText;
-            DeleteButton.Location = new Point(824, 12);
-            DeleteButton.Name = "DeleteButton";
-            DeleteButton.Size = new Size(95, 33);
-            DeleteButton.TabIndex = 8;
-            DeleteButton.Text = "Excluir";
-            DeleteButton.UseVisualStyleBackColor = false;
-            DeleteButton.Click += DeleteButton_Click;
             // 
             // Area
             // 
@@ -163,7 +149,6 @@
         private Label FoundationDate;
         private Label Location;
         private Button EditButton;
-        private Button DeleteButton;
         private Label Area;
         private Label FarmName;
     }

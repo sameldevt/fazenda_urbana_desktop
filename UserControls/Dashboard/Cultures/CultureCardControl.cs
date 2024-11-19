@@ -28,8 +28,11 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Cultures
             CultureName.Text = Culture.Name;
             Type.Text = Culture.Type.ToString();
             Cycle.Text = Culture.Cycle.ToString();
-            PlantingDate.Text = Culture.PlantingDate.ToString();
-            EstimatedHarvestDate.Text = Culture.EstimatedHarvestDate.ToString();
+            PlantingDate.Text = Culture.PlantingDate.ToString("dd/MM/yyyy");
+            EstimatedHarvestDate.Text = Culture.EstimatedHarvestDate.ToString("dd/MM/yyyy");
+
+            var farm = await FarmService.GetInstance().GetById(culture.FarmId);
+            Farm.Text = farm.Name;
         }
 
         private void DetailsButton_Click(object sender, EventArgs e)
@@ -37,20 +40,6 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Cultures
             var cultureDetailsControlInstance = EditCultureControl.GetInstance();
             cultureDetailsControlInstance.LoadCultureInfo(Culture);
             CultureControl.GetInstance().SetContentPanelControl(cultureDetailsControlInstance);
-        }
-
-        private async void DeleteButton_Click(object sender, EventArgs e)
-        {
-            await CultureService.GetInstance().Delete(Culture!.Id);
-
-            CultureListControl.GetInstance().CultureList.Controls.Remove(this);
-        }
-
-        private void EditButton_Click(object sender, EventArgs e)
-        {
-            var editCultureControlInstance = EditCultureControl.GetInstance();
-            editCultureControlInstance.LoadCultureInfo(Culture);
-            CultureControl.GetInstance().SetContentPanelControl(editCultureControlInstance);
         }
     }
 }

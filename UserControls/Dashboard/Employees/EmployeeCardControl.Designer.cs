@@ -60,12 +60,11 @@
             RegistrationNumberLabel.AutoSize = true;
             RegistrationNumberLabel.Font = new Font("Segoe UI", 14F);
             RegistrationNumberLabel.ForeColor = Color.Green;
-            RegistrationNumberLabel.Location = new Point(190, 87);
+            RegistrationNumberLabel.Location = new Point(214, 87);
             RegistrationNumberLabel.Name = "RegistrationNumberLabel";
             RegistrationNumberLabel.Size = new Size(82, 25);
             RegistrationNumberLabel.TabIndex = 11;
             RegistrationNumberLabel.Text = "1231312";
-            RegistrationNumberLabel.Visible = false;
             // 
             // label2
             // 
@@ -77,7 +76,6 @@
             label2.Size = new Size(181, 25);
             label2.TabIndex = 10;
             label2.Text = "Número de registro:";
-            label2.Visible = false;
             // 
             // PositionLabel
             // 

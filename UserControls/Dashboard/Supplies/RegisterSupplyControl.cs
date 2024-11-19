@@ -48,6 +48,8 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Supplies
             PurchaseDate.Text = string.Empty;
             ManufacturingDate.Text = string.Empty;
             ExpirationDate.Text = string.Empty;
+
+            SupplyImage.Image = null;
         }
 
         private void LoadCategories()

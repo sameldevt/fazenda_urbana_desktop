@@ -59,7 +59,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Harvests
         {
             if (CultureComboBox.Items.Count == 0)
             {
-                var cultures = await CultureService.GetInstance().GetAll();
+                var cultures = await ColheitaService.GetInstance().GetAll();
 
                 if (cultures != null && cultures.Any())
                 {
@@ -94,10 +94,10 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Harvests
                 HarvestedArea = decimal.Parse(HarvestedArea.Text),
                 HarvestedQuantity = decimal.Parse(HarvestedQuantity.Text),
                 ProductId = (int)ProductComboBox.SelectedValue,
-                CultureId = (int)CultureComboBox.SelectedIndex,
+                CultureId = (int)CultureComboBox.SelectedValue,
             };
 
-            await HarvestService.GetInstance().Register(harvest);
+            await ColheitaService.GetInstance().Register(harvest);
 
             HarvestControl.GetInstance().RegisterButton.Enabled = true;
             HarvestControl.GetInstance().SetContentPanelControl(HarvestListControl.GetInstance());

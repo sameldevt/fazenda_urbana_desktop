@@ -16,6 +16,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Suppliers
     {
         private static SupplierDetailsControl? Instance;
         private Supplier? Supplier;
+
         private SupplierDetailsControl()
         {
             InitializeComponent();
@@ -28,7 +29,19 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Suppliers
                 Instance = new SupplierDetailsControl();
             }
 
+            Instance.ClearSupplierInfo();
             return Instance;
+        }
+
+        private void ClearSupplierInfo()
+        {
+            NameTextBox.Text = string.Empty;
+            CnpjTextBox.Text = string.Empty;
+            WebsiteTextBox.Text = string.Empty;
+            PhoneTextBox.Text = string.Empty;
+            EmailTextBox.Text = string.Empty;
+
+            Addresses.Controls.Clear();
         }
 
         public void LoadSupplier(Supplier supplier)
@@ -37,8 +50,8 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Suppliers
             NameTextBox.Text = supplier.Name;
             CnpjTextBox.Text = supplier.CNPJ;
             WebsiteTextBox.Text = supplier.Website;
-            PhoneTextBox.Text = supplier.Contact?.Phone ?? "";
-            EmailTextBox.Text = supplier.Contact?.Email ?? "";
+            PhoneTextBox.Text = supplier.Contact.Phone;
+            EmailTextBox.Text = supplier.Contact.Email;
             NameTextBox.Enabled = false;
             CnpjTextBox.Enabled = false;
             WebsiteTextBox.Enabled = false;

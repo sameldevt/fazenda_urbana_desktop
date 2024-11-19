@@ -31,13 +31,6 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Farms
             IsActive.Text = farm.IsActive ? "Sim" : "Não";
         }
 
-        private async void DeleteButton_Click(object sender, EventArgs e)
-        {
-            await FarmService.GetInstance().Delete(Farm!.Id);
-            FarmListControl.GetInstance().FarmList.Controls.Remove(this);
-
-        }
-
         private void EditButton_Click(object sender, EventArgs e)
         {
             var editFarmControlInstance = EditFarmControl.GetInstance();

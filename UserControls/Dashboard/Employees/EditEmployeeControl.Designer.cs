@@ -95,6 +95,7 @@
             RegistrationNumberTextBox.Location = new Point(50, 250);
             RegistrationNumberTextBox.Multiline = true;
             RegistrationNumberTextBox.Name = "RegistrationNumberTextBox";
+            RegistrationNumberTextBox.ReadOnly = true;
             RegistrationNumberTextBox.Size = new Size(190, 23);
             RegistrationNumberTextBox.TabIndex = 284;
             // 

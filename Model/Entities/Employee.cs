@@ -15,6 +15,9 @@ namespace fazenda_verdeviva.Model.Entities
         [JsonProperty("numeroRegistro")]
         public string RegistrationNumber { get; set; }
 
+        [JsonProperty("fazendaId")]
+        public int FarmId { get; set; }
+
         public override string ToString()
         {
             return Name;

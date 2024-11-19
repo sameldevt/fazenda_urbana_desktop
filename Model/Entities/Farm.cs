@@ -30,8 +30,8 @@ namespace fazenda_verdeviva.Model.Entities
         [JsonProperty("equipamentos")]
         public ICollection<Equipment> Equipments { get; set; }
 
-        [JsonProperty("colheitas")]
-        public ICollection<Harvest> Harvests { get; set; }
+        [JsonProperty("culturas")]
+        public ICollection<Culture> Cultures { get; set; }
 
         [JsonProperty("numeroEstufas")]
         public int GreenhousesCount { get; set; }
@@ -65,7 +65,6 @@ namespace fazenda_verdeviva.Model.Entities
 
         [JsonProperty("fazendaId")]
         public int FarmId { get; set; }
-
     }
 
     public class Culture : EntityInterface
@@ -87,5 +86,16 @@ namespace fazenda_verdeviva.Model.Entities
 
         [JsonProperty("dataColheitaPrevista")]
         public DateTime EstimatedHarvestDate { get; set; }
+
+        [JsonProperty("fazendaId")]
+        public int FarmId { get; set; }
+
+        [JsonProperty("produtoId")]
+        public int ProductId { get; set; }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

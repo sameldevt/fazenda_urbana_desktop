@@ -20,11 +20,11 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Farms
 
         private List<Employee> Employees = new List<Employee>();
         private List<Equipment> Equipments = new List<Equipment>();
-        private List<Harvest> Harvests = new List<Harvest>();
+        private List<Culture> Cultures = new List<Culture>();
 
         private List<Employee>? DbEmployees;
         private List<Equipment>? DbEquipments;
-        private List<Harvest>? DbHarvests;
+        private List<Culture>? DbCultures;
 
         private EditFarmControl()
         {
@@ -41,7 +41,8 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Farms
             Instance.LoadIsActive();
             Instance.LoadEmployees();
             Instance.LoadEquipments();
-            Instance.LoadHarvests();
+            Instance.LoadCultures();
+            Instance.ClearFarmInfos();
             return Instance;
         }
 
@@ -55,10 +56,9 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Farms
             NumberOfGreenhouses.Text = farm.GreenhousesCount.ToString();
             AreaTextBox.Text = farm.Area.ToString("F2");
             IsActiveComboBox.Text = farm.IsActive ? "Sim" : "Não";
-            Employees = farm.Employees.ToList();
-            Equipments = farm.Equipments.ToList();
-            Harvests = farm.Harvests.ToList();
-
+            Employees.AddRange(farm.Employees);
+            Equipments.AddRange(farm.Equipments);
+            Cultures.AddRange(farm.Cultures);
         }
 
         private void LoadIsActive()
@@ -82,9 +82,18 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Farms
                 foreach (var e in DbEmployees)
                 {
                     EmployeeCheckedList.Items.Add(e);
+
+                    bool isChecked = true;
+
+                    int index = EmployeeCheckedList.Items.IndexOf(e);
+                    if (index != -1)
+                    {
+                        EmployeeCheckedList.SetItemChecked(index, isChecked);
+                    }
                 }
             }
         }
+
 
         private async void LoadEquipments()
         {
@@ -95,19 +104,31 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Farms
                 foreach (var e in DbEquipments)
                 {
                     EquipmentsCheckedList.Items.Add(e);
+
+                    int index = EquipmentsCheckedList.Items.IndexOf(e);
+                    if (index != -1)
+                    {
+                        EquipmentsCheckedList.SetItemChecked(index, true);
+                    }
                 }
             }
         }
 
-        private async void LoadHarvests()
+        private async void LoadCultures()
         {
-            DbHarvests = await HarvestService.GetInstance().GetAll();
+            DbCultures = await CultureService.GetInstance().GetAll();
 
-            if (DbHarvests != null && DbHarvests.Count > 0)
+            if (DbCultures != null && DbCultures.Count > 0)
             {
-                foreach (var h in DbHarvests)
+                foreach (var h in DbCultures)
                 {
-                    HarvestsCheckedList.Items.Add(h);
+                    CulturesCheckedList.Items.Add(h);
+
+                    int index = CulturesCheckedList.Items.IndexOf(h);
+                    if (index != -1)
+                    {
+                        CulturesCheckedList.SetItemChecked(index, true);
+                    }
                 }
             }
         }
@@ -118,6 +139,12 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Farms
             LocationTextBox.Text = string.Empty;
             FoundationDate.Text = string.Empty;
             NumberOfGreenhouses.Text = string.Empty;
+            Employees.Clear();
+            Equipments.Clear();
+            Cultures.Clear();
+            DbCultures?.Clear();
+            DbEmployees?.Clear();
+            DbEquipments?.Clear();
         }
 
         private void EmployeeCheckedList_ItemCheck(object sender, ItemCheckEventArgs e)
@@ -166,24 +193,24 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Farms
             }
         }
 
-        private void HarvestsCheckedList_ItemCheck(object sender, ItemCheckEventArgs e)
+        private void CulturesCheckedList_ItemCheck(object sender, ItemCheckEventArgs e)
         {
             int index = e.Index;
 
-            if (HarvestsCheckedList.Items[index] is Harvest harvest)
+            if (CulturesCheckedList.Items[index] is Culture culture)
             {
                 if (e.NewValue == CheckState.Checked)
                 {
-                    if (!Harvests.Contains(harvest))
+                    if (!Cultures.Contains(culture))
                     {
-                        Harvests.Add(harvest);
+                        Cultures.Add(culture);
                     }
                 }
                 else
                 {
-                    if (Harvests.Contains(harvest))
+                    if (Cultures.Contains(culture))
                     {
-                        Harvests.Remove(harvest);
+                        Cultures.Remove(culture);
                     }
                 }
             }
@@ -191,7 +218,6 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Farms
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-            ClearFarmInfos();
             FarmControl.GetInstance().RegisterButton.Enabled = true;
             FarmControl.GetInstance().SetContentPanelControl(FarmListControl.GetInstance());
         }
@@ -209,7 +235,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Farms
             });
 
             Farm.Employees = await Task.WhenAll(tasks);
-            
+
             var equipmentTasks = Equipments.Select(async e =>
             {
                 return await EquipmentService.GetInstance().GetById(e.Id);
@@ -217,12 +243,12 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Farms
 
             Farm.Equipments = await Task.WhenAll(equipmentTasks);
 
-            var harvestTasks = Harvests.Select(async e =>
+            var cultureTasks = Cultures.Select(async e =>
             {
-                return await HarvestService.GetInstance().GetById(e.Id);
+                return await CultureService.GetInstance().GetById(e.Id);
             });
 
-            Farm.Harvests = await Task.WhenAll(harvestTasks);
+            Farm.Cultures = await Task.WhenAll(cultureTasks);
 
             Farm.GreenhousesCount = int.Parse(NumberOfGreenhouses.Text);
             Farm.IsActive = IsActiveComboBox.SelectedValue.Equals("Sim");

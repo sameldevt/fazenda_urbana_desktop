@@ -99,5 +99,10 @@ namespace fazenda_verdeviva.Model.Entities
 
         [JsonProperty("fazendaId")]
         public int FarmId { get; set; }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

@@ -109,7 +109,8 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Cultures
                 Cycle = (CultureCycle)Enum.Parse(typeof(CultureCycle), CycleComboBox.Text),
                 PlantingDate = PlantingDate.Value,
                 EstimatedHarvestDate = EstimatedHarvestDate.Value,
-                FarmId = (int)FarmComboBox.SelectedValue
+                FarmId = (int)FarmComboBox.SelectedValue,
+                ProductId = (int)ProductComboBox.SelectedValue,
             };
 
             await CultureService.GetInstance().Register(culture);

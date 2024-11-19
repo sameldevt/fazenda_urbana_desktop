@@ -26,23 +26,24 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Harvests
         {
             Harvest = harvest;
 
-            HarvestId.Text = harvest.Id.ToString();
-            StartDate.Text = harvest.StartDate.ToString();
-            EndDate.Text = harvest.EndDate.ToString();
-            HarvestedArea.Text = harvest.HarvestedArea.ToString();
-            HarvestedQuantity.Text = harvest.HarvestedQuantity.ToString();
+            HarvestId.Text = harvest.Id.ToString().PadLeft(10, '0');
+            StartDate.Text = harvest.StartDate.ToString("dd/MM/yyyy");
+            EndDate.Text = harvest.EndDate.ToString("dd/MM/yyyy");
+            HarvestedArea.Text = $"{harvest.HarvestedArea.ToString()} m²";
+            HarvestedQuantity.Text = $"{harvest.HarvestedQuantity.ToString()} kg";
         }
 
-        private void EditButton_Click(object sender, EventArgs e)
+        private void Details_Click(object sender, EventArgs e)
         {
             var editHarvestControlInstance = HarvestDetailsControl.GetInstance();
             editHarvestControlInstance.LoadHarvestInfo(Harvest);
             HarvestControl.GetInstance().SetContentPanelControl(editHarvestControlInstance);
+
         }
 
         private async void DeleteButton_Click(object sender, EventArgs e)
         {
-            await HarvestService.GetInstance().Delete(Harvest!.Id);
+            await ColheitaService.GetInstance().Delete(Harvest!.Id);
             HarvestListControl.GetInstance().HarvestsList.Controls.Remove(this);
         }
     }

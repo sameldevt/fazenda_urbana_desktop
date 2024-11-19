@@ -11,18 +11,18 @@ using System.Threading.Tasks;
 
 namespace fazenda_verdeviva.Services
 {
-    internal class HarvestService : ServiceInterface<Harvest>
+    internal class ColheitaService : ServiceInterface<Harvest>
     {
         private readonly string ContextUrl = "colheita";
-        private static HarvestService? Instance;
+        private static ColheitaService? Instance;
 
-        private HarvestService() { }
+        private ColheitaService() { }
 
-        public static HarvestService GetInstance()
+        public static ColheitaService GetInstance()
         {
             if (Instance == null)
             {
-                Instance = new HarvestService();
+                Instance = new ColheitaService();
             }
             return Instance;
         }

@@ -86,6 +86,8 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Equipments
             ImageUrl.Text = string.Empty;
             ManufacturingYear.Text = string.Empty;
             AcquisitionValue.Text = string.Empty;
+
+            EquipmentImage.Image = null;
         }
 
         private async void LoadEquipmentImage(object sender, EventArgs e)
@@ -134,7 +136,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Equipments
                 Name = EquipmentName.Text,
                 Description = EquipmentDescription.Text,
                 ImageUrl = ImageUrl.Text,
-                Type = (EquipmentType)TypeComboBox.SelectedItem,
+                Type = (EquipmentType)TypeComboBox.SelectedValue,
                 Brand = EquipmentBrand.Text,
                 Model = EquipmentModel.Text,
                 PurchaseDate = PurchaseDate.Value,

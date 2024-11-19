@@ -34,7 +34,26 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Suppliers
             {
                 Instance = new RegisterSupplierControl();
             }
+
+            Instance.ClearSupplierInfo();
             return Instance;
+        }
+
+        private void ClearSupplierInfo()
+        {
+            NameTextBox.Text = string.Empty;
+            CnpjTextBox.Text = string.Empty;
+            WebsiteTextBox.Text = string.Empty;
+            PhoneTextBox.Text = string.Empty;
+            EmailTextBox.Text = string.Empty;
+            StreetTextBox.Text = string.Empty;
+            NumberTextBox.Text = string.Empty;
+            CityTextBox.Text = string.Empty;
+            PostalcodeTextBox.Text = string.Empty;
+            ComplementTextBox.Text = string.Empty;
+            StateTextBox.Text = string.Empty;
+
+            AddressesList.Controls.Clear();
         }
 
         private void BackButton_Click(object sender, EventArgs e)

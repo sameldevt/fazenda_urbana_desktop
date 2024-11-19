@@ -45,18 +45,11 @@
             ProductProteins = new Label();
             ProductFibers = new Label();
             ProductFats = new Label();
-            SupplierCnpj = new Label();
-            SupplierEmail = new Label();
-            SupplierName = new Label();
-            label2 = new Label();
             label6 = new Label();
             label7 = new Label();
             label8 = new Label();
             label9 = new Label();
             label10 = new Label();
-            label11 = new Label();
-            label12 = new Label();
-            label13 = new Label();
             panel2 = new Panel();
             ((System.ComponentModel.ISupportInitialize)ProductImage).BeginInit();
             panel1.SuspendLayout();
@@ -246,53 +239,6 @@
             ProductFats.TabIndex = 107;
             ProductFats.Text = "gorduras";
             // 
-            // SupplierCnpj
-            // 
-            SupplierCnpj.AutoSize = true;
-            SupplierCnpj.Font = new Font("Segoe UI", 14F);
-            SupplierCnpj.ForeColor = Color.Green;
-            SupplierCnpj.Location = new Point(513, 89);
-            SupplierCnpj.Name = "SupplierCnpj";
-            SupplierCnpj.Size = new Size(55, 25);
-            SupplierCnpj.TabIndex = 111;
-            SupplierCnpj.Text = "CNPJ";
-            SupplierCnpj.TextAlign = ContentAlignment.TopRight;
-            // 
-            // SupplierEmail
-            // 
-            SupplierEmail.AutoSize = true;
-            SupplierEmail.Font = new Font("Segoe UI", 14F);
-            SupplierEmail.ForeColor = Color.Green;
-            SupplierEmail.Location = new Point(513, 64);
-            SupplierEmail.Name = "SupplierEmail";
-            SupplierEmail.Size = new Size(156, 25);
-            SupplierEmail.TabIndex = 110;
-            SupplierEmail.Text = "Email fornecedor";
-            SupplierEmail.TextAlign = ContentAlignment.TopRight;
-            // 
-            // SupplierName
-            // 
-            SupplierName.AutoSize = true;
-            SupplierName.Font = new Font("Segoe UI", 14F);
-            SupplierName.ForeColor = Color.Green;
-            SupplierName.Location = new Point(513, 39);
-            SupplierName.Name = "SupplierName";
-            SupplierName.Size = new Size(161, 25);
-            SupplierName.TabIndex = 109;
-            SupplierName.Text = "Nome fornecedor";
-            SupplierName.TextAlign = ContentAlignment.TopRight;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
-            label2.Location = new Point(404, 14);
-            label2.Name = "label2";
-            label2.Size = new Size(115, 25);
-            label2.TabIndex = 108;
-            label2.Text = "Fornecedor";
-            label2.TextAlign = ContentAlignment.TopCenter;
-            // 
             // label6
             // 
             label6.AutoSize = true;
@@ -343,50 +289,13 @@
             label10.TabIndex = 121;
             label10.Text = "Gorduras:";
             // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI", 14F);
-            label11.Location = new Point(404, 39);
-            label11.Name = "label11";
-            label11.Size = new Size(67, 25);
-            label11.TabIndex = 122;
-            label11.Text = "Nome:";
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI", 14F);
-            label12.Location = new Point(404, 64);
-            label12.Name = "label12";
-            label12.Size = new Size(70, 25);
-            label12.TabIndex = 123;
-            label12.Text = "E-mail:";
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI", 14F);
-            label13.Location = new Point(404, 89);
-            label13.Name = "label13";
-            label13.Size = new Size(59, 25);
-            label13.TabIndex = 124;
-            label13.Text = "CNPJ:";
-            // 
             // panel2
             // 
-            panel2.Controls.Add(label13);
-            panel2.Controls.Add(label12);
-            panel2.Controls.Add(label11);
             panel2.Controls.Add(label10);
             panel2.Controls.Add(label9);
             panel2.Controls.Add(label8);
             panel2.Controls.Add(label7);
             panel2.Controls.Add(label6);
-            panel2.Controls.Add(label2);
-            panel2.Controls.Add(SupplierName);
-            panel2.Controls.Add(SupplierEmail);
-            panel2.Controls.Add(SupplierCnpj);
             panel2.Controls.Add(ProductFats);
             panel2.Controls.Add(ProductFibers);
             panel2.Controls.Add(ProductProteins);
@@ -437,18 +346,11 @@
         private Label ProductProteins;
         private Label ProductFibers;
         private Label ProductFats;
-        private Label SupplierCnpj;
-        private Label SupplierEmail;
-        private Label SupplierName;
-        private Label label2;
         private Label label6;
         private Label label7;
         private Label label8;
         private Label label9;
         private Label label10;
-        private Label label11;
-        private Label label12;
-        private Label label13;
         private Panel panel2;
     }
 }

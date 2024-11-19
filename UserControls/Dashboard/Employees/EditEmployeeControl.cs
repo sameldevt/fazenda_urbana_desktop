@@ -30,7 +30,26 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Employees
                 Instance = new EditEmployeeControl();
             }
 
+            Instance.ClearEmployeeInfo();
             return Instance;
+        }
+
+        private void ClearEmployeeInfo()
+        {
+            Employee = null;
+            NameTextBox.Text = string.Empty;
+            PositionTextBox.Text = string.Empty;
+            RegistrationNumberTextBox.Text = string.Empty;
+            PhoneTextBox.Text = string.Empty;
+            EmailTextBox.Text = string.Empty;
+            StreetTextBox.Text = string.Empty;
+            NumberTextBox.Text = string.Empty;
+            CityTextBox.Text = string.Empty;
+            PostalcodeTextBox.Text = string.Empty;
+            ComplementTextBox.Text = string.Empty;
+            StateTextBox.Text = string.Empty;
+
+            Addresses.Controls.Clear();
         }
 
         public void LoadEmployeeInfo(Employee employee)

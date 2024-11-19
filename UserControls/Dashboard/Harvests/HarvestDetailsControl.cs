@@ -30,6 +30,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Harvests
                 Instance = new HarvestDetailsControl();
             }
 
+            Instance.ClearHarvestInfo();
             return Instance;
         }
 
@@ -48,7 +49,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Harvests
             CultureType.Text = culture.Type.ToString();
             CultureCycle.Text = culture.Cycle.ToString();
 
-            var farm = await FarmService.GetInstance().GetById(harvest.FarmId);
+            var farm = await FarmService.GetInstance().GetById(culture.FarmId);
 
             FarmName.Text = farm.Name;
             FarmLocation.Text = farm.Location;
@@ -79,10 +80,8 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Harvests
             ProductName.Text = string.Empty;
         }
 
-
         private void BackButton_Click(object sender, EventArgs e)
         {
-            ClearHarvestInfo();
             HarvestControl.GetInstance().SetContentPanelControl(HarvestListControl.GetInstance());
         }
     }

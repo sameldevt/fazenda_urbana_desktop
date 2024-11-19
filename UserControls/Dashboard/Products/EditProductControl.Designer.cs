@@ -55,8 +55,6 @@
             ProductPriceTextBox = new TextBox();
             ProductDescriptionTextBox = new TextBox();
             ProductNameTextBox = new TextBox();
-            SupplierComboBox = new ComboBox();
-            ManufacturerLabel = new Label();
             CategoryComboBox = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)ProductImage).BeginInit();
             SuspendLayout();
@@ -260,7 +258,7 @@
             // 
             ImageLinkLabel.AutoSize = true;
             ImageLinkLabel.Font = new Font("Segoe UI", 12F);
-            ImageLinkLabel.Location = new Point(220, 402);
+            ImageLinkLabel.Location = new Point(218, 352);
             ImageLinkLabel.Name = "ImageLinkLabel";
             ImageLinkLabel.Size = new Size(121, 21);
             ImageLinkLabel.TabIndex = 133;
@@ -268,7 +266,7 @@
             // 
             // ProductImageUrlTextBox
             // 
-            ProductImageUrlTextBox.Location = new Point(220, 426);
+            ProductImageUrlTextBox.Location = new Point(218, 376);
             ProductImageUrlTextBox.Name = "ProductImageUrlTextBox";
             ProductImageUrlTextBox.Size = new Size(190, 23);
             ProductImageUrlTextBox.TabIndex = 134;
@@ -302,25 +300,6 @@
             ProductNameTextBox.Name = "ProductNameTextBox";
             ProductNameTextBox.Size = new Size(190, 23);
             ProductNameTextBox.TabIndex = 129;
-            // 
-            // SupplierComboBox
-            // 
-            SupplierComboBox.FormattingEnabled = true;
-            SupplierComboBox.Items.AddRange(new object[] { "Empresa 1", "Empresa 2", "Empresa 3" });
-            SupplierComboBox.Location = new Point(220, 376);
-            SupplierComboBox.Name = "SupplierComboBox";
-            SupplierComboBox.Size = new Size(190, 23);
-            SupplierComboBox.TabIndex = 128;
-            // 
-            // ManufacturerLabel
-            // 
-            ManufacturerLabel.AutoSize = true;
-            ManufacturerLabel.Font = new Font("Segoe UI", 12F);
-            ManufacturerLabel.Location = new Point(220, 352);
-            ManufacturerLabel.Name = "ManufacturerLabel";
-            ManufacturerLabel.Size = new Size(89, 21);
-            ManufacturerLabel.TabIndex = 127;
-            ManufacturerLabel.Text = "Fornecedor";
             // 
             // CategoryComboBox
             // 
@@ -359,8 +338,6 @@
             Controls.Add(ProductPriceTextBox);
             Controls.Add(ProductDescriptionTextBox);
             Controls.Add(ProductNameTextBox);
-            Controls.Add(SupplierComboBox);
-            Controls.Add(ManufacturerLabel);
             Controls.Add(CategoryComboBox);
             Controls.Add(SaveButton);
             Controls.Add(BackButton);
@@ -400,8 +377,6 @@
         private TextBox ProductPriceTextBox;
         private TextBox ProductDescriptionTextBox;
         private TextBox ProductNameTextBox;
-        private ComboBox SupplierComboBox;
-        private Label ManufacturerLabel;
         private ComboBox CategoryComboBox;
     }
 }

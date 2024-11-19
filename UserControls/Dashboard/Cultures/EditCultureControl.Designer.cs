@@ -112,6 +112,7 @@
             BackButton.TabIndex = 139;
             BackButton.Text = "Voltar";
             BackButton.UseVisualStyleBackColor = true;
+            BackButton.Click += BackButton_Click;
             // 
             // EstimatedHarvestDate
             // 
@@ -152,6 +153,7 @@
             SaveButton.TabIndex = 138;
             SaveButton.Text = "Salvar";
             SaveButton.UseVisualStyleBackColor = true;
+            SaveButton.Click += this.SaveButton_Click;
             // 
             // CycleComboBox
             // 
