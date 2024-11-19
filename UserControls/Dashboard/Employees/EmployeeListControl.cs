@@ -37,6 +37,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Employees
 
         public async Task LoadCards()
         {
+
             EmployeesList.Controls.Clear();
 
             List<Employee> employees = await EmployeeService.GetInstance().GetAll();

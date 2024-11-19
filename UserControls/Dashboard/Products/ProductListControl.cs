@@ -49,7 +49,6 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
                     productCard.LoadCardInfo(p);
                     ProductsList.Controls.Add(productCard);
                 });
-                MessageBox.Show("fdsafds");
 
             }
             catch (Exception ex)
