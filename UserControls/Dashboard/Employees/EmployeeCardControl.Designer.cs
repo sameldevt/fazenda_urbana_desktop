@@ -34,7 +34,6 @@
             PositionLabel = new Label();
             label1 = new Label();
             EmployeeEmail = new Label();
-            EditButton = new Button();
             DeleteButton = new Button();
             EmployeeName = new Label();
             ContentPanel.SuspendLayout();
@@ -47,7 +46,6 @@
             ContentPanel.Controls.Add(PositionLabel);
             ContentPanel.Controls.Add(label1);
             ContentPanel.Controls.Add(EmployeeEmail);
-            ContentPanel.Controls.Add(EditButton);
             ContentPanel.Controls.Add(DeleteButton);
             ContentPanel.Controls.Add(EmployeeName);
             ContentPanel.Location = new Point(3, 3);
@@ -110,21 +108,11 @@
             EmployeeEmail.TabIndex = 7;
             EmployeeEmail.Text = "email@verdeviva.com.br";
             // 
-            // EditButton
-            // 
-            EditButton.Location = new Point(831, 14);
-            EditButton.Name = "EditButton";
-            EditButton.Size = new Size(75, 23);
-            EditButton.TabIndex = 6;
-            EditButton.Text = "Editar";
-            EditButton.UseVisualStyleBackColor = true;
-            EditButton.Click += EditButton_Click;
-            // 
             // DeleteButton
             // 
-            DeleteButton.Location = new Point(750, 14);
+            DeleteButton.Location = new Point(835, 8);
             DeleteButton.Name = "DeleteButton";
-            DeleteButton.Size = new Size(75, 23);
+            DeleteButton.Size = new Size(75, 35);
             DeleteButton.TabIndex = 5;
             DeleteButton.Text = "Excluir";
             DeleteButton.UseVisualStyleBackColor = true;
@@ -156,7 +144,6 @@
 
         private Panel ContentPanel;
         private Label EmployeeEmail;
-        private Button EditButton;
         private Button DeleteButton;
         private Label EmployeeName;
         private Label PositionLabel;

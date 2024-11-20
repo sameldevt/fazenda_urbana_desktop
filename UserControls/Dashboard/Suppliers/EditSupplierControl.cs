@@ -70,7 +70,15 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Suppliers
 
         private async void SaveButton_Click(object sender, EventArgs e)
         {
+            Supplier.Name = NameTextBox.Text;
+            Supplier.Website = WebsiteTextBox.Text;
+            Supplier.CNPJ = CnpjTextBox.Text;
+            Supplier.Contact.Phone = PhoneTextBox.Text;
+            Supplier.Contact.Email = EmailTextBox.Text;
+
             await SupplierService.GetInstance().Update(Supplier);
+
+            MessageBox.Show("Fornecedor editado com sucesso.");
 
             SupplierControl.GetInstance().RegisterButton.Enabled = true;
             SupplierControl.GetInstance().SetContentPanelControl(SupplierListControl.GetInstance());

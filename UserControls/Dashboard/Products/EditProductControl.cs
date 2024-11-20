@@ -196,12 +196,14 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Products
                     Fibers = decimal.Parse(ProductFibersTextBox.Text),
                     Fats = decimal.Parse(ProductFatsTextBox.Text)
                 },
+                ImageUrl = ProductImageUrlTextBox.Text,
                 CategoryId = (int)CategoryComboBox.SelectedValue,
             };
 
-            var response = await ProductService.GetInstance().Update(updateProductDto);
+            await ProductService.GetInstance().Update(updateProductDto);
 
-            MessageBox.Show(response);
+            MessageBox.Show("Produto editado com sucesso.");
+
             ProductsControl.GetInstance().RegisterButton.Enabled = true;
             ProductsControl.GetInstance().SetContentPanelControl(ProductListControl.GetInstance());
         }

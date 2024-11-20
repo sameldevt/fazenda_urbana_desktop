@@ -31,7 +31,6 @@
             ContentPanel = new Panel();
             ClientEmail = new Label();
             DetailsButton = new Button();
-            EditButton = new Button();
             DeleteButton = new Button();
             ClientMemberSinceDate = new Label();
             ClientName = new Label();
@@ -42,7 +41,6 @@
             // 
             ContentPanel.Controls.Add(ClientEmail);
             ContentPanel.Controls.Add(DetailsButton);
-            ContentPanel.Controls.Add(EditButton);
             ContentPanel.Controls.Add(DeleteButton);
             ContentPanel.Controls.Add(ClientMemberSinceDate);
             ContentPanel.Controls.Add(ClientName);
@@ -72,17 +70,6 @@
             DetailsButton.Text = "Ver detalhes";
             DetailsButton.UseVisualStyleBackColor = false;
             DetailsButton.Click += DetailsButton_Click;
-            // 
-            // EditButton
-            // 
-            EditButton.BackColor = Color.White;
-            EditButton.Location = new Point(826, 90);
-            EditButton.Name = "EditButton";
-            EditButton.Size = new Size(95, 35);
-            EditButton.TabIndex = 9;
-            EditButton.Text = "Editar";
-            EditButton.UseVisualStyleBackColor = false;
-            EditButton.Click += EditButton_Click_1;
             // 
             // DeleteButton
             // 
@@ -135,7 +122,6 @@
         private Label ClientMemberSinceDate;
         private Label ClientName;
         private Button DetailsButton;
-        private Button EditButton;
         private Button DeleteButton;
         private Label ClientEmail;
     }

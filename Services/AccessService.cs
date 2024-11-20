@@ -56,6 +56,7 @@ namespace fazenda_verdeviva.Services
             {
                 nome = name,
                 senha = password,
+                fazendaId = 2,
                 contato = new 
                 {
                     telefone = "",

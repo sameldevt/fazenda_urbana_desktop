@@ -101,6 +101,8 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Employees
 
             await EmployeeService.GetInstance().Update(Employee);
 
+            MessageBox.Show("Funcionário editado com sucesso");
+
             EmployeeControl.GetInstance().RegisterButton.Enabled = true;
             EmployeeControl.GetInstance().SetContentPanelControl(EmployeeListControl.GetInstance());
         }

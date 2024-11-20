@@ -59,7 +59,7 @@ namespace fazenda_verdeviva.UserControls.Dashboard.Harvests
         {
             if (CultureComboBox.Items.Count == 0)
             {
-                var cultures = await ColheitaService.GetInstance().GetAll();
+                var cultures = await CultureService.GetInstance().GetAll();
 
                 if (cultures != null && cultures.Any())
                 {
