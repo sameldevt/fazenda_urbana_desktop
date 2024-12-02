@@ -1,0 +1,13 @@
+{
+  "cargo": null,
+  "numeroRegistro": "403729",
+  "fazendaId": 1,
+  "id": 19,
+  "nome": "Thales Sales",
+  "dataCadastro": "2024-12-02T17:50:49.5611801",
+  "contato": {
+    "telefone": "",
+    "email": "thales.sales@verdeviva.com"
+  },
+  "enderecos": []
+}

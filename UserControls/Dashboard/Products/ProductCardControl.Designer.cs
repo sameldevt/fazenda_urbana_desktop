@@ -34,7 +34,6 @@
             ProductDetails = new Button();
             ProductQuantity = new Label();
             EditButton = new Button();
-            DeleteButton = new Button();
             ProductPrice = new Label();
             ProductDescription = new Label();
             ProductName = new Label();
@@ -50,7 +49,6 @@
             ContentPanel.Controls.Add(ProductDetails);
             ContentPanel.Controls.Add(ProductQuantity);
             ContentPanel.Controls.Add(EditButton);
-            ContentPanel.Controls.Add(DeleteButton);
             ContentPanel.Controls.Add(ProductPrice);
             ContentPanel.Controls.Add(ProductDescription);
             ContentPanel.Controls.Add(ProductName);
@@ -107,25 +105,13 @@
             // EditButton
             // 
             EditButton.BackColor = Color.White;
-            EditButton.Location = new Point(835, 78);
+            EditButton.Location = new Point(835, 38);
             EditButton.Name = "EditButton";
             EditButton.Size = new Size(95, 35);
             EditButton.TabIndex = 5;
             EditButton.Text = "Editar";
             EditButton.UseVisualStyleBackColor = false;
             EditButton.Click += EditButton_Click;
-            // 
-            // DeleteButton
-            // 
-            DeleteButton.BackColor = Color.White;
-            DeleteButton.ForeColor = SystemColors.ControlText;
-            DeleteButton.Location = new Point(835, 39);
-            DeleteButton.Name = "DeleteButton";
-            DeleteButton.Size = new Size(95, 33);
-            DeleteButton.TabIndex = 4;
-            DeleteButton.Text = "Excluir";
-            DeleteButton.UseVisualStyleBackColor = false;
-            DeleteButton.Click += DeleteButton_Click;
             // 
             // ProductPrice
             // 
@@ -193,7 +179,6 @@
         private Label ProductPrice;
         private Label ProductDescription;
         private Button EditButton;
-        private Button DeleteButton;
         private Label ProductQuantity;
         private Button ProductDetails;
         private Label label1;

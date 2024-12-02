@@ -21,7 +21,7 @@ namespace fazenda_verdeviva.Model.Dto
         public string Position { get; init; }
 
         [JsonProperty("fazendaId")]
-        public int FarmId { get; set; }
+        public int? FarmId { get; set; }
 
         [JsonProperty("numeroRegistro")]
         public string RegistrationNumber { get; init; } 

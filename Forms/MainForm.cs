@@ -40,6 +40,7 @@ namespace fazenda_verdeviva.Forms
                 instance = new MainForm();
             }
 
+            //instance.SetContentPanelControl(DashboardControl.GetInstance());
             LoadEmployeeInfo();
 
             return instance;
